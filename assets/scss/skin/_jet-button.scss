@@ -1,0 +1,33 @@
+.jet-button__instance {
+	border-radius: 4px;
+}
+
+.jet-button__icon {
+	color: white;
+	width: 25px;
+	height: 25px;
+	font-size: 25px;
+	margin: 3px;
+}
+
+.jet-button__label {
+	color: white;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.jet-button__state {
+	padding: 10px 30px;
+}
+
+.jet-button__plane {
+	&-normal {
+		background-color: #6ec1e4;
+	}
+
+	&-hover {
+		background-color: #54595f;
+	}
+}

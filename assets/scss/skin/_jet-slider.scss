@@ -1,0 +1,111 @@
+.jet-slider {
+	position: relative;
+
+	&__icon {
+		.jet-slider-icon-inner {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+		}
+
+		i {
+			font-size: 40px;
+			color: white;
+		}
+	}
+
+	.jet-slider__icon {
+		color: white;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.jet-slider__title {
+		color: white;
+		font-size: 36px;
+		margin: 10px 0;
+		text-align: center;
+	}
+
+	.jet-slider__subtitle {
+		color: white;
+		font-size: 24px;
+		margin: 10px 0;
+		text-align: center;
+	}
+
+	.jet-slider__desc {
+		color: white;
+		font-size: 14px;
+		margin: 10px 0 30px 0;
+		text-align: center;
+	}
+
+	.jet-slider__button-wrapper {
+		text-align: center;
+
+		.jet-slider__button--primary {
+			background-color: #6ec1e4;
+		}
+	}
+
+	.sp-image-container {
+		position: relative;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: rgba(0,0,0, 0.2);
+			content: '';
+		}
+	}
+
+	.sp-arrow {
+		color: white;
+		font-size: 30px;
+		background-color: #6ec1e4;
+	}
+
+	.sp-full-screen-button {
+		font-size: 16px;
+		color: white;
+	}
+
+	.sp-buttons {
+
+		.sp-button {
+			border-color: #6ec1e4;
+			background-color: transparent;
+
+			&.sp-selected-button {
+				background-color: #6ec1e4;
+			}
+
+			&:hover {
+				background-color: #6ec1e4;
+			}
+		}
+	}
+
+	.sp-thumbnails {
+		.sp-thumbnail-container {
+
+			&:hover {
+				&:before {
+					border: 2px solid #54595f;
+				}
+			}
+
+			&.sp-selected-thumbnail {
+				&:before {
+					border: 2px solid #6ec1e4;
+				}
+			}
+
+		}
+	}
+}

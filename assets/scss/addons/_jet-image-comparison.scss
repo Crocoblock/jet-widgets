@@ -1,0 +1,142 @@
+.jet-image-comparison {
+	width: 100%;
+	position: relative;
+
+	&__instance {
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.jet-arrow {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 99;
+		transition: all 200ms linear;
+
+		&:before {
+			display: block;
+			width: 100%;
+			text-align: center;
+			line-height: 0;
+			transition: all 200ms linear;
+		}
+
+		&.prev-arrow {
+			left: 0;
+		}
+
+		&.next-arrow {
+			right: 0;
+		}
+	}
+
+	.jet-slick-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 99;
+
+		li {
+			padding: 5px;
+			margin: 0;
+			list-style: none;
+
+			span {
+				display: block;
+				cursor: pointer;
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				padding: 0;
+				text-indent: -10em;
+				overflow: hidden;
+				transition: all 200ms linear;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.juxtapose {
+		margin: 0 auto;
+		max-width: 100%;
+
+		.jx-image {
+			display: flex;
+			align-items: flex-end;
+
+			img {
+				top: 0;
+			}
+
+			.jx-label {
+				float: none;
+				left: auto;
+				right: auto;
+			}
+
+			&.jx-left {
+				justify-content: flex-start;
+			}
+
+			&.jx-right {
+				justify-content: flex-end;
+			}
+		}
+
+		.jx-handle {
+			width: 40px;
+			margin: 0;
+			margin-left: -20px;
+
+			.jx-arrow {
+				display: none;
+			}
+
+			.jx-control {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 40px;
+				background: none;
+				margin: 0;
+				z-index: 1;
+
+				&:before {
+					width: 3px;
+					height: 100%;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					background-color: white;
+					content: '';
+				}
+			}
+
+			.jx-controller {
+				width: 40px;
+				height: 40px;
+				margin: 0;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				i {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+}

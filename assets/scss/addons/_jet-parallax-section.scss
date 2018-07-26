@@ -1,0 +1,33 @@
+.jet-parallax-section {
+
+	&__layout {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position-x: 50%;
+		background-position-y: 50%;
+		will-change: transform;
+	}
+
+	.jet-parallax-section__scroll-layout:not(.is-mac) {
+
+		.jet-parallax-section__image {
+			transition: transform 0.5s cubic-bezier(.25,.88,.54,.98),
+						background-position 0s linear;
+		}
+	}
+
+	.jet-parallax-section__mouse-layout:not(.is-mac) {}
+}

@@ -1,0 +1,115 @@
+.jet-weather {
+	&__title {
+		padding: 0;
+		margin: 0 0 15px;
+	}
+
+	&__current {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__current-temp,
+	&__current-icon-box {
+		flex: 0 1 auto;
+		max-width: 50%;
+	}
+
+	&__current-temp {
+		font-size: 4em;
+	}
+
+	&__current-icon-box {
+		text-align: center;
+	}
+
+	&__current-desc {
+		margin-top: 10px;
+	}
+
+	&__current-day,
+	&__forecast-day {
+		font-weight: 700;
+	}
+
+	&__details,
+	&__forecast {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+
+	&__details {
+		display: flex;
+		align-items: flex-end;
+		margin-top: 10px;
+	}
+
+	&__details-column {
+		width: 33.33%;
+	}
+
+	&__details-item {
+		display: flex;
+		align-items: center;
+
+		& + .jet-weather__details-item {
+			margin-top: 5px;
+		}
+
+		.jet-weather-icon {
+			margin-right: 5px;
+		}
+	}
+
+	&__current-sunrise,
+	&__current-sunset {
+		text-transform: uppercase;
+	}
+
+	&__forecast {
+		margin-top: 15px;
+	}
+
+	&__forecast-item {
+		display: flex;
+		align-items: center;
+		margin-top: 5px;
+	}
+
+	&__forecast-day,
+	&__forecast-icon,
+	&__forecast-max-temp,
+	&__forecast-min-temp {
+		width: 25%;
+	}
+
+	&__forecast-icon,
+	&__forecast-max-temp,
+	&__forecast-min-temp {
+		text-align: center;
+	}
+
+	&__notice {
+		font-style: italic;
+	}
+
+	&-icon {
+		line-height: 1;
+
+		.jet-weather__current-icon & {
+			font-size: 60px;
+		}
+
+		.jet-weather__details-item &,
+		.jet-weather__forecast-icon & {
+			font-size: 1.5em;
+		}
+
+		svg {
+			width: auto;
+			height: 1em;
+			vertical-align: top;
+		}
+	}
+}

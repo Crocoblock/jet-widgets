@@ -1,0 +1,73 @@
+.jet-image-comparison {
+
+	.jx-label {
+		margin: 5px;
+		background-color: #54595f;
+	}
+
+	.jx-controller {
+		width: 40px;
+		height: 40px;
+		background-color: #6ec1e4;
+		transition: all .3s cubic-bezier(.5,.12,.46,.88);
+
+		i {
+			color: white;
+			font-size: 20px;
+			margin: 5px;
+		}
+	}
+
+	.jx-image {
+		&.jx-left {
+			justify-content: flex-start;
+		}
+
+		&.jx-right {
+			justify-content: flex-end;
+		}
+	}
+
+	.jet-arrow {
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		margin-top: -18px;
+		color: #fff;
+		background-color: #6ec1e4;
+
+		&:before {
+			font-size: 23px;
+		}
+
+		&.prev-arrow {
+			left: 20px;
+		}
+
+		&.next-arrow {
+			right: 20px;
+		}
+	}
+
+	.jet-slick-dots {
+		margin: 20px 0 0 0;
+
+		li {
+			&.slick-active {
+				span {
+					background-color: #61ce70;
+				}
+			}
+
+			&:hover {
+				span {
+					background-color: #6ec1e4;
+				}
+			}
+
+			span {
+				background-color: #7a7a7a;
+			}
+		}
+	}
+}

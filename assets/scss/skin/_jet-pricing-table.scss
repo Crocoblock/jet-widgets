@@ -1,0 +1,34 @@
+.pricing-table {
+	text-align: center;
+	padding: 30px;
+
+	&__icon-box {
+		> * {
+			&:before {
+				font-size: 40px;
+			}
+		}
+	}
+	.pricing-table__title {
+		margin: 20px 0 0 0;
+		padding: 0;
+	}
+	.pricing-table__subtitle {
+		margin: 10px 0 0 0;
+		padding: 0;
+	}
+	&__price {
+		padding: 15px 0;
+		&-prefix,
+		&-val {
+			font-size: 23px;
+		}
+		&-desc {
+			padding: 0;
+			margin: 5px 0 0;
+		}
+	}
+	&__action {
+		padding: 20px 0 0 0;
+	}
+}

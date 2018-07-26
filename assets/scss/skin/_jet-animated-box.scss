@@ -1,0 +1,50 @@
+.jet-animated-box {
+
+	&__front,
+	&__back {
+		padding: 10px;
+	}
+
+	&__icon {
+		.jet-animated-box-icon-inner {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+		}
+
+		i {
+			font-size: 40px;
+			color: white;
+		}
+	}
+
+	.jet-animated-box__title {
+		color: white;
+		font-size: 23px;
+		margin: 0 0 10px 0;
+	}
+
+	.jet-animated-box__subtitle {
+		color: white;
+		font-size: 18px;
+		margin: 0 0 10px 0;
+	}
+
+	.jet-animated-box__description {
+		color: white;
+		font-size: 13px;
+		margin: 0 0 10px 0;
+	}
+
+	.jet-animated-box__button {
+
+		.jet-animated-box__button-text {
+			margin: 0 3px;
+		}
+
+		.jet-animated-box__button-icon{
+			color: white;
+
+		}
+	}
+}

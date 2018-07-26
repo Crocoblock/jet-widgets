@@ -1,0 +1,56 @@
+.jet-subscribe-form {
+	.jet-subscribe-form__input {
+		border: 1px solid #e0e0e8;
+		background-color: #f7fafd;
+		border-radius: 4px;
+		padding: 13px 20px;
+
+		&.mail-invalid {
+			color: #d9534f;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 10px #e0e0e8;
+		}
+	}
+
+	.jet-subscribe-form__submit {
+		background-color: #6ec1e4;
+	}
+
+	.jet-subscribe-form__submit-icon {
+		color: white;
+		font-size: 15px;
+		margin-right: 10px;
+	}
+}
+
+.jet-subscribe-form--inline-layout {
+	.jet-subscribe-form__submit {
+		margin-left: 10px;
+	}
+}
+
+.jet-subscribe-form--block-layout {
+	.jet-subscribe-form__input {
+		width: 100%;
+	}
+
+	.jet-subscribe-form__submit {
+		margin-top: 10px;
+	}
+}
+
+.jet-subscribe-form--response-success {
+	.jet-subscribe-form__message {
+		color: #5cb85c;
+	}
+}
+
+.jet-subscribe-form--response-error {
+	.jet-subscribe-form__message {
+		color: #d9534f;
+	}
+}
+

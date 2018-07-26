@@ -1,0 +1,10 @@
+.brands-list {
+	.brands-list__item {
+		&-name {
+			margin: 20px 0 0 0;
+		}
+		&-img {
+			display: inline-block;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.jet-inline-svg {
+	display: inline-block;
+	
+	svg {
+		min-width: 20px;
+	}
+	
+	&--custom-width {
+		width: 100%;
+		svg {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+	
+	&--custom-color {
+		svg {
+			fill: currentColor;
+			stroke: currentColor;
+		}
+	}
+	
+	circle,
+	ellipse,
+	polygon,
+	path,
+	rect {
+		&:not([stroke]){
+			stroke: none;
+		}
+		&:not([stroke-width]){
+			stroke-width: 2px;
+		}
+		&:not([stroke-linecap]){
+			stroke-linecap: butt;
+		}
+		&:not([stroke-dasharray]){
+			stroke-dasharray: none;
+		}
+		&:not([stroke-miterlimit]){
+			stroke-miterlimit: 4;
+		}
+	}
+}
+

@@ -1,0 +1,61 @@
+.jet-team-member {
+
+	.jet-team-member__inner {
+
+	}
+
+	.jet-team-member__image {
+
+	}
+
+	.jet-team-member__cover {
+		&:before {
+			background-color: rgba(84, 89, 95, 0.5);
+		}
+
+		&:after {
+			border-color: rgba(84, 89, 95, 0.5) transparent transparent transparent;
+		}
+	}
+
+	.jet-team-member__name {
+		font-size: 20px;
+		color: black;
+		margin: 10px 0;
+	}
+
+	.jet-team-member__position {
+		text-align: center;
+		margin: 5px 0;
+		font-size: 14px;
+		color: #6ec1e4;
+	}
+
+	.jet-team-member__desc {
+		text-align: center;
+		font-size: 16px;
+		color: #54595f;
+		margin: 10px 0;
+	}
+
+	.jet-team-member__socials {
+		margin: 10px 0;
+	}
+
+	.jet-team-member__socials-icon {
+		font-size: 18px;
+		color: #6ec1e4;
+
+		.inner {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+		}
+	}
+
+	.jet-team-member__socials-icon {
+		.inner {
+			margin: 5px;
+		}
+	}
+}

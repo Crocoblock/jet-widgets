@@ -1,0 +1,49 @@
+.jet-price-list {
+	list-style: none;
+	margin: 0;
+	
+	.price-list {
+		&__item {
+			&-inner{
+				display: flex;
+			}
+			
+			&-content{
+				width: 100%;
+			}
+			
+			&-img-wrap{
+				max-width: 200px;
+				margin-right: 20px;
+				flex: 1 0 100%;
+				font-size: 0;
+				
+				img{
+					width: 100%;
+				}
+			}
+			
+			&-title {
+				&__wrapper {
+					display: flex;
+					flex: 0 1 100%;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					align-items: center;
+					
+					> * {
+						flex: 0 1 auto;
+						flex-grow: 0;
+						margin: 0;
+					}
+				}
+			}
+			
+			&-separator {
+				position: relative;
+				height: 0;
+				flex-grow: 1;
+			}
+		}
+	}
+}

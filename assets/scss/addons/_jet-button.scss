@@ -1,0 +1,691 @@
+.jet-button {
+	&__container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+	}
+
+	&__instance {
+		position: relative;
+		overflow: hidden;
+		max-width: 100%;
+		box-sizing: border-box;
+		cursor: pointer;
+		transform: translateZ(0);
+		transition: all .3s cubic-bezier(.5,.12,.46,.88);
+	}
+
+	&__plane {
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+
+		&-normal {
+			z-index: 1;
+		}
+
+		&-hover {
+			z-index: 3;
+		}
+	}
+
+	&__state {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+
+		&-normal {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+		}
+
+		&-hover {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 4;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__label {
+
+	}
+}
+
+.jet-button__instance {
+	&.jet-button__instance--icon-left {
+		.jet-button__state {
+			flex-direction: row;
+
+			.jet-button__icon {
+				order: 1;
+			}
+
+			.jet-button__label {
+				order: 2;
+			}
+		}
+	}
+
+	&.jet-button__instance--icon-top {
+		.jet-button__state {
+			flex-direction: column;
+
+			.jet-button__icon {
+				order: 1;
+			}
+
+			.jet-button__label {
+				order: 2;
+			}
+		}
+	}
+
+	&.jet-button__instance--icon-right {
+		.jet-button__state {
+			flex-direction: row;
+
+			.jet-button__icon {
+				order: 2;
+			}
+
+			.jet-button__label {
+				order: 1;
+			}
+		}
+	}
+
+	&.jet-button__instance--icon-bottom {
+		.jet-button__state {
+			flex-direction: column;
+
+			.jet-button__icon {
+				order: 2;
+			}
+
+			.jet-button__label {
+				order: 1;
+			}
+		}
+	}
+}
+
+.jet-button__instance {
+	&.hover-effect-0 {
+		.jet-button__plane-normal {
+			opacity: 1;
+		}
+
+		.jet-button__plane-hover {
+			opacity: 0;
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.hover-effect-1 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 0;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			.jet-button__icon {
+				opacity: 1;
+				transition: all .3s cubic-bezier(.5,.12,.46,.88);
+			}
+
+			.jet-button__label {
+				opacity: 1;
+				transition: all .3s cubic-bezier(.5,.12,.46,.88);
+			}
+		}
+
+		.jet-button__state-hover {
+			.jet-button__icon {
+				opacity: 0;
+				transition: all .3s cubic-bezier(.5,.12,.46,.88);
+			}
+
+			.jet-button__label {
+				opacity: 0;
+				transition: all .3s cubic-bezier(.5,.12,.46,.88);
+			}
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+			}
+
+			.jet-button__state-normal {
+				.jet-button__icon {
+					opacity: 0;
+				}
+
+				.jet-button__label {
+					opacity: 0;
+				}
+			}
+
+			.jet-button__state-hover {
+				.jet-button__icon {
+					opacity: 1;
+				}
+
+				.jet-button__label {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.hover-effect-2 {
+		.jet-button__plane-normal {
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			transform: translateY(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			transform: translateY(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				transition-delay: .1s;
+				transform: translateY(-100%);
+			}
+
+			.jet-button__plane-hover {
+				transform: translateY(0%);
+				transition-delay: .1s;
+			}
+
+			.jet-button__state-normal {
+				transform: translateY(-100%);
+			}
+
+			.jet-button__state-hover {
+				transition-delay: .15s;
+				transform: translateY(0%);
+
+			}
+		}
+	}
+
+	&.hover-effect-3 {
+		.jet-button__plane-normal {
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			transform: translateY(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			transform: translateY(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				transition-delay: .1s;
+				transform: translateY(100%);
+			}
+
+			.jet-button__plane-hover {
+				transform: translateY(0%);
+				transition-delay: .1s;
+			}
+
+			.jet-button__state-normal {
+				transform: translateY(100%);
+			}
+
+			.jet-button__state-hover {
+				transition-delay: .15s;
+				transform: translateY(0%);
+
+			}
+		}
+	}
+
+	&.hover-effect-4 {
+		.jet-button__plane-normal {
+			transform: translateX(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			transform: translateX(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			transform: translateX(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			transform: translateX(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				transform: translateX(100%);
+				transition-delay: .1s;
+			}
+
+			.jet-button__plane-hover {
+				transform: translateX(0);
+			}
+
+			.jet-button__state-normal {
+				transform: translateX(100%);
+			}
+
+			.jet-button__state-hover {
+				transform: translateX(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+
+	&.hover-effect-5 {
+		.jet-button__plane-normal {
+			transform: translateX(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			transform: translateX(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			transform: translateX(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			transform: translateX(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				transform: translateX(-100%);
+				transition-delay: .1s;
+			}
+
+			.jet-button__plane-hover {
+				transform: translateX(0);
+			}
+
+			.jet-button__state-normal {
+				transform: translateX(-100%);
+			}
+
+			.jet-button__state-hover {
+				transform: translateX(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+
+	&.hover-effect-6 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transform: scale(1);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 0;
+			transform: scale(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: scale(1);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform: scale(0);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+				transform: scale(1.5);
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: scale(1.5);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+	&.hover-effect-7 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transform: scale(1);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 0;
+			transform: scale(1.5);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: scale(1);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform: scale(1.5);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+				transform: scale(0);
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: scale(0);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+	&.hover-effect-8 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 1;
+			transform-origin: 0 100%;
+			transform: rotateZ(-90deg) scaleX(2);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform-origin: 0 100%;
+			transform: rotateZ(-90deg) translateY(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: rotateZ(0deg);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: rotateZ(0) translateY(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+
+	&.hover-effect-9 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 1;
+			transform-origin: 100% 0;
+			transform: rotateZ(-90deg) translateY(100%) scaleX(2);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform-origin: 100% 0;
+			transform: rotateZ(-90deg) translateY(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: rotateZ(0deg);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: rotateZ(0) translateY(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+
+	&.hover-effect-10 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 1;
+			transform: translateX(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform: translateX(-100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 0;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: translateX(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+
+	&.hover-effect-11 {
+		.jet-button__plane-normal {
+			opacity: 1;
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__plane-hover {
+			opacity: 1;
+			transform: translateX(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-normal {
+			opacity: 1;
+			transform: translateY(0%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		.jet-button__state-hover {
+			opacity: 0;
+			transform: translateX(100%);
+			transition: all .3s cubic-bezier(.5,.12,.46,.88);
+		}
+
+		&:hover {
+			.jet-button__plane-normal {
+				opacity: 1;
+			}
+
+			.jet-button__plane-hover {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+			.jet-button__state-normal {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+
+			.jet-button__state-hover {
+				opacity: 1;
+				transform: translateX(0);
+				transition-delay: .1s;
+			}
+		}
+	}
+}

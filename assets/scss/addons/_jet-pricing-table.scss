@@ -1,0 +1,47 @@
+.pricing-table {
+	position: relative;
+	&__icon {
+		&-box {
+			i {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+	&__badge {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+
+	.pricing-table-button {
+		overflow: hidden;
+
+		&.button-full-size {
+			width: 100%;
+		}
+	}
+	.button-icon {
+		margin-right: 5px;
+	}
+}
+
+.pricing-feature {
+	&:not(:first-child):before {
+		content: "";
+		display: block;
+		height: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__inner {
+		display: inline-flex;
+		align-items: center;
+	}
+	.item-bullet {
+		display: flex;
+		align-items: center;
+		margin-right: 7px;
+	}
+}

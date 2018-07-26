@@ -1,0 +1,27 @@
+[data-element_type="jet-map.default"] {
+	.jet-map-message {
+		width: 100%;
+		height: 300px;
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.jet-map-message__text {
+			z-index: 2;
+		}
+
+		.jet-map-message__dammy-map {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-image: url( '../images/dummy-map.png' );
+			background-repeat: no-repeat;
+			background-color: white;
+			background-size: cover;
+			filter: blur(1.5px);
+			z-index: 1;
+		}
+	}
+}

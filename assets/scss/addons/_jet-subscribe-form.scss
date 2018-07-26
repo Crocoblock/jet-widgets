@@ -1,0 +1,102 @@
+.jet-subscribe-form {
+	max-width: 100%;
+
+	&__input-group {
+
+	}
+
+	&__input {
+		max-width: 100%;
+	}
+
+	&__submit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 1 auto;
+		position: relative;
+		max-width: 100%;
+
+		i {
+			visibility: visible;
+			transition: inherit;
+		}
+
+		span {
+			visibility: visible;
+		}
+
+		&:before {
+			box-sizing: border-box;
+			position: absolute;
+			visibility: hidden;
+			top: 50%;
+			left: 50%;
+			width: 26px;
+			height: 26px;
+			margin-top: -13px;
+			margin-left: -13px;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			border-top-color: #000;
+			content: '';
+			animation: jet-spinner .6s linear infinite;
+		}
+
+		&.loading {
+
+			i {
+				visibility: hidden;
+			}
+
+			span {
+				visibility: hidden;
+			}
+
+			&:before {
+				visibility: visible;
+			}
+		}
+	}
+
+	&__message {
+		position: absolute;
+		top: 120%;
+		width: 100%;
+		visibility: hidden;
+
+		.jet-subscribe-form__message-inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	}
+}
+
+.jet-subscribe-form--inline-layout {
+	.jet-subscribe-form__input-group {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		align-items: center;
+
+		.jet-subscribe-form__input {
+			flex: 1 1 auto;
+			width: auto;
+		}
+	}
+}
+
+.jet-subscribe-form--block-layout {
+	.jet-subscribe-form__input-group {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+@keyframes jet-spinner {
+	to {transform: rotate(360deg);}
+}

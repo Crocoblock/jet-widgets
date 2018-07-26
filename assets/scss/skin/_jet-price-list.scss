@@ -1,0 +1,11 @@
+.jet-price-list {
+	.price-list {
+		margin: 0;
+		
+		&__item {
+			&-separator {
+				border-bottom: 2px dotted #434345;
+			}
+		}
+	}
+}

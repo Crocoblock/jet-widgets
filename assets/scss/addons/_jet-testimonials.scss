@@ -1,0 +1,160 @@
+.jet-testimonials {
+	width: 100%;
+	position: relative;
+
+	&.jet-equal-cols {
+		.slick-track {
+			display: flex;
+			align-items: stretch;
+		}
+
+		.jet-testimonials__item {
+			display: flex;
+			flex-direction: column;
+			float: none;
+			height: auto;
+		}
+
+		.jet-testimonials__item-inner {
+			flex-grow: 1;
+		}
+	}
+
+	&__instance {
+		width: 100%;
+		position: relative;
+
+		&.jet-testimonials--comment-corner {
+			.jet-testimonials__comment {
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+
+	&__item {
+		outline: none;
+	}
+
+	&__content {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__figure {
+		position: relative;
+		overflow: hidden;
+
+		img.jet-testimonials__tag-img {
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.jet-testimonials__icon-inner {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		max-width: 100%;
+	}
+
+	&__comment {
+		max-width: 100%;
+		position: relative;
+
+		&:after {
+			display: block;
+			position: absolute;
+			left: 50%;
+			margin-left: -5px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 10px 0 10px;
+			bottom: -10px;
+			content: none;
+		}
+	}
+
+	&__name {
+		max-width: 100%;
+	}
+
+	&__position {
+		max-width: 100%;
+	}
+
+	&__date {
+		max-width: 100%;
+	}
+
+	.jet-arrow {
+		position: absolute;
+		top: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		z-index: 999;
+		transition: all 200ms linear;
+
+		&:before {
+			display: block;
+			width: 100%;
+			text-align: center;
+			line-height: 0;
+			transition: all 200ms linear;
+		}
+
+		&.prev-arrow {
+			left: 0;
+		}
+
+		&.next-arrow {
+			right: 0;
+		}
+	}
+
+	.jet-slick-dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 99;
+
+		li {
+			padding: 5px;
+			margin: 0;
+			list-style: none;
+
+			span {
+				display: block;
+				cursor: pointer;
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				padding: 0;
+				text-indent: -10em;
+				overflow: hidden;
+				transition: all 200ms linear;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}

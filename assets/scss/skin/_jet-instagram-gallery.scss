@@ -1,0 +1,44 @@
+.jet-instagram-gallery__content {
+	padding: 20px;
+
+	&:before {
+		background-color: rgba(84, 89, 95, 0.6);
+	}
+}
+
+.jet-instagram-gallery__caption {
+	color: white;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	margin: 10px 0;
+	max-width: 100%;
+	z-index: 1;
+}
+
+.jet-instagram-gallery__meta {
+	z-index: 1;
+}
+
+.jet-instagram-gallery__comments-count {
+	color: white;
+	font-size: 20px;
+	margin: 5px;
+}
+
+.jet-instagram-gallery__comments-icon {
+	color: #6ec1e4;
+	margin-right: 5px;
+}
+
+.jet-instagram-gallery__likes-count {
+	color: white;
+	font-size: 20px;
+	margin: 5px;
+}
+
+.jet-instagram-gallery__likes-icon {
+	color: #6ec1e4;
+	margin-right: 5px;
+}
+

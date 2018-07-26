@@ -1,0 +1,128 @@
+.jet-portfolio {
+
+	.jet-portfolio__filter {
+
+	}
+
+	.jet-portfolio__filter-list {
+		margin: 0 0 30px 0;
+	}
+
+	.jet-portfolio__filter-item {
+		padding: 0 10px;
+		margin: 0 5px;
+		color: #54595f;
+
+		&.active {
+			color: white;
+			background-color: #6ec1e4;
+		}
+	}
+
+	.jet-portfolio__filter-item-separator {
+		font-size: 12px;
+		color: #6ec1e4;
+	}
+
+	.jet-portfolio__content-inner {
+		padding: 10px;
+
+	}
+
+	.jet-portfolio__title {
+		font-size: 22px;
+		margin: 0 0 5px 0;
+	}
+
+	.jet-portfolio__category {
+		font-size: 16px;
+		margin: 0 0 5px 0;
+	}
+
+	.jet-portfolio__desc {
+
+		font-size: 14px;
+		margin: 0 0 5px 0;
+	}
+
+	.jet-portfolio__view-more {
+		margin-top: 30px;
+	}
+
+	.jet-portfolio__view-more-button {
+		background-color: #6ec1e4;
+		color: white;
+	}
+}
+
+.jet-portfolio {
+	&.preset-type-1 {
+		.jet-portfolio__title {
+			color: white;
+		}
+
+		.jet-portfolio__category {
+			color: white;
+		}
+
+		.jet-portfolio__desc {
+			color: white;
+		}
+
+		.jet-portfolio__content-inner {
+			background-color: #54595f;
+		}
+	}
+
+	&.preset-type-2 {
+		.jet-portfolio__title {
+			color: #54595f;
+		}
+
+		.jet-portfolio__category {
+			color: #54595f;
+		}
+
+		.jet-portfolio__desc {
+			color: #54595f;
+		}
+
+		.jet-portfolio__cover {
+			background-color: rgba(84, 89, 95, 0.6);
+
+			i {
+				font-size: 25px;
+				color: #6ec1e4;
+			}
+		}
+	}
+
+	&.preset-type-3 {
+		.jet-portfolio__cover {
+			background-color: rgba(84, 89, 95, 0.6);
+
+			i {
+				font-size: 25px;
+				color: #6ec1e4;
+			}
+		}
+	}
+
+	&.preset-type-4 {
+		.jet-portfolio__title {
+			color: white;
+		}
+
+		.jet-portfolio__category {
+			color: white;
+		}
+
+		.jet-portfolio__desc {
+			color: white;
+		}
+
+		.jet-portfolio__content-inner {
+			background-color: rgba(84, 89, 95, 0.6);
+		}
+	}
+}

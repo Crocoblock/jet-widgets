@@ -1,0 +1,259 @@
+.jet-instagram-gallery {
+	&__instance {
+		&.layout-type-grid {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		&.layout-type-masonry {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+
+			.salvattore-column {
+				display: flex;
+				flex-flow: column nowrap;
+			}
+		}
+
+		&.show-overlay-on-hover {
+			.jet-instagram-gallery__inner {
+
+				.jet-instagram-gallery__content {
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity 0.5s cubic-bezier(.21,.75,.27,.96);
+				}
+
+				&:hover {
+					.jet-instagram-gallery__content {
+						opacity: 1;
+						pointer-events: auto;
+					}
+				}
+			}
+		}
+
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__inner {
+		position: relative;
+		overflow: hidden;
+		margin: 10px;
+	}
+
+	&__link {
+		display: block;
+		line-height: 0;
+	}
+
+	&__media {
+
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+
+	&__meta {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__meta-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&:before {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			content:'';
+		}
+	}
+
+	&__caption {
+		max-width: 100%;
+	}
+}
+
+.jet-instagram-gallery__instance {
+
+	@media screen and (min-width: 1px) and (max-width: 767px){
+		&.column-mobile-1 {
+			&[data-columns]::before {
+				content: '1 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 100%;
+			}
+		}
+		&.column-mobile-2 {
+			&[data-columns]::before {
+				content: '2 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 50%;
+			}
+		}
+		&.column-mobile-3 {
+			&[data-columns]::before {
+				content: '3 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 33.33333%;
+			}
+		}
+		&.column-mobile-4 {
+			&[data-columns]::before {
+				content: '4 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 25%;
+			}
+		}
+		&.column-mobile-5 {
+			&[data-columns]::before {
+				content: '5 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 20%;
+			}
+		}
+		&.column-mobile-6 {
+			&[data-columns]::before {
+				content: '6 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 16.66666%;
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1024px){
+		&.column-tablet-1 {
+			&[data-columns]::before {
+				content: '1 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 100%;
+			}
+		}
+		&.column-tablet-2 {
+			&[data-columns]::before {
+				content: '2 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 50%;
+			}
+		}
+		&.column-tablet-3 {
+			&[data-columns]::before {
+				content: '3 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 33.33333%;
+			}
+		}
+		&.column-tablet-4 {
+			&[data-columns]::before {
+				content: '4 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 25%;
+			}
+		}
+		&.column-tablet-5 {
+			&[data-columns]::before {
+				content: '5 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 20%;
+			}
+		}
+		&.column-tablet-6 {
+			&[data-columns]::before {
+				content: '6 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 16.66666%;
+			}
+		}
+	}
+
+	@media ( min-width: 1025px ) {
+		&.column-desktop-1 {
+			&[data-columns]::before {
+				content: '1 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 100%;
+			}
+		}
+		&.column-desktop-2 {
+			&[data-columns]::before {
+				content: '2 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 50%;
+			}
+		}
+		&.column-desktop-3 {
+			&[data-columns]::before {
+				content: '3 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 33.33333%;
+			}
+		}
+		&.column-desktop-4 {
+			&[data-columns]::before {
+				content: '4 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 25%;
+			}
+		}
+		&.column-desktop-5 {
+			&[data-columns]::before {
+				content: '5 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 20%;
+			}
+		}
+		&.column-desktop-6 {
+			&[data-columns]::before {
+				content: '6 .salvattore-column';
+			}
+			.salvattore-column {
+				width: 16.66666%;
+			}
+		}
+	}
+}

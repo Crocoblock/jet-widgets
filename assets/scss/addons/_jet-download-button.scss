@@ -1,0 +1,41 @@
+.jet-download {
+	&.elementor-button {
+		display: inline-flex;
+		align-items: center;
+	}
+	&.icon-position-top,
+	&.icon-position-bottom {
+		flex-direction: column;
+	}
+	&__icon.icon-left {
+		margin-right: 10px;
+		order: 1;
+	}
+	&__icon.icon-right {
+		margin-left: 10px;
+		order: 3;
+	}
+	&__icon.icon-top {
+		margin-bottom: 10px;
+		order: 1;
+	}
+	&__icon.icon-bottom {
+		margin-top: 10px;
+		order: 3;
+	}
+	&__icon {
+		transition: all 0.3s ease;
+	}
+	&__text {
+		text-align: left;
+		order: 2;
+	}
+	&__label {
+		display: block;
+		transition: all 0.3s ease;
+	}
+	&__sub-label {
+		display: block;
+		transition: all 0.3s ease;
+	}
+}

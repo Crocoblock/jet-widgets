@@ -1,0 +1,123 @@
+.jet-progress-bar__wrapper {
+	position: relative;
+	height: 30px;
+	background-color: #eeeeee;
+	border-radius: 2px;
+}
+
+.jet-progress-bar__status-bar {
+	height: 100%;
+	background-color: #6ec1e4;
+	border-radius: 2px;
+}
+
+.jet-progress-bar__title-icon {
+	margin-right: 5px;
+}
+
+.jet-progress-bar__percent {
+}
+
+.jet-progress-bar-type-1 {
+	.jet-progress-bar__title {
+		align-self: flex-start;
+	}
+
+	.jet-progress-bar__title-text {
+		color: #54595f;
+	}
+
+	.jet-progress-bar__title-icon {
+		color: #54595f;
+	}
+
+	.jet-progress-bar__percent {
+		margin: 0 10px;
+		color: white;
+		align-self: flex-end;
+	}
+}
+
+.jet-progress-bar-type-2 {
+	.jet-progress-bar__title {
+		align-self: center;
+		margin-top: 5px;
+	}
+
+	.jet-progress-bar__percent {
+		align-self: center;
+		margin-bottom: 5px;
+	}
+}
+
+.jet-progress-bar-type-3 {
+	.jet-progress-bar__percent {
+		width: 40px;
+		margin-right: -20px;
+		padding: 5px 0;
+		color: white;
+		background-color: #6ec1e4;
+		border-radius: 2px;
+	}
+
+	.jet-progress-bar__wrapper {
+		height: 10px;
+	}
+}
+
+.jet-progress-bar-type-4 {
+	.jet-progress-bar__title {
+		margin-right: 20px;
+	}
+
+	.jet-progress-bar__percent {
+		margin-left: 20px;
+	}
+
+	.jet-progress-bar__wrapper {
+		height: 10px;
+	}
+}
+
+.jet-progress-bar-type-5 {
+	.jet-progress-bar__title {
+		margin-bottom: 5px;
+		align-self: flex-start;
+	}
+
+	.jet-progress-bar__percent {
+		margin-left: 10px;
+	}
+}
+
+.jet-progress-bar-type-6 {
+	.jet-progress-bar__title {
+		align-self: flex-start;
+	}
+
+	.jet-progress-bar__wrapper {
+		height: 60px;
+	}
+
+	.jet-progress-bar__status {
+		margin-left: 10px;
+	}
+
+	.jet-progress-bar__percent {
+		font-size: 25px;
+	}
+}
+
+
+.jet-progress-bar-type-7 {
+
+	.jet-progress-bar__wrapper {
+		width: 50px;
+		height: 300px;
+		justify-content: flex-end;
+	}
+
+	.jet-progress-bar__percent {
+		margin-bottom: 10px;
+	}
+}

@@ -1,0 +1,26 @@
+.jet-countdown-timer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: stretch;
+		text-align: center;
+		margin: 5px;
+	}
+
+	&__separator {
+		display: none;
+		* + & {
+			display: block;
+		}
+	}
+
+	&__digit {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,20 @@
+.circle-counter {
+
+	.circle-val {
+		color: #6ec1e4;
+		font-size: 23px;
+
+		.circle-counter__prefix {
+			line-height: 1;
+		}
+
+		.circle-counter__suffix {
+			line-height: 1;
+		}
+	}
+
+	.circle-counter__title {
+		padding-top: 10px;
+	}
+
+}

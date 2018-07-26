@@ -1,0 +1,21 @@
+.jet_widgets_settings_form {
+	&__checkbox-group {
+
+		.cherry-ui-container {
+			display: flex;
+			flex-flow: row wrap;
+
+			.cherry-checkbox-item-wrap {
+				width: 33.333%;
+
+				@media screen and (max-width: 1200px) {
+					width: 50%;
+				}
+
+				@media screen and (max-width: 782px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
