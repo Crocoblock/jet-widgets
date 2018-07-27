@@ -53,8 +53,8 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 		 */
 		public function add_translatable_nodes( $nodes_to_translate ) {
 
-			$nodes_to_translate[ 'jet-animated-box' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-animated-box' ),
+			$nodes_to_translate[ 'jw-animated-box' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-animated-box' ),
 				'fields'     => array(
 					array(
 						'field'       => 'front_side_title',
@@ -89,8 +89,8 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				),
 			);
 
-			$nodes_to_translate[ 'jet-posts' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-posts' ),
+			$nodes_to_translate[ 'jw-posts' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-posts' ),
 				'fields'     => array(
 					array(
 						'field'       => 'more_text',
@@ -100,20 +100,20 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				),
 			);
 
-			$nodes_to_translate[ 'jet-carousel' ] = array(
-				'conditions'        => array( 'widgetType' => 'jet-carousel' ),
+			$nodes_to_translate[ 'jw-carousel' ] = array(
+				'conditions'        => array( 'widgetType' => 'jw-carousel' ),
 				'fields'            => array(),
 				'integration-class' => 'WPML_Jet_Widgets_Advanced_Carousel',
 			);
 
-			$nodes_to_translate[ 'jet-images-layout' ] = array(
-				'conditions'        => array( 'widgetType' => 'jet-images-layout' ),
+			$nodes_to_translate[ 'jw-images-layout' ] = array(
+				'conditions'        => array( 'widgetType' => 'jw-images-layout' ),
 				'fields'            => array(),
 				'integration-class' => 'WPML_Jet_Widgets_Images_Layout',
 			);
 
-			$nodes_to_translate[ 'jet-pricing-table' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-pricing-table' ),
+			$nodes_to_translate[ 'jw-pricing-table' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-pricing-table' ),
 				'fields'     => array(
 					array(
 						'field'       => 'title',
@@ -149,8 +149,8 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'integration-class' => 'WPML_Jet_Widgets_Pricing_Table',
 			);
 
-			$nodes_to_translate[ 'jet-services' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-services' ),
+			$nodes_to_translate[ 'jw-services' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-services' ),
 				'fields'     => array(
 					array(
 						'field'       => 'services_title',
@@ -170,8 +170,8 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				),
 			);
 
-			$nodes_to_translate[ 'jet-team-member' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-team-member' ),
+			$nodes_to_translate[ 'jw-team-member' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-team-member' ),
 				'fields'     => array(
 					array(
 						'field'       => 'member_first_name',
@@ -197,20 +197,20 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'integration-class' => 'WPML_Jet_Widgets_Team_Member',
 			);
 
-			$nodes_to_translate[ 'jet-testimonials' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-testimonials' ),
+			$nodes_to_translate[ 'jw-testimonials' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-testimonials' ),
 				'fields'     => array(),
 				'integration-class' => 'WPML_Jet_Widgets_Testimonials',
 			);
 
-			$nodes_to_translate[ 'jet-image-comparison' ] = array(
-				'conditions'        => array( 'widgetType' => 'jet-image-comparison' ),
+			$nodes_to_translate[ 'jw-image-comparison' ] = array(
+				'conditions'        => array( 'widgetType' => 'jw-image-comparison' ),
 				'fields'            => array(),
 				'integration-class' => 'WPML_Jet_Widgets_Image_Comparison',
 			);
 
-			$nodes_to_translate[ 'jet-headline' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-headline' ),
+			$nodes_to_translate[ 'jw-headline' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-headline' ),
 				'fields'     => array(
 					array(
 						'field'       => 'first_part',
@@ -225,8 +225,8 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				),
 			);
 
-			$nodes_to_translate[ 'jet-subscribe-form' ] = array(
-				'conditions' => array( 'widgetType' => 'jet-subscribe-form' ),
+			$nodes_to_translate[ 'jw-subscribe-form' ] = array(
+				'conditions' => array( 'widgetType' => 'jw-subscribe-form' ),
 				'fields'     => array(
 					array(
 						'field'       => 'submit_button_text',

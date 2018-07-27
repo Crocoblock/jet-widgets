@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Subscribe_Form
  * Name: Subscribe
- * Slug: jet-subscribe-form
+ * Slug: jw-subscribe-form
  */
 
 namespace Elementor;
@@ -49,11 +49,11 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/subscribe-form/css-scheme',
 			array(
-				'instance'    => '.jet-subscribe-form',
-				'input'       => '.jet-subscribe-form__input',
-				'submit'      => '.jet-subscribe-form__submit',
-				'submit_icon' => '.jet-subscribe-form__submit-icon',
-				'message'     => '.jet-subscribe-form__message',
+				'instance'    => '.jw-subscribe-form',
+				'input'       => '.jw-subscribe-form__input',
+				'submit'      => '.jw-subscribe-form__submit',
+				'submit_icon' => '.jw-subscribe-form__submit-icon',
+				'message'     => '.jw-subscribe-form__message',
 			)
 		);
 
@@ -249,7 +249,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['instance'] . '.jet-subscribe-form--response-error' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['instance'] . '.jw-subscribe-form--response-error' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -261,7 +261,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['instance'] . '.jet-subscribe-form--response-error',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['instance'] . '.jw-subscribe-form--response-error',
 			)
 		);
 
@@ -269,7 +269,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'container_error_box_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['instance'] . '.jet-subscribe-form--response-error',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['instance'] . '.jw-subscribe-form--response-error',
 			)
 		);
 
@@ -987,7 +987,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['message'] . ' .jet-subscribe-form__message-inner' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['message'] . ' .jw-subscribe-form__message-inner' => 'justify-content: {{VALUE}};',
 				),
 			)
 		);
@@ -1007,7 +1007,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -1018,7 +1018,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1028,7 +1028,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			array(
 				'name'     => 'message_success_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
-				'selector' => '{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
+				'selector' => '{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
 			)
 		);
 
@@ -1039,7 +1039,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1051,7 +1051,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1063,7 +1063,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1075,7 +1075,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
+				'selector'    => '{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
 			)
 		);
 
@@ -1083,7 +1083,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'message_success_box_shadow',
-				'selector' => '{{WRAPPER}} .jet-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
+				'selector' => '{{WRAPPER}} .jw-subscribe-form--response-success ' . $css_scheme['message'] . ' span',
 			)
 		);
 
@@ -1102,7 +1102,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -1113,7 +1113,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1123,7 +1123,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			array(
 				'name'     => 'message_error_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
-				'selector' => '{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
+				'selector' => '{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
 			)
 		);
 
@@ -1134,7 +1134,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1146,7 +1146,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1158,7 +1158,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1170,7 +1170,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
+				'selector'    => '{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
 			)
 		);
 
@@ -1178,7 +1178,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'message_error_box_shadow',
-				'selector' => '{{WRAPPER}} .jet-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
+				'selector' => '{{WRAPPER}} .jw-subscribe-form--response-error ' . $css_scheme['message'] . ' span',
 			)
 		);
 

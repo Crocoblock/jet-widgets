@@ -1,14 +1,14 @@
-.jet-carousel {
+.jw-carousel {
 	margin-left: -10px;
 	margin-right: -10px;
 
 	&-wrap {
-		&.jet-equal-cols {
+		&.jw-equal-cols {
 			.slick-track {
 				display: flex;
 				align-items: stretch;
 			}
-			.jet-carousel__item {
+			.jw-carousel__item {
 				float: none;
 				height: auto;
 				display: flex;
@@ -18,16 +18,16 @@
 					object-fit: cover;
 					flex-grow: 1;
 				}
-				.jet-carousel__item-inner,
-				.jet-carousel__item-link,
-				.jet-banner,
-				.jet-banner__link {
+				.jw-carousel__item-inner,
+				.jw-carousel__item-link,
+				.jw-banner,
+				.jw-banner__link {
 					display: flex;
 					flex-direction: column;
 				}
-				.jet-carousel__item-inner,
-				.jet-carousel__item-inner > *:last-child,
-				.jet-banner__link {
+				.jw-carousel__item-inner,
+				.jw-carousel__item-inner > *:last-child,
+				.jw-banner__link {
 					flex-grow: 1;
 				}
 			}
@@ -37,7 +37,7 @@
 	&__item {
 		padding: 10px;
 
-		.jet-banner {
+		.jw-banner {
 			float: none;
 		}
 	}
@@ -52,7 +52,7 @@
 		transition: all 200ms linear;
 	}
 
-	.jet-arrow {
+	.jw-arrow {
 		position: absolute;
 		top: 50%;
 		display: flex;
@@ -76,7 +76,7 @@
 			right: 0;
 		}
 	}
-	.jet-slick-dots {
+	.jw-slick-dots {
 		display: flex;
 		align-items: center;
 		justify-content: center;

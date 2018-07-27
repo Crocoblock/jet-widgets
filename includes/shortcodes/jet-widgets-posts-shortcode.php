@@ -22,7 +22,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 		$columns = jet_widgets_tools()->get_select_range( 6 );
 
-		return apply_filters( 'jet-widgets/shortcodes/jet-posts/atts', array(
+		return apply_filters( 'jet-widgets/shortcodes/jw-posts/atts', array(
 			'number' => array(
 				'type'       => 'number',
 				'label'      => esc_html__( 'Posts Number', 'jet-widgets' ),
@@ -182,15 +182,15 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_block' => true,
 				'default'     => 'center center',
 				'options'     => array(
-					'center center' => esc_html__( 'Center Center', 'Background Control', 'jet-widgets' ),
-					'center left'   => esc_html__( 'Center Left', 'Background Control', 'jet-widgets' ),
-					'center right'  => esc_html__( 'Center Right', 'Background Control', 'jet-widgets' ),
-					'top center'    => esc_html__( 'Top Center', 'Background Control', 'jet-widgets' ),
-					'top left'      => esc_html__( 'Top Left', 'Background Control', 'jet-widgets' ),
-					'top right'     => esc_html__( 'Top Right', 'Background Control', 'jet-widgets' ),
-					'bottom center' => esc_html__( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-					'bottom left'   => esc_html__( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-					'bottom right'  => esc_html__( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+					'center center' => esc_attr_x( 'Center Center', 'Background Control', 'jet-widgets' ),
+					'center left'   => esc_attr_x( 'Center Left', 'Background Control', 'jet-widgets' ),
+					'center right'  => esc_attr_x( 'Center Right', 'Background Control', 'jet-widgets' ),
+					'top center'    => esc_attr_x( 'Top Center', 'Background Control', 'jet-widgets' ),
+					'top left'      => esc_attr_x( 'Top Left', 'Background Control', 'jet-widgets' ),
+					'top right'     => esc_attr_x( 'Top Right', 'Background Control', 'jet-widgets' ),
+					'bottom center' => esc_attr_x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
+					'bottom left'   => esc_attr_x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
+					'bottom right'  => esc_attr_x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
 				),
 				'condition'   => array(
 					'show_image'    => array( 'yes' ),
@@ -395,7 +395,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 		/**
 		 * Hook before loop start template included
 		 */
-		do_action( 'jet-widgets/shortcodes/jet-posts/loop-start' );
+		do_action( 'jet-widgets/shortcodes/jw-posts/loop-start' );
 
 		include $loop_start;
 
@@ -409,14 +409,14 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			/**
 			 * Hook before loop item template included
 			 */
-			do_action( 'jet-widgets/shortcodes/jet-posts/loop-item-start' );
+			do_action( 'jet-widgets/shortcodes/jw-posts/loop-item-start' );
 
 			include $loop_item;
 
 			/**
 			 * Hook after loop item template included
 			 */
-			do_action( 'jet-widgets/shortcodes/jet-posts/loop-item-end' );
+			do_action( 'jet-widgets/shortcodes/jw-posts/loop-item-end' );
 
 		}
 

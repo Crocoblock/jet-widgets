@@ -7,13 +7,13 @@
 		init: function() {
 
 			var widgets = {
-				'jet-carousel.default' : JetWidgets.widgetCarousel,
-				'jet-posts.default' : JetWidgets.widgetPosts,
-				'jet-animated-box.default' : JetWidgets.widgetAnimatedBox,
-				'jet-images-layout.default' : JetWidgets.widgetImagesLayout,
-				'jet-testimonials.default' : JetWidgets.widgetTestimonials,
-				'jet-image-comparison.default' : JetWidgets.widgetImageComparison,
-				'jet-subscribe-form.default' : JetWidgets.widgetSubscribeForm,
+				'jw-carousel.default' : JetWidgets.widgetCarousel,
+				'jw-posts.default' : JetWidgets.widgetPosts,
+				'jw-animated-box.default' : JetWidgets.widgetAnimatedBox,
+				'jw-images-layout.default' : JetWidgets.widgetImagesLayout,
+				'jw-testimonials.default' : JetWidgets.widgetTestimonials,
+				'jw-image-comparison.default' : JetWidgets.widgetImageComparison,
+				'jw-subscribe-form.default' : JetWidgets.widgetSubscribeForm
 			};
 
 			$.each( widgets, function( widget, callback ) {
@@ -23,7 +23,7 @@
 
 		widgetCarousel: function( $scope ) {
 
-			var $carousel = $scope.find( '.jet-carousel' );
+			var $carousel = $scope.find( '.jw-carousel' );
 
 			if ( ! $carousel.length ) {
 				return;
@@ -35,13 +35,13 @@
 
 		widgetPosts: function ( $scope ) {
 
-			var $target = $scope.find( '.jet-carousel' );
+			var $target = $scope.find( '.jw-carousel' );
 
 			if ( ! $target.length ) {
 				return;
 			}
 
-			JetWidgets.initCarousel( $target.find( '.jet-posts' ), $target.data( 'slider_options' ) );
+			JetWidgets.initCarousel( $target.find( '.jw-posts' ), $target.data( 'slider_options' ) );
 
 		},
 
@@ -49,7 +49,7 @@
 
 			JetWidgets.onAnimatedBoxSectionActivated( $scope );
 
-			var $target      = $scope.find( '.jet-animated-box' ),
+			var $target      = $scope.find( '.jw-animated-box' ),
 				toogleEvents = 'mouseenter mouseleave',
 				scrollOffset = $( window ).scrollTop();
 
@@ -99,16 +99,16 @@
 			var isBackSide = -1 !== [ 'section_back_content', 'section_action_button_style' ].indexOf( section );
 
 			if ( isBackSide ) {
-				$scope.find( '.jet-animated-box' ).addClass( 'flipped' );
-				$scope.find( '.jet-animated-box' ).addClass( 'flipped-stop' );
+				$scope.find( '.jw-animated-box' ).addClass( 'flipped' );
+				$scope.find( '.jw-animated-box' ).addClass( 'flipped-stop' );
 			} else {
-				$scope.find( '.jet-animated-box' ).removeClass( 'flipped' );
-				$scope.find( '.jet-animated-box' ).removeClass( 'flipped-stop' );
+				$scope.find( '.jw-animated-box' ).removeClass( 'flipped' );
+				$scope.find( '.jw-animated-box' ).removeClass( 'flipped-stop' );
 			}
 		},
 
 		widgetImagesLayout: function( $scope ) {
-			var $target = $scope.find( '.jet-images-layout' ),
+			var $target = $scope.find( '.jw-images-layout' ),
 				instance = null,
 				settings = {};
 
@@ -117,21 +117,21 @@
 			}
 
 			settings = $target.data( 'settings' );
-			instance = new jetImagesLayout( $target, settings );
+			instance = new jwImagesLayout( $target, settings );
 			instance.init();
 		},
 
 		widgetSubscribeForm: function( $scope ) {
-			var $target               = $scope.find( '.jet-subscribe-form' ),
+			var $target               = $scope.find( '.jw-subscribe-form' ),
 				scoreId               = $scope.data( 'id' ),
 				settings              = $target.data( 'settings' ),
 				jetSubscribeFormAjax  = null,
-				subscribeFormAjaxId   = 'jet_subscribe_form_ajax',
-				$subscribeForm        = $( '.jet-subscribe-form__form', $target ),
-				$input                = $( '.jet-subscribe-form__input', $target ),
+				subscribeFormAjaxId   = 'jw_subscribe_form_ajax',
+				$subscribeForm        = $( '.jw-subscribe-form__form', $target ),
+				$input                = $( '.jw-subscribe-form__input', $target ),
 				$inputData            = $input.data( 'instance-data' ),
-				$submitButton         = $( '.jet-subscribe-form__submit', $target ),
-				$subscribeFormMessage = $( '.jet-subscribe-form__message', $target ),
+				$submitButton         = $( '.jw-subscribe-form__submit', $target ),
+				$subscribeFormMessage = $( '.jw-subscribe-form__message', $target ),
 				timeout               = null,
 				invalidMailMessage    = window.jetWidgets.messages.invalidMail || 'Please specify a valid email';
 
@@ -141,11 +141,11 @@
 				successCallback: function( data ) {
 					var successType   = data.type,
 						message       = data.message || '',
-						responceClass = 'jet-subscribe-form--response-' + successType;
+						responceClass = 'jw-subscribe-form--response-' + successType;
 
 					$submitButton.removeClass( 'loading' );
 
-					$target.removeClass( 'jet-subscribe-form--response-error' );
+					$target.removeClass( 'jw-subscribe-form--response-error' );
 					$target.addClass( responceClass );
 
 					$( 'span', $subscribeFormMessage ).html( message );
@@ -202,12 +202,12 @@
 				} else {
 					$input.addClass( 'mail-invalid' );
 
-					$target.addClass( 'jet-subscribe-form--response-error' );
+					$target.addClass( 'jw-subscribe-form--response-error' );
 					$( 'span', $subscribeFormMessage ).html( invalidMailMessage );
 					$subscribeFormMessage.css( { 'visibility': 'visible' } );
 
 					timeout = setTimeout( function() {
-						$target.removeClass( 'jet-subscribe-form--response-error' );
+						$target.removeClass( 'jw-subscribe-form--response-error' );
 						$subscribeFormMessage.css( { 'visibility': 'hidden' } );
 						$input.removeClass( 'mail-invalid' );
 					}, 20000 );
@@ -216,8 +216,8 @@
 		},
 
 		widgetTestimonials: function( $scope ) {
-			var $target        = $scope.find( '.jet-testimonials__instance' ),
-				$imagesTagList = $( '.jet-testimonials__figure', $target ),
+			var $target        = $scope.find( '.jw-testimonials__instance' ),
+				$imagesTagList = $( '.jw-testimonials__figure', $target ),
 				instance       = null,
 				settings       = $target.data( 'settings' );
 
@@ -231,9 +231,9 @@
 		},
 
 		widgetImageComparison: function( $scope ) {
-			var $target              = $scope.find( '.jet-image-comparison__instance' ),
+			var $target              = $scope.find( '.jw-image-comparison__instance' ),
 				instance             = null,
-				imageComparisonItems = $( '.jet-image-comparison__container', $target ),
+				imageComparisonItems = $( '.jw-image-comparison__container', $target ),
 				settings             = $target.data( 'settings' ),
 				elementId            = $scope.data( 'id' );
 
@@ -241,7 +241,7 @@
 				return;
 			}
 
-			window.juxtapose.scanPage( '.jet-juxtapose' );
+			window.juxtapose.scanPage( '.jw-juxtapose' );
 
 			settings.draggable = false;
 			settings.infinite = false;
@@ -271,7 +271,7 @@
 				customPaging: function(slider, i) {
 					return $( '<span />' ).text( i + 1 );
 				},
-				dotsClass: 'jet-slick-dots',
+				dotsClass: 'jw-slick-dots',
 				responsive: [
 					{
 						breakpoint: 1025,
@@ -365,11 +365,11 @@
 	 *
 	 * @return {void}
 	 */
-	window.jetImagesLayout = function( $selector, settings ) {
+	window.jwImagesLayout = function( $selector, settings ) {
 		var self            = this,
 			$instance       = $selector,
-			$instanceList   = $( '.jet-images-layout__list', $instance ),
-			$itemsList      = $( '.jet-images-layout__item', $instance ),
+			$instanceList   = $( '.jw-images-layout__list', $instance ),
+			$itemsList      = $( '.jw-images-layout__item', $instance ),
 			defaultSettings = {},
 			settings        = settings || {};
 
@@ -400,7 +400,7 @@
 				case 'justify':
 					$itemsList.each( function() {
 						var $this          = $( this ),
-							$imageInstance = $( '.jet-images-layout__image-instance', $this),
+							$imageInstance = $( '.jw-images-layout__image-instance', $this),
 							imageWidth     = $imageInstance.data( 'width' ),
 							imageHeight    = $imageInstance.data( 'height' ),
 							imageRatio     = +imageWidth / +imageHeight,
@@ -416,10 +416,10 @@
 				break;
 			}
 
-			$( '.jet-images-layout__image', $itemsList ).imagesLoaded().progress( function( instance, image ) {
+			$( '.jw-images-layout__image', $itemsList ).imagesLoaded().progress( function( instance, image ) {
 				var $image      = $( image.img ),
-					$parentItem = $image.closest( '.jet-images-layout__item' ),
-					$loader     = $( '.jet-images-layout__image-loader', $parentItem );
+					$parentItem = $image.closest( '.jw-images-layout__item' ),
+					$loader     = $( '.jw-images-layout__image-loader', $parentItem );
 
 				$parentItem.addClass( 'image-loaded' );
 

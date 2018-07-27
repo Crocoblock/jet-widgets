@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Posts
  * Name: Posts
- * Slug: jet-posts
+ * Slug: jw-posts
  */
 
 namespace Elementor;
@@ -77,19 +77,19 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->end_controls_section();
 
 		$css_scheme = apply_filters(
-			'jet-widgets/jet-posts/css-scheme',
+			'jet-widgets/posts/css-scheme',
 			array(
-				'wrap'          => '.jet-posts',
-				'column'        => '.jet-posts .jet-posts__item',
-				'inner-box'     => '.jet-posts .jet-posts__inner-box',
-				'inner-content' => '.jet-posts .jet-posts__inner-content',
-				'thumb'         => '.jet-posts .post-thumbnail',
-				'title'         => '.jet-posts .entry-title',
-				'meta'          => '.jet-posts .post-meta',
-				'meta-item'     => '.jet-posts .post-meta__item',
-				'excerpt'       => '.jet-posts .entry-excerpt',
-				'button'        => '.jet-posts .jet-more',
-				'button_icon'   => '.jet-posts .jet-more-icon',
+				'wrap'          => '.jw-posts',
+				'column'        => '.jw-posts .jw-posts__item',
+				'inner-box'     => '.jw-posts .jw-posts__inner-box',
+				'inner-content' => '.jw-posts .jw-posts__inner-content',
+				'thumb'         => '.jw-posts .post-thumbnail',
+				'title'         => '.jw-posts .entry-title',
+				'meta'          => '.jw-posts .post-meta',
+				'meta-item'     => '.jw-posts .post-meta__item',
+				'excerpt'       => '.jw-posts .entry-excerpt',
+				'button'        => '.jw-posts .jw-more',
+				'button_icon'   => '.jw-posts .jw-more-icon',
 			)
 		);
 
@@ -228,7 +228,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'elementor' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
 				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
@@ -1483,7 +1483,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			array(
 				'name'           => 'arrows_style',
 				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-posts .jet-arrow',
+				'selector'       => '{{WRAPPER}} .jw-posts .jw-arrow',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1509,7 +1509,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			array(
 				'name'           => 'arrows_hover_style',
 				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-posts .jet-arrow:hover',
+				'selector'       => '{{WRAPPER}} .jw-posts .jw-arrow:hover',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1571,7 +1571,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'prev_vert_position' => 'top',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.prev-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.prev-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
 				),
 			)
 		);
@@ -1600,7 +1600,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'prev_vert_position' => 'bottom',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.prev-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.prev-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
 				),
 			)
 		);
@@ -1642,7 +1642,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'prev_hor_position' => 'left',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.prev-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.prev-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
 				),
 			)
 		);
@@ -1671,7 +1671,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'prev_hor_position' => 'right',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.prev-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.prev-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
 				),
 			)
 		);
@@ -1722,7 +1722,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'next_vert_position' => 'top',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.next-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.next-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
 				),
 			)
 		);
@@ -1751,7 +1751,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'next_vert_position' => 'bottom',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.next-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.next-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
 				),
 			)
 		);
@@ -1793,7 +1793,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'next_hor_position' => 'left',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.next-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.next-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
 				),
 			)
 		);
@@ -1822,7 +1822,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'next_hor_position' => 'right',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-posts .jet-arrow.next-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+					'{{WRAPPER}} .jw-posts .jw-arrow.next-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
 				),
 			)
 		);
@@ -1852,7 +1852,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li span',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1882,7 +1882,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style_hover',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li span:hover',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span:hover',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1912,7 +1912,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style_active',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li.slick-active span',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1948,7 +1948,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					),
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots li' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots li' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}}',
 				),
 				'separator' => 'before',
 			)
@@ -1961,7 +1961,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1987,7 +1987,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots' => 'justify-content: {{VALUE}};',
 				),
 			)
 		);
@@ -2005,14 +2005,14 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 
 		$this->add_meta_style_controls(
 			'title_related',
-			esc_html__( 'Before/After Title', 'jet-blog' ),
-			'jet-title-fields'
+			esc_html__( 'Before/After Title', 'jet-widgets' ),
+			'jw-title-fields'
 		);
 
 		$this->add_meta_style_controls(
 			'content_related',
-			esc_html__( 'Before/After Content', 'jet-blog' ),
-			'jet-content-fields'
+			esc_html__( 'Before/After Content', 'jet-widgets' ),
+			'jw-content-fields'
 		);
 
 		$this->end_controls_section();
@@ -2059,7 +2059,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		}
 
 		return sprintf(
-			'<div class="jet-carousel elementor-slick-slider" data-slider_options="%1$s" dir="ltr">%2$s</div>',
+			'<div class="jw-carousel elementor-slick-slider" data-slider_options="%1$s" dir="ltr">%2$s</div>',
 			htmlspecialchars( json_encode( $options ) ), $content
 		);
 	}
@@ -2118,10 +2118,10 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			'show_' . $position_slug . '_meta',
 			array(
-				'label'        => sprintf( esc_html__( 'Show Meta %s', 'jet-blog' ), $position_name ),
+				'label'        => sprintf( esc_html__( 'Show Meta %s', 'jet-widgets' ), $position_name ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-blog' ),
-				'label_off'    => esc_html__( 'No', 'jet-blog' ),
+				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
+				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
 				'return_value' => 'yes',
 				'default'      => '',
 				'separator'    => 'before',
@@ -2131,12 +2131,12 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			'meta_' . $position_slug . '_position',
 			array(
-				'label'   => esc_html__( 'Meta Fields Position', 'jet-blog' ),
+				'label'   => esc_html__( 'Meta Fields Position', 'jet-widgets' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'before',
 				'options' => array(
-					'before' => esc_html__( 'Before', 'jet-blog' ),
-					'after'  => esc_html__( 'After', 'jet-blog' ),
+					'before' => esc_html__( 'Before', 'jet-widgets' ),
+					'after'  => esc_html__( 'After', 'jet-widgets' ),
 				),
 				'condition'   => array(
 					'show_' . $position_slug . '_meta' => 'yes',
@@ -2178,11 +2178,11 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'meta_callback',
 			array(
-				'label'   => esc_html__( 'Prepare meta value with callback', 'jet-blog' ),
+				'label'   => esc_html__( 'Prepare meta value with callback', 'jet-widgets' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => array(
-					''                        => esc_html__( 'Clean', 'jet-blog' ),
+					''                        => esc_html__( 'Clean', 'jet-widgets' ),
 					'get_permalink'           => 'get_permalink',
 					'get_the_title'           => 'get_the_title',
 					'wp_get_attachment_url'   => 'wp_get_attachment_url',
@@ -2221,7 +2221,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_styles',
 			array(
-				'label'     => sprintf( esc_html__( 'Meta Styles %s', 'jet-blog' ), $position_name ),
+				'label'     => sprintf( esc_html__( 'Meta Styles %s', 'jet-widgets' ), $position_name ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -2230,7 +2230,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_bg_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-blog' ),
+				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .' . $base => 'background-color: {{VALUE}}',
@@ -2241,7 +2241,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_label_heading',
 			array(
-				'label'     => esc_html__( 'Meta Label', 'jet-blog' ),
+				'label'     => esc_html__( 'Meta Label', 'jet-widgets' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -2250,7 +2250,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_label_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-blog' ),
+				'label'     => esc_html__( 'Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .' . $base . '__item-label' => 'color: {{VALUE}}',
@@ -2270,12 +2270,12 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_label_display',
 			array(
-				'label'   => esc_html__( 'Dispaly Meta Label and Value', 'jet-blog' ),
+				'label'   => esc_html__( 'Dispaly Meta Label and Value', 'jet-widgets' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => array(
-					'inline-block' => esc_html__( 'Inline', 'jet-blog' ),
-					'block'        => esc_html__( 'As Blocks', 'jet-blog' ),
+					'inline-block' => esc_html__( 'Inline', 'jet-widgets' ),
+					'block'        => esc_html__( 'As Blocks', 'jet-widgets' ),
 				),
 				'selectors' => array(
 					'{{WRAPPER}} .' . $base . '__item-label' => 'display: {{VALUE}}',
@@ -2287,7 +2287,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_label_gap',
 			array(
-				'label'       => esc_html__( 'Horizontal Gap Between Label and Value', 'jet-blog' ),
+				'label'       => esc_html__( 'Horizontal Gap Between Label and Value', 'jet-widgets' ),
 				'type'        => Controls_Manager::NUMBER,
 				'default'     => 5,
 				'min'         => 0,
@@ -2302,7 +2302,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_value_heading',
 			array(
-				'label'     => esc_html__( 'Meta Value', 'jet-blog' ),
+				'label'     => esc_html__( 'Meta Value', 'jet-widgets' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -2311,7 +2311,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-blog' ),
+				'label'     => esc_html__( 'Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .' . $base . '__item-value' => 'color: {{VALUE}}',
@@ -2330,7 +2330,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			$position_slug . '_meta_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-blog' ),
+				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -2343,7 +2343,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			$position_slug . '_meta_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-blog' ),
+				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -2355,7 +2355,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			$position_slug . '_meta_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-blog' ),
+				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(

@@ -1,40 +1,38 @@
-.jet-headline__first {
+.jw-headline__first {
 	color: #54595f;
 
-	.jet-headline__deco {
+	.jw-headline__deco {
 		margin-right: 10px;
 	}
 }
 
-.jet-headline__second {
+.jw-headline__second {
 	color: #6ec1e4;
 
-	.jet-headline__deco {
+	.jw-headline__deco {
 		margin-left: 10px;
 	}
 }
 
-.jet-headline__divider {
+.jw-headline__divider {
 	height: 2px;
 	background-color: #7a7a7a;
-
-
 }
 
-.jet-headline__deco-icon {
+.jw-headline__deco-icon {
 	i {
 		font-size: 30px;
 		color: #54595f;
 	}
 }
 
-.jet-headline--direction-horizontal {
-	.jet-headline__divider {
-		&.jet-headline__left-divider {
+.jw-headline--direction-horizontal {
+	.jw-headline__divider {
+		&.jw-headline__left-divider {
 			margin-right: 10px;
 		}
 
-		&.jet-headline__right-divider {
+		&.jw-headline__right-divider {
 			margin-left: 10px;
 		}
 	}

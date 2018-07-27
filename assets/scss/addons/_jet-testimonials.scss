@@ -1,21 +1,21 @@
-.jet-testimonials {
+.jw-testimonials {
 	width: 100%;
 	position: relative;
 
-	&.jet-equal-cols {
+	&.jw-equal-cols {
 		.slick-track {
 			display: flex;
 			align-items: stretch;
 		}
 
-		.jet-testimonials__item {
+		.jw-testimonials__item {
 			display: flex;
 			flex-direction: column;
 			float: none;
 			height: auto;
 		}
 
-		.jet-testimonials__item-inner {
+		.jw-testimonials__item-inner {
 			flex-grow: 1;
 		}
 	}
@@ -24,8 +24,8 @@
 		width: 100%;
 		position: relative;
 
-		&.jet-testimonials--comment-corner {
-			.jet-testimonials__comment {
+		&.jw-testimonials--comment-corner {
+			.jw-testimonials__comment {
 				&:after {
 					content: '';
 				}
@@ -48,7 +48,7 @@
 		position: relative;
 		overflow: hidden;
 
-		img.jet-testimonials__tag-img {
+		img.jw-testimonials__tag-img {
 			max-width: 100%;
 			object-fit: cover;
 		}
@@ -59,7 +59,7 @@
 		justify-content: center;
 		align-items: center;
 
-		.jet-testimonials__icon-inner {
+		.jw-testimonials__icon-inner {
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: center;
@@ -101,7 +101,7 @@
 		max-width: 100%;
 	}
 
-	.jet-arrow {
+	.jw-arrow {
 		position: absolute;
 		top: 50%;
 		display: flex;
@@ -128,7 +128,7 @@
 		}
 	}
 
-	.jet-slick-dots {
+	.jw-slick-dots {
 		display: flex;
 		align-items: center;
 		justify-content: center;

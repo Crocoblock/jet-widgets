@@ -1,4 +1,4 @@
-.jet-team-member {
+.jw-team-member {
 	&__inner {
 		display: flex;
 		flex-flow: column nowrap;
@@ -9,7 +9,7 @@
 	&__image {
 		position: relative;
 
-		img.jet-team-member__img-tag {
+		img.jw-team-member__img-tag {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -118,12 +118,12 @@
 		}
 	}
 
-	&.jet-team-member--cover-hint {
-		.jet-team-member__image {
+	&.jw-team-member--cover-hint {
+		.jw-team-member__image {
 
 		}
 
-		.jet-team-member__cover {
+		.jw-team-member__cover {
 			top: auto;
 			height: auto;
 			bottom: 100%;
@@ -139,25 +139,25 @@
 		}
 	}
 
-	&.jet-team-member--hint-corner {
-		.jet-team-member__cover {
+	&.jw-team-member--hint-corner {
+		.jw-team-member__cover {
 			&:after {
 				content: '';
 			}
 		}
 	}
 
-	&.jet-team-member--cover-hover {
-		.jet-team-member__cover {
+	&.jw-team-member--cover-hover {
+		.jw-team-member__cover {
 			opacity: 0;
 			pointer-events: none;
 			transition: opacity 0.3s cubic-bezier(.69,.1,.33,.9);
 			transition-delay: .2s;
 		}
 
-		.jet-team-member__image {
+		.jw-team-member__image {
 			&:hover {
-				.jet-team-member__cover {
+				.jw-team-member__cover {
 					opacity: 1;
 					pointer-events: auto;
 					transition-delay: 0s;

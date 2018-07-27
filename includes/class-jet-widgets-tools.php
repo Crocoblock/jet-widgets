@@ -280,7 +280,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		 */
 		public function get_carousel_arrow( $classes ) {
 
-			$format = apply_filters( 'jet_widgets/carousel/arrows_format', '<i class="%s jet-arrow"></i>', $classes );
+			$format = apply_filters( 'jet_widgets/carousel/arrows_format', '<i class="%s jw-arrow"></i>', $classes );
 
 			return sprintf( $format, implode( ' ', $classes ) );
 		}

@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Testimonials
  * Name: Testimonials
- * Slug: jet-testimonials
+ * Slug: jw-testimonials
  */
 
 namespace Elementor;
@@ -44,21 +44,21 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/testimonials/css-scheme',
 			array(
-				'instance'   => '.jet-testimonials__instance',
-				'item'       => '.jet-testimonials__item',
-				'item_inner' => '.jet-testimonials__item-inner',
-				'image'      => '.jet-testimonials__figure',
-				'image_tag'  => '.jet-testimonials__tag-img',
-				'content'    => '.jet-testimonials__content',
-				'icon'       => '.jet-testimonials__icon',
-				'icon_inner' => '.jet-testimonials__icon-inner',
-				'title'      => '.jet-testimonials__title',
-				'comment'    => '.jet-testimonials__comment',
-				'name'       => '.jet-testimonials__name',
-				'position'   => '.jet-testimonials__position',
-				'date'       => '.jet-testimonials__date',
-				'arrow'      => '.jet-testimonials__instance .jet-arrow',
-				'dots'       => '.jet-testimonials__instance .jet-slick-dots',
+				'instance'   => '.jw-testimonials__instance',
+				'item'       => '.jw-testimonials__item',
+				'item_inner' => '.jw-testimonials__item-inner',
+				'image'      => '.jw-testimonials__figure',
+				'image_tag'  => '.jw-testimonials__tag-img',
+				'content'    => '.jw-testimonials__content',
+				'icon'       => '.jw-testimonials__icon',
+				'icon_inner' => '.jw-testimonials__icon-inner',
+				'title'      => '.jw-testimonials__title',
+				'comment'    => '.jw-testimonials__comment',
+				'name'       => '.jw-testimonials__name',
+				'position'   => '.jw-testimonials__position',
+				'date'       => '.jw-testimonials__date',
+				'arrow'      => '.jw-testimonials__instance .jw-arrow',
+				'dots'       => '.jw-testimonials__instance .jw-slick-dots',
 			)
 		);
 
@@ -131,7 +131,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'elementor' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
 				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
@@ -143,7 +143,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'adaptive_height',
 			array(
-				'label'        => esc_html__( 'Adaptive Height', 'elementor' ),
+				'label'        => esc_html__( 'Adaptive Height', 'jet-widgets' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
 				'label_off'    => esc_html__( 'No', 'jet-widgets' ),

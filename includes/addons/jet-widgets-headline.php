@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Headline
  * Name: Headline
- * Slug: jet-headline
+ * Slug: jw-headline
  */
 
 namespace Elementor;
@@ -42,10 +42,10 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/headline/css-scheme',
 			array(
-				'instance'    => '.jet-headline',
-				'first_part'  => '.jet-headline__first',
-				'second_part' => '.jet-headline__second',
-				'divider'     => '.jet-headline__divider',
+				'instance'    => '.jw-headline',
+				'first_part'  => '.jw-headline__first',
+				'second_part' => '.jw-headline__second',
+				'divider'     => '.jw-headline__divider',
 			)
 		);
 
@@ -277,7 +277,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['instance'] => 'justify-content: {{VALUE}};',
-					'{{WRAPPER}} '. $css_scheme['instance'] . ' > .jet-headline__link' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['instance'] . ' > .jw-headline__link' => 'justify-content: {{VALUE}};',
 				),
 				'condition' => array(
 					'instance_direction' => 'horizontal',
@@ -307,7 +307,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['instance'] => 'align-items: {{VALUE}};',
-					'{{WRAPPER}} '. $css_scheme['instance'] . ' > .jet-headline__link' => 'align-items: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['instance'] . ' > .jw-headline__link' => 'align-items: {{VALUE}};',
 				),
 				'condition' => array(
 					'instance_direction' => 'vertical',
@@ -394,7 +394,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'value' => Scheme_Color::COLOR_2,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part']  . ' .jet-headline__label' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part']  . ' .jw-headline__label' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -404,7 +404,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			array(
 				'name'     => 'first_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label',
 			)
 		);
 
@@ -412,7 +412,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			Group_Control_Text_Shadow::get_type(),
 			array(
 				'name'     => 'first_text_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label',
 			)
 		);
 
@@ -446,7 +446,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_first_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label' => 'background-image: url({{URL}})',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label' => 'background-image: url({{URL}})',
 				),
 			)
 		);
@@ -473,7 +473,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_first_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label' => 'background-position: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label' => 'background-position: {{VALUE}};',
 				),
 			)
 		);
@@ -486,7 +486,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'default' => '',
 				'options' => array(
 					''          => esc_html__( 'Default', 'jet-widgets' ),
-					'no-repeat' => esc_html__( 'No-repeat', 'elementor' ),
+					'no-repeat' => esc_html__( 'No-repeat', 'jet-widgets' ),
 					'repeat'    => esc_html__( 'Repeat', 'jet-widgets' ),
 					'repeat-x'  => esc_html__( 'Repeat-x', 'jet-widgets' ),
 					'repeat-y'  => esc_html__( 'Repeat-y', 'jet-widgets' ),
@@ -495,7 +495,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_first_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label' => 'background-repeat: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label' => 'background-repeat: {{VALUE}};',
 				),
 			)
 		);
@@ -516,7 +516,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_first_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label' => 'background-size: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label' => 'background-size: {{VALUE}};',
 				),
 			)
 		);
@@ -572,20 +572,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'first_vertical_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Top', 'jet-menu' ),
+						'title' => esc_html__( 'Top', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-up',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Bottom', 'jet-menu' ),
+						'title' => esc_html__( 'Bottom', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-down',
 					),
 				),
@@ -601,20 +601,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'first_horizontal_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-menu' ),
+						'title' => esc_html__( 'Left', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-menu' ),
+						'title' => esc_html__( 'Right', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-right',
 					),
 				),
@@ -648,7 +648,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__label' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__label' => 'text-align: {{VALUE}};',
 				),
 			)
 		);
@@ -677,7 +677,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'value' => Scheme_Color::COLOR_1,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -687,7 +687,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			array(
 				'name'     => 'second_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_2,
-				'selector' => '{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label',
 			)
 		);
 
@@ -695,7 +695,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			Group_Control_Text_Shadow::get_type(),
 			array(
 				'name'     => 'second_text_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label',
 			)
 		);
 
@@ -729,7 +729,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_second_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'background-image: url({{URL}});',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'background-image: url({{URL}});',
 				),
 			)
 		);
@@ -756,7 +756,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_second_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'background-position: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'background-position: {{VALUE}};',
 				),
 			)
 		);
@@ -769,7 +769,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'default' => '',
 				'options' => array(
 					''          => esc_html__( 'Default', 'jet-widgets' ),
-					'no-repeat' => esc_html__( 'No-repeat', 'elementor' ),
+					'no-repeat' => esc_html__( 'No-repeat', 'jet-widgets' ),
 					'repeat'    => esc_html__( 'Repeat', 'jet-widgets' ),
 					'repeat-x'  => esc_html__( 'Repeat-x', 'jet-widgets' ),
 					'repeat-y'  => esc_html__( 'Repeat-y', 'jet-widgets' ),
@@ -778,7 +778,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_second_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'background-repeat: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'background-repeat: {{VALUE}};',
 				),
 			)
 		);
@@ -799,7 +799,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'use_second_text_image' => 'yes',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'background-size: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'background-size: {{VALUE}};',
 				),
 			)
 		);
@@ -855,20 +855,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'second_vertical_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Top', 'jet-menu' ),
+						'title' => esc_html__( 'Top', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-up',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Bottom', 'jet-menu' ),
+						'title' => esc_html__( 'Bottom', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-down',
 					),
 				),
@@ -884,20 +884,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'second_horizontal_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-menu' ),
+						'title' => esc_html__( 'Left', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-menu' ),
+						'title' => esc_html__( 'Right', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-right',
 					),
 				),
@@ -931,7 +931,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__label' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__label' => 'text-align: {{VALUE}};',
 				),
 			)
 		);
@@ -970,7 +970,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'before_deco_type' => 'icon',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -993,7 +993,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'before_deco_type' => 'icon',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -1016,7 +1016,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'before_deco_type' => 'image',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco-image' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-image' => 'width: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1039,7 +1039,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'before_deco_type' => 'image',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco-image' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-image' => 'height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1051,7 +1051,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 				'condition' => array(
 					'before_deco_type!' => 'none',
@@ -1062,20 +1062,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'before_deco_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Top', 'jet-menu' ),
+						'title' => esc_html__( 'Top', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-up',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Bottom', 'jet-menu' ),
+						'title' => esc_html__( 'Bottom', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-down',
 					),
 				),
@@ -1083,7 +1083,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'before_deco_type!' => 'none',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jet-headline__deco' => 'align-self: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco' => 'align-self: {{VALUE}};',
 				),
 			)
 		);
@@ -1109,7 +1109,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'icon',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1132,7 +1132,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'icon',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -1155,7 +1155,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'image',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco-image' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-image' => 'width: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1178,7 +1178,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'image',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco-image' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-image' => 'height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1190,7 +1190,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 				'condition' => array(
 					'after_deco_type!' => 'none',
@@ -1201,20 +1201,20 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'after_deco_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-menu' ),
+				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Top', 'jet-menu' ),
+						'title' => esc_html__( 'Top', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-up',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-menu' ),
+						'title' => esc_html__( 'Center', 'jet-widgets' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Bottom', 'jet-menu' ),
+						'title' => esc_html__( 'Bottom', 'jet-widgets' ),
 						'icon'  => 'fa fa-arrow-down',
 					),
 				),
@@ -1222,7 +1222,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type!' => 'none',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jet-headline__deco' => 'align-self: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco' => 'align-self: {{VALUE}};',
 				),
 			)
 		);
@@ -1280,8 +1280,8 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'instance_direction' => 'horizontal',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} '. $css_scheme['divider'] . '.jet-headline__left-divider' => 'margin-right: {{VALUE}}px;',
-					'{{WRAPPER}} '. $css_scheme['divider'] . '.jet-headline__right-divider' => 'margin-left: {{VALUE}}px;',
+					'{{WRAPPER}} '. $css_scheme['divider'] . '.jw-headline__left-divider' => 'margin-right: {{VALUE}}px;',
+					'{{WRAPPER}} '. $css_scheme['divider'] . '.jw-headline__right-divider' => 'margin-left: {{VALUE}}px;',
 				),
 			)
 		);
@@ -1318,7 +1318,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			array(
 				'name'      => 'divider_deco_left_background',
 				'label'     => esc_html__( 'Background', 'jet-widgets' ),
-				'selector'  => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jet-headline__left-divider',
+				'selector'  => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jw-headline__left-divider',
 				'condition' => array(
 					'use_divider_deco' => 'yes',
 				),
@@ -1332,7 +1332,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jet-headline__left-divider',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jw-headline__left-divider',
 				'condition'   => array(
 					'use_divider_deco' => 'yes',
 				),
@@ -1371,7 +1371,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			array(
 				'name'      => 'divider_deco_right_background',
 				'label'     => esc_html__( 'Background', 'jet-widgets' ),
-				'selector'  => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jet-headline__right-divider',
+				'selector'  => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jw-headline__right-divider',
 				'condition' => array(
 					'use_divider_deco' => 'yes',
 				),
@@ -1385,7 +1385,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jet-headline__right-divider',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['divider'] . '.jw-headline__right-divider',
 				'condition'   => array(
 					'use_divider_deco' => 'yes',
 				),
@@ -1418,13 +1418,13 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$after_deco_html = '';
 		$space = '';
 
-		$heading_classes_array = array( 'jet-headline' );
-		$heading_classes_array[] = 'jet-headline--direction-' . $settings['instance_direction'];
+		$heading_classes_array = array( 'jw-headline' );
+		$heading_classes_array[] = 'jw-headline--direction-' . $settings['instance_direction'];
 
 		$heading_classes = implode( ' ', $heading_classes_array );
 
 		if ( filter_var( $settings['use_space_between'], FILTER_VALIDATE_BOOLEAN ) && 'horizontal' === $settings['instance_direction'] ) {
-			$space = '<span class="jet-headline__space">&nbsp;</span>';
+			$space = '<span class="jw-headline__space">&nbsp;</span>';
 		}
 
 		// Before Deco Render
@@ -1432,12 +1432,12 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			if ( 'icon' === $settings['before_deco_type'] && ! empty( $settings['before_icon'] ) ) {
 				$before_deco_icon = sprintf( '<i class="%s"></i>', $settings['before_icon'] );
-				$before_deco_html = sprintf( '<span class="jet-headline__deco jet-headline__deco-icon">%1$s</span>', $before_deco_icon );
+				$before_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-icon">%1$s</span>', $before_deco_icon );
 			}
 
 			if ( 'image' === $settings['before_deco_type'] && ! empty( $settings['before_image']['url'] ) ) {
 				$before_deco_image = sprintf( '<img src="%s" alt="">', $settings['before_image']['url'] );
-				$before_deco_html = sprintf( '<span class="jet-headline__deco jet-headline__deco-image">%1$s</span>', $before_deco_image );
+				$before_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-image">%1$s</span>', $before_deco_image );
 			}
 		}
 
@@ -1446,18 +1446,18 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			if ( 'icon' === $settings['after_deco_type'] && ! empty( $settings['after_icon'] ) ) {
 				$after_deco_icon = sprintf( '<i class="%s"></i>', $settings['after_icon'] );
-				$after_deco_html = sprintf( '<span class="jet-headline__deco jet-headline__deco-icon">%1$s</span>', $after_deco_icon );
+				$after_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-icon">%1$s</span>', $after_deco_icon );
 			}
 
 			if ( 'image' === $settings['after_deco_type'] && ! empty( $settings['after_image']['url'] ) ) {
 				$after_deco_image = sprintf( '<img src="%s" alt="">', $settings['after_image']['url'] );
-				$after_deco_html = sprintf( '<span class="jet-headline__deco jet-headline__deco-image">%1$s</span>', $after_deco_image );
+				$after_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-image">%1$s</span>', $after_deco_image );
 			}
 		}
 
 		if ( ! empty( $settings['first_part'] ) ) {
 
-			$first_classes_array = array( 'jet-headline__part', 'jet-headline__first' );
+			$first_classes_array = array( 'jw-headline__part', 'jw-headline__first' );
 
 			if ( filter_var( $settings['use_first_text_image'], FILTER_VALIDATE_BOOLEAN ) ) {
 				$first_classes_array[] = 'headline__part--image-text';
@@ -1465,11 +1465,11 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			$first_classes = implode( ' ', $first_classes_array );
 
-			$first_part = sprintf( '<span class="%1$s">%2$s<span class="jet-headline__label">%3$s</span></span>%4$s', $first_classes, $before_deco_html, $settings['first_part'], $space );
+			$first_part = sprintf( '<span class="%1$s">%2$s<span class="jw-headline__label">%3$s</span></span>%4$s', $first_classes, $before_deco_html, $settings['first_part'], $space );
 		}
 
 		if ( ! empty( $settings['second_part'] ) ) {
-			$second_classes_array = array( 'jet-headline__part', 'jet-headline__second' );
+			$second_classes_array = array( 'jw-headline__part', 'jw-headline__second' );
 
 			if ( filter_var( $settings['use_second_text_image'], FILTER_VALIDATE_BOOLEAN ) ) {
 				$second_classes_array[] = 'headline__part--image-text';
@@ -1477,7 +1477,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			$second_classes = implode( ' ', $second_classes_array );
 
-			$second_part = sprintf( '<span class="%1$s"><span class="jet-headline__label">%2$s</span>%3$s</span>', $second_classes, $settings['second_part'], $after_deco_html );
+			$second_part = sprintf( '<span class="%1$s"><span class="jw-headline__label">%2$s</span>%3$s</span>', $second_classes, $settings['second_part'], $after_deco_html );
 		}
 
 		$deco_devider_left = '';
@@ -1486,11 +1486,11 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		if ( filter_var( $settings['use_divider_deco'], FILTER_VALIDATE_BOOLEAN ) ) {
 
 			if ( filter_var( $settings['use_divider_deco_left'], FILTER_VALIDATE_BOOLEAN ) ) {
-				$deco_devider_left ='<span class="jet-headline__divider jet-headline__left-divider"></span>';
+				$deco_devider_left ='<span class="jw-headline__divider jw-headline__left-divider"></span>';
 			}
 
 			if ( filter_var( $settings['use_divider_deco_right'], FILTER_VALIDATE_BOOLEAN ) ) {
-				$deco_devider_right ='<span class="jet-headline__divider jet-headline__right-divider"></span>';
+				$deco_devider_right ='<span class="jw-headline__divider jw-headline__right-divider"></span>';
 			}
 		}
 
@@ -1507,7 +1507,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				$this->add_render_attribute( 'url', 'rel', 'nofollow' );
 			}
 
-			$title = sprintf( '<a class="jet-headline__link" %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $title );
+			$title = sprintf( '<a class="jw-headline__link" %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $title );
 		}
 
 		$title_html = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', $settings['header_size'], $heading_classes, $title );

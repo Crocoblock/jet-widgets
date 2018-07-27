@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Pricing_Table
  * Name: Pricing Table
- * Slug: jet-pricing-table
+ * Slug: jw-pricing-table
  */
 
 namespace Elementor;

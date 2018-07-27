@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Advanced_Carousel
  * Name: Advanced Carousel
- * Slug: jet-carousel
+ * Slug: jw-carousel
  */
 
 namespace Elementor;
@@ -330,7 +330,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'elementor' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
 				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
@@ -369,25 +369,25 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/advanced-carousel/css-scheme',
 			array(
-				'arrow_next'     => '.jet-carousel.elementor-slick-slider .slick-next:before',
-				'arrow_prev'     => '.jet-carousel.elementor-slick-slider .slick-prev:before',
-				'arrow_next_hov' => '.jet-carousel.elementor-slick-slider .slick-next:hover:before',
-				'arrow_prev_hov' => '.jet-carousel.elementor-slick-slider .slick-prev:hover:before',
-				'dot'            => '.jet-carousel.elementor-slick-slider .slick-dots li button:before',
-				'dot_hover'      => '.jet-carousel.elementor-slick-slider .slick-dots li button:hover:before',
-				'dot_active'     => '.jet-carousel.elementor-slick-slider .slick-dots .slick-active button:before',
-				'wrap'           => '.jet-carousel.elementor-slick-slider',
-				'column'         => '.jet-carousel.elementor-slick-slider .jet-carousel__item',
-				'image'          => '.jet-carousel__item-img',
-				'items'          => '.jet-carousel__content',
-				'items_title'    => '.jet-carousel__content .jet-carousel__item-title',
-				'items_text'     => '.jet-carousel__content .jet-carousel__item-text',
-				'items_button'   => '.jet-carousel__content .jet-carousel__item-button',
-				'banner'         => '.jet-banner',
-				'banner_content' => '.jet-banner__content',
-				'banner_overlay' => '.jet-banner__overlay',
-				'banner_title'   => '.jet-banner__title',
-				'banner_text'    => '.jet-banner__text',
+				'arrow_next'     => '.jw-carousel.elementor-slick-slider .slick-next:before',
+				'arrow_prev'     => '.jw-carousel.elementor-slick-slider .slick-prev:before',
+				'arrow_next_hov' => '.jw-carousel.elementor-slick-slider .slick-next:hover:before',
+				'arrow_prev_hov' => '.jw-carousel.elementor-slick-slider .slick-prev:hover:before',
+				'dot'            => '.jw-carousel.elementor-slick-slider .slick-dots li button:before',
+				'dot_hover'      => '.jw-carousel.elementor-slick-slider .slick-dots li button:hover:before',
+				'dot_active'     => '.jw-carousel.elementor-slick-slider .slick-dots .slick-active button:before',
+				'wrap'           => '.jw-carousel.elementor-slick-slider',
+				'column'         => '.jw-carousel.elementor-slick-slider .jw-carousel__item',
+				'image'          => '.jw-carousel__item-img',
+				'items'          => '.jw-carousel__content',
+				'items_title'    => '.jw-carousel__content .jw-carousel__item-title',
+				'items_text'     => '.jw-carousel__content .jw-carousel__item-text',
+				'items_button'   => '.jw-carousel__content .jw-carousel__item-button',
+				'banner'         => '.jw-banner',
+				'banner_content' => '.jw-banner__content',
+				'banner_overlay' => '.jw-banner__overlay',
+				'banner_title'   => '.jw-banner__title',
+				'banner_text'    => '.jw-banner__text',
 			)
 		);
 
@@ -421,7 +421,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'type'        => Controls_Manager::DIMENSIONS,
 				'size_units'  => array( 'px' ),
 				'selectors'   => array(
-					'{{WRAPPER}} ' . $css_scheme['column'] . ' .jet-carousel__item-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['column'] . ' .jw-carousel__item-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -433,7 +433,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['column'] . ' .jet-carousel__item-inner',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['column'] . ' .jw-carousel__item-inner',
 			)
 		);
 
@@ -537,7 +537,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Background::get_type(),
 			array(
 				'name'     => 'simple_item_bg_hover',
-				'selector' => '{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['items'],
+				'selector' => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -548,7 +548,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['items'],
+				'selector'    => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -556,7 +556,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'item_box_shadow_hover',
-				'selector' => '{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['items'],
+				'selector' => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -644,19 +644,19 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Additional Elements Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-effect-layla ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-layla ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-oscar ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-marley ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-ruby ' . $css_scheme['banner_text'] => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-roxy ' . $css_scheme['banner_text'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-roxy ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-bubba ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-bubba ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-romeo ' . $css_scheme['banner_content'] . '::before' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-romeo ' . $css_scheme['banner_content'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-sarah ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-chico ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-layla ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-layla ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-oscar ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-marley ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-ruby ' . $css_scheme['banner_text'] => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-roxy ' . $css_scheme['banner_text'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-roxy ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-bubba ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-bubba ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-romeo ' . $css_scheme['banner_content'] . '::before' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-romeo ' . $css_scheme['banner_content'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-sarah ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-chico ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
 				),
 			)
 		);
@@ -699,19 +699,19 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Additional Elements Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-effect-layla:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-layla:hover ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-oscar:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-marley:hover ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-ruby:hover ' . $css_scheme['banner_text'] => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-roxy:hover ' . $css_scheme['banner_text'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-roxy:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-bubba:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-bubba:hover ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-romeo:hover ' . $css_scheme['banner_content'] . '::before' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-romeo:hover ' . $css_scheme['banner_content'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-sarah:hover ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
-					'{{WRAPPER}} .jet-effect-chico:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-layla:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-layla:hover ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-oscar:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-marley:hover ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-ruby:hover ' . $css_scheme['banner_text'] => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-roxy:hover ' . $css_scheme['banner_text'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-roxy:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-bubba:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-bubba:hover ' . $css_scheme['banner_content'] . '::after' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-romeo:hover ' . $css_scheme['banner_content'] . '::before' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-romeo:hover ' . $css_scheme['banner_content'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-sarah:hover ' . $css_scheme['banner_title'] . '::after' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .jw-effect-chico:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
 				),
 			)
 		);
@@ -790,8 +790,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Items Title Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
-					'{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['banner_title'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['banner_title'] => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -819,6 +819,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'separator'  => 'before',
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['items_title'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['banner_title'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -874,8 +875,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Items Content Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
-					'{{WRAPPER}} .jet-carousel__item:hover ' . $css_scheme['banner_text'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['banner_text'] => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -903,6 +904,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'separator'  => 'before',
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['items_text'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['banner_text'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1103,7 +1105,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'name'           => 'arrows_style',
 				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-arrow',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1129,7 +1131,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'name'           => 'arrows_hover_style',
 				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-arrow:hover',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow:hover',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1191,7 +1193,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'prev_vert_position' => 'top',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.prev-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.prev-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
 				),
 			)
 		);
@@ -1220,7 +1222,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'prev_vert_position' => 'bottom',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.prev-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.prev-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
 				),
 			)
 		);
@@ -1262,7 +1264,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'prev_hor_position' => 'left',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.prev-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.prev-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
 				),
 			)
 		);
@@ -1291,7 +1293,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'prev_hor_position' => 'right',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.prev-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.prev-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
 				),
 			)
 		);
@@ -1342,7 +1344,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'next_vert_position' => 'top',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.next-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.next-arrow' => 'top: {{SIZE}}{{UNIT}}; bottom: auto;',
 				),
 			)
 		);
@@ -1371,7 +1373,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'next_vert_position' => 'bottom',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.next-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.next-arrow' => 'bottom: {{SIZE}}{{UNIT}}; top: auto;',
 				),
 			)
 		);
@@ -1413,7 +1415,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'next_hor_position' => 'left',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.next-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.next-arrow' => 'left: {{SIZE}}{{UNIT}}; right: auto;',
 				),
 			)
 		);
@@ -1442,7 +1444,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					'next_hor_position' => 'right',
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-arrow.next-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
+					'{{WRAPPER}} .jw-carousel .jw-arrow.next-arrow' => 'right: {{SIZE}}{{UNIT}}; left: auto;',
 				),
 			)
 		);
@@ -1472,7 +1474,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li span',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1502,7 +1504,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style_hover',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li span:hover',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span:hover',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1532,7 +1534,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'name'           => 'dots_style_active',
 				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
-				'selector'       => '{{WRAPPER}} .jet-carousel .jet-slick-dots li.slick-active span',
+				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
 						'scheme' => array(
@@ -1568,7 +1570,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					),
 				),
 				'selectors' => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots li' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots li' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}}',
 				),
 				'separator' => 'before',
 			)
@@ -1581,7 +1583,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1607,7 +1609,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} .jet-carousel .jet-slick-dots' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} .jw-carousel .jw-slick-dots' => 'justify-content: {{VALUE}};',
 				),
 			)
 		);

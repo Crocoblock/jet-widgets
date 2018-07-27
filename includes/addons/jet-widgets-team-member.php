@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Team_Member
  * Name: Team Memeber
- * Slug: jet-team-member
+ * Slug: jw-team-member
  */
 
 namespace Elementor;
@@ -25,7 +25,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Team Memeber', 'jet-widgets' );
+		return esc_html__( 'Team Member', 'jet-widgets' );
 	}
 
 	public function get_icon() {
@@ -40,21 +40,21 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/team-member/css-scheme',
 			array(
-				'instance'         => '.jet-team-member',
-				'instance_inner'   => '.jet-team-member__inner',
-				'image'            => '.jet-team-member__image',
-				'cover'            => '.jet-team-member__cover',
-				'figure'           => '.jet-team-member__figure',
-				'content'          => '.jet-team-member__content',
-				'name'             => '.jet-team-member__name',
-				'position'         => '.jet-team-member__position',
-				'desc'             => '.jet-team-member__desc',
-				'socials'          => '.jet-team-member__socials',
-				'socials_item'     => '.jet-team-member__socials-item',
-				'socials_icon'     => '.jet-team-member__socials-icon',
-				'socials_label'    => '.jet-team-member__socials-label',
-				'button_container' => '.jet-team-member__button-container',
-				'button'           => '.jet-team-member__button',
+				'instance'         => '.jw-team-member',
+				'instance_inner'   => '.jw-team-member__inner',
+				'image'            => '.jw-team-member__image',
+				'cover'            => '.jw-team-member__cover',
+				'figure'           => '.jw-team-member__figure',
+				'content'          => '.jw-team-member__content',
+				'name'             => '.jw-team-member__name',
+				'position'         => '.jw-team-member__position',
+				'desc'             => '.jw-team-member__desc',
+				'socials'          => '.jw-team-member__socials',
+				'socials_item'     => '.jw-team-member__socials-item',
+				'socials_icon'     => '.jw-team-member__socials-icon',
+				'socials_label'    => '.jw-team-member__socials-label',
+				'button_container' => '.jw-team-member__button-container',
+				'button'           => '.jw-team-member__button',
 			)
 		);
 
@@ -556,7 +556,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label'  => esc_html__( 'Color', 'jet-widgets' ),
 				'type'   => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['name'] . ' .jet-team-member__name-first' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['name'] . ' .jw-team-member__name-first' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -566,7 +566,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			array(
 				'name'     => 'first_name_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
-				'selector' => '{{WRAPPER}} ' . $css_scheme['name'] . ' .jet-team-member__name-first',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['name'] . ' .jw-team-member__name-first',
 			)
 		);
 
@@ -585,7 +585,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label'  => esc_html__( 'Color', 'jet-widgets' ),
 				'type'   => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['name'] . ' .jet-team-member__name-last' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['name'] . ' .jw-team-member__name-last' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -595,7 +595,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			array(
 				'name'     => 'last_name_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
-				'selector' => '{{WRAPPER}} ' . $css_scheme['name'] . ' .jet-team-member__name-last',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['name'] . ' .jw-team-member__name-last',
 			)
 		);
 
@@ -1551,7 +1551,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['cover'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}; width: calc( 100% - {{LEFT}}{{UNIT}} - {{RIGHT}}{{UNIT}} );',
-					'{{WRAPPER}} ' . $css_scheme['instance'] . ':not(.jet-team-member--cover-hint) ' . $css_scheme['cover'] => 'height: calc( 100% - {{TOP}}{{UNIT}} - {{BOTTOM}}{{UNIT}} );',
+					'{{WRAPPER}} ' . $css_scheme['instance'] . ':not(.jw-team-member--cover-hint) ' . $css_scheme['cover'] => 'height: calc( 100% - {{TOP}}{{UNIT}} - {{BOTTOM}}{{UNIT}} );',
 				),
 			)
 		);
@@ -1695,7 +1695,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			return;
 		}
 
-		$format = apply_filters( 'jet-widgets/team-member/image-format', '<figure class="jet-team-member__figure"><img class="jet-team-member__img-tag" src="%s" alt=""></figure>' );
+		$format = apply_filters( 'jet-widgets/team-member/image-format', '<figure class="jw-team-member__figure"><img class="jw-team-member__img-tag" src="%s" alt=""></figure>' );
 
 		return sprintf( $format, $image['url'] );
 
@@ -1718,17 +1718,17 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		}
 
 		if ( ! empty( $first_name ) ) {
-			$first_name_html = sprintf( '<span class="jet-team-member__name-first">%s</span>', $first_name );
+			$first_name_html = sprintf( '<span class="jw-team-member__name-first">%s</span>', $first_name );
 		}
 
 		if ( ! empty( $last_name ) ) {
 
-			$last_name_html = sprintf( '<span class="jet-team-member__name-last"> %s</span>', $last_name );
+			$last_name_html = sprintf( '<span class="jw-team-member__name-last"> %s</span>', $last_name );
 		}
 
 		$name_tag = $this->get_settings( 'member_name_html_tag' );
 
-		$format = apply_filters( 'jet-widgets/team-member/name-format', '<%3$s class="jet-team-member__name">%1$s%2$s</%3$s>' );
+		$format = apply_filters( 'jet-widgets/team-member/name-format', '<%3$s class="jw-team-member__name">%1$s%2$s</%3$s>' );
 
 		return sprintf( $format, $first_name_html, $last_name_html, $name_tag );
 
@@ -1746,7 +1746,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			return false;
 		}
 
-		$format = apply_filters( 'jet-widgets/team-member/position-format', '<div class="jet-team-member__position"><span>%1$s</span></div>' );
+		$format = apply_filters( 'jet-widgets/team-member/position-format', '<div class="jw-team-member__position"><span>%1$s</span></div>' );
 
 		return sprintf( $format, $position );
 	}
@@ -1763,7 +1763,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			return false;
 		}
 
-		$format = apply_filters( 'jet-widgets/team-member/description-format', '<p class="jet-team-member__desc">%s</p>' );
+		$format = apply_filters( 'jet-widgets/team-member/description-format', '<p class="jw-team-member__desc">%s</p>' );
 
 		return sprintf( $format, $desc );
 	}
@@ -1788,7 +1788,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$this->add_render_attribute( 'url', 'class', array(
 			'elementor-button',
 			'elementor-size-md',
-			'jet-team-member__button',
+			'jw-team-member__button',
 		) );
 
 		if ( is_array( $button_url ) ) {
@@ -1805,7 +1805,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			$this->add_render_attribute( 'url', 'href', $button_url );
 		}
 
-		$format = apply_filters( 'jet-widgets/team-member/description-format', '<div class="jet-team-member__button-container"><a %1$s>%2$s</a></div>' );
+		$format = apply_filters( 'jet-widgets/team-member/description-format', '<div class="jw-team-member__button-container"><a %1$s>%2$s</a></div>' );
 
 		return sprintf( $format, $this->get_render_attribute_string( 'url' ), $button_text );
 	}
@@ -1831,18 +1831,18 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			if ( ! empty( $icon_data[ 'social_link' ] ) ) {
 
 				if ( ! empty( $icon_data[ 'social_icon' ] ) ) {
-					$icon = sprintf( '<div class="jet-team-member__socials-icon"><div class="inner"><i class="%s"></i></div></div>', $icon_data[ 'social_icon' ] );
+					$icon = sprintf( '<div class="jw-team-member__socials-icon"><div class="inner"><i class="%s"></i></div></div>', $icon_data[ 'social_icon' ] );
 				}
 
 				if ( filter_var( $icon_data['label_visible'], FILTER_VALIDATE_BOOLEAN ) ) {
-					$label = sprintf( '<span class="jet-team-member__socials-label">%s</span>', $icon_data[ 'social_label' ] );
+					$label = sprintf( '<span class="jw-team-member__socials-label">%s</span>', $icon_data[ 'social_label' ] );
 				}
 
-				$icon_list .= sprintf( '<div class="jet-team-member__socials-item"><a href="%1$s">%2$s%3$s</a></div>', $icon_data[ 'social_link' ], $icon, $label );
+				$icon_list .= sprintf( '<div class="jw-team-member__socials-item"><a href="%1$s">%2$s%3$s</a></div>', $icon_data[ 'social_link' ], $icon, $label );
 			}
 		}
 
-		$format = apply_filters( 'jet-widgets/team-member/social-list-format', '<div class="jet-team-member__socials">%1$s</div>' );
+		$format = apply_filters( 'jet-widgets/team-member/social-list-format', '<div class="jw-team-member__socials">%1$s</div>' );
 
 		return sprintf( $format, $icon_list );
 	}

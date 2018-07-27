@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Animated_Box
  * Name: Animated Box
- * Slug: jet-animated-box
+ * Slug: jw-animated-box
  */
 
 namespace Elementor;
@@ -42,25 +42,25 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/animated-box/css-scheme',
 			array(
-				'animated_box'                => '.jet-animated-box',
-				'animated_box_inner'          => '.jet-animated-box__inner',
-				'animated_box_front'          => '.jet-animated-box__front',
-				'animated_box_back'           => '.jet-animated-box__back',
-				'animated_box_icon'           => '.jet-animated-box__icon',
-				'animated_box_icon_box'       => '.jet-animated-box__icon-box',
-				'animated_box_title'          => '.jet-animated-box__title',
-				'animated_box_subtitle'       => '.jet-animated-box__subtitle',
-				'animated_box_description'    => '.jet-animated-box__description',
-				'animated_box_button'         => '.jet-animated-box__button',
-				'animated_box_button_icon'    => '.jet-animated-box__button-icon',
-				'animated_box_icon_front'     => '.jet-animated-box__icon--front',
-				'animated_box_icon_back'      => '.jet-animated-box__icon--back',
-				'animated_box_title_front'    => '.jet-animated-box__title--front',
-				'animated_box_title_back'     => '.jet-animated-box__title--back',
-				'animated_box_subtitle_front' => '.jet-animated-box__subtitle--front',
-				'animated_box_subtitle_back'  => '.jet-animated-box__subtitle--back',
-				'animated_box_desc_front'     => '.jet-animated-box__description--front',
-				'animated_box_desc_back'      => '.jet-animated-box__description--back',
+				'animated_box'                => '.jw-animated-box',
+				'animated_box_inner'          => '.jw-animated-box__inner',
+				'animated_box_front'          => '.jw-animated-box__front',
+				'animated_box_back'           => '.jw-animated-box__back',
+				'animated_box_icon'           => '.jw-animated-box__icon',
+				'animated_box_icon_box'       => '.jw-animated-box__icon-box',
+				'animated_box_title'          => '.jw-animated-box__title',
+				'animated_box_subtitle'       => '.jw-animated-box__subtitle',
+				'animated_box_description'    => '.jw-animated-box__description',
+				'animated_box_button'         => '.jw-animated-box__button',
+				'animated_box_button_icon'    => '.jw-animated-box__button-icon',
+				'animated_box_icon_front'     => '.jw-animated-box__icon--front',
+				'animated_box_icon_back'      => '.jw-animated-box__icon--back',
+				'animated_box_title_front'    => '.jw-animated-box__title--front',
+				'animated_box_title_back'     => '.jw-animated-box__title--back',
+				'animated_box_subtitle_front' => '.jw-animated-box__subtitle--front',
+				'animated_box_subtitle_back'  => '.jw-animated-box__subtitle--back',
+				'animated_box_desc_front'     => '.jw-animated-box__description--front',
+				'animated_box_desc_back'      => '.jw-animated-box__description--back',
 			)
 		);
 
@@ -191,16 +191,16 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			array(
 				'label'   => esc_html__( 'Animation Effect', 'jet-widgets' ),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'jet-box-effect-1',
+				'default' => 'jw-box-effect-1',
 				'options' => array(
-					'jet-box-effect-1'  => esc_html__( 'Flip Horizontal', 'jet-widgets' ),
-					'jet-box-effect-2'  => esc_html__( 'Flip Vertical', 'jet-widgets' ),
-					'jet-box-effect-3'  => esc_html__( 'Fall Up', 'jet-widgets' ),
-					'jet-box-effect-4'  => esc_html__( 'Fall Right', 'jet-widgets' ),
-					'jet-box-effect-5'  => esc_html__( 'Slide Down', 'jet-widgets' ),
-					'jet-box-effect-6'  => esc_html__( 'Slide Right', 'jet-widgets' ),
-					'jet-box-effect-7'  => esc_html__( 'Flip Horizontal 3D', 'jet-widgets' ),
-					'jet-box-effect-8'  => esc_html__( 'Flip Vertical 3D', 'jet-widgets' ),
+					'jw-box-effect-1'  => esc_html__( 'Flip Horizontal', 'jet-widgets' ),
+					'jw-box-effect-2'  => esc_html__( 'Flip Vertical', 'jet-widgets' ),
+					'jw-box-effect-3'  => esc_html__( 'Fall Up', 'jet-widgets' ),
+					'jw-box-effect-4'  => esc_html__( 'Fall Right', 'jet-widgets' ),
+					'jw-box-effect-5'  => esc_html__( 'Slide Down', 'jet-widgets' ),
+					'jw-box-effect-6'  => esc_html__( 'Slide Right', 'jet-widgets' ),
+					'jw-box-effect-7'  => esc_html__( 'Flip Horizontal 3D', 'jet-widgets' ),
+					'jw-box-effect-8'  => esc_html__( 'Flip Vertical 3D', 'jet-widgets' ),
 				),
 			)
 		);
@@ -324,7 +324,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['animated_box_front'] => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-					'{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jet-animated-box__overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jw-animated-box__overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -396,7 +396,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['animated_box_back'] => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-					'{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jet-animated-box__overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jw-animated-box__overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -468,7 +468,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Background Color', 'jet-widgets' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-animated-box-icon-inner' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jw-animated-box-icon-inner' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -508,7 +508,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-animated-box-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jw-animated-box-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -520,7 +520,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-animated-box-icon-inner',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jw-animated-box-icon-inner',
 			)
 		);
 
@@ -531,7 +531,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-animated-box-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jw-animated-box-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -543,7 +543,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front']. ' .jet-animated-box-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front']. ' .jw-animated-box-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -552,7 +552,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'front_icon_box_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-animated-box-icon-inner',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jw-animated-box-icon-inner',
 			)
 		);
 
@@ -608,7 +608,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Background Color', 'jet-widgets' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -648,7 +648,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -660,7 +660,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner',
 			)
 		);
 
@@ -671,7 +671,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -683,7 +683,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -692,7 +692,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'back_icon_box_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-animated-box-icon-inner',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jw-animated-box-icon-inner',
 			)
 		);
 
@@ -1711,7 +1711,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			Group_Control_Background::get_type(),
 			array(
 				'name'     => 'front_overlay_background',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jet-animated-box__overlay',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jw-animated-box__overlay',
 			)
 		);
 
@@ -1725,7 +1725,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'max'     => 1,
 				'step'    => 0.1,
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jet-animated-box__overlay' => 'opacity: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_front'] . ' .jw-animated-box__overlay' => 'opacity: {{VALUE}};',
 				),
 			)
 		);
@@ -1743,7 +1743,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			Group_Control_Background::get_type(),
 			array(
 				'name'     => 'back_overlay_background',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jet-animated-box__overlay',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jw-animated-box__overlay',
 			)
 		);
 
@@ -1757,7 +1757,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'max'     => 1,
 				'step'    => 0.1,
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jet-animated-box__overlay' => 'opacity: {{VALUE}};',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_back'] . ' .jw-animated-box__overlay' => 'opacity: {{VALUE}};',
 				),
 			)
 		);
@@ -1814,7 +1814,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'max'     => 2,
 				'step'    => 1,
 				'selectors' => array(
-					'{{WRAPPER}} '. $css_scheme['animated_box_front'] . ' .jet-animated-box__content' => 'order: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['animated_box_front'] . ' .jw-animated-box__content' => 'order: {{VALUE}};',
 				),
 			)
 		);
@@ -1832,7 +1832,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 					'space-between' => esc_html__( 'Space Between', 'jet-widgets' ),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} '. $css_scheme['animated_box_front'] . ' .jet-animated-box__inner' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['animated_box_front'] . ' .jw-animated-box__inner' => 'justify-content: {{VALUE}};',
 				),
 			)
 		);
@@ -1871,7 +1871,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'max'     => 2,
 				'step'    => 1,
 				'selectors' => array(
-					'{{WRAPPER}} '. $css_scheme['animated_box_back'] . ' .jet-animated-box__content' => 'order: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['animated_box_back'] . ' .jw-animated-box__content' => 'order: {{VALUE}};',
 				),
 			)
 		);
@@ -1889,7 +1889,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 					'space-between' => esc_html__( 'Space Between', 'jet-widgets' ),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} '. $css_scheme['animated_box_back'] . ' .jet-animated-box__inner' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} '. $css_scheme['animated_box_back'] . ' .jw-animated-box__inner' => 'justify-content: {{VALUE}};',
 				),
 			)
 		);

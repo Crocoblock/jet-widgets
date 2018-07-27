@@ -68,10 +68,10 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 			jet_widgets()->get_core()->init_module(
 				'cherry-handler',
 				array(
-					'id'           => 'jet_subscribe_form_ajax',
-					'action'       => 'jet_subscribe_form_ajax',
+					'id'           => 'jw_subscribe_form_ajax',
+					'action'       => 'jw_subscribe_form_ajax',
 					'is_public'    => true,
-					'callback'     => array( $this , 'jet_subscribe_form_ajax' ),
+					'callback'     => array( $this , 'jw_subscribe_form_ajax' ),
 				)
 			);
 		}
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 		 *
 		 * @return void
 		 */
-		public function jet_subscribe_form_ajax() {
+		public function jw_subscribe_form_ajax() {
 			$data = ( ! empty( $_POST['data'] ) ) ? $_POST['data'] : false;
 
 			if ( ! $data ) {

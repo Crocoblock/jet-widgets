@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Image_Comparison
  * Name: Image Comparison
- * Slug: jet-image-comparison
+ * Slug: jw-image-comparison
  */
 
 namespace Elementor;
@@ -47,15 +47,15 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/image-comparison/css-scheme',
 			array(
-				'instance'         => '.jet-image-comparison__instance',
+				'instance'         => '.jw-image-comparison__instance',
 				'jx_instance'      => '.jx-slider',
 				'before_container' => '.jx-left',
 				'before_label'     => '.jx-left .jx-label',
 				'after_container'  => '.jx-right',
 				'after_label'      => '.jx-right .jx-label',
 				'handle'           => '.jx-handle',
-				'arrow'            => '.jet-arrow',
-				'dots'             => '.jet-slick-dots',
+				'arrow'            => '.jw-arrow',
+				'dots'             => '.jw-slick-dots',
 			)
 		);
 
@@ -128,7 +128,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'elementor' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
 				'label_off'    => esc_html__( 'No', 'jet-widgets' ),

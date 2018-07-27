@@ -1,9 +1,5 @@
-.jet-subscribe-form {
+.jw-subscribe-form {
 	max-width: 100%;
-
-	&__input-group {
-
-	}
 
 	&__input {
 		max-width: 100%;
@@ -40,7 +36,7 @@
 			border: 3px solid #fff;
 			border-top-color: #000;
 			content: '';
-			animation: jet-spinner .6s linear infinite;
+			animation: jx-spinner .6s linear infinite;
 		}
 
 		&.loading {
@@ -65,7 +61,7 @@
 		width: 100%;
 		visibility: hidden;
 
-		.jet-subscribe-form__message-inner {
+		.jw-subscribe-form__message-inner {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -74,22 +70,22 @@
 	}
 }
 
-.jet-subscribe-form--inline-layout {
-	.jet-subscribe-form__input-group {
+.jw-subscribe-form--inline-layout {
+	.jw-subscribe-form__input-group {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-end;
 		align-items: center;
 
-		.jet-subscribe-form__input {
+		.jw-subscribe-form__input {
 			flex: 1 1 auto;
 			width: auto;
 		}
 	}
 }
 
-.jet-subscribe-form--block-layout {
-	.jet-subscribe-form__input-group {
+.jw-subscribe-form--block-layout {
+	.jw-subscribe-form__input-group {
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: flex-start;
@@ -97,6 +93,6 @@
 	}
 }
 
-@keyframes jet-spinner {
+@keyframes jx-spinner {
 	to {transform: rotate(360deg);}
 }

@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Images_Layout
  * Name: Images Layout
- * Slug: jet-images-layout
+ * Slug: jw-images-layout
  */
 
 namespace Elementor;
@@ -38,7 +38,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 	}
 
 	public function get_script_depends() {
-		return array( 'imagesloaded', 'jet-salvattore', 'jet-magnific-popup' );
+		return array( 'imagesloaded', 'jet-salvattore' );
 	}
 
 	/**
@@ -52,17 +52,17 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/images-layout/css-scheme',
 			array(
-				'instance'          => '.jet-images-layout',
-				'list_container'    => '.jet-images-layout__list',
-				'item'              => '.jet-images-layout__item',
-				'inner'             => '.jet-images-layout__inner',
-				'image_wrap'        => '.jet-images-layout__image',
-				'image_instance'    => '.jet-images-layout__image-instance',
-				'content_wrap'      => '.jet-images-layout__content',
-				'icon'              => '.jet-images-layout__icon',
-				'title'             => '.jet-images-layout__title',
-				'desc'              => '.jet-images-layout__desc',
-				'button'            => '.jet-images-layout__button',
+				'instance'          => '.jw-images-layout',
+				'list_container'    => '.jw-images-layout__list',
+				'item'              => '.jw-images-layout__item',
+				'inner'             => '.jw-images-layout__inner',
+				'image_wrap'        => '.jw-images-layout__image',
+				'image_instance'    => '.jw-images-layout__image-instance',
+				'content_wrap'      => '.jw-images-layout__content',
+				'icon'              => '.jw-images-layout__icon',
+				'title'             => '.jw-images-layout__title',
+				'desc'              => '.jw-images-layout__desc',
+				'button'            => '.jw-images-layout__button',
 			)
 		);
 
@@ -424,7 +424,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Background Color', 'jet-widgets' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner' => 'background-color: {{VALUE}}',
 				),
 			)
 		);
@@ -464,7 +464,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -476,7 +476,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jet-widgets' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner',
+				'selector'    => '{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner',
 			)
 		);
 
@@ -487,7 +487,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -499,7 +499,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -508,7 +508,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'icon_box_shadow',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-images-layout-icon-inner',
+				'selector' => '{{WRAPPER}} ' . $css_scheme['icon'] . ' .jw-images-layout-icon-inner',
 			)
 		);
 

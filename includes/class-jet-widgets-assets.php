@@ -67,29 +67,12 @@ if ( ! class_exists( 'Jet_Widgets_Assets' ) ) {
 				jet_widgets()->get_version()
 			);
 
-			// Register vendor slider-pro.css styles (https://github.com/bqworks/slider-pro)
-			wp_enqueue_style(
-				'jet-slider-pro-css',
-				jet_widgets()->plugin_url( 'assets/css/lib/slider-pro/slider-pro.min.css' ),
-				false,
-				'1.3.0'
-			);
-
 			// Register vendor twentytwenty-css styles
 			wp_enqueue_style(
 				'jet-juxtapose-css',
 				jet_widgets()->plugin_url( 'assets/css/lib/juxtapose/juxtapose.css' ),
 				false,
 				'1.3.0'
-			);
-
-			// Register vendor masonry.pkgd.min.js script
-			wp_register_script(
-				'jet-masonry-js',
-				jet_widgets()->plugin_url( 'assets/js/lib/masonry-js/masonry.pkgd.min.js' ),
-				array(),
-				'4.2.1',
-				true
 			);
 		}
 
@@ -99,30 +82,12 @@ if ( ! class_exists( 'Jet_Widgets_Assets' ) ) {
 		 * @return void
 		 */
 		public function register_scripts() {
-			// Register vendor anime.js script (https://github.com/juliangarnier/anime)
-			wp_register_script(
-				'jet-anime-js',
-				jet_widgets()->plugin_url( 'assets/js/lib/anime-js/anime.min.js' ),
-				array(),
-				'2.0.2',
-				true
-			);
-
 			// Register vendor isotope.js script (https://github.com/rnmp/salvattore)
 			wp_register_script(
 				'jet-salvattore',
 				jet_widgets()->plugin_url( 'assets/js/lib/salvattore/salvattore.min.js' ),
 				array(),
 				'1.0.9',
-				true
-			);
-
-			// Register vendor slider-pro.js script (https://github.com/bqworks/slider-pro)
-			wp_register_script(
-				'jet-slider-pro',
-				jet_widgets()->plugin_url( 'assets/js/lib/slider-pro/jquery.sliderPro.min.js' ),
-				array(),
-				'1.3.0',
 				true
 			);
 

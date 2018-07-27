@@ -75,11 +75,34 @@ gulp.task('css-admin', () => {
 		.pipe(notify('Compile Sass Done!'));
 });
 
+gulp.task('css-rtl', () => {
+	return gulp.src('./assets/scss/jet-widgets-rtl.scss')
+			   .pipe(
+				   plumber( {
+					   errorHandler: function ( error ) {
+						   console.log('=================ERROR=================');
+						   console.log(error.message);
+						   this.emit( 'end' );
+					   }
+				   })
+			   )
+			   .pipe(sass( { outputStyle: 'compressed' } ))
+			   .pipe(autoprefixer({
+				   browsers: ['last 10 versions'],
+				   cascade: false
+			   }))
+
+			   .pipe(rename('jet-widgets-rtl.css'))
+			   .pipe(gulp.dest('./assets/css/'))
+			   .pipe(notify('Compile Sass Done!'));
+});
+
 //watch
 gulp.task('watch', () => {
 	gulp.watch('./assets/scss/**', ['css']);
 	gulp.watch('./assets/scss/**', ['css-skin']);
 	gulp.watch('./assets/scss/**', ['css-admin']);
+	gulp.watch('./assets/scss/**', ['css-rtl']);
 });
 
 gulp.task( 'checktextdomain', () => {

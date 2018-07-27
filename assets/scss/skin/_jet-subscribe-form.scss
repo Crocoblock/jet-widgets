@@ -1,5 +1,5 @@
-.jet-subscribe-form {
-	.jet-subscribe-form__input {
+.jw-subscribe-form {
+	.jw-subscribe-form__input {
 		border: 1px solid #e0e0e8;
 		background-color: #f7fafd;
 		border-radius: 4px;
@@ -15,41 +15,41 @@
 		}
 	}
 
-	.jet-subscribe-form__submit {
+	.jw-subscribe-form__submit {
 		background-color: #6ec1e4;
 	}
 
-	.jet-subscribe-form__submit-icon {
+	.jw-subscribe-form__submit-icon {
 		color: white;
 		font-size: 15px;
 		margin-right: 10px;
 	}
 }
 
-.jet-subscribe-form--inline-layout {
-	.jet-subscribe-form__submit {
+.jw-subscribe-form--inline-layout {
+	.jw-subscribe-form__submit {
 		margin-left: 10px;
 	}
 }
 
-.jet-subscribe-form--block-layout {
-	.jet-subscribe-form__input {
+.jw-subscribe-form--block-layout {
+	.jw-subscribe-form__input {
 		width: 100%;
 	}
 
-	.jet-subscribe-form__submit {
+	.jw-subscribe-form__submit {
 		margin-top: 10px;
 	}
 }
 
-.jet-subscribe-form--response-success {
-	.jet-subscribe-form__message {
+.jw-subscribe-form--response-success {
+	.jw-subscribe-form__message {
 		color: #5cb85c;
 	}
 }
 
-.jet-subscribe-form--response-error {
-	.jet-subscribe-form__message {
+.jw-subscribe-form--response-error {
+	.jw-subscribe-form__message {
 		color: #d9534f;
 	}
 }

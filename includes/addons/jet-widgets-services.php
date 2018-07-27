@@ -2,7 +2,7 @@
 /**
  * Class: Jet_Widgets_Services
  * Name: Services
- * Slug: jet-services
+ * Slug: jw-services
  */
 
 namespace Elementor;
@@ -40,19 +40,19 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		$css_scheme = apply_filters(
 			'jet-widgets/services/css-scheme',
 			array(
-				'instance'         => '.jet-services',
-				'instance_inner'   => '.jet-services__inner',
-				'header'           => '.jet-services__header',
-				'cover'            => '.jet-services__cover',
-				'figure'           => '.jet-services__figure',
-				'content'          => '.jet-services__content',
-				'icon'             => '.jet-services__icon',
-				'title'            => '.jet-services__title',
-				'title_icon'       => '.jet-services__title-icon',
-				'title_text'       => '.jet-services__title-text',
-				'desc'             => '.jet-services__desc',
-				'button'           => '.jet-services__button',
-				'button_icon'      => '.jet-services__button-icon',
+				'instance'         => '.jw-services',
+				'instance_inner'   => '.jw-services__inner',
+				'header'           => '.jw-services__header',
+				'cover'            => '.jw-services__cover',
+				'figure'           => '.jw-services__figure',
+				'content'          => '.jw-services__content',
+				'icon'             => '.jw-services__icon',
+				'title'            => '.jw-services__title',
+				'title_icon'       => '.jw-services__title-icon',
+				'title_text'       => '.jw-services__title-text',
+				'desc'             => '.jw-services__desc',
+				'button'           => '.jw-services__button',
+				'button_icon'      => '.jw-services__button-icon',
 			)
 		);
 
@@ -1316,7 +1316,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			return false;
 		}
 
-		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jet-services__icon"><div class="inner"><i class="%s"></i></div></div>' );
+		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jw-services__icon"><div class="inner"><i class="%s"></i></div></div>' );
 
 		return sprintf( $format, $icon );
 	}
@@ -1339,17 +1339,17 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		}
 
 		if ( ! empty( $title_icon ) ) {
-			$icon_html = sprintf( '<span class="jet-services__title-icon"><i class="%s"></i></span>', $title_icon );
+			$icon_html = sprintf( '<span class="jw-services__title-icon"><i class="%s"></i></span>', $title_icon );
 		}
 
 		if ( ! empty( $title ) ) {
 
-			$title_html = sprintf( '<span class="jet-services__title-text">%s</span>', $title );
+			$title_html = sprintf( '<span class="jw-services__title-text">%s</span>', $title );
 		}
 
 		$title_tag = $this->get_settings( 'services_title_size' );
 
-		$format = apply_filters( 'jet-widgets/services/name-format', '<%3$s class="jet-services__title">%1$s%2$s</%3$s>' );
+		$format = apply_filters( 'jet-widgets/services/name-format', '<%3$s class="jw-services__title">%1$s%2$s</%3$s>' );
 
 		return sprintf( $format, $icon_html, $title_html, $title_tag );
 
@@ -1367,7 +1367,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			return false;
 		}
 
-		$format = apply_filters( 'jet-widgets/services/description-format', '<p class="jet-services__desc">%s</p>' );
+		$format = apply_filters( 'jet-widgets/services/description-format', '<p class="jw-services__desc">%s</p>' );
 
 		return sprintf( $format, $desc );
 	}
@@ -1395,14 +1395,14 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		}
 
 		if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
-			$icon_html = sprintf( '<i class="jet-services__button-icon %s"></i>', $button_icon );
+			$icon_html = sprintf( '<i class="jw-services__button-icon %s"></i>', $button_icon );
 		}
 
 		$this->add_render_attribute( 'url', 'class', array(
 			'elementor-button',
 			'elementor-size-md',
-			'jet-services__button',
-			'jet-services__button--icon-' . $icon_position,
+			'jw-services__button',
+			'jw-services__button--icon-' . $icon_position,
 		) );
 
 		if ( is_array( $button_url ) ) {
@@ -1420,7 +1420,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			$this->add_render_attribute( 'url', 'href', $button_url );
 		}
 
-		$format = apply_filters( 'jet-widgets/services/action-button-format', '<a %1$s><span class="jet-services__button-text">%2$s</span>%3$s</a>' );
+		$format = apply_filters( 'jet-widgets/services/action-button-format', '<a %1$s><span class="jw-services__button-text">%2$s</span>%3$s</a>' );
 
 		return sprintf( $format, $this->get_render_attribute_string( 'url' ), $button_text, $icon_html );
 	}
