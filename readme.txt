@@ -1,6 +1,6 @@
 === JetWidgets For Elementor ===
 
-Contributors: Crocoblock
+Contributors: CrocoBlock
 Tags: elementor, elementor builder, elementor widgets, elementor addons, elementor elements
 Requires at least: 4.7
 Tested up to: 4.9.7
