@@ -41,7 +41,7 @@
 			window.JetWidgetsEditor.editedElement = editedElement;
 			window.JetWidgetsEditor.activeSection = sectionName;
 
-			var isBackSide = -1 !== [ 'section_back_content', 'section_action_button_style' ].indexOf( sectionName );
+			var isBackSide = -1 !== [ 'section_action_button_style' ].indexOf( sectionName );
 
 			if ( isBackSide ) {
 				editedElement.$el.find( '.jw-animated-box' ).addClass( 'flipped' );

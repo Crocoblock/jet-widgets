@@ -178,8 +178,8 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 			add_submenu_page(
 				'elementor',
-				esc_html__( 'Jet Widgets Settings', 'jet-widgets' ),
-				esc_html__( 'Jet Widgets Settings', 'jet-widgets' ),
+				esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
+				esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
 				'manage_options',
 				$this->key,
 				array( $this, 'render_page' )
@@ -203,7 +203,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 					'jet_widgets_settings' => array(
 						'type'   => 'section',
 						'scroll' => false,
-						'title'  => esc_html__( 'Jet Widgets Settings', 'jet-widgets' ),
+						'title'  => esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
 					),
 				)
 			);

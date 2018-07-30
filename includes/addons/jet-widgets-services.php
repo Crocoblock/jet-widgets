@@ -53,6 +53,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'desc'             => '.jw-services__desc',
 				'button'           => '.jw-services__button',
 				'button_icon'      => '.jw-services__button-icon',
+				'button_text'      => '.jw-services__button-text',
 			)
 		);
 
@@ -997,7 +998,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			array(
 				'name'     => 'button_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'],
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['button_text'],
 			)
 		);
 
@@ -1082,7 +1083,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button'] . ':hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['button'] . ':hover ' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1091,7 +1092,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_hover_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'] . ':hover',
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'] . ':hover ' . $css_scheme['button_text'],
 			)
 		);
 

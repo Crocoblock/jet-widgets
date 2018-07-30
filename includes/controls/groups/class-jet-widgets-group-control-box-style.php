@@ -286,4 +286,32 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 
 		return $fields;
 	}
+
+	protected function prepare_fields( $fields ) {
+		array_walk( $fields, function ( &$field, $field_name ) {
+			if ( in_array( $field_name, array( 'jet_widgets_box_style', 'popover_toggle' ) ) ) {
+				return;
+			}
+
+			$condition = array(
+				'jet_widgets_box_style!' => '',
+			);
+
+			if( isset( $field['condition'] ) ) {
+				$field['condition'] = array_merge( $field['condition'], $condition );
+			} else {
+				$field['condition'] = $condition;
+			}
+		} );
+
+		return parent::prepare_fields( $fields );
+	}
+
+	protected function get_default_options() {
+		return array(
+			'popover' => array(
+				'starter_name' => 'jet_widgets_box_style',
+			),
+		);
+	}
 }

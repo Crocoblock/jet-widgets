@@ -389,7 +389,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'exclude' => array(
 					'box_shadow_position',
 				),
-				'selector' => '{{WRAPPER}} ' . $css_scheme['item'],
+				'selector' => '{{WRAPPER}} ' . $css_scheme['inner'],
 			)
 		);
 

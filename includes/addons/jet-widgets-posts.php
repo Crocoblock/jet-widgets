@@ -1116,22 +1116,6 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
-			'button_text_decor',
-			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
-				'type'    => Controls_Manager::SELECT,
-				'options' => array(
-					'none'      => esc_html__( 'None', 'jet-widgets' ),
-					'underline' => esc_html__( 'Underline', 'jet-widgets' ),
-				),
-				'default' => 'none',
-				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button'] => 'text-decoration: {{VALUE}}',
-				),
-			)
-		);
-
 		$this->add_responsive_control(
 			'button_padding',
 			array(
@@ -1361,22 +1345,6 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'name' => 'button_hover_typography',
 				'label' => esc_html__( 'Typography', 'jet-widgets' ),
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'] . ':hover',
-			)
-		);
-
-		$this->add_control(
-			'button_hover_text_decor',
-			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
-				'type'    => Controls_Manager::SELECT,
-				'options' => array(
-					'none'      => esc_html__( 'None', 'jet-widgets' ),
-					'underline' => esc_html__( 'Underline', 'jet-widgets' ),
-				),
-				'default' => 'none',
-				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button'] . ':hover' => 'text-decoration: {{VALUE}}',
-				),
 			)
 		);
 

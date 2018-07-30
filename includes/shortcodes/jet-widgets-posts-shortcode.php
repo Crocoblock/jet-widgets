@@ -338,7 +338,8 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 		$query_args['post_type'] = $post_type;
 
-		$offset = ! empty( $this->get_attr( 'post_offset' ) ) ? absint( $this->get_attr( 'post_offset' ) ) : 0;
+		$offset = $this->get_attr( 'post_offset' );
+		$offset = ! empty( $offset ) ? absint( $offset ) : 0;
 
 		if ( $offset ) {
 			$query_args['offset'] = $offset;

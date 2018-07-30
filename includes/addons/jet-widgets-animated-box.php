@@ -53,6 +53,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'animated_box_description'    => '.jw-animated-box__description',
 				'animated_box_button'         => '.jw-animated-box__button',
 				'animated_box_button_icon'    => '.jw-animated-box__button-icon',
+				'animated_box_button_text'    => '.jw-animated-box__button-text',
 				'animated_box_icon_front'     => '.jw-animated-box__icon--front',
 				'animated_box_icon_back'      => '.jw-animated-box__icon--back',
 				'animated_box_title_front'    => '.jw-animated-box__title--front',
@@ -1527,7 +1528,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			array(
 				'name'     => 'button_typography',
 				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['animated_box_button'],
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['animated_box_button_text'],
 			)
 		);
 
@@ -1621,7 +1622,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_hover_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['animated_box_button'] . ':hover',
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['animated_box_button'] . ':hover ' . $css_scheme['animated_box_button_text'],
 			)
 		);
 

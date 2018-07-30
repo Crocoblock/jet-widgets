@@ -94,6 +94,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		&-text {
+			transition: inherit;
+		}
 	}
 
 	.jw-services__button--icon-before {

@@ -96,7 +96,7 @@
 			}
 
 			var section = window.JetWidgetsEditor.activeSection;
-			var isBackSide = -1 !== [ 'section_back_content', 'section_action_button_style' ].indexOf( section );
+			var isBackSide = -1 !== [ 'section_action_button_style' ].indexOf( section );
 
 			if ( isBackSide ) {
 				$scope.find( '.jw-animated-box' ).addClass( 'flipped' );

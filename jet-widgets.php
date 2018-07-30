@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Jet Widgets For Elementor
+ * Plugin Name: JetWidgets For Elementor
  * Description: Brand new addon for Elementor Page builder. It provides the set of modules to create different kinds of content, adds custom modules to your website and applies attractive styles in the matter of several clicks!
  * Version:     1.0.0
  * Author:      Crocoblock
@@ -13,7 +13,7 @@
  * @package jet-widgets
  * @author  Crocoblock
  * @license GPL-2.0+
- * @copyright  2018, Crocoblock
+ * @copyright 2018, Crocoblock
  */
 
 // If this file is called directly, abort.
@@ -242,13 +242,13 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 				'is_automatic' => false,
 				'strings'      => array(
 					'notice_can_install_required' => _n_noop(
-						'Jet Widgets for Elementor requires the following plugin: %1$s.',
-						'Jet Widgets for Elementor requires the following plugins: %1$s.',
+						'JetWidgets for Elementor requires the following plugin: %1$s.',
+						'JetWidgets for Elementor requires the following plugins: %1$s.',
 						'jet-widgets'
 					),
 					'notice_can_install_recommended' => _n_noop(
-						'Jet Widgets for Elementor recommends the following plugin: %1$s.',
-						'Jet Widgets for Elementor recommends the following plugins: %1$s.',
+						'JetWidgets for Elementor recommends the following plugin: %1$s.',
+						'JetWidgets for Elementor recommends the following plugins: %1$s.',
 						'jet-widgets'
 					),
 				),

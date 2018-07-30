@@ -282,7 +282,7 @@ if ( ! class_exists( 'Jet_Widgets_Integration' ) ) {
 			$elements_manager->add_category(
 				$cherry_cat,
 				array(
-					'title' => esc_html__( 'Jet Widgets', 'jet-widgets' ),
+					'title' => esc_html__( 'JetWidgets', 'jet-widgets' ),
 					'icon'  => 'font',
 				),
 				1
