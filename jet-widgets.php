@@ -203,6 +203,12 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 			jet_widgets_shortocdes()->init();
 			jet_widgets_svg_manager()->init();
 			jet_widgets_compatibility()->init();
+
+			if ( is_admin() ) {
+				if ( ! $this->has_elementor() ) {
+					$this->required_plugins_notice();
+				}
+			}
 		}
 
 		/**
