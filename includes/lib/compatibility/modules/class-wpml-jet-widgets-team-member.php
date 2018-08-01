@@ -27,7 +27,7 @@ class WPML_Jet_Widgets_Team_Member extends WPML_Elementor_Module_With_Items {
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'social_label':
-				return esc_html__( 'Jet Team Member: Social Label', 'jet-widgets' );
+				return esc_html__( 'Jet Team Member: Social Label', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

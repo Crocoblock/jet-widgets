@@ -24,15 +24,15 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		$fields = [];
 
 		$fields['background'] = array(
-			'label'       => _x( 'Background Type', 'Background Control', 'jet-widgets' ),
+			'label'       => _x( 'Background Type', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'        => Controls_Manager::CHOOSE,
 			'options'     => array(
 				'color' => array(
-					'title' => _x( 'Classic', 'Background Control', 'jet-widgets' ),
+					'title' => _x( 'Classic', 'Background Control', 'jetwidgets-for-elementor' ),
 					'icon'  => 'fa fa-paint-brush',
 				),
 				'gradient' => array(
-					'title' => _x( 'Gradient', 'Background Control', 'jet-widgets' ),
+					'title' => _x( 'Gradient', 'Background Control', 'jetwidgets-for-elementor' ),
 					'icon'  => 'fa fa-barcode',
 				),
 			),
@@ -41,10 +41,10 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['color'] = array(
-			'label'     => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+			'label'     => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'      => Controls_Manager::COLOR,
 			'default'   => '',
-			'title'     => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+			'title'     => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 			'selectors' => array(
 				'{{SELECTOR}}' => 'background-color: {{VALUE}};',
 			),
@@ -54,7 +54,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['color_stop'] = array(
-			'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+			'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::SLIDER,
 			'size_units' => array( '%' ),
 			'default'    => array(
@@ -69,7 +69,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['color_b'] = array(
-			'label'       => _x( 'Second Background Color', 'Background Control', 'jet-widgets' ),
+			'label'       => _x( 'Second Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'        => Controls_Manager::COLOR,
 			'default'     => '#f2295b',
 			'render_type' => 'ui',
@@ -80,7 +80,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['color_b_stop'] = array(
-			'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+			'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::SLIDER,
 			'size_units' => array( '%' ),
 			'default'    => array(
@@ -95,11 +95,11 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['gradient_type'] = array(
-			'label'   => _x( 'Type', 'Background Control', 'jet-widgets' ),
+			'label'   => _x( 'Type', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'    => Controls_Manager::SELECT,
 			'options' => array(
-				'linear' => _x( 'Linear', 'Background Control', 'jet-widgets' ),
-				'radial' => _x( 'Radial', 'Background Control', 'jet-widgets' ),
+				'linear' => _x( 'Linear', 'Background Control', 'jetwidgets-for-elementor' ),
+				'radial' => _x( 'Radial', 'Background Control', 'jetwidgets-for-elementor' ),
 			),
 			'default'     => 'linear',
 			'render_type' => 'ui',
@@ -110,7 +110,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['gradient_angle'] = array(
-			'label'      => _x( 'Angle', 'Background Control', 'jet-widgets' ),
+			'label'      => _x( 'Angle', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::SLIDER,
 			'size_units' => array( 'deg' ),
 			'default'    => array(
@@ -133,18 +133,18 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['gradient_position'] = array(
-			'label'   => _x( 'Position', 'Background Control', 'jet-widgets' ),
+			'label'   => _x( 'Position', 'Background Control', 'jetwidgets-for-elementor' ),
 			'type'    => Controls_Manager::SELECT,
 			'options' => array(
-				'center center' => _x( 'Center Center', 'Background Control', 'jet-widgets' ),
-				'center left'   => _x( 'Center Left', 'Background Control', 'jet-widgets' ),
-				'center right'  => _x( 'Center Right', 'Background Control', 'jet-widgets' ),
-				'top center'    => _x( 'Top Center', 'Background Control', 'jet-widgets' ),
-				'top left'      => _x( 'Top Left', 'Background Control', 'jet-widgets' ),
-				'top right'     => _x( 'Top Right', 'Background Control', 'jet-widgets' ),
-				'bottom center' => _x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-				'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-				'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+				'center center' => _x( 'Center Center', 'Background Control', 'jetwidgets-for-elementor' ),
+				'center left'   => _x( 'Center Left', 'Background Control', 'jetwidgets-for-elementor' ),
+				'center right'  => _x( 'Center Right', 'Background Control', 'jetwidgets-for-elementor' ),
+				'top center'    => _x( 'Top Center', 'Background Control', 'jetwidgets-for-elementor' ),
+				'top left'      => _x( 'Top Left', 'Background Control', 'jetwidgets-for-elementor' ),
+				'top right'     => _x( 'Top Right', 'Background Control', 'jetwidgets-for-elementor' ),
+				'bottom center' => _x( 'Bottom Center', 'Background Control', 'jetwidgets-for-elementor' ),
+				'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jetwidgets-for-elementor' ),
+				'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jetwidgets-for-elementor' ),
 			),
 			'default' => 'center center',
 			'selectors' => array(
@@ -158,7 +158,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_font_color'] = array(
-			'label'     => esc_html__( 'Font Color', 'jet-widgets' ),
+			'label'     => esc_html__( 'Font Color', 'jetwidgets-for-elementor' ),
 			'type'      => Controls_Manager::COLOR,
 			'selectors' => array(
 				'{{SELECTOR}}' => 'color: {{VALUE}}',
@@ -166,7 +166,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_font_size'] = array(
-			'label'      => esc_html__( 'Font Size', 'jet-widgets' ),
+			'label'      => esc_html__( 'Font Size', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::SLIDER,
 			'size_units' => array(
 				'px', 'em', 'rem',
@@ -185,7 +185,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_size'] = array(
-			'label'      => esc_html__( 'Box Size', 'jet-widgets' ),
+			'label'      => esc_html__( 'Box Size', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::SLIDER,
 			'size_units' => array(
 				'px', 'em', '%',
@@ -203,14 +203,14 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_border'] = array(
-			'label'   => _x( 'Border Type', 'Border Control', 'jet-widgets' ),
+			'label'   => _x( 'Border Type', 'Border Control', 'jetwidgets-for-elementor' ),
 			'type'    => Controls_Manager::SELECT,
 			'options' => array(
-				''       => __( 'None', 'jet-widgets' ),
-				'solid'  => _x( 'Solid', 'Border Control', 'jet-widgets' ),
-				'double' => _x( 'Double', 'Border Control', 'jet-widgets' ),
-				'dotted' => _x( 'Dotted', 'Border Control', 'jet-widgets' ),
-				'dashed' => _x( 'Dashed', 'Border Control', 'jet-widgets' ),
+				''       => __( 'None', 'jetwidgets-for-elementor' ),
+				'solid'  => _x( 'Solid', 'Border Control', 'jetwidgets-for-elementor' ),
+				'double' => _x( 'Double', 'Border Control', 'jetwidgets-for-elementor' ),
+				'dotted' => _x( 'Dotted', 'Border Control', 'jetwidgets-for-elementor' ),
+				'dashed' => _x( 'Dashed', 'Border Control', 'jetwidgets-for-elementor' ),
 			),
 			'selectors' => array(
 				'{{SELECTOR}}' => 'border-style: {{VALUE}};',
@@ -218,7 +218,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_border_width'] = array(
-			'label'     => _x( 'Width', 'Border Control', 'jet-widgets' ),
+			'label'     => _x( 'Width', 'Border Control', 'jetwidgets-for-elementor' ),
 			'type'      => Controls_Manager::DIMENSIONS,
 			'selectors' => array(
 				'{{SELECTOR}}' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -229,7 +229,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_border_color'] = array(
-			'label' => _x( 'Color', 'Border Control', 'jet-widgets' ),
+			'label' => _x( 'Color', 'Border Control', 'jetwidgets-for-elementor' ),
 			'type' => Controls_Manager::COLOR,
 			'default' => '',
 			'selectors' => array(
@@ -241,7 +241,7 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_border_radius'] = array(
-			'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+			'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 			'type'       => Controls_Manager::DIMENSIONS,
 			'size_units' => array( 'px', '%' ),
 			'selectors'  => array(
@@ -250,17 +250,17 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['allow_box_shadow'] = array(
-			'label' => _x( 'Box Shadow', 'Box Shadow Control', 'jet-widgets' ),
+			'label' => _x( 'Box Shadow', 'Box Shadow Control', 'jetwidgets-for-elementor' ),
 			'type' => Controls_Manager::SWITCHER,
-			'label_on' => esc_html__( 'Yes', 'jet-widgets' ),
-			'label_off' => esc_html__( 'No', 'jet-widgets' ),
+			'label_on' => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+			'label_off' => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 			'return_value' => 'yes',
 			'separator' => 'before',
 			'render_type' => 'ui',
 		);
 
 		$fields['box_shadow'] = array(
-			'label'     => _x( 'Box Shadow', 'Box Shadow Control', 'jet-widgets' ),
+			'label'     => _x( 'Box Shadow', 'Box Shadow Control', 'jetwidgets-for-elementor' ),
 			'type'      => Controls_Manager::BOX_SHADOW,
 			'condition' => array(
 				'allow_box_shadow!' => '',
@@ -271,11 +271,11 @@ class Jet_Widgets_Group_Control_Box_Style extends Elementor\Group_Control_Base {
 		);
 
 		$fields['box_shadow_position'] = array(
-			'label' => _x( 'Position', 'Box Shadow Control', 'jet-widgets' ),
+			'label' => _x( 'Position', 'Box Shadow Control', 'jetwidgets-for-elementor' ),
 			'type' => Controls_Manager::SELECT,
 			'options' => array(
-				' '     => _x( 'Outline', 'Box Shadow Control', 'jet-widgets' ),
-				'inset' => _x( 'Inset', 'Box Shadow Control', 'jet-widgets' ),
+				' '     => _x( 'Outline', 'Box Shadow Control', 'jetwidgets-for-elementor' ),
+				'inset' => _x( 'Inset', 'Box Shadow Control', 'jetwidgets-for-elementor' ),
 			),
 			'condition' => array(
 				'allow_box_shadow!' => '',

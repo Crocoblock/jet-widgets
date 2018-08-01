@@ -26,7 +26,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Advanced Carousel', 'jet-widgets' );
+		return esc_html__( 'Advanced Carousel', 'jetwidgets-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -46,7 +46,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_slides',
 			array(
-				'label' => esc_html__( 'Slides', 'jet-widgets' ),
+				'label' => esc_html__( 'Slides', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -55,7 +55,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_image',
 			array(
-				'label'   => esc_html__( 'Image', 'jet-widgets' ),
+				'label'   => esc_html__( 'Image', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array(
 					'url' => Utils::get_placeholder_image_src(),
@@ -66,7 +66,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_title',
 			array(
-				'label'   => esc_html__( 'Item Title', 'jet-widgets' ),
+				'label'   => esc_html__( 'Item Title', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -74,7 +74,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_text',
 			array(
-				'label'   => esc_html__( 'Item Description', 'jet-widgets' ),
+				'label'   => esc_html__( 'Item Description', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXTAREA,
 			)
 		);
@@ -82,7 +82,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_link',
 			array(
-				'label'   => esc_html__( 'Item Link', 'jet-widgets' ),
+				'label'   => esc_html__( 'Item Link', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -90,7 +90,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_link_target',
 			array(
-				'label'        => esc_html__( 'Open link in new window', 'jet-widgets' ),
+				'label'        => esc_html__( 'Open link in new window', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
 				'return_value' => '_blank',
 				'condition'    => array(
@@ -102,7 +102,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_button_text',
 			array(
-				'label'   => esc_html__( 'Item Button Text', 'jet-widgets' ),
+				'label'   => esc_html__( 'Item Button Text', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -118,8 +118,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 						'item_image' => array(
 							'url' => Utils::get_placeholder_image_src(),
 						),
-						'item_title' => esc_html__( 'Item #1', 'jet-widgets' ),
-						'item_text'  => esc_html__( 'Item #1 Description', 'jet-widgets' ),
+						'item_title' => esc_html__( 'Item #1', 'jetwidgets-for-elementor' ),
+						'item_text'  => esc_html__( 'Item #1 Description', 'jetwidgets-for-elementor' ),
 						'item_link'  => '#',
 						'item_link_target'  => '',
 					),
@@ -133,19 +133,19 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_settings',
 			array(
-				'label' => esc_html__( 'Settings', 'jet-widgets' ),
+				'label' => esc_html__( 'Settings', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'item_layout',
 			array(
-				'label'   => esc_html__( 'Items Layout', 'jet-widgets' ),
+				'label'   => esc_html__( 'Items Layout', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'simple',
 				'options' => array(
-					'banners'=> esc_html__( 'Banners', 'jet-widgets' ),
-					'simple' => esc_html__( 'Simple', 'jet-widgets' ),
+					'banners'=> esc_html__( 'Banners', 'jetwidgets-for-elementor' ),
+					'simple' => esc_html__( 'Simple', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -153,21 +153,21 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'animation_effect',
 			array(
-				'label'   => esc_html__( 'Animation Effect', 'jet-widgets' ),
+				'label'   => esc_html__( 'Animation Effect', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'lily',
 				'options' => array(
-					'lily'   => esc_html__( 'Lily', 'jet-widgets' ),
-					'sadie'  => esc_html__( 'Sadie', 'jet-widgets' ),
-					'layla'  => esc_html__( 'Layla', 'jet-widgets' ),
-					'oscar'  => esc_html__( 'Oscar', 'jet-widgets' ),
-					'marley' => esc_html__( 'Marley', 'jet-widgets' ),
-					'ruby'   => esc_html__( 'Ruby', 'jet-widgets' ),
-					'roxy'   => esc_html__( 'Roxy', 'jet-widgets' ),
-					'bubba'  => esc_html__( 'Bubba', 'jet-widgets' ),
-					'romeo'  => esc_html__( 'Romeo', 'jet-widgets' ),
-					'sarah'  => esc_html__( 'Sarah', 'jet-widgets' ),
-					'chico'  => esc_html__( 'Chico', 'jet-widgets' ),
+					'lily'   => esc_html__( 'Lily', 'jetwidgets-for-elementor' ),
+					'sadie'  => esc_html__( 'Sadie', 'jetwidgets-for-elementor' ),
+					'layla'  => esc_html__( 'Layla', 'jetwidgets-for-elementor' ),
+					'oscar'  => esc_html__( 'Oscar', 'jetwidgets-for-elementor' ),
+					'marley' => esc_html__( 'Marley', 'jetwidgets-for-elementor' ),
+					'ruby'   => esc_html__( 'Ruby', 'jetwidgets-for-elementor' ),
+					'roxy'   => esc_html__( 'Roxy', 'jetwidgets-for-elementor' ),
+					'bubba'  => esc_html__( 'Bubba', 'jetwidgets-for-elementor' ),
+					'romeo'  => esc_html__( 'Romeo', 'jetwidgets-for-elementor' ),
+					'sarah'  => esc_html__( 'Sarah', 'jetwidgets-for-elementor' ),
+					'chico'  => esc_html__( 'Chico', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'item_layout' => 'banners',
@@ -179,7 +179,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			'img_size',
 			array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Images Size', 'jet-widgets' ),
+				'label'      => esc_html__( 'Images Size', 'jetwidgets-for-elementor' ),
 				'default'    => 'full',
 				'options'    => jet_widgets_tools()->get_image_sizes(),
 			)
@@ -188,10 +188,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'equal_height_cols',
 			array(
-				'label'        => esc_html__( 'Equal Columns Height', 'jet-widgets' ),
+				'label'        => esc_html__( 'Equal Columns Height', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -200,10 +200,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'fluid_width',
 			array(
-				'label'        => esc_html__( 'Fluid Columns Width', 'jet-widgets' ),
+				'label'        => esc_html__( 'Fluid Columns Width', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -212,7 +212,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
-				'label'   => esc_html__( 'Slides to Show', 'jet-widgets' ),
+				'label'   => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '2',
 				'options' => jet_widgets_tools()->get_select_range( 10 ),
@@ -222,7 +222,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'slides_to_scroll',
 			array(
-				'label'     => esc_html__( 'Slides to Scroll', 'jet-widgets' ),
+				'label'     => esc_html__( 'Slides to Scroll', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => '1',
 				'options'   => jet_widgets_tools()->get_select_range( 10 ),
@@ -235,10 +235,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'arrows',
 			array(
-				'label'        => esc_html__( 'Show Arrows Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Arrows Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -247,7 +247,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow',
 			array(
-				'label'   => esc_html__( 'Prev Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-left',
 				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
@@ -260,7 +260,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow',
 			array(
-				'label'   => esc_html__( 'Next Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-right',
 				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
@@ -273,10 +273,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots',
 			array(
-				'label'        => esc_html__( 'Show Dots Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Dots Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -287,17 +287,17 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_additional_options',
 			array(
-				'label' => esc_html__( 'Additional Options', 'jet-widgets' ),
+				'label' => esc_html__( 'Additional Options', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'pause_on_hover',
 			array(
-				'label'        => esc_html__( 'Pause on Hover', 'jet-widgets' ),
+				'label'        => esc_html__( 'Pause on Hover', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -306,10 +306,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay',
 			array(
-				'label'        => esc_html__( 'Autoplay', 'jet-widgets' ),
+				'label'        => esc_html__( 'Autoplay', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -318,7 +318,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay_speed',
 			array(
-				'label'     => esc_html__( 'Autoplay Speed', 'jet-widgets' ),
+				'label'     => esc_html__( 'Autoplay Speed', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 5000,
 				'condition' => array(
@@ -330,10 +330,10 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -342,12 +342,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'effect',
 			array(
-				'label'   => esc_html__( 'Effect', 'jet-widgets' ),
+				'label'   => esc_html__( 'Effect', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'slide',
 				'options' => array(
-					'slide' => esc_html__( 'Slide', 'jet-widgets' ),
-					'fade'  => esc_html__( 'Fade', 'jet-widgets' ),
+					'slide' => esc_html__( 'Slide', 'jetwidgets-for-elementor' ),
+					'fade'  => esc_html__( 'Fade', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'slides_to_show' => '1',
@@ -358,7 +358,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'speed',
 			array(
-				'label'   => esc_html__( 'Animation Speed', 'jet-widgets' ),
+				'label'   => esc_html__( 'Animation Speed', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 500,
 			)
@@ -394,7 +394,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_column_style',
 			array(
-				'label'      => esc_html__( 'Column', 'jet-widgets' ),
+				'label'      => esc_html__( 'Column', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -403,7 +403,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'column_padding',
 			array(
-				'label'       => esc_html__( 'Column Padding', 'jet-widgets' ),
+				'label'       => esc_html__( 'Column Padding', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::DIMENSIONS,
 				'size_units'  => array( 'px' ),
 				'render_type' => 'template',
@@ -417,7 +417,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'column_margin',
 			array(
-				'label'       => esc_html__( 'Column Margin', 'jet-widgets' ),
+				'label'       => esc_html__( 'Column Margin', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::DIMENSIONS,
 				'size_units'  => array( 'px' ),
 				'selectors'   => array(
@@ -430,7 +430,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'column_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['column'] . ' .jw-carousel__item-inner',
@@ -442,7 +442,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_simple_item_style',
 			array(
-				'label'      => esc_html__( 'Simple Items', 'jet-widgets' ),
+				'label'      => esc_html__( 'Simple Items', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 				'condition'  => array(
@@ -454,7 +454,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'item_image_heading',
 			array(
-				'label' => esc_html__( 'Image', 'jet-widgets' ),
+				'label' => esc_html__( 'Image', 'jetwidgets-for-elementor' ),
 				'type'  => Controls_Manager::HEADING,
 			)
 		);
@@ -462,7 +462,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'item_image_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -482,7 +482,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'item_content_heading',
 			array(
-				'label'     => esc_html__( 'Content', 'jet-widgets' ),
+				'label'     => esc_html__( 'Content', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -493,7 +493,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_item_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -509,7 +509,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'item_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['items'],
@@ -529,7 +529,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_item_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -545,7 +545,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'item_border_hover',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
@@ -567,7 +567,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'items_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -580,7 +580,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'items_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -592,20 +592,20 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'items_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -620,7 +620,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_banner_item_style',
 			array(
-				'label'      => esc_html__( 'Banner Items', 'jet-widgets' ),
+				'label'      => esc_html__( 'Banner Items', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 				'condition'  => array(
@@ -634,14 +634,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_background_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_content_color',
 			array(
-				'label'     => esc_html__( 'Additional Elements Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Additional Elements Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .jw-effect-layla ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
@@ -672,7 +672,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'normal_opacity',
 			array(
-				'label'   => esc_html__( 'Opacity', 'jet-widgets' ),
+				'label'   => esc_html__( 'Opacity', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => '0',
 				'min'     => 0,
@@ -689,14 +689,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_background_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_content_hover_color',
 			array(
-				'label'     => esc_html__( 'Additional Elements Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Additional Elements Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .jw-effect-layla:hover ' . $css_scheme['banner_content'] . '::before' => 'border-color: {{VALUE}}',
@@ -727,7 +727,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'hover_opacity',
 			array(
-				'label'   => esc_html__( 'Opacity', 'jet-widgets' ),
+				'label'   => esc_html__( 'Opacity', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => '0.4',
 				'min'     => 0,
@@ -748,7 +748,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_item_title_style',
 			array(
-				'label'      => esc_html__( 'Items Title Typography', 'jet-widgets' ),
+				'label'      => esc_html__( 'Items Title Typography', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -759,14 +759,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_title_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_title_color',
 			array(
-				'label'     => esc_html__( 'Items Title Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Items Title Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
@@ -780,14 +780,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_title_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_title_color_hover',
 			array(
-				'label'     => esc_html__( 'Items Title Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Items Title Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
@@ -813,7 +813,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'items_title_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'separator'  => 'before',
@@ -829,7 +829,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_item_text_style',
 			array(
-				'label'      => esc_html__( 'Items Content Typography', 'jet-widgets' ),
+				'label'      => esc_html__( 'Items Content Typography', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -840,14 +840,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_text_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_text_color',
 			array(
-				'label'     => esc_html__( 'Items Content Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Items Content Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'scheme'    => array(
 					'type'  => Scheme_Color::get_type(),
@@ -865,14 +865,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_text_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'items_text_color_hover',
 			array(
-				'label'     => esc_html__( 'Items Content Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Items Content Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
@@ -898,7 +898,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'items_text_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'separator'  => 'before',
@@ -917,7 +917,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_action_button_style',
 			array(
-				'label'      => esc_html__( 'Action Button', 'jet-widgets' ),
+				'label'      => esc_html__( 'Action Button', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 				'condition'  => array(
@@ -938,7 +938,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -950,7 +950,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -962,7 +962,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -977,14 +977,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'button_bg_color',
 			array(
-				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -999,7 +999,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_button'] => 'color: {{VALUE}}',
@@ -1011,7 +1011,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'button_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['items_button'],
@@ -1031,14 +1031,14 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'primary_button_hover_bg_color',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_button'] . ':hover' => 'background-color: {{VALUE}}',
@@ -1049,7 +1049,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_button'] . ':hover' => 'color: {{VALUE}}',
@@ -1061,7 +1061,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'button_hover_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['items_button'] . ':hover',
@@ -1085,7 +1085,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_arrows_style',
 			array(
-				'label'      => esc_html__( 'Carousel Arrows', 'jet-widgets' ),
+				'label'      => esc_html__( 'Carousel Arrows', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1096,7 +1096,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_prev',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1104,7 +1104,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow',
 				'fields_options' => array(
 					'color' => array(
@@ -1122,7 +1122,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_next_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1130,7 +1130,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_hover_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow:hover',
 				'fields_options' => array(
 					'color' => array(
@@ -1150,7 +1150,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow_position',
 			array(
-				'label'     => esc_html__( 'Prev Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Prev Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1159,12 +1159,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1172,7 +1172,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1201,7 +1201,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1230,12 +1230,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1243,7 +1243,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1272,7 +1272,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1301,7 +1301,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow_position',
 			array(
-				'label'     => esc_html__( 'Next Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Next Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1310,12 +1310,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1323,7 +1323,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1352,7 +1352,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1381,12 +1381,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'right',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1394,7 +1394,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1423,7 +1423,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1454,7 +1454,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_dots_style',
 			array(
-				'label'      => esc_html__( 'Carousel Dots', 'jet-widgets' ),
+				'label'      => esc_html__( 'Carousel Dots', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1465,7 +1465,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1473,7 +1473,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span',
 				'fields_options' => array(
 					'color' => array(
@@ -1495,7 +1495,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1503,7 +1503,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_hover',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span:hover',
 				'fields_options' => array(
 					'color' => array(
@@ -1525,7 +1525,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_active',
 			array(
-				'label' => esc_html__( 'Active', 'jet-widgets' ),
+				'label' => esc_html__( 'Active', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1533,7 +1533,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_active',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
@@ -1557,7 +1557,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_gap',
 			array(
-				'label' => esc_html__( 'Gap', 'jet-widgets' ),
+				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 5,
@@ -1579,7 +1579,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_margin',
 			array(
-				'label'      => esc_html__( 'Dots Box Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Dots Box Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1591,20 +1591,20 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'dots_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start' => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),

@@ -25,7 +25,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Pricing Table', 'jet-widgets' );
+		return esc_html__( 'Pricing Table', 'jetwidgets-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -41,14 +41,14 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_general',
 			array(
-				'label' => esc_html__( 'General', 'jet-widgets' ),
+				'label' => esc_html__( 'General', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'icon',
 			array(
-				'label'       => esc_html__( 'Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
@@ -59,28 +59,28 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'title',
 			array(
-				'label'   => esc_html__( 'Title', 'jet-widgets' ),
+				'label'   => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Title', 'jet-widgets' ),
+				'default' => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'subtitle',
 			array(
-				'label'   => esc_html__( 'Subtitle', 'jet-widgets' ),
+				'label'   => esc_html__( 'Subtitle', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Subtitle', 'jet-widgets' ),
+				'default' => esc_html__( 'Subtitle', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'featured',
 			array(
-				'label'        => esc_html__( 'Is Featured?', 'jet-widgets' ),
+				'label'        => esc_html__( 'Is Featured?', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
 			)
@@ -89,7 +89,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'featured_badge',
 			array(
-				'label'   => esc_html__( 'Featured Badge', 'jet-widgets' ),
+				'label'   => esc_html__( 'Featured Badge', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::MEDIA,
 				'default' => array(
 					'url' => jet_widgets_tools()->get_badge_placeholder(),
@@ -103,12 +103,12 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'featured_position',
 			array(
-				'label'   => esc_html__( 'Featured Postition', 'jet-widgets' ),
+				'label'   => esc_html__( 'Featured Postition', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'right',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'featured' => 'yes',
@@ -119,7 +119,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'featured_left',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -149,7 +149,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'featured_right',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -179,7 +179,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'featured_top',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -210,41 +210,41 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_price',
 			array(
-				'label' => esc_html__( 'Price', 'jet-widgets' ),
+				'label' => esc_html__( 'Price', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'price_prefix',
 			array(
-				'label'   => esc_html__( 'Price Prefix', 'jet-widgets' ),
+				'label'   => esc_html__( 'Price Prefix', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( '$', 'jet-widgets' ),
+				'default' => esc_html__( '$', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'price',
 			array(
-				'label'   => esc_html__( 'Price Value', 'jet-widgets' ),
+				'label'   => esc_html__( 'Price Value', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( '100', 'jet-widgets' ),
+				'default' => esc_html__( '100', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'price_suffix',
 			array(
-				'label'   => esc_html__( 'Price Suffix', 'jet-widgets' ),
+				'label'   => esc_html__( 'Price Suffix', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( '/per month', 'jet-widgets' ),
+				'default' => esc_html__( '/per month', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'price_desc',
 			array(
-				'label' => esc_html__( 'Price Description', 'jet-widgets' ),
+				'label' => esc_html__( 'Price Description', 'jetwidgets-for-elementor' ),
 				'type'  => Controls_Manager::TEXTAREA,
 			)
 		);
@@ -254,7 +254,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_features',
 			array(
-				'label' => esc_html__( 'Features', 'jet-widgets' ),
+				'label' => esc_html__( 'Features', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -263,21 +263,21 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_text',
 			array(
-				'label' => esc_html__( 'Text', 'jet-widgets' ),
+				'label' => esc_html__( 'Text', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Feature', 'jet-widgets' ),
+				'default' => esc_html__( 'Feature', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$repeater->add_control(
 			'item_included',
 			array(
-				'label'   => esc_html__( 'Is Included?', 'jet-widgets' ),
+				'label'   => esc_html__( 'Is Included?', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'item-included',
 				'options' => array(
-					'item-included'=> esc_html__( 'Included', 'jet-widgets' ),
-					'item-excluded' => esc_html__( 'Excluded', 'jet-widgets' ),
+					'item-included'=> esc_html__( 'Included', 'jetwidgets-for-elementor' ),
+					'item-excluded' => esc_html__( 'Excluded', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -289,19 +289,19 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'fields'  => array_values( $repeater->get_controls() ),
 				'default' => array(
 					array(
-						'item_text'     => esc_html__( 'Feature #1', 'jet-widgets' ),
+						'item_text'     => esc_html__( 'Feature #1', 'jetwidgets-for-elementor' ),
 						'item_included' => 'item-included',
 					),
 					array(
-						'item_text'     => esc_html__( 'Feature #2', 'jet-widgets' ),
+						'item_text'     => esc_html__( 'Feature #2', 'jetwidgets-for-elementor' ),
 						'item_included' => 'item-included',
 					),
 					array(
-						'item_text'     => esc_html__( 'Feature #3', 'jet-widgets' ),
+						'item_text'     => esc_html__( 'Feature #3', 'jetwidgets-for-elementor' ),
 						'item_included' => 'item-excluded',
 					),
 					array(
-						'item_text'     => esc_html__( 'Feature #4', 'jet-widgets' ),
+						'item_text'     => esc_html__( 'Feature #4', 'jetwidgets-for-elementor' ),
 						'item_included' => 'item-excluded',
 					),
 				),
@@ -314,14 +314,14 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_action',
 			array(
-				'label' => esc_html__( 'Action Button', 'jet-widgets' ),
+				'label' => esc_html__( 'Action Button', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'button_before',
 			array(
-				'label'   => esc_html__( 'Text Before Action Button', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Before Action Button', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -330,16 +330,16 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_text',
 			array(
-				'label'   => esc_html__( 'Button Text', 'jet-widgets' ),
+				'label'   => esc_html__( 'Button Text', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Buy', 'jet-widgets' ),
+				'default' => esc_html__( 'Buy', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'button_url',
 			array(
-				'label'   => esc_html__( 'Button URL', 'jet-widgets' ),
+				'label'   => esc_html__( 'Button URL', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '#',
 			)
@@ -348,7 +348,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_after',
 			array(
-				'label'   => esc_html__( 'Text After Action Button', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text After Action Button', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 				'default' => '',
 			)
@@ -384,7 +384,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_table_style',
 			array(
-				'label'      => esc_html__( 'Table', 'jet-widgets' ),
+				'label'      => esc_html__( 'Table', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -402,7 +402,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'table_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['table'],
 				'fields_options' => array(
@@ -431,7 +431,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'table_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -451,7 +451,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'table_padding',
 			array(
-				'label'      => esc_html__( 'Table Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Table Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -465,7 +465,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_header_style',
 			array(
-				'label'      => esc_html__( 'Header', 'jet-widgets' ),
+				'label'      => esc_html__( 'Header', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -474,7 +474,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'header_bg_color',
 			array(
-				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['header'] => 'background-color: {{VALUE}}',
@@ -485,7 +485,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'header_title_style',
 			array(
-				'label'     => esc_html__( 'Title', 'jet-widgets' ),
+				'label'     => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -494,7 +494,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'title_color',
 			array(
-				'label'  => esc_html__( 'Title Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Title Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -518,7 +518,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'header_subtitle_style',
 			array(
-				'label'     => esc_html__( 'Subtitle', 'jet-widgets' ),
+				'label'     => esc_html__( 'Subtitle', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -527,7 +527,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'subtitle_color',
 			array(
-				'label'  => esc_html__( 'Subtitle Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Subtitle Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -551,7 +551,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'header_padding',
 			array(
-				'label'      => esc_html__( 'Header Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Header Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -563,20 +563,20 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'header_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -590,7 +590,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'header_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['header'],
 			)
@@ -599,7 +599,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'header_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -613,7 +613,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_icon_style',
 			array(
-				'label'      => esc_html__( 'Icon', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -623,7 +623,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'icon_style',
-				'label'          => esc_html__( 'Icon Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Icon Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['icon'],
 				'fields_options' => array(
 					'box_font_color' => array(
@@ -639,7 +639,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_wrap_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -652,20 +652,20 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_box_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -680,7 +680,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_pricing_style',
 			array(
-				'label'      => esc_html__( 'Pricing', 'jet-widgets' ),
+				'label'      => esc_html__( 'Pricing', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -689,7 +689,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_bg_color',
 			array(
-				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price'] => 'background-color: {{VALUE}}',
@@ -700,7 +700,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_prefix_style',
 			array(
-				'label'     => esc_html__( 'Prefix', 'jet-widgets' ),
+				'label'     => esc_html__( 'Prefix', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -709,7 +709,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_prefix_color',
 			array(
-				'label' => esc_html__( 'Price Prefix Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Price Prefix Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -733,7 +733,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_prefix_vertical_align',
 			array(
-				'label'   => esc_html__( 'Vertical Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => jet_widgets_tools()->verrtical_align_attr(),
 				'default' => 'baseline',
@@ -746,11 +746,11 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_prefix_dispaly',
 			array(
-				'label'   => esc_html__( 'Prefix Display', 'jet-widgets' ),
+				'label'   => esc_html__( 'Prefix Display', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'inline-block' => esc_html__( 'Inline', 'jet-widgets' ),
-					'block'        => esc_html__( 'Block', 'jet-widgets' ),
+					'inline-block' => esc_html__( 'Inline', 'jetwidgets-for-elementor' ),
+					'block'        => esc_html__( 'Block', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'inline-block',
 				'selectors' => array(
@@ -762,7 +762,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_val_style',
 			array(
-				'label'     => esc_html__( 'Price Value', 'jet-widgets' ),
+				'label'     => esc_html__( 'Price Value', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -771,7 +771,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_color',
 			array(
-				'label' => esc_html__( 'Price Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Price Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -795,7 +795,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_suffix_style',
 			array(
-				'label'     => esc_html__( 'Suffix', 'jet-widgets' ),
+				'label'     => esc_html__( 'Suffix', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -804,7 +804,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_suffix_color',
 			array(
-				'label' => esc_html__( 'Price Suffix Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Price Suffix Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -828,7 +828,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_suffix_vertical_align',
 			array(
-				'label'   => esc_html__( 'Vertical Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => jet_widgets_tools()->verrtical_align_attr(),
 				'default' => 'baseline',
@@ -841,11 +841,11 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_suffix_dispaly',
 			array(
-				'label'   => esc_html__( 'Suffix Display', 'jet-widgets' ),
+				'label'   => esc_html__( 'Suffix Display', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'inline-block' => esc_html__( 'Inline', 'jet-widgets' ),
-					'block'        => esc_html__( 'Block', 'jet-widgets' ),
+					'inline-block' => esc_html__( 'Inline', 'jetwidgets-for-elementor' ),
+					'block'        => esc_html__( 'Block', 'jetwidgets-for-elementor' ),
 				),
 				'default'   => 'inline-block',
 				'selectors' => array(
@@ -857,7 +857,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_desc_style',
 			array(
-				'label'     => esc_html__( 'Description', 'jet-widgets' ),
+				'label'     => esc_html__( 'Description', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -866,7 +866,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_desc_color',
 			array(
-				'label' => esc_html__( 'Price Description Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Price Description Color', 'jetwidgets-for-elementor' ),
 				'type'  => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price_desc'] => 'color: {{VALUE}}',
@@ -886,7 +886,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'price_desc_gap',
 			array(
-				'label' => esc_html__( 'Gap', 'jet-widgets' ),
+				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => array(
 					'px' => array(
@@ -903,7 +903,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'price_padding',
 			array(
-				'label'      => esc_html__( 'Pricing Block Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Pricing Block Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -917,7 +917,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'price_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['price'],
 			)
@@ -926,7 +926,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'price_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -938,20 +938,20 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'price_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -966,7 +966,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_features_style',
 			array(
-				'label'      => esc_html__( 'Features', 'jet-widgets' ),
+				'label'      => esc_html__( 'Features', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -975,7 +975,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_bg_color',
 			array(
-				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['features'] => 'background-color: {{VALUE}}',
@@ -986,7 +986,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'features_padding',
 			array(
-				'label'      => esc_html__( 'Features Block Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Features Block Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -999,7 +999,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'features_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['features'],
 			)
@@ -1008,7 +1008,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'features_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1020,20 +1020,20 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'features_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1055,7 +1055,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'heading_included_feature_style',
 			array(
-				'label'     => esc_html__( 'Included Feature', 'jet-widgets' ),
+				'label'     => esc_html__( 'Included Feature', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1064,7 +1064,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'inc_features_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1079,7 +1079,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'included_bullet_icon',
 			array(
-				'label'       => esc_html__( 'Included Bullet Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Included Bullet Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
@@ -1090,7 +1090,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'inc_bullet_icon_size',
 			array(
-				'label'   => esc_html__( 'Icon Size', 'jet-widgets' ),
+				'label'   => esc_html__( 'Icon Size', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 14,
@@ -1112,7 +1112,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'inc_bullet_color',
 			array(
-				'label' => esc_html__( 'Bullet Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Bullet Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1127,7 +1127,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'heading_excluded_feature_style',
 			array(
-				'label'     => esc_html__( 'Excluded Feature', 'jet-widgets' ),
+				'label'     => esc_html__( 'Excluded Feature', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1136,7 +1136,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'exc_features_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1151,7 +1151,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'excluded_bullet_icon',
 			array(
-				'label'       => esc_html__( 'Excluded Bullet Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Excluded Bullet Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
@@ -1162,7 +1162,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'exc_bullet_icon_size',
 			array(
-				'label'   => esc_html__( 'Icon Size', 'jet-widgets' ),
+				'label'   => esc_html__( 'Icon Size', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 14,
@@ -1184,7 +1184,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'exc_bullet_color',
 			array(
-				'label' => esc_html__( 'Bullet Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Bullet Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1199,12 +1199,12 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'exc_text_decoration',
 			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Decoration', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'none',
 				'options' => array(
-					'none'         => esc_html__( 'None', 'jet-widgets' ),
-					'line-through' => esc_html__( 'Line Through', 'jet-widgets' ),
+					'none'         => esc_html__( 'None', 'jetwidgets-for-elementor' ),
+					'line-through' => esc_html__( 'Line Through', 'jetwidgets-for-elementor' ),
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .pricing-feature__text' => 'text-decoration: {{VALUE}}',
@@ -1215,7 +1215,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_style',
 			array(
-				'label'     => esc_html__( 'Features Divider', 'jet-widgets' ),
+				'label'     => esc_html__( 'Features Divider', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1224,10 +1224,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider',
 			array(
-				'label'        => esc_html__( 'Divider', 'jet-widgets' ),
+				'label'        => esc_html__( 'Divider', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
 			)
@@ -1236,13 +1236,13 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_line',
 			array(
-				'label' => esc_html__( 'Style', 'jet-widgets' ),
+				'label' => esc_html__( 'Style', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => array(
-					'solid' => esc_html__( 'Solid', 'jet-widgets' ),
-					'double' => esc_html__( 'Double', 'jet-widgets' ),
-					'dotted' => esc_html__( 'Dotted', 'jet-widgets' ),
-					'dashed' => esc_html__( 'Dashed', 'jet-widgets' ),
+					'solid' => esc_html__( 'Solid', 'jetwidgets-for-elementor' ),
+					'double' => esc_html__( 'Double', 'jetwidgets-for-elementor' ),
+					'dotted' => esc_html__( 'Dotted', 'jetwidgets-for-elementor' ),
+					'dashed' => esc_html__( 'Dashed', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'solid',
 				'condition' => array(
@@ -1257,7 +1257,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type' => Scheme_Color::get_type(),
@@ -1275,7 +1275,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_weight',
 			array(
-				'label'   => esc_html__( 'Weight', 'jet-widgets' ),
+				'label'   => esc_html__( 'Weight', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 1,
@@ -1299,7 +1299,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_width',
 			array(
-				'label' => esc_html__( 'Width', 'jet-widgets' ),
+				'label' => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'condition' => array(
 					'features_divider' => 'yes',
@@ -1313,7 +1313,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'features_divider_gap',
 			array(
-				'label' => esc_html__( 'Gap', 'jet-widgets' ),
+				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 15,
@@ -1339,7 +1339,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_actions_style',
 			array(
-				'label'      => esc_html__( 'Action Box', 'jet-widgets' ),
+				'label'      => esc_html__( 'Action Box', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1348,7 +1348,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'action_bg_color',
 			array(
-				'label' => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['action'] => 'background-color: {{VALUE}}',
@@ -1359,7 +1359,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'action_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['action'] => 'color: {{VALUE}}',
@@ -1379,7 +1379,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'action_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1392,7 +1392,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'action_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['action'],
 			)
@@ -1401,7 +1401,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'action_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1413,20 +1413,20 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'action_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1441,7 +1441,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_action_button_style',
 			array(
-				'label'      => esc_html__( 'Action Button', 'jet-widgets' ),
+				'label'      => esc_html__( 'Action Button', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1450,12 +1450,12 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_size',
 			array(
-				'label'   => esc_html__( 'Size', 'jet-widgets' ),
+				'label'   => esc_html__( 'Size', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'auto',
 				'options' => array(
-					'auto' => esc_html__( 'auto', 'jet-widgets' ),
-					'full'  => esc_html__( 'full', 'jet-widgets' ),
+					'auto' => esc_html__( 'auto', 'jetwidgets-for-elementor' ),
+					'full'  => esc_html__( 'full', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1463,10 +1463,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'add_button_icon',
 			array(
-				'label'        => esc_html__( 'Add Icon', 'jet-widgets' ),
+				'label'        => esc_html__( 'Add Icon', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => '',
 			)
@@ -1475,7 +1475,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_icon',
 			array(
-				'label'       => esc_html__( 'Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
@@ -1489,11 +1489,11 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_icon_position',
 			array(
-				'label'   => esc_html__( 'Icon Position', 'jet-widgets' ),
+				'label'   => esc_html__( 'Icon Position', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'left'  => esc_html__( 'Before Text', 'jet-widgets' ),
-					'right' => esc_html__( 'After Text', 'jet-widgets' ),
+					'left'  => esc_html__( 'Before Text', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'After Text', 'jetwidgets-for-elementor' ),
 				),
 				'default'     => 'left',
 				'render_type' => 'template',
@@ -1509,7 +1509,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_icon_size',
 			array(
-				'label' => esc_html__( 'Icon Size', 'jet-widgets' ),
+				'label' => esc_html__( 'Icon Size', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => array(
 					'px' => array(
@@ -1529,7 +1529,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_icon_color',
 			array(
-				'label'     => esc_html__( 'Icon Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'condition' => array(
 					'add_button_icon' => 'yes',
@@ -1543,7 +1543,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_icon_margin',
 			array(
-				'label'      => esc_html__( 'Icon Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'condition' => array(
@@ -1560,7 +1560,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1574,14 +1574,14 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 						'default' => 'classic',
 					),
 					'color' => array(
-						'label'  => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+						'label'  => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 						'scheme' => array(
 							'type'  => Scheme_Color::get_type(),
 							'value' => Scheme_Color::COLOR_1,
 						),
 					),
 					'color_b' => array(
-						'label' => _x( 'Second Background Color', 'Background Control', 'jet-widgets' ),
+						'label' => _x( 'Second Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 					),
 				),
 				'exclude' => array(
@@ -1598,7 +1598,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['button'] => 'color: {{VALUE}}',
@@ -1618,7 +1618,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1630,7 +1630,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1643,7 +1643,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'button_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['button'],
@@ -1663,7 +1663,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1677,10 +1677,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 						'default' => 'classic',
 					),
 					'color' => array(
-						'label' => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+						'label' => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 					),
 					'color_b' => array(
-						'label' => _x( 'Second Background Color', 'Background Control', 'jet-widgets' ),
+						'label' => _x( 'Second Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 					),
 				),
 				'exclude' => array(
@@ -1697,7 +1697,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_control(
 			'button_hover_color',
 			array(
-				'label'     => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['button'] . ':hover' => 'color: {{VALUE}}',
@@ -1716,7 +1716,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_hover_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1728,7 +1728,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'button_hover_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1741,7 +1741,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'button_hover_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['button'] . ':hover',

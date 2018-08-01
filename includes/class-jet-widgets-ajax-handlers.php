@@ -48,11 +48,11 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 		public function init() {
 
 			$this->sys_messages = apply_filters( 'jet-widgets_sys_messages', array(
-				'invalid_mail'      => esc_html__( 'Please, provide valid mail', 'jet-widgets' ),
-				'mailchimp'         => esc_html__( 'Please, set up MailChimp API key and List ID', 'jet-widgets' ),
-				'internal'          => esc_html__( 'Internal error. Please, try again later', 'jet-widgets' ),
-				'server_error'      => esc_html__( 'Server error. Please, try again later', 'jet-widgets' ),
-				'subscribe_success' => esc_html__( 'Success', 'jet-widgets' ),
+				'invalid_mail'      => esc_html__( 'Please, provide valid mail', 'jetwidgets-for-elementor' ),
+				'mailchimp'         => esc_html__( 'Please, set up MailChimp API key and List ID', 'jetwidgets-for-elementor' ),
+				'internal'          => esc_html__( 'Internal error. Please, try again later', 'jetwidgets-for-elementor' ),
+				'server_error'      => esc_html__( 'Server error. Please, try again later', 'jetwidgets-for-elementor' ),
+				'subscribe_success' => esc_html__( 'Success', 'jetwidgets-for-elementor' ),
 			) );
 
 			$this->handlers_init();

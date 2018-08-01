@@ -25,7 +25,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Image Comparison', 'jet-widgets' );
+		return esc_html__( 'Image Comparison', 'jetwidgets-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -62,14 +62,14 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_settings',
 			array(
-				'label' => esc_html__( 'Settings', 'jet-widgets' ),
+				'label' => esc_html__( 'Settings', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
-				'label'   => esc_html__( 'Slides to Show', 'jet-widgets' ),
+				'label'   => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => jet_widgets_tools()->get_select_range( 10 ),
@@ -79,7 +79,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'slides_to_scroll',
 			array(
-				'label'     => esc_html__( 'Slides to Scroll', 'jet-widgets' ),
+				'label'     => esc_html__( 'Slides to Scroll', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => '1',
 				'options'   => jet_widgets_tools()->get_select_range( 10 ),
@@ -92,10 +92,10 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'pause_on_hover',
 			array(
-				'label'        => esc_html__( 'Pause on Hover', 'jet-widgets' ),
+				'label'        => esc_html__( 'Pause on Hover', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -104,10 +104,10 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay',
 			array(
-				'label'        => esc_html__( 'Autoplay', 'jet-widgets' ),
+				'label'        => esc_html__( 'Autoplay', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -116,7 +116,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay_speed',
 			array(
-				'label'     => esc_html__( 'Autoplay Speed', 'jet-widgets' ),
+				'label'     => esc_html__( 'Autoplay Speed', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 5000,
 				'condition' => array(
@@ -128,10 +128,10 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -140,12 +140,12 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'effect',
 			array(
-				'label'   => esc_html__( 'Effect', 'jet-widgets' ),
+				'label'   => esc_html__( 'Effect', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'slide',
 				'options' => array(
-					'slide' => esc_html__( 'Slide', 'jet-widgets' ),
-					'fade'  => esc_html__( 'Fade', 'jet-widgets' ),
+					'slide' => esc_html__( 'Slide', 'jetwidgets-for-elementor' ),
+					'fade'  => esc_html__( 'Fade', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'slides_to_show' => '1',
@@ -156,7 +156,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'speed',
 			array(
-				'label'   => esc_html__( 'Animation Speed', 'jet-widgets' ),
+				'label'   => esc_html__( 'Animation Speed', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 500,
 			)
@@ -165,10 +165,10 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'arrows',
 			array(
-				'label'        => esc_html__( 'Show Arrows Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Arrows Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'false',
 			)
@@ -177,7 +177,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow',
 			array(
-				'label'   => esc_html__( 'Prev Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-left',
 				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
@@ -190,7 +190,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow',
 			array(
-				'label'   => esc_html__( 'Next Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-right',
 				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
@@ -203,10 +203,10 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots',
 			array(
-				'label'        => esc_html__( 'Show Dots Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Dots Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -217,7 +217,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_items_data',
 			array(
-				'label' => esc_html__( 'Items', 'jet-widgets' ),
+				'label' => esc_html__( 'Items', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -226,7 +226,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_before_label',
 			array(
-				'label'   => esc_html__( 'Before Label', 'jet-widgets' ),
+				'label'   => esc_html__( 'Before Label', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -234,7 +234,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_before_image',
 			array(
-				'label'   => esc_html__( 'Before Image', 'jet-widgets' ),
+				'label'   => esc_html__( 'Before Image', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::MEDIA,
 			)
 		);
@@ -242,7 +242,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_after_label',
 			array(
-				'label'   => esc_html__( 'After Label', 'jet-widgets' ),
+				'label'   => esc_html__( 'After Label', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -250,7 +250,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_after_image',
 			array(
-				'label'   => esc_html__( 'After Image', 'jet-widgets' ),
+				'label'   => esc_html__( 'After Image', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::MEDIA,
 			)
 		);
@@ -262,21 +262,21 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 				'fields'      => array_values( $repeater->get_controls() ),
 				'default'     => array(
 					array(
-						'item_before_label' => esc_html__( 'Before', 'jet-widgets' ),
+						'item_before_label' => esc_html__( 'Before', 'jetwidgets-for-elementor' ),
 						'item_before_image' => array(
 							'url' => Utils::get_placeholder_image_src(),
 						),
-						'item_after_label' => esc_html__( 'After', 'jet-widgets' ),
+						'item_after_label' => esc_html__( 'After', 'jetwidgets-for-elementor' ),
 						'item_after_image' => array(
 							'url' => Utils::get_placeholder_image_src(),
 						),
 					),
 					array(
-						'item_before_label' => esc_html__( 'Before', 'jet-widgets' ),
+						'item_before_label' => esc_html__( 'Before', 'jetwidgets-for-elementor' ),
 						'item_before_image' => array(
 							'url' => Utils::get_placeholder_image_src(),
 						),
-						'item_after_label' => esc_html__( 'After', 'jet-widgets' ),
+						'item_after_label' => esc_html__( 'After', 'jetwidgets-for-elementor' ),
 						'item_after_image' => array(
 							'url' => Utils::get_placeholder_image_src(),
 						),
@@ -294,7 +294,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_services_general_style',
 			array(
-				'label'      => esc_html__( 'General', 'jet-widgets' ),
+				'label'      => esc_html__( 'General', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -304,7 +304,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'container_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'  => '{{WRAPPER}} ' . $css_scheme['instance'],
@@ -314,7 +314,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'container_border_radius',
 			array(
-				'label'      => __( 'Border Radius', 'jet-widgets' ),
+				'label'      => __( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -326,7 +326,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'container_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -354,7 +354,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_image_comparison_label_style',
 			array(
-				'label'      => esc_html__( 'Label', 'jet-widgets' ),
+				'label'      => esc_html__( 'Label', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -365,14 +365,14 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_label_before',
 			array(
-				'label' => esc_html__( 'Before', 'jet-widgets' ),
+				'label' => esc_html__( 'Before', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'before_label_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['before_label'] => 'color: {{VALUE}}',
@@ -408,7 +408,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'before_label_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -420,7 +420,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'before_label_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -432,13 +432,13 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'before_label_horizontal_alignment',
 			array(
-				'label'   => esc_html__( 'Horizontal Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'flex-start',
 				'options' => array(
-					'flex-start'    => esc_html__( 'Left', 'jet-widgets' ),
-					'center'        => esc_html__( 'Center', 'jet-widgets' ),
-					'flex-end'      => esc_html__( 'Right', 'jet-widgets' ),
+					'flex-start'    => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'center'        => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
+					'flex-end'      => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['before_container'] => 'justify-content: {{VALUE}};',
@@ -449,13 +449,13 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'before_label_vertical_alignment',
 			array(
-				'label'   => esc_html__( 'Vertical Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'flex-start',
 				'options' => array(
-					'flex-start'    => esc_html__( 'Top', 'jet-widgets' ),
-					'center'        => esc_html__( 'Center', 'jet-widgets' ),
-					'flex-end'      => esc_html__( 'Bottom', 'jet-widgets' ),
+					'flex-start'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'center'        => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
+					'flex-end'      => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['before_container'] => 'align-items: {{VALUE}};',
@@ -469,14 +469,14 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_label_after',
 			array(
-				'label' => esc_html__( 'After', 'jet-widgets' ),
+				'label' => esc_html__( 'After', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'after_label_color',
 			array(
-				'label' => esc_html__( 'Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['after_label'] => 'color: {{VALUE}}',
@@ -512,7 +512,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'after_label_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -524,7 +524,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'after_label_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -536,13 +536,13 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'after_label_horizontal_alignment',
 			array(
-				'label'   => esc_html__( 'Horizontal Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'flex-end',
 				'options' => array(
-					'flex-start'    => esc_html__( 'Left', 'jet-widgets' ),
-					'center'        => esc_html__( 'Center', 'jet-widgets' ),
-					'flex-end'      => esc_html__( 'Right', 'jet-widgets' ),
+					'flex-start'    => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'center'        => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
+					'flex-end'      => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['after_container'] => 'justify-content: {{VALUE}};',
@@ -553,13 +553,13 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'after_label_vertical_alignment',
 			array(
-				'label'   => esc_html__( 'Vertical Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'flex-start',
 				'options' => array(
-					'flex-start'    => esc_html__( 'Top', 'jet-widgets' ),
-					'center'        => esc_html__( 'Center', 'jet-widgets' ),
-					'flex-end'      => esc_html__( 'Bottom', 'jet-widgets' ),
+					'flex-start'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'center'        => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
+					'flex-end'      => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['after_container'] => 'align-items: {{VALUE}};',
@@ -579,7 +579,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_image_comparison_handle_style',
 			array(
-				'label'      => esc_html__( 'Handle', 'jet-widgets' ),
+				'label'      => esc_html__( 'Handle', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -588,7 +588,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_control_width',
 			array(
-				'label'      => esc_html__( 'Control Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Control Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -608,7 +608,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_control_height',
 			array(
-				'label'      => esc_html__( 'Height', 'jet-widgets' ),
+				'label'      => esc_html__( 'Height', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -628,7 +628,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_handle_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -651,7 +651,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'handle_arrow_color',
 			array(
-				'label' => esc_html__( 'Arrow Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Arrow Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['jx_instance'] . ' .jx-controller i' => 'color: {{VALUE}}',
@@ -672,7 +672,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_handle_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -695,7 +695,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'handle_arrow_color_hover',
 			array(
-				'label' => esc_html__( 'Arrow Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Arrow Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['jx_instance'] . ':hover .jx-controller i' => 'color: {{VALUE}}',
@@ -718,7 +718,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_divider_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -731,7 +731,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_divider_radius',
 			array(
-				'label'      => __( 'Border Radius', 'jet-widgets' ),
+				'label'      => __( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -743,21 +743,21 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_control_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'label_block' => false,
 				'options' => array(
 					'flex-start' => array(
-						'title' => esc_html__( 'Top', 'jet-widgets' ),
+						'title' => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
 						'icon'  => 'eicon-v-align-top',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'eicon-v-align-middle',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Bottom', 'jet-widgets' ),
+						'title' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 						'icon'  => 'eicon-v-align-bottom',
 					),
 				),
@@ -770,7 +770,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'heading_handle_divider_style',
 			array(
-				'label'     => esc_html__( 'Handle Divider', 'jet-widgets' ),
+				'label'     => esc_html__( 'Handle Divider', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -779,7 +779,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_divider_width',
 			array(
-				'label'      => esc_html__( 'Divider Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Divider Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -797,7 +797,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'handle_divider_color',
 			array(
-				'label'   => esc_html__( 'Divider Color', 'jet-widgets' ),
+				'label'   => esc_html__( 'Divider Color', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['handle'] . ' .jx-control:before' => 'background-color: {{VALUE}};',
@@ -808,7 +808,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'starting_position',
 			array(
-				'label'      => esc_html__( 'Divider Starting Position', 'jet-widgets' ),
+				'label'      => esc_html__( 'Divider Starting Position', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'range'      => array(
@@ -828,7 +828,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'heading_handle_arrow_style',
 			array(
-				'label'     => esc_html__( 'Handle Arrow', 'jet-widgets' ),
+				'label'     => esc_html__( 'Handle Arrow', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -837,7 +837,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'handle_prev_arrow',
 			array(
-				'label'       => esc_html__( 'Prev Arrow Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::SELECT,
 				'default'     => 'fa fa-angle-left',
 				'render_type' => 'template',
@@ -848,7 +848,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'handle_next_arrow',
 			array(
-				'label'       => esc_html__( 'Next Arrow Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::SELECT,
 				'default'     => 'fa fa-angle-right',
 				'render_type' => 'template',
@@ -859,7 +859,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_arrow_size',
 			array(
-				'label'      => esc_html__( 'Icon Size', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon Size', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', 'em'
@@ -879,7 +879,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'handle_arrow_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -896,7 +896,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_arrows_style',
 			array(
-				'label'      => esc_html__( 'Arrows', 'jet-widgets' ),
+				'label'      => esc_html__( 'Arrows', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -907,7 +907,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_arrows_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -915,7 +915,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['arrow'],
 				'fields_options' => array(
 					'color' => array(
@@ -933,7 +933,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_arrows_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -941,7 +941,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_hover_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['arrow'] . ':hover',
 				'fields_options' => array(
 					'color' => array(
@@ -961,7 +961,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow_position',
 			array(
-				'label'     => esc_html__( 'Prev Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Prev Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -970,12 +970,12 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -983,7 +983,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1012,7 +1012,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1041,12 +1041,12 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1054,7 +1054,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1083,7 +1083,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1112,7 +1112,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow_position',
 			array(
-				'label'     => esc_html__( 'Next Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Next Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1121,12 +1121,12 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1134,7 +1134,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1163,7 +1163,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1192,12 +1192,12 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'right',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -1205,7 +1205,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1234,7 +1234,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -1268,7 +1268,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_dots_style',
 			array(
-				'label'      => esc_html__( 'Dots', 'jet-widgets' ),
+				'label'      => esc_html__( 'Dots', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1279,7 +1279,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1287,7 +1287,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] .' li span',
 				'fields_options' => array(
 					'color' => array(
@@ -1309,7 +1309,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1317,7 +1317,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_hover',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] . ' li span:hover',
 				'fields_options' => array(
 					'color' => array(
@@ -1339,7 +1339,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_active',
 			array(
-				'label' => esc_html__( 'Active', 'jet-widgets' ),
+				'label' => esc_html__( 'Active', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1347,7 +1347,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_active',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] .' li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
@@ -1371,7 +1371,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_gap',
 			array(
-				'label' => esc_html__( 'Gap', 'jet-widgets' ),
+				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 5,
@@ -1393,7 +1393,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_margin',
 			array(
-				'label'      => esc_html__( 'Dots Box Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Dots Box Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1405,20 +1405,20 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'dots_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start' => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),

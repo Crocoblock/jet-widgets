@@ -25,7 +25,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Testimonials', 'jet-widgets' );
+		return esc_html__( 'Testimonials', 'jetwidgets-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -65,14 +65,14 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_settings',
 			array(
-				'label' => esc_html__( 'Settings', 'jet-widgets' ),
+				'label' => esc_html__( 'Settings', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
-				'label'   => esc_html__( 'Slides to Show', 'jet-widgets' ),
+				'label'   => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => jet_widgets_tools()->get_select_range( 10 ),
@@ -82,7 +82,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'slides_to_scroll',
 			array(
-				'label'     => esc_html__( 'Slides to Scroll', 'jet-widgets' ),
+				'label'     => esc_html__( 'Slides to Scroll', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::SELECT,
 				'default'   => '1',
 				'options'   => jet_widgets_tools()->get_select_range( 10 ),
@@ -95,10 +95,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'pause_on_hover',
 			array(
-				'label'        => esc_html__( 'Pause on Hover', 'jet-widgets' ),
+				'label'        => esc_html__( 'Pause on Hover', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -107,10 +107,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay',
 			array(
-				'label'        => esc_html__( 'Autoplay', 'jet-widgets' ),
+				'label'        => esc_html__( 'Autoplay', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -119,7 +119,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'autoplay_speed',
 			array(
-				'label'     => esc_html__( 'Autoplay Speed', 'jet-widgets' ),
+				'label'     => esc_html__( 'Autoplay Speed', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 5000,
 				'condition' => array(
@@ -131,10 +131,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'infinite',
 			array(
-				'label'        => esc_html__( 'Infinite Loop', 'jet-widgets' ),
+				'label'        => esc_html__( 'Infinite Loop', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -143,10 +143,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'adaptive_height',
 			array(
-				'label'        => esc_html__( 'Adaptive Height', 'jet-widgets' ),
+				'label'        => esc_html__( 'Adaptive Height', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -155,12 +155,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'effect',
 			array(
-				'label'   => esc_html__( 'Effect', 'jet-widgets' ),
+				'label'   => esc_html__( 'Effect', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'slide',
 				'options' => array(
-					'slide' => esc_html__( 'Slide', 'jet-widgets' ),
-					'fade'  => esc_html__( 'Fade', 'jet-widgets' ),
+					'slide' => esc_html__( 'Slide', 'jetwidgets-for-elementor' ),
+					'fade'  => esc_html__( 'Fade', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'slides_to_show' => '1',
@@ -171,7 +171,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'speed',
 			array(
-				'label'   => esc_html__( 'Animation Speed', 'jet-widgets' ),
+				'label'   => esc_html__( 'Animation Speed', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 500,
 			)
@@ -180,10 +180,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'arrows',
 			array(
-				'label'        => esc_html__( 'Show Arrows Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Arrows Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'false',
 			)
@@ -192,7 +192,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow',
 			array(
-				'label'   => esc_html__( 'Prev Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-left',
 				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
@@ -205,7 +205,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow',
 			array(
-				'label'   => esc_html__( 'Next Arrow Icon', 'jet-widgets' ),
+				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'fa fa-angle-right',
 				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
@@ -218,10 +218,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots',
 			array(
-				'label'        => esc_html__( 'Show Dots Navigation', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Dots Navigation', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
 			)
@@ -232,7 +232,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_items_data',
 			array(
-				'label' => esc_html__( 'Items', 'jet-widgets' ),
+				'label' => esc_html__( 'Items', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -241,7 +241,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_image',
 			array(
-				'label'   => esc_html__( 'Image', 'jet-widgets' ),
+				'label'   => esc_html__( 'Image', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::MEDIA,
 			)
 		);
@@ -249,7 +249,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_icon',
 			array(
-				'label'       => esc_html__( 'Icon', 'jet-widgets' ),
+				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
@@ -260,7 +260,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_title',
 			array(
-				'label'   => esc_html__( 'Title', 'jet-widgets' ),
+				'label'   => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -268,7 +268,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_comment',
 			array(
-				'label'   => esc_html__( 'Comment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Comment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXTAREA,
 			)
 		);
@@ -276,7 +276,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_name',
 			array(
-				'label'   => esc_html__( 'Name', 'jet-widgets' ),
+				'label'   => esc_html__( 'Name', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -284,7 +284,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_position',
 			array(
-				'label'   => esc_html__( 'Position', 'jet-widgets' ),
+				'label'   => esc_html__( 'Position', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -292,7 +292,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$repeater->add_control(
 			'item_date',
 			array(
-				'label'   => esc_html__( 'Date', 'jet-widgets' ),
+				'label'   => esc_html__( 'Date', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::TEXT,
 			)
 		);
@@ -304,40 +304,40 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'fields'      => array_values( $repeater->get_controls() ),
 				'default'     => array(
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'Mary Scott', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'Mary Scott', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'John Borthwick', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'John Borthwick', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'Jane Bill', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'Jane Bill', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'David Anderson', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'David Anderson', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'Susan O’Neill', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'Susan O’Neill', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 					array(
-						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jet-widgets' ),
-						'item_name'     => esc_html__( 'Ryan King', 'jet-widgets' ),
-						'item_position' => esc_html__( 'Founder & CEO', 'jet-widgets' ),
-						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jet-widgets' ),
+						'item_comment'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jetwidgets-for-elementor' ),
+						'item_name'     => esc_html__( 'Ryan King', 'jetwidgets-for-elementor' ),
+						'item_position' => esc_html__( 'Founder & CEO', 'jetwidgets-for-elementor' ),
+						'item_date'     => esc_html__( 'Thursday, August 31, 2017', 'jetwidgets-for-elementor' ),
 					),
 				),
 				'title_field' => '{{{ item_title }}}',
@@ -349,7 +349,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_item_style',
 			array(
-				'label'      => esc_html__( 'Item', 'jet-widgets' ),
+				'label'      => esc_html__( 'Item', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -358,10 +358,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'equal_height_cols',
 			array(
-				'label'        => esc_html__( 'Equal Items Height', 'jet-widgets' ),
+				'label'        => esc_html__( 'Equal Items Height', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			)
@@ -379,7 +379,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'item_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['item_inner'],
@@ -389,7 +389,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'item_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -409,7 +409,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'item_margin',
 			array(
-				'label'       => esc_html__( 'Item Margin', 'jet-widgets' ),
+				'label'       => esc_html__( 'Item Margin', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::DIMENSIONS,
 				'size_units'  => array( 'px' ),
 				'render_type' => 'template',
@@ -428,7 +428,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_image_style',
 			array(
-				'label'      => esc_html__( 'Image', 'jet-widgets' ),
+				'label'      => esc_html__( 'Image', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -437,7 +437,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'image_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -465,7 +465,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'image_height',
 			array(
-				'label'      => esc_html__( 'Height', 'jet-widgets' ),
+				'label'      => esc_html__( 'Height', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -494,7 +494,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'image_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['image'],
@@ -504,7 +504,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'image_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -516,7 +516,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'image_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -536,19 +536,19 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'image_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'options' => array(
 					'flex-start' => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -566,7 +566,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_arrows_style',
 			array(
-				'label'      => esc_html__( 'Arrows', 'jet-widgets' ),
+				'label'      => esc_html__( 'Arrows', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -577,7 +577,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_arrows_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -585,7 +585,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['arrow'],
 				'fields_options' => array(
 					'color' => array(
@@ -603,7 +603,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_arrows_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -611,7 +611,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'arrows_hover_style',
-				'label'          => esc_html__( 'Arrows Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Arrows Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['arrow'] . ':hover',
 				'fields_options' => array(
 					'color' => array(
@@ -631,7 +631,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_arrow_position',
 			array(
-				'label'     => esc_html__( 'Prev Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Prev Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -640,12 +640,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -653,7 +653,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -682,7 +682,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -711,12 +711,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'prev_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'left',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -724,7 +724,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -753,7 +753,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'prev_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -782,7 +782,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_arrow_position',
 			array(
-				'label'     => esc_html__( 'Next Arrow Position', 'jet-widgets' ),
+				'label'     => esc_html__( 'Next Arrow Position', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -791,12 +791,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_vert_position',
 			array(
-				'label'   => esc_html__( 'Vertical Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Vertical Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => array(
-					'top'    => esc_html__( 'Top', 'jet-widgets' ),
-					'bottom' => esc_html__( 'Bottom', 'jet-widgets' ),
+					'top'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'bottom' => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -804,7 +804,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_top_position',
 			array(
-				'label'      => esc_html__( 'Top Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Top Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -833,7 +833,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_bottom_position',
 			array(
-				'label'      => esc_html__( 'Bottom Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Bottom Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -862,12 +862,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'next_hor_position',
 			array(
-				'label'   => esc_html__( 'Horizontal Postition by', 'jet-widgets' ),
+				'label'   => esc_html__( 'Horizontal Postition by', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'right',
 				'options' => array(
-					'left'  => esc_html__( 'Left', 'jet-widgets' ),
-					'right' => esc_html__( 'Right', 'jet-widgets' ),
+					'left'  => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
+					'right' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 				),
 			)
 		);
@@ -875,7 +875,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_left_position',
 			array(
-				'label'      => esc_html__( 'Left Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Left Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -904,7 +904,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'next_right_position',
 			array(
-				'label'      => esc_html__( 'Right Indent', 'jet-widgets' ),
+				'label'      => esc_html__( 'Right Indent', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px', '%', 'em' ),
 				'range'      => array(
@@ -938,7 +938,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_dots_style',
 			array(
-				'label'      => esc_html__( 'Dots', 'jet-widgets' ),
+				'label'      => esc_html__( 'Dots', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -949,7 +949,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -957,7 +957,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] .' li span',
 				'fields_options' => array(
 					'color' => array(
@@ -979,7 +979,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -987,7 +987,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_hover',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] . ' li span:hover',
 				'fields_options' => array(
 					'color' => array(
@@ -1009,7 +1009,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_dots_active',
 			array(
-				'label' => esc_html__( 'Active', 'jet-widgets' ),
+				'label' => esc_html__( 'Active', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -1017,7 +1017,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			\Jet_Widgets_Group_Control_Box_Style::get_type(),
 			array(
 				'name'           => 'dots_style_active',
-				'label'          => esc_html__( 'Dots Style', 'jet-widgets' ),
+				'label'          => esc_html__( 'Dots Style', 'jetwidgets-for-elementor' ),
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['dots'] .' li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
@@ -1041,7 +1041,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_gap',
 			array(
-				'label' => esc_html__( 'Gap', 'jet-widgets' ),
+				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => array(
 					'size' => 5,
@@ -1063,7 +1063,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'dots_margin',
 			array(
-				'label'      => esc_html__( 'Dots Box Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Dots Box Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1075,20 +1075,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'dots_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start' => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1106,7 +1106,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_icon_style',
 			array(
-				'label'      => esc_html__( 'Icon', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1115,7 +1115,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'icon_color',
 			array(
-				'label' => esc_html__( 'Icon Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'color: {{VALUE}}',
@@ -1126,7 +1126,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'icon_bg_color',
 			array(
-				'label' => esc_html__( 'Icon Background Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Icon Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['icon'] . ' ' . $css_scheme['icon_inner'] => 'background-color: {{VALUE}}',
@@ -1137,7 +1137,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_font_size',
 			array(
-				'label'      => esc_html__( 'Icon Font Size', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon Font Size', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', 'em', 'rem',
@@ -1157,7 +1157,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_size',
 			array(
-				'label'      => esc_html__( 'Icon Box Size', 'jet-widgets' ),
+				'label'      => esc_html__( 'Icon Box Size', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', 'em', '%',
@@ -1178,7 +1178,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'icon_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['icon'] . ' ' . $css_scheme['icon_inner'],
@@ -1188,7 +1188,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'icon_box_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1200,7 +1200,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_box_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1220,20 +1220,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'icon_box_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1251,7 +1251,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_title_style',
 			array(
-				'label'      => esc_html__( 'Title', 'jet-widgets' ),
+				'label'      => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1260,10 +1260,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'title_custom_width',
 			array(
-				'label'        => esc_html__( 'Custom width', 'jet-widgets' ),
+				'label'        => esc_html__( 'Custom width', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'false',
 			)
@@ -1272,7 +1272,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'title_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -1303,7 +1303,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'title_color',
 			array(
-				'label'  => esc_html__( 'Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['title'] => 'color: {{VALUE}}',
@@ -1323,7 +1323,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'title_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1335,7 +1335,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'title_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1347,20 +1347,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'title_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1373,20 +1373,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'title_text_alignment',
 			array(
-				'label'   => esc_html__( 'Text Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1404,7 +1404,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_comment_style',
 			array(
-				'label'      => esc_html__( 'Comment', 'jet-widgets' ),
+				'label'      => esc_html__( 'Comment', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1413,7 +1413,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'comment_color',
 			array(
-				'label'  => esc_html__( 'Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => array(
@@ -1434,7 +1434,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -1462,10 +1462,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'use_comment_corner',
 			array(
-				'label'        => esc_html__( 'Use comment corner', 'jet-widgets' ),
+				'label'        => esc_html__( 'Use comment corner', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'false',
 			)
@@ -1474,7 +1474,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'comment_corner_color',
 			array(
-				'label'   => esc_html__( 'Color', 'jet-widgets' ),
+				'label'   => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['comment'] . ':after' => 'border-color: {{VALUE}} transparent transparent transparent;',
@@ -1488,7 +1488,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_corner_position',
 			array(
-				'label'      => esc_html__( 'Corner Position', 'jet-widgets' ),
+				'label'      => esc_html__( 'Corner Position', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'range'      => array(
@@ -1513,7 +1513,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_corner_width',
 			array(
-				'label'      => esc_html__( 'Corner Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Corner Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -1538,7 +1538,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_corner_height',
 			array(
-				'label'      => esc_html__( 'Corner Height', 'jet-widgets' ),
+				'label'      => esc_html__( 'Corner Height', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -1563,7 +1563,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_corner_skew',
 			array(
-				'label'      => esc_html__( 'Corner Skew', 'jet-widgets' ),
+				'label'      => esc_html__( 'Corner Skew', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'px' ),
 				'range'      => array(
@@ -1605,7 +1605,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'comment_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} ' . $css_scheme['comment'],
@@ -1615,7 +1615,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'comment_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'default' => array(
@@ -1641,7 +1641,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'default' => array(
@@ -1659,7 +1659,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1671,20 +1671,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1697,20 +1697,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'comment_text_alignment',
 			array(
-				'label'   => esc_html__( 'Text Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1728,7 +1728,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_name_style',
 			array(
-				'label'      => esc_html__( 'Name', 'jet-widgets' ),
+				'label'      => esc_html__( 'Name', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1737,10 +1737,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'name_custom_width',
 			array(
-				'label'        => esc_html__( 'Custom width', 'jet-widgets' ),
+				'label'        => esc_html__( 'Custom width', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'false',
 			)
@@ -1749,7 +1749,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'name_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -1780,7 +1780,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'name_color',
 			array(
-				'label'  => esc_html__( 'Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1804,7 +1804,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'name_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1816,7 +1816,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'name_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1828,20 +1828,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'name_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1854,20 +1854,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'name_text_alignment',
 			array(
-				'label'   => esc_html__( 'Text Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1885,7 +1885,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_position_style',
 			array(
-				'label'      => esc_html__( 'Position', 'jet-widgets' ),
+				'label'      => esc_html__( 'Position', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1894,10 +1894,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'position_custom_width',
 			array(
-				'label'        => esc_html__( 'Custom width', 'jet-widgets' ),
+				'label'        => esc_html__( 'Custom width', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'false',
 			)
@@ -1906,7 +1906,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'position_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -1937,7 +1937,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'position_color',
 			array(
-				'label'  => esc_html__( 'Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -1961,7 +1961,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'position_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1973,7 +1973,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'position_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1985,20 +1985,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'position_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -2011,20 +2011,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'position_text_alignment',
 			array(
-				'label'   => esc_html__( 'Text Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -2042,7 +2042,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_date_style',
 			array(
-				'label'      => esc_html__( 'Date', 'jet-widgets' ),
+				'label'      => esc_html__( 'Date', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -2051,10 +2051,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'date_custom_width',
 			array(
-				'label'        => esc_html__( 'Custom width', 'jet-widgets' ),
+				'label'        => esc_html__( 'Custom width', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'false',
 			)
@@ -2063,7 +2063,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'date_width',
 			array(
-				'label'      => esc_html__( 'Width', 'jet-widgets' ),
+				'label'      => esc_html__( 'Width', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array(
 					'px', '%',
@@ -2094,7 +2094,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'date_color',
 			array(
-				'label'  => esc_html__( 'Color', 'jet-widgets' ),
+				'label'  => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'scheme' => array(
 					'type'  => Scheme_Color::get_type(),
@@ -2118,7 +2118,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'date_padding',
 			array(
-				'label'      => __( 'Padding', 'jet-widgets' ),
+				'label'      => __( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -2130,7 +2130,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'date_margin',
 			array(
-				'label'      => __( 'Margin', 'jet-widgets' ),
+				'label'      => __( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -2142,20 +2142,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'date_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'flex-start'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'flex-end' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -2168,20 +2168,20 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'date_text_alignment',
 			array(
-				'label'   => esc_html__( 'Text Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -2199,7 +2199,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_order_style',
 			array(
-				'label'      => esc_html__( 'Content Order and Alignment', 'jet-widgets' ),
+				'label'      => esc_html__( 'Content Order and Alignment', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -2208,7 +2208,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'image_order',
 			array(
-				'label'   => esc_html__( 'Image Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Image Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 1,
 				'min'     => 1,
@@ -2223,7 +2223,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'icon_order',
 			array(
-				'label'   => esc_html__( 'Icon Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Icon Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 2,
 				'min'     => 1,
@@ -2238,7 +2238,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'title_order',
 			array(
-				'label'   => esc_html__( 'Title Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Title Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 3,
 				'min'     => 1,
@@ -2253,7 +2253,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'comment_order',
 			array(
-				'label'   => esc_html__( 'Description Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Description Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 4,
 				'min'     => 1,
@@ -2268,7 +2268,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'name_order',
 			array(
-				'label'   => esc_html__( 'Name Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Name Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 5,
 				'min'     => 1,
@@ -2283,7 +2283,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'position_order',
 			array(
-				'label'   => esc_html__( 'Position Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Position Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 6,
 				'min'     => 1,
@@ -2298,7 +2298,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'date_order',
 			array(
-				'label'   => esc_html__( 'Date Order', 'jet-widgets' ),
+				'label'   => esc_html__( 'Date Order', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 7,
 				'min'     => 1,
@@ -2313,14 +2313,14 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'content_alignment',
 			array(
-				'label'   => esc_html__( 'Cover Content Vertical Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Cover Content Vertical Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => 'center',
 				'options' => array(
-					'flex-start'    => esc_html__( 'Top', 'jet-widgets' ),
-					'center'        => esc_html__( 'Center', 'jet-widgets' ),
-					'flex-end'      => esc_html__( 'Bottom', 'jet-widgets' ),
-					'space-between' => esc_html__( 'Space between', 'jet-widgets' ),
+					'flex-start'    => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+					'center'        => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
+					'flex-end'      => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
+					'space-between' => esc_html__( 'Space between', 'jetwidgets-for-elementor' ),
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} '. $css_scheme['content'] => 'justify-content: {{VALUE}};',

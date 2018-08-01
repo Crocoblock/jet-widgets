@@ -27,10 +27,10 @@ class WPML_Jet_Widgets_Advanced_Carousel extends WPML_Elementor_Module_With_Item
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'item_title':
-				return esc_html__( 'Advanced Carousel: Item Title', 'jet-widgets' );
+				return esc_html__( 'Advanced Carousel: Item Title', 'jetwidgets-for-elementor' );
 
 			case 'item_text':
-				return esc_html__( 'Advanced Carousel: Item Description', 'jet-widgets' );
+				return esc_html__( 'Advanced Carousel: Item Description', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

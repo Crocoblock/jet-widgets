@@ -12,7 +12,7 @@ echo '<div class="post-meta">';
 	jet_widgets()->utility()->meta_data->get_author( array(
 		'visible' => $this->get_attr( 'show_author' ),
 		'class'   => 'posted-by__author',
-		'prefix'  => esc_html__( 'Posted by ', 'jet-widgets' ),
+		'prefix'  => esc_html__( 'Posted by ', 'jetwidgets-for-elementor' ),
 		'html'    => '<span class="posted-by post-meta__item">%1$s<a href="%2$s" %3$s %4$s rel="author">%5$s%6$s</a></span>',
 		'echo'    => true,
 	) );
@@ -29,7 +29,7 @@ echo '<div class="post-meta">';
 		'visible' => $this->get_attr( 'show_comments' ),
 		'class'   => 'post__comments-link',
 		'icon'    => '',
-		'prefix'  => esc_html__( 'Comments: ', 'jet-widgets' ),
+		'prefix'  => esc_html__( 'Comments: ', 'jetwidgets-for-elementor' ),
 		'html'    => '<span class="post__comments post-meta__item">%1$s<a href="%2$s" %3$s %4$s>%5$s%6$s</a></span>',
 		'echo'    => true,
 	) );

@@ -95,7 +95,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 				return false;
 			}
 
-			$message = esc_html__( 'Settings saved', 'jet-widgets' );
+			$message = esc_html__( 'Settings saved', 'jetwidgets-for-elementor' );
 
 			printf( '<div class="notice notice-success is-dismissible"><p>%s</p></div>', $message );
 
@@ -178,8 +178,8 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 			add_submenu_page(
 				'elementor',
-				esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
-				esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
+				esc_html__( 'JetWidgets Settings', 'jetwidgets-for-elementor' ),
+				esc_html__( 'JetWidgets Settings', 'jetwidgets-for-elementor' ),
 				'manage_options',
 				$this->key,
 				array( $this, 'render_page' )
@@ -203,7 +203,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 					'jet_widgets_settings' => array(
 						'type'   => 'section',
 						'scroll' => false,
-						'title'  => esc_html__( 'JetWidgets Settings', 'jet-widgets' ),
+						'title'  => esc_html__( 'JetWidgets Settings', 'jetwidgets-for-elementor' ),
 					),
 				)
 			);
@@ -247,15 +247,15 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 				array(
 					'general_tab' => array(
 						'parent'      => 'jet_widgets_tab_vertical',
-						'title'       => esc_html__( 'General settings', 'jet-widgets' ),
+						'title'       => esc_html__( 'General settings', 'jetwidgets-for-elementor' ),
 					),
 					'mailing_options' => array(
 						'parent'      => 'jet_widgets_tab_vertical',
-						'title'       => esc_html__( 'Mailing List Manager', 'jet-widgets' ),
+						'title'       => esc_html__( 'Mailing List Manager', 'jetwidgets-for-elementor' ),
 					),
 					'avaliable_widgets_options' => array(
 						'parent'      => 'jet_widgets_tab_vertical',
-						'title'       => esc_html__( 'Available Widgets', 'jet-widgets' ),
+						'title'       => esc_html__( 'Available Widgets', 'jetwidgets-for-elementor' ),
 					),
 				)
 			);
@@ -269,19 +269,19 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						'parent'      => 'general_tab',
 						'value'       => $this->get( 'svg_uploads', 'enabled' ),
 						'options'     => array(
-							'enabled'  => esc_html__( 'Enabled', 'jet-widgets' ),
-							'disabled' => esc_html__( 'Disabled', 'jet-widgets' ),
+							'enabled'  => esc_html__( 'Enabled', 'jetwidgets-for-elementor' ),
+							'disabled' => esc_html__( 'Disabled', 'jetwidgets-for-elementor' ),
 						),
-						'title'       => esc_html__( 'SVG images upload status:', 'jet-widgets' ),
-						'description' => esc_html__( 'Enable or disable SVG images uploading', 'jet-widgets' ),
+						'title'       => esc_html__( 'SVG images upload status:', 'jetwidgets-for-elementor' ),
+						'description' => esc_html__( 'Enable or disable SVG images uploading', 'jetwidgets-for-elementor' ),
 					),
 
 					'mailchimp-api-key' => array(
 						'type'         => 'text',
 						'parent'       => 'mailing_options',
-						'title'        => esc_html__( 'MailChimp API key', 'jet-widgets' ),
-						'placeholder'  => esc_html__( 'MailChimp API key', 'jet-widgets' ),
-						'description'  => sprintf( '%1$s <a href="http://kb.mailchimp.com/integrations/api-integrations/about-api-keys">%2$s</a>', esc_html__( 'Input your MailChimp API key', 'jet-widgets' ), esc_html__( 'About API Keys', 'jet-widgets' ) ),
+						'title'        => esc_html__( 'MailChimp API key', 'jetwidgets-for-elementor' ),
+						'placeholder'  => esc_html__( 'MailChimp API key', 'jetwidgets-for-elementor' ),
+						'description'  => sprintf( '%1$s <a href="http://kb.mailchimp.com/integrations/api-integrations/about-api-keys">%2$s</a>', esc_html__( 'Input your MailChimp API key', 'jetwidgets-for-elementor' ), esc_html__( 'About API Keys', 'jetwidgets-for-elementor' ) ),
 						'value'        => $this->get( 'mailchimp-api-key' ),
 						'class'        => '',
 						'label'        => '',
@@ -290,9 +290,9 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 					'mailchimp-list-id' => array(
 						'type'         => 'text',
 						'parent'       => 'mailing_options',
-						'title'        => esc_html__( 'MailChimp list ID', 'jet-widgets' ),
-						'placeholder'  => esc_html__( 'MailChimp list ID', 'jet-widgets' ),
-						'description'  => sprintf( '%1$s <a href="http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id">%2$s</a>', esc_html__( 'MailChimp list ID', 'jet-widgets' ), esc_html__( 'list ID', 'jet-widgets' ) ),
+						'title'        => esc_html__( 'MailChimp list ID', 'jetwidgets-for-elementor' ),
+						'placeholder'  => esc_html__( 'MailChimp list ID', 'jetwidgets-for-elementor' ),
+						'description'  => sprintf( '%1$s <a href="http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id">%2$s</a>', esc_html__( 'MailChimp list ID', 'jetwidgets-for-elementor' ), esc_html__( 'list ID', 'jetwidgets-for-elementor' ) ),
 						'value'        => $this->get( 'mailchimp-list-id' ),
 						'class'        => '',
 						'label'        => '',
@@ -301,8 +301,8 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 					'mailchimp-double-opt-in' => array(
 						'type'        => 'switcher',
 						'parent'      => 'mailing_options',
-						'title'       => esc_html__( 'Double opt-in', 'jet-widgets' ),
-						'description' => esc_html__( 'Send contacts an opt-in confirmation email when they subscribe to your list.', 'jet-widgets' ),
+						'title'       => esc_html__( 'Double opt-in', 'jetwidgets-for-elementor' ),
+						'description' => esc_html__( 'Send contacts an opt-in confirmation email when they subscribe to your list.', 'jetwidgets-for-elementor' ),
 						'value'       => $this->get( 'mailchimp-double-opt-in' ),
 						'toggle'      => array(
 							'true_toggle'  => 'On',
@@ -317,8 +317,8 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						'parent'      => 'avaliable_widgets_options',
 						'value'       => $this->get( 'avaliable_widgets', $default_avaliable_widgets ),
 						'options'     => $this->avaliable_widgets,
-						'title'       => esc_html__( 'Available Widgets', 'jet-widgets' ),
-						'description' => esc_html__( 'List of widgets that will be available when editing the page', 'jet-widgets' ),
+						'title'       => esc_html__( 'Available Widgets', 'jetwidgets-for-elementor' ),
+						'description' => esc_html__( 'List of widgets that will be available when editing the page', 'jetwidgets-for-elementor' ),
 						'class'       => 'jet_widgets_settings_form__checkbox-group'
 					),
 				)
@@ -332,7 +332,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						'type'   => 'html',
 						'parent' => 'settings_bottom',
 						'class'  => 'cherry-control dialog-save',
-						'html'   => '<button type="submit" class="button button-primary">' . esc_html__( 'Save', 'jet-widgets' ) . '</button>',
+						'html'   => '<button type="submit" class="button button-primary">' . esc_html__( 'Save', 'jetwidgets-for-elementor' ) . '</button>',
 					),
 				)
 			);

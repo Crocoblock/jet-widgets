@@ -20,7 +20,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Contact Form 7', 'jet-widgets' );
+		return esc_html__( 'Contact Form 7', 'jetwidgets-for-elementor' );
 	}
 
 	public function get_icon() {
@@ -35,7 +35,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_settings',
 			array(
-				'label' => esc_html__( 'Form', 'jet-widgets' ),
+				'label' => esc_html__( 'Form', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -48,7 +48,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		}
 
 		$this->add_control( 'form_shortcode', array(
-			'label'   => esc_html__( 'Select Form', 'jet-widgets' ),
+			'label'   => esc_html__( 'Select Form', 'jetwidgets-for-elementor' ),
 			'type'    => Controls_Manager::SELECT,
 			'default' => $active_form,
 			'options' => $avaliable_forms,
@@ -59,7 +59,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_text_style',
 			array(
-				'label'      => esc_html__( 'Form Texts', 'jet-widgets' ),
+				'label'      => esc_html__( 'Form Texts', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -68,7 +68,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'text_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 *:not(.wpcf7-form-control):not(option)' => 'color: {{VALUE}}',
@@ -87,7 +87,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'invalid_heading',
 			array(
-				'label'     => esc_html__( 'Not Valid Notices', 'jet-widgets' ),
+				'label'     => esc_html__( 'Not Valid Notices', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -96,7 +96,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'invalid_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 span.wpcf7-not-valid-tip' => 'color: {{VALUE}}',
@@ -115,7 +115,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'invalid_notice_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -127,20 +127,20 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'invalid_notice_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -155,7 +155,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_inputs_style',
 			array(
-				'label'      => esc_html__( 'Controls', 'jet-widgets' ),
+				'label'      => esc_html__( 'Controls', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -166,7 +166,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_input_noraml',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -181,7 +181,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'input_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])' => 'color: {{VALUE}}',
@@ -192,7 +192,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'input_placeholder_color',
 			array(
-				'label'     => esc_html__( 'Placeholder Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Placeholder Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form .wpcf7-form-control::-webkit-input-placeholder' => 'color: {{VALUE}}',
@@ -213,7 +213,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'input_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -225,7 +225,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'input_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -238,7 +238,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'input_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])',
 			)
@@ -247,7 +247,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'input_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -269,7 +269,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_input_focus',
 			array(
-				'label' => esc_html__( 'Focus', 'jet-widgets' ),
+				'label' => esc_html__( 'Focus', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -284,7 +284,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'input_focus_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]):focus' => 'color: {{VALUE}}',
@@ -295,7 +295,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'input_placeholder_focus_color',
 			array(
-				'label'     => esc_html__( 'Placeholder Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Placeholder Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form .wpcf7-form-control:focus::-webkit-input-placeholder' => 'color: {{VALUE}}',
@@ -309,7 +309,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'input_focus_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]):focus',
 			)
@@ -328,7 +328,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_input_invalid',
 			array(
-				'label' => esc_html__( 'Not Valid', 'jet-widgets' ),
+				'label' => esc_html__( 'Not Valid', 'jetwidgets-for-elementor' ),
 			)
 		);
 
@@ -343,7 +343,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'input_invalid_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]).wpcf7-not-valid' => 'color: {{VALUE}}',
@@ -355,7 +355,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'input_invalid_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]).wpcf7-not-valid',
 			)
@@ -376,7 +376,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'textarea_min_height',
 			array(
-				'label'       => esc_html__( 'Textarea Height', 'jet-widgets' ),
+				'label'       => esc_html__( 'Textarea Height', 'jetwidgets-for-elementor' ),
 				'label_block' => true,
 				'type'        => Controls_Manager::NUMBER,
 				'default'     => '',
@@ -391,7 +391,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'submit_style',
 			array(
-				'label'      => esc_html__( 'Submit Button', 'jet-widgets' ),
+				'label'      => esc_html__( 'Submit Button', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -402,22 +402,22 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'submit_normal',
 			array(
-				'label' => esc_html__( 'Normal', 'jet-widgets' ),
+				'label' => esc_html__( 'Normal', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'submit_bg',
 			array(
-				'label'       => _x( 'Background Type', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Background Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::CHOOSE,
 				'options'     => array(
 					'color' => array(
-						'title' => _x( 'Classic', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Classic', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-paint-brush',
 					),
 					'gradient' => array(
-						'title' => _x( 'Gradient', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Gradient', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-barcode',
 					),
 				),
@@ -430,14 +430,14 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_color',
 			array(
-				'label'     => _x( 'Color', 'Background Control', 'jet-widgets' ),
+				'label'     => _x( 'Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'scheme'    => array(
 					'type'  => Scheme_Color::get_type(),
 					'value' => Scheme_Color::COLOR_1,
 				),
-				'title'     => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+				'title'     => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit' => 'background-color: {{VALUE}};',
 				),
@@ -450,7 +450,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_color_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -468,7 +468,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_color_b',
 			array(
-				'label'       => _x( 'Second Color', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Second Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::COLOR,
 				'default'     => '#f2295b',
 				'render_type' => 'ui',
@@ -482,7 +482,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_color_b_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -500,11 +500,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_gradient_type',
 			array(
-				'label'   => _x( 'Type', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'linear' => _x( 'Linear', 'Background Control', 'jet-widgets' ),
-					'radial' => _x( 'Radial', 'Background Control', 'jet-widgets' ),
+					'linear' => _x( 'Linear', 'Background Control', 'jetwidgets-for-elementor' ),
+					'radial' => _x( 'Radial', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default'     => 'linear',
 				'render_type' => 'ui',
@@ -518,7 +518,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_gradient_angle',
 			array(
-				'label'      => _x( 'Angle', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Angle', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'deg' ),
 				'default'    => array(
@@ -544,18 +544,18 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_bg_gradient_position',
 			array(
-				'label'   => _x( 'Position', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Position', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'center center' => _x( 'Center Center', 'Background Control', 'jet-widgets' ),
-					'center left'   => _x( 'Center Left', 'Background Control', 'jet-widgets' ),
-					'center right'  => _x( 'Center Right', 'Background Control', 'jet-widgets' ),
-					'top center'    => _x( 'Top Center', 'Background Control', 'jet-widgets' ),
-					'top left'      => _x( 'Top Left', 'Background Control', 'jet-widgets' ),
-					'top right'     => _x( 'Top Right', 'Background Control', 'jet-widgets' ),
-					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+					'center center' => _x( 'Center Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center left'   => _x( 'Center Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center right'  => _x( 'Center Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top center'    => _x( 'Top Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top left'      => _x( 'Top Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top right'     => _x( 'Top Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'center center',
 				'selectors' => array(
@@ -572,7 +572,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_color',
 			array(
-				'label' => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit' => 'color: {{VALUE}}',
@@ -592,11 +592,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_text_decor',
 			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Decoration', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'none'      => esc_html__( 'None', 'jet-widgets' ),
-					'underline' => esc_html__( 'Underline', 'jet-widgets' ),
+					'none'      => esc_html__( 'None', 'jetwidgets-for-elementor' ),
+					'underline' => esc_html__( 'Underline', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'none',
 				'selectors' => array(
@@ -608,7 +608,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -620,7 +620,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -633,7 +633,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'submit_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} .wpcf7 input.wpcf7-submit',
@@ -653,22 +653,22 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_submit_hover',
 			array(
-				'label' => esc_html__( 'Hover', 'jet-widgets' ),
+				'label' => esc_html__( 'Hover', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'submit_hover_bg',
 			array(
-				'label'       => _x( 'Background Type', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Background Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::CHOOSE,
 				'options'     => array(
 					'color' => array(
-						'title' => _x( 'Classic', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Classic', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-paint-brush',
 					),
 					'gradient' => array(
-						'title' => _x( 'Gradient', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Gradient', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-barcode',
 					),
 				),
@@ -681,14 +681,14 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_color',
 			array(
-				'label'     => _x( 'Color', 'Background Control', 'jet-widgets' ),
+				'label'     => _x( 'Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'scheme'    => array(
 					'type'  => Scheme_Color::get_type(),
 					'value' => Scheme_Color::COLOR_1,
 				),
-				'title'     => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+				'title'     => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit:hover' => 'background-color: {{VALUE}};',
 				),
@@ -701,7 +701,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_color_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -719,7 +719,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_color_b',
 			array(
-				'label'       => _x( 'Second Color', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Second Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::COLOR,
 				'default'     => '#f2295b',
 				'render_type' => 'ui',
@@ -733,7 +733,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_color_b_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -751,11 +751,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_gradient_type',
 			array(
-				'label'   => _x( 'Type', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'linear' => _x( 'Linear', 'Background Control', 'jet-widgets' ),
-					'radial' => _x( 'Radial', 'Background Control', 'jet-widgets' ),
+					'linear' => _x( 'Linear', 'Background Control', 'jetwidgets-for-elementor' ),
+					'radial' => _x( 'Radial', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default'     => 'linear',
 				'render_type' => 'ui',
@@ -769,7 +769,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_gradient_angle',
 			array(
-				'label'      => _x( 'Angle', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Angle', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'deg' ),
 				'default'    => array(
@@ -795,18 +795,18 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_bg_gradient_position',
 			array(
-				'label'   => _x( 'Position', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Position', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'center center' => _x( 'Center Center', 'Background Control', 'jet-widgets' ),
-					'center left'   => _x( 'Center Left', 'Background Control', 'jet-widgets' ),
-					'center right'  => _x( 'Center Right', 'Background Control', 'jet-widgets' ),
-					'top center'    => _x( 'Top Center', 'Background Control', 'jet-widgets' ),
-					'top left'      => _x( 'Top Left', 'Background Control', 'jet-widgets' ),
-					'top right'     => _x( 'Top Right', 'Background Control', 'jet-widgets' ),
-					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+					'center center' => _x( 'Center Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center left'   => _x( 'Center Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center right'  => _x( 'Center Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top center'    => _x( 'Top Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top left'      => _x( 'Top Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top right'     => _x( 'Top Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'center center',
 				'selectors' => array(
@@ -823,7 +823,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_color',
 			array(
-				'label' => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit:hover' => 'color: {{VALUE}}',
@@ -835,7 +835,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name' => 'submit_hover_typography',
-				'label' => esc_html__( 'Typography', 'jet-widgets' ),
+				'label' => esc_html__( 'Typography', 'jetwidgets-for-elementor' ),
 				'selector' => '{{WRAPPER}}  .wpcf7 input.wpcf7-submit:hover',
 			)
 		);
@@ -843,11 +843,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_hover_text_decor',
 			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Decoration', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'none'      => esc_html__( 'None', 'jet-widgets' ),
-					'underline' => esc_html__( 'Underline', 'jet-widgets' ),
+					'none'      => esc_html__( 'None', 'jetwidgets-for-elementor' ),
+					'underline' => esc_html__( 'Underline', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'none',
 				'selectors' => array(
@@ -859,7 +859,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_hover_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -871,7 +871,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_hover_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -884,7 +884,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'submit_hover_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} .wpcf7 input.wpcf7-submit:hover',
@@ -904,22 +904,22 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_tab(
 			'tab_submit_focus',
 			array(
-				'label' => esc_html__( 'Focus', 'jet-widgets' ),
+				'label' => esc_html__( 'Focus', 'jetwidgets-for-elementor' ),
 			)
 		);
 
 		$this->add_control(
 			'submit_focus_bg',
 			array(
-				'label'       => _x( 'Background Type', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Background Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::CHOOSE,
 				'options'     => array(
 					'color' => array(
-						'title' => _x( 'Classic', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Classic', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-paint-brush',
 					),
 					'gradient' => array(
-						'title' => _x( 'Gradient', 'Background Control', 'jet-widgets' ),
+						'title' => _x( 'Gradient', 'Background Control', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-barcode',
 					),
 				),
@@ -932,14 +932,14 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_color',
 			array(
-				'label'     => _x( 'Color', 'Background Control', 'jet-widgets' ),
+				'label'     => _x( 'Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'scheme'    => array(
 					'type'  => Scheme_Color::get_type(),
 					'value' => Scheme_Color::COLOR_1,
 				),
-				'title'     => _x( 'Background Color', 'Background Control', 'jet-widgets' ),
+				'title'     => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit:focus' => 'background-color: {{VALUE}};',
 				),
@@ -952,7 +952,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_color_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -970,7 +970,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_color_b',
 			array(
-				'label'       => _x( 'Second Color', 'Background Control', 'jet-widgets' ),
+				'label'       => _x( 'Second Color', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::COLOR,
 				'default'     => '#f2295b',
 				'render_type' => 'ui',
@@ -984,7 +984,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_color_b_stop',
 			array(
-				'label'      => _x( 'Location', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Location', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
 				'default'    => array(
@@ -1002,11 +1002,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_gradient_type',
 			array(
-				'label'   => _x( 'Type', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Type', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'linear' => _x( 'Linear', 'Background Control', 'jet-widgets' ),
-					'radial' => _x( 'Radial', 'Background Control', 'jet-widgets' ),
+					'linear' => _x( 'Linear', 'Background Control', 'jetwidgets-for-elementor' ),
+					'radial' => _x( 'Radial', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default'     => 'linear',
 				'render_type' => 'ui',
@@ -1020,7 +1020,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_gradient_angle',
 			array(
-				'label'      => _x( 'Angle', 'Background Control', 'jet-widgets' ),
+				'label'      => _x( 'Angle', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( 'deg' ),
 				'default'    => array(
@@ -1046,18 +1046,18 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_bg_gradient_position',
 			array(
-				'label'   => _x( 'Position', 'Background Control', 'jet-widgets' ),
+				'label'   => _x( 'Position', 'Background Control', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'center center' => _x( 'Center Center', 'Background Control', 'jet-widgets' ),
-					'center left'   => _x( 'Center Left', 'Background Control', 'jet-widgets' ),
-					'center right'  => _x( 'Center Right', 'Background Control', 'jet-widgets' ),
-					'top center'    => _x( 'Top Center', 'Background Control', 'jet-widgets' ),
-					'top left'      => _x( 'Top Left', 'Background Control', 'jet-widgets' ),
-					'top right'     => _x( 'Top Right', 'Background Control', 'jet-widgets' ),
-					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+					'center center' => _x( 'Center Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center left'   => _x( 'Center Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center right'  => _x( 'Center Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top center'    => _x( 'Top Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top left'      => _x( 'Top Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top right'     => _x( 'Top Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom center' => _x( 'Bottom Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom left'   => _x( 'Bottom Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom right'  => _x( 'Bottom Right', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'center center',
 				'selectors' => array(
@@ -1074,7 +1074,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_color',
 			array(
-				'label' => esc_html__( 'Text Color', 'jet-widgets' ),
+				'label' => esc_html__( 'Text Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 input.wpcf7-submit:focus' => 'color: {{VALUE}}',
@@ -1086,7 +1086,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name' => 'submit_focus_typography',
-				'label' => esc_html__( 'Typography', 'jet-widgets' ),
+				'label' => esc_html__( 'Typography', 'jetwidgets-for-elementor' ),
 				'selector' => '{{WRAPPER}}  .wpcf7 input.wpcf7-submit:focus',
 			)
 		);
@@ -1094,11 +1094,11 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'submit_focus_text_decor',
 			array(
-				'label'   => esc_html__( 'Text Decoration', 'jet-widgets' ),
+				'label'   => esc_html__( 'Text Decoration', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'options' => array(
-					'none'      => esc_html__( 'None', 'jet-widgets' ),
-					'underline' => esc_html__( 'Underline', 'jet-widgets' ),
+					'none'      => esc_html__( 'None', 'jetwidgets-for-elementor' ),
+					'underline' => esc_html__( 'Underline', 'jetwidgets-for-elementor' ),
 				),
 				'default' => 'none',
 				'selectors' => array(
@@ -1110,7 +1110,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_focus_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1122,7 +1122,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_focus_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1135,7 +1135,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'        => 'submit_focus_border',
-				'label'       => esc_html__( 'Border', 'jet-widgets' ),
+				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
 				'selector'    => '{{WRAPPER}} .wpcf7 input.wpcf7-submit:focus',
@@ -1157,10 +1157,10 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'arrows',
 			array(
-				'label'        => esc_html__( 'Fullwidth Button', 'jet-widgets' ),
+				'label'        => esc_html__( 'Fullwidth Button', 'jetwidgets-for-elementor' ),
 				'type'         => Controls_Manager::SWITCHER,
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'block',
 				'default'      => '',
 				'selectors'    => array(
@@ -1172,7 +1172,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'submit_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1186,7 +1186,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->start_controls_section(
 			'section_alerts_style',
 			array(
-				'label'      => esc_html__( 'Alerts', 'jet-widgets' ),
+				'label'      => esc_html__( 'Alerts', 'jetwidgets-for-elementor' ),
 				'tab'        => Controls_Manager::TAB_STYLE,
 				'show_label' => false,
 			)
@@ -1203,7 +1203,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'alert_padding',
 			array(
-				'label'      => esc_html__( 'Padding', 'jet-widgets' ),
+				'label'      => esc_html__( 'Padding', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1215,7 +1215,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'alert_margin',
 			array(
-				'label'      => esc_html__( 'Margin', 'jet-widgets' ),
+				'label'      => esc_html__( 'Margin', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
@@ -1227,7 +1227,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'alert_border_radius',
 			array(
-				'label'      => esc_html__( 'Border Radius', 'jet-widgets' ),
+				'label'      => esc_html__( 'Border Radius', 'jetwidgets-for-elementor' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
@@ -1239,20 +1239,20 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'alert_alignment',
 			array(
-				'label'   => esc_html__( 'Alignment', 'jet-widgets' ),
+				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => array(
 					'left'    => array(
-						'title' => esc_html__( 'Left', 'jet-widgets' ),
+						'title' => esc_html__( 'Left', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-left',
 					),
 					'center' => array(
-						'title' => esc_html__( 'Center', 'jet-widgets' ),
+						'title' => esc_html__( 'Center', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-center',
 					),
 					'right' => array(
-						'title' => esc_html__( 'Right', 'jet-widgets' ),
+						'title' => esc_html__( 'Right', 'jetwidgets-for-elementor' ),
 						'icon'  => 'fa fa-align-right',
 					),
 				),
@@ -1265,7 +1265,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'sent_heading',
 			array(
-				'label'     => esc_html__( 'Sent Success', 'jet-widgets' ),
+				'label'     => esc_html__( 'Sent Success', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1274,7 +1274,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'sent_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ok' => 'color: {{VALUE}}',
@@ -1285,7 +1285,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'sent_bg',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ok' => 'background-color: {{VALUE}}',
@@ -1297,7 +1297,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'sent_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ok',
 			)
@@ -1314,7 +1314,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'error_heading',
 			array(
-				'label'     => esc_html__( 'Sent Error', 'jet-widgets' ),
+				'label'     => esc_html__( 'Sent Error', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1323,7 +1323,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'error_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ng' => 'color: {{VALUE}}',
@@ -1334,7 +1334,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'error_bg',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ng' => 'background-color: {{VALUE}}',
@@ -1346,7 +1346,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'error_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 div.wpcf7-mail-sent-ng',
 			)
@@ -1363,7 +1363,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'invalid_alert_heading',
 			array(
-				'label'     => esc_html__( 'Not Valid', 'jet-widgets' ),
+				'label'     => esc_html__( 'Not Valid', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1372,7 +1372,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'invalid_alert_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-validation-errors' => 'color: {{VALUE}}',
@@ -1383,7 +1383,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'invalid_alert_bg',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-validation-errors' => 'background-color: {{VALUE}}',
@@ -1395,7 +1395,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'invalid_alert_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 div.wpcf7-validation-errors',
 			)
@@ -1412,7 +1412,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'spam_heading',
 			array(
-				'label'     => esc_html__( 'Spam Blocked', 'jet-widgets' ),
+				'label'     => esc_html__( 'Spam Blocked', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::HEADING,
 				'separator' => 'before',
 			)
@@ -1421,7 +1421,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'spam_color',
 			array(
-				'label'     => esc_html__( 'Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-spam-blocked' => 'color: {{VALUE}}',
@@ -1432,7 +1432,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		$this->add_control(
 			'spam_bg',
 			array(
-				'label'     => esc_html__( 'Background Color', 'jet-widgets' ),
+				'label'     => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 div.wpcf7-spam-blocked' => 'background-color: {{VALUE}}',
@@ -1444,7 +1444,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Border::get_type(),
 			array(
 				'name'           => 'spam_border',
-				'label'          => esc_html__( 'Border', 'jet-widgets' ),
+				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
 				'selector'       => '{{WRAPPER}} .wpcf7 div.wpcf7-spam-blocked',
 			)

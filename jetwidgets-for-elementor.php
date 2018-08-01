@@ -5,7 +5,7 @@
  * Version:     1.0.0
  * Author:      CrocoBlock
  * Author URI:  https://crocoblock.com/
- * Text Domain: jet-widgets
+ * Text Domain: jetwidgets-for-elementor
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
@@ -237,7 +237,7 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 			);
 
 			$config = array(
-				'id'           => 'jet-widgets',
+				'id'           => 'jetwidgets-for-elementor',
 				'default_path' => '',
 				'menu'         => 'tgmpa-install-plugins',
 				'parent_slug'  => 'plugins.php',
@@ -250,12 +250,12 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 					'notice_can_install_required' => _n_noop(
 						'JetWidgets for Elementor requires the following plugin: %1$s.',
 						'JetWidgets for Elementor requires the following plugins: %1$s.',
-						'jet-widgets'
+						'jetwidgets-for-elementor'
 					),
 					'notice_can_install_recommended' => _n_noop(
 						'JetWidgets for Elementor recommends the following plugin: %1$s.',
 						'JetWidgets for Elementor recommends the following plugins: %1$s.',
-						'jet-widgets'
+						'jetwidgets-for-elementor'
 					),
 				),
 			);
@@ -345,7 +345,7 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 		 * @return void
 		 */
 		public function lang() {
-			load_plugin_textdomain( 'jet-widgets', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain( 'jetwidgets-for-elementor', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		}
 
 		/**

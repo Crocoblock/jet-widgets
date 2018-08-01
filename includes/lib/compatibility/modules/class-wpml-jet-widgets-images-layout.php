@@ -27,10 +27,10 @@ class WPML_Jet_Widgets_Images_Layout extends WPML_Elementor_Module_With_Items {
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'item_title':
-				return esc_html__( 'Jet Images Layout: Item Title', 'jet-widgets' );
+				return esc_html__( 'Jet Images Layout: Item Title', 'jetwidgets-for-elementor' );
 
 			case 'item_desc':
-				return esc_html__( 'Jet Images Layout: Item Description', 'jet-widgets' );
+				return esc_html__( 'Jet Images Layout: Item Description', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

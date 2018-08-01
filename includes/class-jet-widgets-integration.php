@@ -63,7 +63,7 @@ if ( ! class_exists( 'Jet_Widgets_Integration' ) ) {
 
 			// Frontend messages
 			$this->localize_data['messages'] = array(
-				'invalidMail' => esc_html__( 'Please specify a valid e-mail', 'jet-widgets' ),
+				'invalidMail' => esc_html__( 'Please specify a valid e-mail', 'jetwidgets-for-elementor' ),
 			);
 		}
 
@@ -282,7 +282,7 @@ if ( ! class_exists( 'Jet_Widgets_Integration' ) ) {
 			$elements_manager->add_category(
 				$cherry_cat,
 				array(
-					'title' => esc_html__( 'JetWidgets', 'jet-widgets' ),
+					'title' => esc_html__( 'JetWidgets', 'jetwidgets-for-elementor' ),
 					'icon'  => 'font',
 				),
 				1

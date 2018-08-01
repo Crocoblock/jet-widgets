@@ -27,19 +27,19 @@ class WPML_Jet_Widgets_Testimonials extends WPML_Elementor_Module_With_Items {
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'item_title':
-				return esc_html__( 'Jet Testimonials: Item Title', 'jet-widgets' );
+				return esc_html__( 'Jet Testimonials: Item Title', 'jetwidgets-for-elementor' );
 
 			case 'item_comment':
-				return esc_html__( 'Jet Testimonials: Item Comment', 'jet-widgets' );
+				return esc_html__( 'Jet Testimonials: Item Comment', 'jetwidgets-for-elementor' );
 
 			case 'item_name':
-				return esc_html__( 'Jet Testimonials: Item Name', 'jet-widgets' );
+				return esc_html__( 'Jet Testimonials: Item Name', 'jetwidgets-for-elementor' );
 
 			case 'item_position':
-				return esc_html__( 'Jet Testimonials: Item Position', 'jet-widgets' );
+				return esc_html__( 'Jet Testimonials: Item Position', 'jetwidgets-for-elementor' );
 
 			case 'item_date':
-				return esc_html__( 'Jet Testimonials: Item Date', 'jet-widgets' );
+				return esc_html__( 'Jet Testimonials: Item Date', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

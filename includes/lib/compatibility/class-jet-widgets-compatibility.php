@@ -58,32 +58,32 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'front_side_title',
-						'type'        => esc_html__( 'Jet Animated Box: Front Title', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Front Title', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'front_side_subtitle',
-						'type'        => esc_html__( 'Jet Animated Box: Front SubTitle', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Front SubTitle', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'front_side_description',
-						'type'        => esc_html__( 'Jet Animated Box: Front Description', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Front Description', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'VISUAL',
 					),
 					array(
 						'field'       => 'back_side_title',
-						'type'        => esc_html__( 'Jet Animated Box: Back Title', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Back Title', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'back_side_subtitle',
-						'type'        => esc_html__( 'Jet Animated Box: Back SubTitle', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Back SubTitle', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'back_side_description',
-						'type'        => esc_html__( 'Jet Animated Box: Back Description', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Animated Box: Back Description', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'VISUAL',
 					),
 				),
@@ -94,7 +94,7 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'more_text',
-						'type'        => esc_html__( 'Jet Posts: Read More Button Text', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Posts: Read More Button Text', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 				),
@@ -117,32 +117,32 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'title',
-						'type'        => esc_html__( 'Jet Pricing Table: Title', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Title', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'subtitle',
-						'type'        => esc_html__( 'Jet Pricing Table: Subtitle', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Subtitle', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'price_suffix',
-						'type'        => esc_html__( 'Jet Pricing Table: Price Suffix', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Price Suffix', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'button_before',
-						'type'        => esc_html__( 'Jet Pricing Table: Button Before', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Button Before', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'button_text',
-						'type'        => esc_html__( 'Jet Pricing Table: Button Text', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Button Text', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'button_after',
-						'type'        => esc_html__( 'Jet Pricing Table: Button After', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Pricing Table: Button After', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 				),
@@ -154,17 +154,17 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'services_title',
-						'type'        => esc_html__( 'Jet Services: Title', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Services: Title', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'services_description',
-						'type'        => esc_html__( 'Jet Services: Description', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Services: Description', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'VISUAL',
 					),
 					array(
 						'field'       => 'button_text',
-						'type'        => esc_html__( 'Jet Services: Button Text', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Services: Button Text', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 				),
@@ -175,22 +175,22 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'member_first_name',
-						'type'        => esc_html__( 'Jet Team Member: First Name', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Team Member: First Name', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'member_last_name',
-						'type'        => esc_html__( 'Jet Team Member: Last Name', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Team Member: Last Name', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'member_position',
-						'type'        => esc_html__( 'Jet Team Member: Position', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Team Member: Position', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'member_description',
-						'type'        => esc_html__( 'Jet Team Member: Description', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Team Member: Description', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'VISUAL',
 					),
 				),
@@ -214,12 +214,12 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'first_part',
-						'type'        => esc_html__( 'Jet Headline: First Part', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Headline: First Part', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'second_part',
-						'type'        => esc_html__( 'Jet Headline: Second Part', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Headline: Second Part', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 				),
@@ -230,12 +230,12 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 				'fields'     => array(
 					array(
 						'field'       => 'submit_button_text',
-						'type'        => esc_html__( 'Jet Subscribe Form: Submit Text', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Subscribe Form: Submit Text', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 					array(
 						'field'       => 'submit_placeholder',
-						'type'        => esc_html__( 'Jet Subscribe Form: Input Placeholder', 'jet-widgets' ),
+						'type'        => esc_html__( 'Jet Subscribe Form: Input Placeholder', 'jetwidgets-for-elementor' ),
 						'editor_type' => 'LINE',
 					),
 				),

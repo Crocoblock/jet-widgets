@@ -27,10 +27,10 @@ class WPML_Jet_Widgets_Image_Comparison extends WPML_Elementor_Module_With_Items
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'item_before_label':
-				return esc_html__( 'Jet Image Comparison: Before Label', 'jet-widgets' );
+				return esc_html__( 'Jet Image Comparison: Before Label', 'jetwidgets-for-elementor' );
 
 			case 'item_after_label':
-				return esc_html__( 'Jet Image Comparison: After Label', 'jet-widgets' );
+				return esc_html__( 'Jet Image Comparison: After Label', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

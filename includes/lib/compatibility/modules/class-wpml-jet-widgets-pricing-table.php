@@ -27,7 +27,7 @@ class WPML_Jet_Widgets_Pricing_Table extends WPML_Elementor_Module_With_Items {
 	protected function get_title( $field ) {
 		switch( $field ) {
 			case 'item_text':
-				return esc_html__( 'Jet Pricing Table: Features Item Text', 'jet-widgets' );
+				return esc_html__( 'Jet Pricing Table: Features Item Text', 'jetwidgets-for-elementor' );
 
 			default:
 				return '';

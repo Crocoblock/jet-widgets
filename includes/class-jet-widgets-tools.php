@@ -93,7 +93,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 				}
 			}
 
-			return array_merge( array( 'full' => esc_html__( 'Full', 'jet-widgets' ), ), $result );
+			return array_merge( array( 'full' => esc_html__( 'Full', 'jetwidgets-for-elementor' ), ), $result );
 		}
 
 		/**
@@ -144,16 +144,16 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		 */
 		public function orderby_arr() {
 			return array(
-				'none'          => esc_html__( 'None', 'jet-widgets' ),
-				'ID'            => esc_html__( 'ID', 'jet-widgets' ),
-				'author'        => esc_html__( 'Author', 'jet-widgets' ),
-				'title'         => esc_html__( 'Title', 'jet-widgets' ),
-				'name'          => esc_html__( 'Name (slug)', 'jet-widgets' ),
-				'date'          => esc_html__( 'Date', 'jet-widgets' ),
-				'modified'      => esc_html__( 'Modified', 'jet-widgets' ),
-				'rand'          => esc_html__( 'Rand', 'jet-widgets' ),
-				'comment_count' => esc_html__( 'Comment Count', 'jet-widgets' ),
-				'menu_order'    => esc_html__( 'Menu Order', 'jet-widgets' ),
+				'none'          => esc_html__( 'None', 'jetwidgets-for-elementor' ),
+				'ID'            => esc_html__( 'ID', 'jetwidgets-for-elementor' ),
+				'author'        => esc_html__( 'Author', 'jetwidgets-for-elementor' ),
+				'title'         => esc_html__( 'Title', 'jetwidgets-for-elementor' ),
+				'name'          => esc_html__( 'Name (slug)', 'jetwidgets-for-elementor' ),
+				'date'          => esc_html__( 'Date', 'jetwidgets-for-elementor' ),
+				'modified'      => esc_html__( 'Modified', 'jetwidgets-for-elementor' ),
+				'rand'          => esc_html__( 'Rand', 'jetwidgets-for-elementor' ),
+				'comment_count' => esc_html__( 'Comment Count', 'jetwidgets-for-elementor' ),
+				'menu_order'    => esc_html__( 'Menu Order', 'jetwidgets-for-elementor' ),
 			);
 		}
 
@@ -165,8 +165,8 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		public function order_arr() {
 
 			return array(
-				'desc' => esc_html__( 'Descending', 'jet-widgets' ),
-				'asc'  => esc_html__( 'Ascending', 'jet-widgets' ),
+				'desc' => esc_html__( 'Descending', 'jetwidgets-for-elementor' ),
+				'asc'  => esc_html__( 'Ascending', 'jetwidgets-for-elementor' ),
 			);
 
 		}
@@ -178,14 +178,14 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		 */
 		public function verrtical_align_attr() {
 			return array(
-				'baseline'    => esc_html__( 'Baseline', 'jet-widgets' ),
-				'top'         => esc_html__( 'Top', 'jet-widgets' ),
-				'middle'      => esc_html__( 'Middle', 'jet-widgets' ),
-				'bottom'      => esc_html__( 'Bottom', 'jet-widgets' ),
-				'sub'         => esc_html__( 'Sub', 'jet-widgets' ),
-				'super'       => esc_html__( 'Super', 'jet-widgets' ),
-				'text-top'    => esc_html__( 'Text Top', 'jet-widgets' ),
-				'text-bottom' => esc_html__( 'Text Bottom', 'jet-widgets' ),
+				'baseline'    => esc_html__( 'Baseline', 'jetwidgets-for-elementor' ),
+				'top'         => esc_html__( 'Top', 'jetwidgets-for-elementor' ),
+				'middle'      => esc_html__( 'Middle', 'jetwidgets-for-elementor' ),
+				'bottom'      => esc_html__( 'Bottom', 'jetwidgets-for-elementor' ),
+				'sub'         => esc_html__( 'Sub', 'jetwidgets-for-elementor' ),
+				'super'       => esc_html__( 'Super', 'jetwidgets-for-elementor' ),
+				'text-top'    => esc_html__( 'Text Top', 'jetwidgets-for-elementor' ),
+				'text-bottom' => esc_html__( 'Text Bottom', 'jetwidgets-for-elementor' ),
 			);
 		}
 
@@ -328,15 +328,15 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 			return apply_filters(
 				'jet_widgets/carousel/available_arrows/prev',
 				array(
-					'fa fa-angle-left'          => __( 'Angle', 'jet-widgets' ),
-					'fa fa-chevron-left'        => __( 'Chevron', 'jet-widgets' ),
-					'fa fa-angle-double-left'   => __( 'Angle Double', 'jet-widgets' ),
-					'fa fa-arrow-left'          => __( 'Arrow', 'jet-widgets' ),
-					'fa fa-caret-left'          => __( 'Caret', 'jet-widgets' ),
-					'fa fa-long-arrow-left'     => __( 'Long Arrow', 'jet-widgets' ),
-					'fa fa-arrow-circle-left'   => __( 'Arrow Circle', 'jet-widgets' ),
-					'fa fa-chevron-circle-left' => __( 'Chevron Circle', 'jet-widgets' ),
-					'fa fa-caret-square-o-left' => __( 'Caret Square', 'jet-widgets' ),
+					'fa fa-angle-left'          => __( 'Angle', 'jetwidgets-for-elementor' ),
+					'fa fa-chevron-left'        => __( 'Chevron', 'jetwidgets-for-elementor' ),
+					'fa fa-angle-double-left'   => __( 'Angle Double', 'jetwidgets-for-elementor' ),
+					'fa fa-arrow-left'          => __( 'Arrow', 'jetwidgets-for-elementor' ),
+					'fa fa-caret-left'          => __( 'Caret', 'jetwidgets-for-elementor' ),
+					'fa fa-long-arrow-left'     => __( 'Long Arrow', 'jetwidgets-for-elementor' ),
+					'fa fa-arrow-circle-left'   => __( 'Arrow Circle', 'jetwidgets-for-elementor' ),
+					'fa fa-chevron-circle-left' => __( 'Chevron Circle', 'jetwidgets-for-elementor' ),
+					'fa fa-caret-square-o-left' => __( 'Caret Square', 'jetwidgets-for-elementor' ),
 				)
 			);
 
@@ -351,15 +351,15 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 			return apply_filters(
 				'jet_widgets/carousel/available_arrows/next',
 				array(
-					'fa fa-angle-right'          => __( 'Angle', 'jet-widgets' ),
-					'fa fa-chevron-right'        => __( 'Chevron', 'jet-widgets' ),
-					'fa fa-angle-double-right'   => __( 'Angle Double', 'jet-widgets' ),
-					'fa fa-arrow-right'          => __( 'Arrow', 'jet-widgets' ),
-					'fa fa-caret-right'          => __( 'Caret', 'jet-widgets' ),
-					'fa fa-long-arrow-right'     => __( 'Long Arrow', 'jet-widgets' ),
-					'fa fa-arrow-circle-right'   => __( 'Arrow Circle', 'jet-widgets' ),
-					'fa fa-chevron-circle-right' => __( 'Chevron Circle', 'jet-widgets' ),
-					'fa fa-caret-square-o-right' => __( 'Caret Square', 'jet-widgets' ),
+					'fa fa-angle-right'          => __( 'Angle', 'jetwidgets-for-elementor' ),
+					'fa fa-chevron-right'        => __( 'Chevron', 'jetwidgets-for-elementor' ),
+					'fa fa-angle-double-right'   => __( 'Angle Double', 'jetwidgets-for-elementor' ),
+					'fa fa-arrow-right'          => __( 'Arrow', 'jetwidgets-for-elementor' ),
+					'fa fa-caret-right'          => __( 'Caret', 'jetwidgets-for-elementor' ),
+					'fa fa-long-arrow-right'     => __( 'Long Arrow', 'jetwidgets-for-elementor' ),
+					'fa fa-arrow-circle-right'   => __( 'Arrow Circle', 'jetwidgets-for-elementor' ),
+					'fa fa-chevron-circle-right' => __( 'Chevron Circle', 'jetwidgets-for-elementor' ),
+					'fa fa-caret-square-o-right' => __( 'Caret Square', 'jetwidgets-for-elementor' ),
 				)
 			);
 

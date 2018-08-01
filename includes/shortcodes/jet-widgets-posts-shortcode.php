@@ -25,7 +25,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 		return apply_filters( 'jet-widgets/shortcodes/jw-posts/atts', array(
 			'number' => array(
 				'type'       => 'number',
-				'label'      => esc_html__( 'Posts Number', 'jet-widgets' ),
+				'label'      => esc_html__( 'Posts Number', 'jetwidgets-for-elementor' ),
 				'default'    => 3,
 				'min'        => -1,
 				'max'        => 30,
@@ -34,7 +34,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			'columns' => array(
 				'type'       => 'select',
 				'responsive' => true,
-				'label'      => esc_html__( 'Columns', 'jet-widgets' ),
+				'label'      => esc_html__( 'Columns', 'jetwidgets-for-elementor' ),
 				'default'    => 3,
 				'options'    => $columns,
 			),
@@ -45,27 +45,27 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'default' => 1,
 			),
 			'equal_height_cols' => array(
-				'label'        => esc_html__( 'Equal Columns Height', 'jet-widgets' ),
+				'label'        => esc_html__( 'Equal Columns Height', 'jetwidgets-for-elementor' ),
 				'type'         => 'switcher',
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
 			),
 			'post_type'   => array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Post Type', 'jet-widgets' ),
+				'label'      => esc_html__( 'Post Type', 'jetwidgets-for-elementor' ),
 				'default'    => 'post',
 				'options'    => jet_widgets_tools()->get_post_types(),
 			),
 			'posts_query' => array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Query posts by', 'jet-widgets' ),
+				'label'      => esc_html__( 'Query posts by', 'jetwidgets-for-elementor' ),
 				'default'    => 'latest',
 				'options'    => array(
-					'latest'   => esc_html__( 'Latest Posts', 'jet-widgets' ),
-					'category' => esc_html__( 'From Category', 'jet-widgets' ),
-					'ids'      => esc_html__( 'By Specific IDs', 'jet-widgets' ),
+					'latest'   => esc_html__( 'Latest Posts', 'jetwidgets-for-elementor' ),
+					'category' => esc_html__( 'From Category', 'jetwidgets-for-elementor' ),
+					'ids'      => esc_html__( 'By Specific IDs', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'post_type' => array( 'post' ),
@@ -73,7 +73,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'post_ids' => array(
 				'type'      => 'text',
-				'label'     => esc_html__( 'Set comma separated IDs list (10, 22, 19 etc.)', 'jet-widgets' ),
+				'label'     => esc_html__( 'Set comma separated IDs list (10, 22, 19 etc.)', 'jetwidgets-for-elementor' ),
 				'default'   => '',
 				'condition' => array(
 					'posts_query' => array( 'ids' ),
@@ -82,7 +82,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'post_cat' => array(
 				'type'       => 'select2',
-				'label'      => esc_html__( 'Category', 'jet-widgets' ),
+				'label'      => esc_html__( 'Category', 'jetwidgets-for-elementor' ),
 				'default'    => '',
 				'multiple'   => true,
 				'options'    => jet_widgets_tools()->get_categories(),
@@ -93,7 +93,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'post_offset' => array(
 				'type'    => 'number',
-				'label'   => esc_html__( 'Post offset', 'jet-widgets' ),
+				'label'   => esc_html__( 'Post offset', 'jetwidgets-for-elementor' ),
 				'default' => 0,
 				'min'     => 0,
 				'max'     => 100,
@@ -101,18 +101,18 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_title' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Title', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Title', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 
 			'title_trimmed' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Title Word Trim', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Title Word Trim', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'no',
 				'condition' => array(
@@ -122,7 +122,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 			'title_length' => array(
 				'type'      => 'number',
-				'label'     => esc_html__( 'Title Length', 'jet-widgets' ),
+				'label'     => esc_html__( 'Title Length', 'jetwidgets-for-elementor' ),
 				'default'   => 5,
 				'min'       => 1,
 				'max'       => 50,
@@ -134,7 +134,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 			'title_trimmed_ending_text' => array(
 				'type'      => 'text',
-				'label'     => esc_html__( 'Title Trimmed Ending', 'jet-widgets' ),
+				'label'     => esc_html__( 'Title Trimmed Ending', 'jetwidgets-for-elementor' ),
 				'default'   => '...',
 				'condition' => array(
 					'title_trimmed' => 'yes',
@@ -143,20 +143,20 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 			'show_image' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Featured Image', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Featured Image', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 			'show_image_as' => array(
 				'type'        => 'select',
-				'label'       => esc_html__( 'Show Featured Image As', 'jet-widgets' ),
+				'label'       => esc_html__( 'Show Featured Image As', 'jetwidgets-for-elementor' ),
 				'default'     => 'image',
 				'label_block' => true,
 				'options'     => array(
-					'image'      => esc_html__( 'Simple Image', 'jet-widgets' ),
-					'background' => esc_html__( 'Box Background', 'jet-widgets' ),
+					'image'      => esc_html__( 'Simple Image', 'jetwidgets-for-elementor' ),
+					'background' => esc_html__( 'Box Background', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
 					'show_image' => array( 'yes' ),
@@ -164,12 +164,12 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'bg_size' => array(
 				'type'        => 'select',
-				'label'       => esc_html__( 'Background Image Size', 'jet-widgets' ),
+				'label'       => esc_html__( 'Background Image Size', 'jetwidgets-for-elementor' ),
 				'label_block' => true,
 				'default'     => 'cover',
 				'options'     => array(
-					'cover'   => esc_html__( 'Cover', 'jet-widgets' ),
-					'contain' => esc_html__( 'Contain', 'jet-widgets' ),
+					'cover'   => esc_html__( 'Cover', 'jetwidgets-for-elementor' ),
+					'contain' => esc_html__( 'Contain', 'jetwidgets-for-elementor' ),
 				),
 				'condition'   => array(
 					'show_image'    => array( 'yes' ),
@@ -178,19 +178,19 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'bg_position' => array(
 				'type'        => 'select',
-				'label'       => esc_html__( 'Background Image Position', 'jet-widgets' ),
+				'label'       => esc_html__( 'Background Image Position', 'jetwidgets-for-elementor' ),
 				'label_block' => true,
 				'default'     => 'center center',
 				'options'     => array(
-					'center center' => esc_attr_x( 'Center Center', 'Background Control', 'jet-widgets' ),
-					'center left'   => esc_attr_x( 'Center Left', 'Background Control', 'jet-widgets' ),
-					'center right'  => esc_attr_x( 'Center Right', 'Background Control', 'jet-widgets' ),
-					'top center'    => esc_attr_x( 'Top Center', 'Background Control', 'jet-widgets' ),
-					'top left'      => esc_attr_x( 'Top Left', 'Background Control', 'jet-widgets' ),
-					'top right'     => esc_attr_x( 'Top Right', 'Background Control', 'jet-widgets' ),
-					'bottom center' => esc_attr_x( 'Bottom Center', 'Background Control', 'jet-widgets' ),
-					'bottom left'   => esc_attr_x( 'Bottom Left', 'Background Control', 'jet-widgets' ),
-					'bottom right'  => esc_attr_x( 'Bottom Right', 'Background Control', 'jet-widgets' ),
+					'center center' => esc_attr_x( 'Center Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center left'   => esc_attr_x( 'Center Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'center right'  => esc_attr_x( 'Center Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top center'    => esc_attr_x( 'Top Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top left'      => esc_attr_x( 'Top Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'top right'     => esc_attr_x( 'Top Right', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom center' => esc_attr_x( 'Bottom Center', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom left'   => esc_attr_x( 'Bottom Left', 'Background Control', 'jetwidgets-for-elementor' ),
+					'bottom right'  => esc_attr_x( 'Bottom Right', 'Background Control', 'jetwidgets-for-elementor' ),
 				),
 				'condition'   => array(
 					'show_image'    => array( 'yes' ),
@@ -199,7 +199,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'thumb_size' => array(
 				'type'       => 'select',
-				'label'      => esc_html__( 'Featured Image Size', 'jet-widgets' ),
+				'label'      => esc_html__( 'Featured Image Size', 'jetwidgets-for-elementor' ),
 				'default'    => 'post-thumbnail',
 				'options'    => jet_widgets_tools()->get_image_sizes(),
 				'condition' => array(
@@ -209,15 +209,15 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_excerpt' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Excerpt', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Excerpt', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 			'excerpt_length' => array(
 				'type'       => 'number',
-				'label'      => esc_html__( 'Excerpt Length', 'jet-widgets' ),
+				'label'      => esc_html__( 'Excerpt Length', 'jetwidgets-for-elementor' ),
 				'default'    => 20,
 				'min'        => 1,
 				'max'        => 300,
@@ -228,17 +228,17 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_meta' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Meta', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Meta', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 			'show_author' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Author', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Author', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 				'condition' => array(
@@ -247,9 +247,9 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_date' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Date', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Date', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 				'condition' => array(
@@ -258,9 +258,9 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_comments' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Posts Comments', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Posts Comments', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 				'condition' => array(
@@ -269,40 +269,40 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'show_more' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Show Read More Button', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Show Read More Button', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 			'more_text' => array(
 				'type'      => 'text',
-				'label'     => esc_html__( 'Read More Button Text', 'jet-widgets' ),
-				'default'   => esc_html__( 'Read More', 'jet-widgets' ),
+				'label'     => esc_html__( 'Read More Button Text', 'jetwidgets-for-elementor' ),
+				'default'   => esc_html__( 'Read More', 'jetwidgets-for-elementor' ),
 				'condition' => array(
 					'show_more' => array( 'yes' ),
 				),
 			),
 			'more_icon' => array(
 				'type'      => 'icon',
-				'label'     => esc_html__( 'Read More Button Icon', 'jet-widgets' ),
+				'label'     => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
 				'condition' => array(
 					'show_more' => array( 'yes' ),
 				),
 			),
 			'columns_gap' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Add gap between columns', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Add gap between columns', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
 			'rows_gap' => array(
 				'type'         => 'switcher',
-				'label'        => esc_html__( 'Add gap between rows', 'jet-widgets' ),
-				'label_on'     => esc_html__( 'Yes', 'jet-widgets' ),
-				'label_off'    => esc_html__( 'No', 'jet-widgets' ),
+				'label'        => esc_html__( 'Add gap between rows', 'jetwidgets-for-elementor' ),
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
 			),
