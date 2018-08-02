@@ -339,7 +339,21 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 			echo '<div class="jet-widgets-settings-page">';
 				$this->builder->render();
+				$this->render_banner_html();
 			echo '</div>';
+		}
+
+		/**
+		 * Render banner html.
+		 */
+		public function render_banner_html() {
+			$html = '<div class="jet-widgets-banner">
+						<a class="jet-widgets-banner__link" href="https://crocoblock.com/" target="_blank">
+							<img class="jet-widgets-banner__img" src="%1$s" alt="%2$s">
+						</a>
+					</div>';
+
+			printf( $html, jet_widgets()->plugin_url( 'assets/images/banner.png' ), esc_attr__( 'CrocoBlock', 'jetwidgets-for-elementor' ) );
 		}
 
 		/**

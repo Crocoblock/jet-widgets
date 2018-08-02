@@ -1,3 +1,25 @@
+.jet-widgets-settings-page {
+	display: flex;
+
+	.jet_widgets_settings {
+		flex-grow: 1;
+		margin-right: 20px;
+	}
+
+	.jet-widgets-banner {
+		flex-shrink: 0;
+		margin: 10px 20px 0 0;
+
+		&__link {
+			display: block;
+		}
+
+		&__img {
+			vertical-align: top;
+		}
+	}
+}
+
 .jet_widgets_settings_form {
 	&__checkbox-group {
 

@@ -1,7 +1,7 @@
 === JetWidgets For Elementor ===
 
 Contributors: CrocoBlock
-Tags: elementor, elementor builder, widgets, elementor widgets, addons, elementor addons, elements, elementor elements, visual editor, wordpress page builder, carousel, subscribe form, headline, image comparison, posts, pricing table
+Tags: elementor, elementor widgets, elementor addons, elementor elements, subscribe form, headline, image comparison, posts, pricing table
 Requires at least: 4.7
 Tested up to: 4.9.7
 Requires PHP: 5.4
