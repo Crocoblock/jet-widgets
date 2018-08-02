@@ -1,5 +1,10 @@
 .jet-widgets-settings-page {
 	display: flex;
+	flex-wrap: nowrap;
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+	}
 
 	.jet_widgets_settings {
 		flex-grow: 1;
