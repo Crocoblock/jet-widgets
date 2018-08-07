@@ -3,7 +3,7 @@
 Contributors: CrocoBlock
 Tags: elementor, elementor widgets, elementor addons, elementor elements, subscribe form, headline, image comparison, posts, pricing table
 Requires at least: 4.7
-Tested up to: 4.9.7
+Tested up to: 4.9.8
 Requires PHP: 5.4
 Stable tag: 1.0.0
 License: GPLv3 or later
