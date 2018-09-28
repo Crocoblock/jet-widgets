@@ -31,7 +31,7 @@
 				}
 
 				prevEditedElement.$el.find( '.jw-animated-box' ).removeClass( 'flipped' );
-				prevEditedElement.$el.find( '.jw-animated-box' ).addClass( 'flipped-stop' );
+				prevEditedElement.$el.find( '.jw-animated-box' ).removeClass( 'flipped-stop' );
 
 				window.JetWidgetsEditor.editedElement = null;
 				
@@ -48,7 +48,7 @@
 				editedElement.$el.find( '.jw-animated-box' ).addClass( 'flipped-stop' );
 			} else {
 				editedElement.$el.find( '.jw-animated-box' ).removeClass( 'flipped' );
-				editedElement.$el.find( '.jw-animated-box' ).addClass( 'flipped-stop' );
+				editedElement.$el.find( '.jw-animated-box' ).removeClass( 'flipped-stop' );
 			}
 		}
 	};
