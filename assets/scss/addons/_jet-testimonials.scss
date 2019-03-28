@@ -101,6 +101,26 @@
 		max-width: 100%;
 	}
 
+	&__rating {
+		color: #ffe435;
+		i{
+			color: #c1c1c1;
+			&::before{
+				content: attr( data-star-style );
+			}
+		}
+		&[data-rating="1"] i:nth-child( -n+1 ),
+		&[data-rating="2"] i:nth-child( -n+2 ),
+		&[data-rating="3"] i:nth-child( -n+3 ),
+		&[data-rating="4"] i:nth-child( -n+4 ),
+		&[data-rating="5"] i:nth-child( -n+5 ){
+			color: inherit !important;
+			&::before{
+				content: attr( data-active-star-style );
+			}
+		}
+	}
+
 	.jw-arrow {
 		position: absolute;
 		top: 50%;

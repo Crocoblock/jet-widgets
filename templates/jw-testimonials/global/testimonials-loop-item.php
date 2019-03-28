@@ -3,6 +3,7 @@
  * Testimonials item template
  */
 $settings = $this->get_settings();
+$stars = $this->render_stars();
 
 ?>
 <div class="jw-testimonials__item">
@@ -15,6 +16,7 @@ $settings = $this->get_settings();
 			echo $this->__loop_item( array( 'item_name' ), '<div class="jw-testimonials__name"><span>%s</span></div>' );
 			echo $this->__loop_item( array( 'item_position' ), '<div class="jw-testimonials__position"><span>%s</span></div>' );
 			echo $this->__loop_item( array( 'item_date' ), '<div class="jw-testimonials__date"><span>%s</span></div>' );
+			echo $this->__loop_item( array( 'item_rating' ), '<div class="jw-testimonials__rating" data-rating="%s">' . $stars . '</div>' );
 		?></div>
 	</div>
 </div>
