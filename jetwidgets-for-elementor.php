@@ -61,7 +61,7 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 		 *
 		 * @var string
 		 */
-		private $version = '1.0.0';
+		private $version = '1.0.1';
 
 		/**
 		 * Holder for base plugin path
