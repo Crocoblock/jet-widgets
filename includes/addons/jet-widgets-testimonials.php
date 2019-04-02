@@ -2229,7 +2229,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label'  => esc_html__( 'Stars', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['rating'] . ' i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['rating'] . ' i.not_active_star' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -2260,7 +2260,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label'  => esc_html__( 'Active Stars', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['rating'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['rating'] . ' i.active_star' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -2510,15 +2510,16 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-	protected function render_stars() {
+	protected function render_stars( $item_settings ) {
 		$settings = $this->get_settings();
+		$html_format = '<i class="fa %1$s" aria-hidden="true"></i>';
+		$star_style = ( "outline" === $settings['rating_star_style'] ) ? 'fa-star-o' : 'fa-star' ;
+		$active_star_style = ( "outline" === $settings['rating_active_star_style'] ) ? 'fa-star-o' : 'fa-star' ;
 		$stars_html = '';
 
 		for ( $stars = 1; $stars <= 5; $stars++ ) {
-			$star_style = ( "outline" === $settings['rating_star_style'] ) ? 'f006' : 'f005' ;
-			$active_star_style = ( "outline" === $settings['rating_active_star_style'] ) ? 'f006' : 'f005' ;
-
-			$stars_html .= '<i class="fa" aria-hidden="true" data-star-style="&#x' . $star_style .'" data-active-star-style="&#x' . $active_star_style .'"></i>';
+			$class = ( $stars > $item_settings[ 'item_rating' ] ) ? $star_style . ' not_active_star' : $active_star_style. ' active_star' ;
+			$stars_html .= sprintf( $html_format, $class );
 		}
 
 		return $stars_html;
