@@ -123,6 +123,24 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 						'item_link'  => '#',
 						'item_link_target'  => '',
 					),
+					array(
+						'item_image' => array(
+							'url' => Utils::get_placeholder_image_src(),
+						),
+						'item_title' => esc_html__( 'Item #2', 'jetwidgets-for-elementor' ),
+						'item_text'  => esc_html__( 'Item #2 Description', 'jetwidgets-for-elementor' ),
+						'item_link'  => '#',
+						'item_link_target'  => '',
+					),
+					array(
+						'item_image' => array(
+							'url' => Utils::get_placeholder_image_src(),
+						),
+						'item_title' => esc_html__( 'Item #3', 'jetwidgets-for-elementor' ),
+						'item_text'  => esc_html__( 'Item #3 Description', 'jetwidgets-for-elementor' ),
+						'item_link'  => '#',
+						'item_link_target'  => '',
+					),
 				),
 				'title_field' => '{{{ item_title }}}',
 			)
