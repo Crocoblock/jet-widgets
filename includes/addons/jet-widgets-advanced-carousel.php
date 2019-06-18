@@ -186,6 +186,18 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		);
 
 		$this->add_control(
+			'vertical_carousel',
+			array(
+				'label'        => esc_html__( 'Vertical carousel', 'jetwidgets-for-elementor' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Yes', 'jetwidgets-for-elementor' ),
+				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
+				'return_value' => 'true',
+				'default'      => '',
+			)
+		);
+
+		$this->add_control(
 			'equal_height_cols',
 			array(
 				'label'        => esc_html__( 'Equal Columns Height', 'jetwidgets-for-elementor' ),
@@ -194,6 +206,9 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
+				'condition' => array(
+					'vertical_carousel!' => 'true',
+				),
 			)
 		);
 
@@ -206,6 +221,9 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
+				'condition' => array(
+					'vertical_carousel!' => 'true',
+				),
 			)
 		);
 
@@ -1630,6 +1648,11 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 	public function get_advanced_carousel_options() {
 
 		$settings = $this->get_settings();
+
+		$vertical_carousel = filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN );
+		$nextArrowIcon = $vertical_carousel ? str_replace( '-right', '-down', $settings['next_arrow']) : $settings['next_arrow'] ;
+		$prevArrowIcon = $vertical_carousel ? str_replace( '-left', '-up', $settings['prev_arrow']) : $settings['prev_arrow'] ;
+
 		$options  = array(
 			'slidesToShow'   => array(
 				'desktop' => absint( $settings['slides_to_show'] ),
@@ -1645,11 +1668,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
 			'prevArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['prev_arrow'], 'prev-arrow' )
+				array( $prevArrowIcon, 'prev-arrow' )
 			),
-			'variableWidth'  => filter_var( $settings['fluid_width'], FILTER_VALIDATE_BOOLEAN ),
+			'variableWidth'  => $vertical_carousel ? false : filter_var( $settings['fluid_width'], FILTER_VALIDATE_BOOLEAN ),
+			'vertical'       => filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN ),
 			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['next_arrow'], 'next-arrow' )
+				array( $nextArrowIcon, 'next-arrow' )
 			),
 		);
 
