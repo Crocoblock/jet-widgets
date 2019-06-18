@@ -1693,6 +1693,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
 				array( $nextArrowIcon, 'next-arrow' )
 			),
+			'rtl' => is_rtl(),
 		);
 
 		if ( 1 === absint( $settings['slides_to_show'] ) ) {
