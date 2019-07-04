@@ -174,7 +174,8 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Background::get_type(),
 			array(
 				'name'     => 'input_background',
-				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])',
+				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]),
+								#page {{WRAPPER}} .wpcf7 .select2.select2-container .select2-selection',
 			)
 		);
 
@@ -185,6 +186,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])' => 'color: {{VALUE}}',
+					'#page {{WRAPPER}} .wpcf7 .select2-selection .select2-selection__rendered' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -198,6 +200,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 					'{{WRAPPER}} .wpcf7 .wpcf7-form .wpcf7-form-control::-webkit-input-placeholder' => 'color: {{VALUE}}',
 					'{{WRAPPER}} .wpcf7 .wpcf7-form .wpcf7-form-control::-moz-placeholder'          => 'color: {{VALUE}}',
 					'{{WRAPPER}} .wpcf7 .wpcf7-form .wpcf7-form-control:-ms-input-placeholder'      => 'color: {{VALUE}}',
+					'#page {{WRAPPER}} .wpcf7 .select2-selection .select2-selection__rendered'      => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -206,7 +209,8 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'input_typography',
-				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])',
+				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]),
+								#page {{WRAPPER}} .wpcf7 .select2-selection .select2-selection__rendered',
 			)
 		);
 
@@ -218,6 +222,8 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#page {{WRAPPER}} .wpcf7 .select2-selection .select2-selection__rendered' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'#page {{WRAPPER}} .wpcf7 .select2-selection .select2-selection__arrow' => 'right: {{TOP}}{{UNIT}};',
 				),
 			)
 		);
@@ -230,6 +236,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%', 'em' ),
 				'selectors'  => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .wpcf7 .select2-container' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -240,7 +247,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 				'name'           => 'input_border',
 				'label'          => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder'    => '1px',
-				'selector'       => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])',
+				'selector'       => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]), {{WRAPPER}} .wpcf7 .select2-selection',
 			)
 		);
 
@@ -252,6 +259,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
 					'{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .wpcf7 .select2-selection' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -260,7 +268,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'input_box_shadow',
-				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"])',
+				'selector' => '{{WRAPPER}} .wpcf7 .wpcf7-form-control:not(.wpcf7-submit):not([type="checkbox"]):not([type="radio"]), {{WRAPPER}} .wpcf7 .select2-selection'
 			)
 		);
 
