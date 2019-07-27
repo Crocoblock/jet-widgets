@@ -1310,7 +1310,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'features_divider_gap',
 			array(
 				'label' => esc_html__( 'Gap', 'jetwidgets-for-elementor' ),
