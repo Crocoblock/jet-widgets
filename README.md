@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.4]
+* add: responsive controls to some widgets
+
 ## [1.0.3]
 * add: vertical mode to carousel widget
 
