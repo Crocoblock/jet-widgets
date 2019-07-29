@@ -436,7 +436,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'column_padding',
 			array(
 				'label'       => esc_html__( 'Column Padding', 'jetwidgets-for-elementor' ),
@@ -450,7 +450,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'column_margin',
 			array(
 				'label'       => esc_html__( 'Column Margin', 'jetwidgets-for-elementor' ),

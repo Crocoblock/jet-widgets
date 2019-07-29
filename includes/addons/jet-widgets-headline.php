@@ -255,7 +255,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'instance_alignment_horizontal',
 			array(
 				'label'   => esc_html__( 'Alignment', 'jetwidgets-for-elementor' ),
