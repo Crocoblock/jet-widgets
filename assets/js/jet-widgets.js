@@ -289,11 +289,7 @@
 				]
 			};
 
-
-
 			slickOptions = $.extend( {}, defaultOptions, options );
-
-			console.log(slickOptions);
 
 			$target.slick( slickOptions );
 		},
