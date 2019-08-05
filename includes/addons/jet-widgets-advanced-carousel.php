@@ -573,7 +573,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Background::get_type(),
 			array(
 				'name'     => 'simple_item_bg_hover',
-				'selector' => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
+				'selector' => '{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -584,7 +584,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'    => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
+				'selector'    => '{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -592,7 +592,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Box_Shadow::get_type(),
 			array(
 				'name'     => 'item_box_shadow_hover',
-				'selector' => '{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items'],
+				'selector' => '{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['items'],
 			)
 		);
 
@@ -826,8 +826,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Items Title Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
-					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['banner_title'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['items_title'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['banner_title'] => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -911,8 +911,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'label'     => esc_html__( 'Items Content Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
-					'{{WRAPPER}} .jw-carousel__item:hover ' . $css_scheme['banner_text'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
+					'{{WRAPPER}} .jw-carousel__item .jw-carousel__item-inner:hover ' . $css_scheme['banner_text'] => 'color: {{VALUE}}',
 				),
 			)
 		);
