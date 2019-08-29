@@ -2237,16 +2237,16 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'rating_star_style',
 			[
-				'label' => __( 'Stars Style', 'elementor' ),
+				'label' => __( 'Stars Style', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'solid' => [
-						'title' => __( 'Solid', 'elementor' ),
+						'title' => __( 'Solid', 'jetwidgets-for-elementor' ),
 						'icon' => 'fa fa-star',
 					],
 					'outline' => [
-						'title' => __( 'Outline', 'elementor' ),
+						'title' => __( 'Outline', 'jetwidgets-for-elementor' ),
 						'icon' => 'fa fa-star-o',
 					],
 				],
@@ -2268,16 +2268,16 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_control(
 			'rating_active_star_style',
 			[
-				'label' => __( 'Active Stars Style', 'elementor' ),
+				'label' => __( 'Active Stars Style', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'label_block' => false,
 				'options' => [
 					'solid' => [
-						'title' => __( 'Solid', 'elementor' ),
+						'title' => __( 'Solid', 'jetwidgets-for-elementor' ),
 						'icon' => 'fa fa-star',
 					],
 					'outline' => [
-						'title' => __( 'Outline', 'elementor' ),
+						'title' => __( 'Outline', 'jetwidgets-for-elementor' ),
 						'icon' => 'fa fa-star-o',
 					],
 				],
@@ -2288,7 +2288,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'rating_icon_size',
 			[
-				'label' => __( 'Size', 'elementor' ),
+				'label' => __( 'Size', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'unit' => 'px',
@@ -2310,7 +2310,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'rating_icon_space',
 			[
-				'label' => __( 'Spacing', 'elementor' ),
+				'label' => __( 'Spacing', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'unit' => 'px',

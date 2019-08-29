@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Jet Widgets for Elementor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-02 16:34+0300\n"
+"POT-Creation-Date: 2019-08-29 16:47+0300\n"
 "PO-Revision-Date: 2018-01-03 12:10+0200\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: JetImpex\n"
@@ -15,7 +15,7 @@ msgstr ""
 "esc_attr__;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.1.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: cherry-framework\n"
@@ -30,13 +30,13 @@ msgid "Slides"
 msgstr ""
 
 #: includes/addons/jet-widgets-advanced-carousel.php:58
-#: includes/addons/jet-widgets-advanced-carousel.php:457
+#: includes/addons/jet-widgets-advanced-carousel.php:493
 #: includes/addons/jet-widgets-headline.php:138
 #: includes/addons/jet-widgets-headline.php:186
 #: includes/addons/jet-widgets-images-layout.php:156
 #: includes/addons/jet-widgets-team-member.php:385
-#: includes/addons/jet-widgets-testimonials.php:244
-#: includes/addons/jet-widgets-testimonials.php:431
+#: includes/addons/jet-widgets-testimonials.php:245
+#: includes/addons/jet-widgets-testimonials.php:449
 msgid "Image"
 msgstr ""
 
@@ -68,92 +68,108 @@ msgstr ""
 msgid "Item #1 Description"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:136
+#: includes/addons/jet-widgets-advanced-carousel.php:130
+msgid "Item #2"
+msgstr ""
+
+#: includes/addons/jet-widgets-advanced-carousel.php:131
+msgid "Item #2 Description"
+msgstr ""
+
+#: includes/addons/jet-widgets-advanced-carousel.php:139
+msgid "Item #3"
+msgstr ""
+
+#: includes/addons/jet-widgets-advanced-carousel.php:140
+msgid "Item #3 Description"
+msgstr ""
+
+#: includes/addons/jet-widgets-advanced-carousel.php:154
 #: includes/addons/jet-widgets-animated-box.php:186
 #: includes/addons/jet-widgets-image-comparison.php:65
 #: includes/addons/jet-widgets-images-layout.php:72
 #: includes/addons/jet-widgets-subscribe-form.php:63
-#: includes/addons/jet-widgets-testimonials.php:68
+#: includes/addons/jet-widgets-testimonials.php:69
 msgid "Settings"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:143
+#: includes/addons/jet-widgets-advanced-carousel.php:161
 msgid "Items Layout"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:147
+#: includes/addons/jet-widgets-advanced-carousel.php:165
 msgid "Banners"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:148
+#: includes/addons/jet-widgets-advanced-carousel.php:166
 msgid "Simple"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:156
+#: includes/addons/jet-widgets-advanced-carousel.php:174
 #: includes/addons/jet-widgets-animated-box.php:193
 msgid "Animation Effect"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:160
+#: includes/addons/jet-widgets-advanced-carousel.php:178
 msgid "Lily"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:161
+#: includes/addons/jet-widgets-advanced-carousel.php:179
 msgid "Sadie"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:162
+#: includes/addons/jet-widgets-advanced-carousel.php:180
 msgid "Layla"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:163
+#: includes/addons/jet-widgets-advanced-carousel.php:181
 msgid "Oscar"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:164
+#: includes/addons/jet-widgets-advanced-carousel.php:182
 msgid "Marley"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:165
+#: includes/addons/jet-widgets-advanced-carousel.php:183
 msgid "Ruby"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:166
+#: includes/addons/jet-widgets-advanced-carousel.php:184
 msgid "Roxy"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:167
+#: includes/addons/jet-widgets-advanced-carousel.php:185
 msgid "Bubba"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:168
+#: includes/addons/jet-widgets-advanced-carousel.php:186
 msgid "Romeo"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:169
+#: includes/addons/jet-widgets-advanced-carousel.php:187
 msgid "Sarah"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:170
+#: includes/addons/jet-widgets-advanced-carousel.php:188
 msgid "Chico"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:182
+#: includes/addons/jet-widgets-advanced-carousel.php:200
 msgid "Images Size"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:191
-#: includes/shortcodes/jet-widgets-posts-shortcode.php:48
-msgid "Equal Columns Height"
+#: includes/addons/jet-widgets-advanced-carousel.php:209
+msgid "Vertical carousel"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:193
-#: includes/addons/jet-widgets-advanced-carousel.php:205
-#: includes/addons/jet-widgets-advanced-carousel.php:240
-#: includes/addons/jet-widgets-advanced-carousel.php:278
-#: includes/addons/jet-widgets-advanced-carousel.php:299
-#: includes/addons/jet-widgets-advanced-carousel.php:311
+#: includes/addons/jet-widgets-advanced-carousel.php:211
+#: includes/addons/jet-widgets-advanced-carousel.php:223
+#: includes/addons/jet-widgets-advanced-carousel.php:238
+#: includes/addons/jet-widgets-advanced-carousel.php:276
+#: includes/addons/jet-widgets-advanced-carousel.php:314
 #: includes/addons/jet-widgets-advanced-carousel.php:335
+#: includes/addons/jet-widgets-advanced-carousel.php:347
+#: includes/addons/jet-widgets-advanced-carousel.php:371
 #: includes/addons/jet-widgets-animated-box.php:1407
 #: includes/addons/jet-widgets-headline.php:248
 #: includes/addons/jet-widgets-headline.php:432
@@ -196,19 +212,19 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:920
 #: includes/addons/jet-widgets-team-member.php:1270
 #: includes/addons/jet-widgets-team-member.php:1519
-#: includes/addons/jet-widgets-testimonials.php:100
-#: includes/addons/jet-widgets-testimonials.php:112
-#: includes/addons/jet-widgets-testimonials.php:136
-#: includes/addons/jet-widgets-testimonials.php:148
-#: includes/addons/jet-widgets-testimonials.php:185
-#: includes/addons/jet-widgets-testimonials.php:223
-#: includes/addons/jet-widgets-testimonials.php:363
-#: includes/addons/jet-widgets-testimonials.php:1265
-#: includes/addons/jet-widgets-testimonials.php:1467
-#: includes/addons/jet-widgets-testimonials.php:1742
-#: includes/addons/jet-widgets-testimonials.php:1899
-#: includes/addons/jet-widgets-testimonials.php:2056
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1162
+#: includes/addons/jet-widgets-testimonials.php:101
+#: includes/addons/jet-widgets-testimonials.php:113
+#: includes/addons/jet-widgets-testimonials.php:137
+#: includes/addons/jet-widgets-testimonials.php:149
+#: includes/addons/jet-widgets-testimonials.php:186
+#: includes/addons/jet-widgets-testimonials.php:224
+#: includes/addons/jet-widgets-testimonials.php:381
+#: includes/addons/jet-widgets-testimonials.php:1283
+#: includes/addons/jet-widgets-testimonials.php:1485
+#: includes/addons/jet-widgets-testimonials.php:1760
+#: includes/addons/jet-widgets-testimonials.php:1917
+#: includes/addons/jet-widgets-testimonials.php:2074
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1170
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:255
 #: includes/shortcodes/jet-widgets-posts-shortcode.php:50
 #: includes/shortcodes/jet-widgets-posts-shortcode.php:105
@@ -225,13 +241,14 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:194
-#: includes/addons/jet-widgets-advanced-carousel.php:206
-#: includes/addons/jet-widgets-advanced-carousel.php:241
-#: includes/addons/jet-widgets-advanced-carousel.php:279
-#: includes/addons/jet-widgets-advanced-carousel.php:300
-#: includes/addons/jet-widgets-advanced-carousel.php:312
+#: includes/addons/jet-widgets-advanced-carousel.php:212
+#: includes/addons/jet-widgets-advanced-carousel.php:224
+#: includes/addons/jet-widgets-advanced-carousel.php:239
+#: includes/addons/jet-widgets-advanced-carousel.php:277
+#: includes/addons/jet-widgets-advanced-carousel.php:315
 #: includes/addons/jet-widgets-advanced-carousel.php:336
+#: includes/addons/jet-widgets-advanced-carousel.php:348
+#: includes/addons/jet-widgets-advanced-carousel.php:372
 #: includes/addons/jet-widgets-animated-box.php:1408
 #: includes/addons/jet-widgets-headline.php:249
 #: includes/addons/jet-widgets-headline.php:433
@@ -274,19 +291,19 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:921
 #: includes/addons/jet-widgets-team-member.php:1271
 #: includes/addons/jet-widgets-team-member.php:1520
-#: includes/addons/jet-widgets-testimonials.php:101
-#: includes/addons/jet-widgets-testimonials.php:113
-#: includes/addons/jet-widgets-testimonials.php:137
-#: includes/addons/jet-widgets-testimonials.php:149
-#: includes/addons/jet-widgets-testimonials.php:186
-#: includes/addons/jet-widgets-testimonials.php:224
-#: includes/addons/jet-widgets-testimonials.php:364
-#: includes/addons/jet-widgets-testimonials.php:1266
-#: includes/addons/jet-widgets-testimonials.php:1468
-#: includes/addons/jet-widgets-testimonials.php:1743
-#: includes/addons/jet-widgets-testimonials.php:1900
-#: includes/addons/jet-widgets-testimonials.php:2057
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1163
+#: includes/addons/jet-widgets-testimonials.php:102
+#: includes/addons/jet-widgets-testimonials.php:114
+#: includes/addons/jet-widgets-testimonials.php:138
+#: includes/addons/jet-widgets-testimonials.php:150
+#: includes/addons/jet-widgets-testimonials.php:187
+#: includes/addons/jet-widgets-testimonials.php:225
+#: includes/addons/jet-widgets-testimonials.php:382
+#: includes/addons/jet-widgets-testimonials.php:1284
+#: includes/addons/jet-widgets-testimonials.php:1486
+#: includes/addons/jet-widgets-testimonials.php:1761
+#: includes/addons/jet-widgets-testimonials.php:1918
+#: includes/addons/jet-widgets-testimonials.php:2075
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1171
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:256
 #: includes/shortcodes/jet-widgets-posts-shortcode.php:51
 #: includes/shortcodes/jet-widgets-posts-shortcode.php:106
@@ -303,132 +320,137 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:203
+#: includes/addons/jet-widgets-advanced-carousel.php:221
+#: includes/shortcodes/jet-widgets-posts-shortcode.php:48
+msgid "Equal Columns Height"
+msgstr ""
+
+#: includes/addons/jet-widgets-advanced-carousel.php:236
 msgid "Fluid Columns Width"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:215
+#: includes/addons/jet-widgets-advanced-carousel.php:251
 #: includes/addons/jet-widgets-image-comparison.php:72
-#: includes/addons/jet-widgets-testimonials.php:75
+#: includes/addons/jet-widgets-testimonials.php:76
 msgid "Slides to Show"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:225
+#: includes/addons/jet-widgets-advanced-carousel.php:261
 #: includes/addons/jet-widgets-image-comparison.php:82
 #: includes/addons/jet-widgets-posts.php:132
-#: includes/addons/jet-widgets-testimonials.php:85
+#: includes/addons/jet-widgets-testimonials.php:86
 msgid "Slides to Scroll"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:238
+#: includes/addons/jet-widgets-advanced-carousel.php:274
 #: includes/addons/jet-widgets-image-comparison.php:168
 #: includes/addons/jet-widgets-posts.php:145
-#: includes/addons/jet-widgets-testimonials.php:183
+#: includes/addons/jet-widgets-testimonials.php:184
 msgid "Show Arrows Navigation"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:250
+#: includes/addons/jet-widgets-advanced-carousel.php:286
 #: includes/addons/jet-widgets-image-comparison.php:180
 #: includes/addons/jet-widgets-image-comparison.php:840
 #: includes/addons/jet-widgets-posts.php:157
-#: includes/addons/jet-widgets-testimonials.php:195
+#: includes/addons/jet-widgets-testimonials.php:196
 msgid "Prev Arrow Icon"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:263
+#: includes/addons/jet-widgets-advanced-carousel.php:299
 #: includes/addons/jet-widgets-image-comparison.php:193
 #: includes/addons/jet-widgets-image-comparison.php:851
 #: includes/addons/jet-widgets-posts.php:170
-#: includes/addons/jet-widgets-testimonials.php:208
+#: includes/addons/jet-widgets-testimonials.php:209
 msgid "Next Arrow Icon"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:276
+#: includes/addons/jet-widgets-advanced-carousel.php:312
 #: includes/addons/jet-widgets-image-comparison.php:206
 #: includes/addons/jet-widgets-posts.php:183
-#: includes/addons/jet-widgets-testimonials.php:221
+#: includes/addons/jet-widgets-testimonials.php:222
 msgid "Show Dots Navigation"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:290
+#: includes/addons/jet-widgets-advanced-carousel.php:326
 msgid "Additional Options"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:297
+#: includes/addons/jet-widgets-advanced-carousel.php:333
 #: includes/addons/jet-widgets-image-comparison.php:95
 #: includes/addons/jet-widgets-posts.php:195
-#: includes/addons/jet-widgets-testimonials.php:98
+#: includes/addons/jet-widgets-testimonials.php:99
 msgid "Pause on Hover"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:309
+#: includes/addons/jet-widgets-advanced-carousel.php:345
 #: includes/addons/jet-widgets-image-comparison.php:107
 #: includes/addons/jet-widgets-posts.php:207
-#: includes/addons/jet-widgets-testimonials.php:110
+#: includes/addons/jet-widgets-testimonials.php:111
 msgid "Autoplay"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:321
+#: includes/addons/jet-widgets-advanced-carousel.php:357
 #: includes/addons/jet-widgets-image-comparison.php:119
 #: includes/addons/jet-widgets-posts.php:219
-#: includes/addons/jet-widgets-testimonials.php:122
+#: includes/addons/jet-widgets-testimonials.php:123
 msgid "Autoplay Speed"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:333
+#: includes/addons/jet-widgets-advanced-carousel.php:369
 #: includes/addons/jet-widgets-image-comparison.php:131
 #: includes/addons/jet-widgets-posts.php:231
-#: includes/addons/jet-widgets-testimonials.php:134
+#: includes/addons/jet-widgets-testimonials.php:135
 msgid "Infinite Loop"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:345
+#: includes/addons/jet-widgets-advanced-carousel.php:381
 #: includes/addons/jet-widgets-image-comparison.php:143
 #: includes/addons/jet-widgets-posts.php:243
-#: includes/addons/jet-widgets-testimonials.php:158
+#: includes/addons/jet-widgets-testimonials.php:159
 msgid "Effect"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:349
+#: includes/addons/jet-widgets-advanced-carousel.php:385
 #: includes/addons/jet-widgets-image-comparison.php:147
 #: includes/addons/jet-widgets-posts.php:247
-#: includes/addons/jet-widgets-testimonials.php:162
+#: includes/addons/jet-widgets-testimonials.php:163
 msgid "Slide"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:350
+#: includes/addons/jet-widgets-advanced-carousel.php:386
 #: includes/addons/jet-widgets-image-comparison.php:148
 #: includes/addons/jet-widgets-posts.php:248
-#: includes/addons/jet-widgets-testimonials.php:163
+#: includes/addons/jet-widgets-testimonials.php:164
 msgid "Fade"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:361
+#: includes/addons/jet-widgets-advanced-carousel.php:397
 #: includes/addons/jet-widgets-image-comparison.php:159
 #: includes/addons/jet-widgets-posts.php:259
-#: includes/addons/jet-widgets-testimonials.php:174
+#: includes/addons/jet-widgets-testimonials.php:175
 msgid "Animation Speed"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:397
+#: includes/addons/jet-widgets-advanced-carousel.php:433
 #: includes/addons/jet-widgets-posts.php:283
 msgid "Column"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:406
+#: includes/addons/jet-widgets-advanced-carousel.php:442
 #: includes/addons/jet-widgets-posts.php:292
 msgid "Column Padding"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:420
+#: includes/addons/jet-widgets-advanced-carousel.php:456
 msgid "Column Margin"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:433
-#: includes/addons/jet-widgets-advanced-carousel.php:512
+#: includes/addons/jet-widgets-advanced-carousel.php:469
 #: includes/addons/jet-widgets-advanced-carousel.php:548
-#: includes/addons/jet-widgets-advanced-carousel.php:1014
-#: includes/addons/jet-widgets-advanced-carousel.php:1064
+#: includes/addons/jet-widgets-advanced-carousel.php:584
+#: includes/addons/jet-widgets-advanced-carousel.php:1050
+#: includes/addons/jet-widgets-advanced-carousel.php:1100
 #: includes/addons/jet-widgets-animated-box.php:313
 #: includes/addons/jet-widgets-animated-box.php:385
 #: includes/addons/jet-widgets-animated-box.php:521
@@ -474,30 +496,30 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:1169
 #: includes/addons/jet-widgets-team-member.php:1387
 #: includes/addons/jet-widgets-team-member.php:1481
-#: includes/addons/jet-widgets-testimonials.php:382
-#: includes/addons/jet-widgets-testimonials.php:497
-#: includes/addons/jet-widgets-testimonials.php:1181
-#: includes/addons/jet-widgets-testimonials.php:1608
-#: includes/addons/vendor/jet-widgets-contact-form7.php:241
-#: includes/addons/vendor/jet-widgets-contact-form7.php:312
-#: includes/addons/vendor/jet-widgets-contact-form7.php:358
-#: includes/addons/vendor/jet-widgets-contact-form7.php:636
-#: includes/addons/vendor/jet-widgets-contact-form7.php:887
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1138
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1300
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1349
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1398
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1447
+#: includes/addons/jet-widgets-testimonials.php:400
+#: includes/addons/jet-widgets-testimonials.php:515
+#: includes/addons/jet-widgets-testimonials.php:1199
+#: includes/addons/jet-widgets-testimonials.php:1626
+#: includes/addons/vendor/jet-widgets-contact-form7.php:248
+#: includes/addons/vendor/jet-widgets-contact-form7.php:320
+#: includes/addons/vendor/jet-widgets-contact-form7.php:366
+#: includes/addons/vendor/jet-widgets-contact-form7.php:644
+#: includes/addons/vendor/jet-widgets-contact-form7.php:895
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1146
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1308
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1357
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1406
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1455
 msgid "Border"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:445
+#: includes/addons/jet-widgets-advanced-carousel.php:481
 msgid "Simple Items"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:465
-#: includes/addons/jet-widgets-advanced-carousel.php:583
-#: includes/addons/jet-widgets-advanced-carousel.php:965
+#: includes/addons/jet-widgets-advanced-carousel.php:501
+#: includes/addons/jet-widgets-advanced-carousel.php:619
+#: includes/addons/jet-widgets-advanced-carousel.php:1001
 #: includes/addons/jet-widgets-animated-box.php:323
 #: includes/addons/jet-widgets-animated-box.php:395
 #: includes/addons/jet-widgets-animated-box.php:531
@@ -541,32 +563,32 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:1374
 #: includes/addons/jet-widgets-team-member.php:1468
 #: includes/addons/jet-widgets-team-member.php:1562
-#: includes/addons/jet-widgets-testimonials.php:392
-#: includes/addons/jet-widgets-testimonials.php:507
-#: includes/addons/jet-widgets-testimonials.php:1191
-#: includes/addons/jet-widgets-testimonials.php:1618
-#: includes/addons/vendor/jet-widgets-contact-form7.php:250
-#: includes/addons/vendor/jet-widgets-contact-form7.php:623
-#: includes/addons/vendor/jet-widgets-contact-form7.php:874
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1125
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1230
+#: includes/addons/jet-widgets-testimonials.php:410
+#: includes/addons/jet-widgets-testimonials.php:525
+#: includes/addons/jet-widgets-testimonials.php:1209
+#: includes/addons/jet-widgets-testimonials.php:1636
+#: includes/addons/vendor/jet-widgets-contact-form7.php:257
+#: includes/addons/vendor/jet-widgets-contact-form7.php:631
+#: includes/addons/vendor/jet-widgets-contact-form7.php:882
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1133
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1238
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:244
 msgid "Border Radius"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:485
+#: includes/addons/jet-widgets-advanced-carousel.php:521
 #: includes/addons/jet-widgets-services.php:63
 #: includes/addons/jet-widgets-team-member.php:64
 msgid "Content"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:496
-#: includes/addons/jet-widgets-advanced-carousel.php:637
-#: includes/addons/jet-widgets-advanced-carousel.php:762
-#: includes/addons/jet-widgets-advanced-carousel.php:843
-#: includes/addons/jet-widgets-advanced-carousel.php:980
-#: includes/addons/jet-widgets-advanced-carousel.php:1099
-#: includes/addons/jet-widgets-advanced-carousel.php:1468
+#: includes/addons/jet-widgets-advanced-carousel.php:532
+#: includes/addons/jet-widgets-advanced-carousel.php:673
+#: includes/addons/jet-widgets-advanced-carousel.php:798
+#: includes/addons/jet-widgets-advanced-carousel.php:879
+#: includes/addons/jet-widgets-advanced-carousel.php:1016
+#: includes/addons/jet-widgets-advanced-carousel.php:1135
+#: includes/addons/jet-widgets-advanced-carousel.php:1504
 #: includes/addons/jet-widgets-animated-box.php:1496
 #: includes/addons/jet-widgets-image-comparison.php:631
 #: includes/addons/jet-widgets-image-comparison.php:910
@@ -582,20 +604,20 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:717
 #: includes/addons/jet-widgets-team-member.php:985
 #: includes/addons/jet-widgets-team-member.php:1308
-#: includes/addons/jet-widgets-testimonials.php:580
-#: includes/addons/jet-widgets-testimonials.php:952
+#: includes/addons/jet-widgets-testimonials.php:598
+#: includes/addons/jet-widgets-testimonials.php:970
 #: includes/addons/vendor/jet-widgets-contact-form7.php:169
-#: includes/addons/vendor/jet-widgets-contact-form7.php:405
+#: includes/addons/vendor/jet-widgets-contact-form7.php:413
 msgid "Normal"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:532
-#: includes/addons/jet-widgets-advanced-carousel.php:692
-#: includes/addons/jet-widgets-advanced-carousel.php:783
-#: includes/addons/jet-widgets-advanced-carousel.php:868
-#: includes/addons/jet-widgets-advanced-carousel.php:1034
-#: includes/addons/jet-widgets-advanced-carousel.php:1125
-#: includes/addons/jet-widgets-advanced-carousel.php:1498
+#: includes/addons/jet-widgets-advanced-carousel.php:568
+#: includes/addons/jet-widgets-advanced-carousel.php:728
+#: includes/addons/jet-widgets-advanced-carousel.php:819
+#: includes/addons/jet-widgets-advanced-carousel.php:904
+#: includes/addons/jet-widgets-advanced-carousel.php:1070
+#: includes/addons/jet-widgets-advanced-carousel.php:1161
+#: includes/addons/jet-widgets-advanced-carousel.php:1534
 #: includes/addons/jet-widgets-animated-box.php:1595
 #: includes/addons/jet-widgets-image-comparison.php:675
 #: includes/addons/jet-widgets-image-comparison.php:936
@@ -609,14 +631,14 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:832
 #: includes/addons/jet-widgets-team-member.php:1099
 #: includes/addons/jet-widgets-team-member.php:1407
-#: includes/addons/jet-widgets-testimonials.php:606
-#: includes/addons/jet-widgets-testimonials.php:982
-#: includes/addons/vendor/jet-widgets-contact-form7.php:656
+#: includes/addons/jet-widgets-testimonials.php:624
+#: includes/addons/jet-widgets-testimonials.php:1000
+#: includes/addons/vendor/jet-widgets-contact-form7.php:664
 msgid "Hover"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:570
-#: includes/addons/jet-widgets-advanced-carousel.php:941
+#: includes/addons/jet-widgets-advanced-carousel.php:606
+#: includes/addons/jet-widgets-advanced-carousel.php:977
 #: includes/addons/jet-widgets-animated-box.php:336
 #: includes/addons/jet-widgets-animated-box.php:408
 #: includes/addons/jet-widgets-animated-box.php:776
@@ -670,21 +692,21 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:1350
 #: includes/addons/jet-widgets-team-member.php:1444
 #: includes/addons/jet-widgets-team-member.php:1537
-#: includes/addons/jet-widgets-testimonials.php:1326
-#: includes/addons/jet-widgets-testimonials.php:1644
-#: includes/addons/jet-widgets-testimonials.php:1807
-#: includes/addons/jet-widgets-testimonials.php:1964
-#: includes/addons/jet-widgets-testimonials.php:2121
-#: includes/addons/vendor/jet-widgets-contact-form7.php:216
-#: includes/addons/vendor/jet-widgets-contact-form7.php:611
-#: includes/addons/vendor/jet-widgets-contact-form7.php:862
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1113
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1206
+#: includes/addons/jet-widgets-testimonials.php:1344
+#: includes/addons/jet-widgets-testimonials.php:1662
+#: includes/addons/jet-widgets-testimonials.php:1825
+#: includes/addons/jet-widgets-testimonials.php:1982
+#: includes/addons/jet-widgets-testimonials.php:2139
+#: includes/addons/vendor/jet-widgets-contact-form7.php:220
+#: includes/addons/vendor/jet-widgets-contact-form7.php:619
+#: includes/addons/vendor/jet-widgets-contact-form7.php:870
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1121
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1214
 msgid "Padding"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:595
-#: includes/addons/jet-widgets-advanced-carousel.php:1594
+#: includes/addons/jet-widgets-advanced-carousel.php:631
+#: includes/addons/jet-widgets-advanced-carousel.php:1630
 #: includes/addons/jet-widgets-animated-box.php:563
 #: includes/addons/jet-widgets-animated-box.php:703
 #: includes/addons/jet-widgets-animated-box.php:800
@@ -725,23 +747,23 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:852
 #: includes/addons/jet-widgets-team-member.php:930
 #: includes/addons/jet-widgets-team-member.php:1280
-#: includes/addons/jet-widgets-testimonials.php:539
-#: includes/addons/jet-widgets-testimonials.php:1078
-#: includes/addons/jet-widgets-testimonials.php:1223
-#: includes/addons/jet-widgets-testimonials.php:1350
-#: includes/addons/jet-widgets-testimonials.php:1674
-#: includes/addons/jet-widgets-testimonials.php:1831
-#: includes/addons/jet-widgets-testimonials.php:1988
-#: includes/addons/jet-widgets-testimonials.php:2145
+#: includes/addons/jet-widgets-testimonials.php:557
+#: includes/addons/jet-widgets-testimonials.php:1096
+#: includes/addons/jet-widgets-testimonials.php:1241
+#: includes/addons/jet-widgets-testimonials.php:1368
+#: includes/addons/jet-widgets-testimonials.php:1692
+#: includes/addons/jet-widgets-testimonials.php:1849
+#: includes/addons/jet-widgets-testimonials.php:2006
+#: includes/addons/jet-widgets-testimonials.php:2163
 #: includes/addons/vendor/jet-widgets-contact-form7.php:130
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1242
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1250
 msgid "Alignment"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:600
-#: includes/addons/jet-widgets-advanced-carousel.php:1237
-#: includes/addons/jet-widgets-advanced-carousel.php:1388
-#: includes/addons/jet-widgets-advanced-carousel.php:1599
+#: includes/addons/jet-widgets-advanced-carousel.php:636
+#: includes/addons/jet-widgets-advanced-carousel.php:1273
+#: includes/addons/jet-widgets-advanced-carousel.php:1424
+#: includes/addons/jet-widgets-advanced-carousel.php:1635
 #: includes/addons/jet-widgets-animated-box.php:568
 #: includes/addons/jet-widgets-animated-box.php:708
 #: includes/addons/jet-widgets-animated-box.php:805
@@ -800,28 +822,28 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:883
 #: includes/addons/jet-widgets-team-member.php:935
 #: includes/addons/jet-widgets-team-member.php:1285
-#: includes/addons/jet-widgets-testimonials.php:543
-#: includes/addons/jet-widgets-testimonials.php:718
-#: includes/addons/jet-widgets-testimonials.php:869
-#: includes/addons/jet-widgets-testimonials.php:1083
-#: includes/addons/jet-widgets-testimonials.php:1228
-#: includes/addons/jet-widgets-testimonials.php:1355
-#: includes/addons/jet-widgets-testimonials.php:1381
-#: includes/addons/jet-widgets-testimonials.php:1679
-#: includes/addons/jet-widgets-testimonials.php:1705
-#: includes/addons/jet-widgets-testimonials.php:1836
-#: includes/addons/jet-widgets-testimonials.php:1862
-#: includes/addons/jet-widgets-testimonials.php:1993
-#: includes/addons/jet-widgets-testimonials.php:2019
-#: includes/addons/jet-widgets-testimonials.php:2150
-#: includes/addons/jet-widgets-testimonials.php:2176
+#: includes/addons/jet-widgets-testimonials.php:561
+#: includes/addons/jet-widgets-testimonials.php:736
+#: includes/addons/jet-widgets-testimonials.php:887
+#: includes/addons/jet-widgets-testimonials.php:1101
+#: includes/addons/jet-widgets-testimonials.php:1246
+#: includes/addons/jet-widgets-testimonials.php:1373
+#: includes/addons/jet-widgets-testimonials.php:1399
+#: includes/addons/jet-widgets-testimonials.php:1697
+#: includes/addons/jet-widgets-testimonials.php:1723
+#: includes/addons/jet-widgets-testimonials.php:1854
+#: includes/addons/jet-widgets-testimonials.php:1880
+#: includes/addons/jet-widgets-testimonials.php:2011
+#: includes/addons/jet-widgets-testimonials.php:2037
+#: includes/addons/jet-widgets-testimonials.php:2168
+#: includes/addons/jet-widgets-testimonials.php:2194
 #: includes/addons/vendor/jet-widgets-contact-form7.php:135
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1247
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1255
 msgid "Left"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:604
-#: includes/addons/jet-widgets-advanced-carousel.php:1603
+#: includes/addons/jet-widgets-advanced-carousel.php:640
+#: includes/addons/jet-widgets-advanced-carousel.php:1639
 #: includes/addons/jet-widgets-animated-box.php:572
 #: includes/addons/jet-widgets-animated-box.php:712
 #: includes/addons/jet-widgets-animated-box.php:809
@@ -886,29 +908,29 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:939
 #: includes/addons/jet-widgets-team-member.php:1289
 #: includes/addons/jet-widgets-team-member.php:1668
-#: includes/addons/jet-widgets-testimonials.php:547
-#: includes/addons/jet-widgets-testimonials.php:1087
-#: includes/addons/jet-widgets-testimonials.php:1232
-#: includes/addons/jet-widgets-testimonials.php:1359
-#: includes/addons/jet-widgets-testimonials.php:1385
-#: includes/addons/jet-widgets-testimonials.php:1683
-#: includes/addons/jet-widgets-testimonials.php:1709
-#: includes/addons/jet-widgets-testimonials.php:1840
-#: includes/addons/jet-widgets-testimonials.php:1866
-#: includes/addons/jet-widgets-testimonials.php:1997
-#: includes/addons/jet-widgets-testimonials.php:2023
-#: includes/addons/jet-widgets-testimonials.php:2154
-#: includes/addons/jet-widgets-testimonials.php:2180
-#: includes/addons/jet-widgets-testimonials.php:2321
+#: includes/addons/jet-widgets-testimonials.php:565
+#: includes/addons/jet-widgets-testimonials.php:1105
+#: includes/addons/jet-widgets-testimonials.php:1250
+#: includes/addons/jet-widgets-testimonials.php:1377
+#: includes/addons/jet-widgets-testimonials.php:1403
+#: includes/addons/jet-widgets-testimonials.php:1701
+#: includes/addons/jet-widgets-testimonials.php:1727
+#: includes/addons/jet-widgets-testimonials.php:1858
+#: includes/addons/jet-widgets-testimonials.php:1884
+#: includes/addons/jet-widgets-testimonials.php:2015
+#: includes/addons/jet-widgets-testimonials.php:2041
+#: includes/addons/jet-widgets-testimonials.php:2172
+#: includes/addons/jet-widgets-testimonials.php:2198
+#: includes/addons/jet-widgets-testimonials.php:2487
 #: includes/addons/vendor/jet-widgets-contact-form7.php:139
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1251
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1259
 msgid "Center"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:608
-#: includes/addons/jet-widgets-advanced-carousel.php:1238
-#: includes/addons/jet-widgets-advanced-carousel.php:1389
-#: includes/addons/jet-widgets-advanced-carousel.php:1607
+#: includes/addons/jet-widgets-advanced-carousel.php:644
+#: includes/addons/jet-widgets-advanced-carousel.php:1274
+#: includes/addons/jet-widgets-advanced-carousel.php:1425
+#: includes/addons/jet-widgets-advanced-carousel.php:1643
 #: includes/addons/jet-widgets-animated-box.php:576
 #: includes/addons/jet-widgets-animated-box.php:716
 #: includes/addons/jet-widgets-animated-box.php:813
@@ -967,55 +989,55 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:891
 #: includes/addons/jet-widgets-team-member.php:943
 #: includes/addons/jet-widgets-team-member.php:1293
-#: includes/addons/jet-widgets-testimonials.php:551
-#: includes/addons/jet-widgets-testimonials.php:719
-#: includes/addons/jet-widgets-testimonials.php:870
-#: includes/addons/jet-widgets-testimonials.php:1091
-#: includes/addons/jet-widgets-testimonials.php:1236
-#: includes/addons/jet-widgets-testimonials.php:1363
-#: includes/addons/jet-widgets-testimonials.php:1389
-#: includes/addons/jet-widgets-testimonials.php:1687
-#: includes/addons/jet-widgets-testimonials.php:1713
-#: includes/addons/jet-widgets-testimonials.php:1844
-#: includes/addons/jet-widgets-testimonials.php:1870
-#: includes/addons/jet-widgets-testimonials.php:2001
-#: includes/addons/jet-widgets-testimonials.php:2027
-#: includes/addons/jet-widgets-testimonials.php:2158
-#: includes/addons/jet-widgets-testimonials.php:2184
+#: includes/addons/jet-widgets-testimonials.php:569
+#: includes/addons/jet-widgets-testimonials.php:737
+#: includes/addons/jet-widgets-testimonials.php:888
+#: includes/addons/jet-widgets-testimonials.php:1109
+#: includes/addons/jet-widgets-testimonials.php:1254
+#: includes/addons/jet-widgets-testimonials.php:1381
+#: includes/addons/jet-widgets-testimonials.php:1407
+#: includes/addons/jet-widgets-testimonials.php:1705
+#: includes/addons/jet-widgets-testimonials.php:1731
+#: includes/addons/jet-widgets-testimonials.php:1862
+#: includes/addons/jet-widgets-testimonials.php:1888
+#: includes/addons/jet-widgets-testimonials.php:2019
+#: includes/addons/jet-widgets-testimonials.php:2045
+#: includes/addons/jet-widgets-testimonials.php:2176
+#: includes/addons/jet-widgets-testimonials.php:2202
 #: includes/addons/vendor/jet-widgets-contact-form7.php:143
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1255
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1263
 msgid "Right"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:623
+#: includes/addons/jet-widgets-advanced-carousel.php:659
 msgid "Banner Items"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:644
-#: includes/addons/jet-widgets-advanced-carousel.php:699
+#: includes/addons/jet-widgets-advanced-carousel.php:680
+#: includes/addons/jet-widgets-advanced-carousel.php:735
 msgid "Additional Elements Color"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:675
-#: includes/addons/jet-widgets-advanced-carousel.php:730
+#: includes/addons/jet-widgets-advanced-carousel.php:711
+#: includes/addons/jet-widgets-advanced-carousel.php:766
 #: includes/addons/jet-widgets-animated-box.php:1722
 #: includes/addons/jet-widgets-animated-box.php:1754
 #: includes/addons/jet-widgets-images-layout.php:751
 msgid "Opacity"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:751
+#: includes/addons/jet-widgets-advanced-carousel.php:787
 msgid "Items Title Typography"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:769
-#: includes/addons/jet-widgets-advanced-carousel.php:790
+#: includes/addons/jet-widgets-advanced-carousel.php:805
+#: includes/addons/jet-widgets-advanced-carousel.php:826
 msgid "Items Title Color"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:816
-#: includes/addons/jet-widgets-advanced-carousel.php:901
-#: includes/addons/jet-widgets-advanced-carousel.php:953
+#: includes/addons/jet-widgets-advanced-carousel.php:852
+#: includes/addons/jet-widgets-advanced-carousel.php:937
+#: includes/addons/jet-widgets-advanced-carousel.php:989
 #: includes/addons/jet-widgets-animated-box.php:543
 #: includes/addons/jet-widgets-animated-box.php:683
 #: includes/addons/jet-widgets-animated-box.php:788
@@ -1065,30 +1087,31 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:1362
 #: includes/addons/jet-widgets-team-member.php:1456
 #: includes/addons/jet-widgets-team-member.php:1549
-#: includes/addons/jet-widgets-testimonials.php:519
-#: includes/addons/jet-widgets-testimonials.php:1203
-#: includes/addons/jet-widgets-testimonials.php:1338
-#: includes/addons/jet-widgets-testimonials.php:1662
-#: includes/addons/jet-widgets-testimonials.php:1819
-#: includes/addons/jet-widgets-testimonials.php:1976
-#: includes/addons/jet-widgets-testimonials.php:2133
+#: includes/addons/jet-widgets-testimonials.php:537
+#: includes/addons/jet-widgets-testimonials.php:1221
+#: includes/addons/jet-widgets-testimonials.php:1356
+#: includes/addons/jet-widgets-testimonials.php:1680
+#: includes/addons/jet-widgets-testimonials.php:1837
+#: includes/addons/jet-widgets-testimonials.php:1994
+#: includes/addons/jet-widgets-testimonials.php:2151
+#: includes/addons/jet-widgets-testimonials.php:2335
 #: includes/addons/vendor/jet-widgets-contact-form7.php:118
-#: includes/addons/vendor/jet-widgets-contact-form7.php:228
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1175
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1218
+#: includes/addons/vendor/jet-widgets-contact-form7.php:234
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1183
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1226
 msgid "Margin"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:832
+#: includes/addons/jet-widgets-advanced-carousel.php:868
 msgid "Items Content Typography"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:850
-#: includes/addons/jet-widgets-advanced-carousel.php:875
+#: includes/addons/jet-widgets-advanced-carousel.php:886
+#: includes/addons/jet-widgets-advanced-carousel.php:911
 msgid "Items Content Color"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:920
+#: includes/addons/jet-widgets-advanced-carousel.php:956
 #: includes/addons/jet-widgets-animated-box.php:1370
 #: includes/addons/jet-widgets-pricing-table.php:317
 #: includes/addons/jet-widgets-pricing-table.php:1444
@@ -1097,8 +1120,8 @@ msgstr ""
 msgid "Action Button"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:987
-#: includes/addons/jet-widgets-advanced-carousel.php:1041
+#: includes/addons/jet-widgets-advanced-carousel.php:1023
+#: includes/addons/jet-widgets-advanced-carousel.php:1077
 #: includes/addons/jet-widgets-animated-box.php:1503
 #: includes/addons/jet-widgets-animated-box.php:1602
 #: includes/addons/jet-widgets-posts.php:317
@@ -1122,15 +1145,15 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:1102
 #: includes/addons/jet-widgets-team-member.php:1315
 #: includes/addons/jet-widgets-team-member.php:1414
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1288
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1337
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1386
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1435
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1296
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1345
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1394
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1443
 msgid "Background Color"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1002
-#: includes/addons/jet-widgets-advanced-carousel.php:1052
+#: includes/addons/jet-widgets-advanced-carousel.php:1038
+#: includes/addons/jet-widgets-advanced-carousel.php:1088
 #: includes/addons/jet-widgets-animated-box.php:1518
 #: includes/addons/jet-widgets-animated-box.php:1613
 #: includes/addons/jet-widgets-headline.php:390
@@ -1151,48 +1174,48 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:1113
 #: includes/addons/jet-widgets-team-member.php:1330
 #: includes/addons/jet-widgets-team-member.php:1425
-#: includes/addons/vendor/jet-widgets-contact-form7.php:575
-#: includes/addons/vendor/jet-widgets-contact-form7.php:826
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1077
+#: includes/addons/vendor/jet-widgets-contact-form7.php:583
+#: includes/addons/vendor/jet-widgets-contact-form7.php:834
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1085
 msgid "Text Color"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1088
+#: includes/addons/jet-widgets-advanced-carousel.php:1124
 #: includes/addons/jet-widgets-posts.php:1434
 msgid "Carousel Arrows"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1107
-#: includes/addons/jet-widgets-advanced-carousel.php:1133
+#: includes/addons/jet-widgets-advanced-carousel.php:1143
+#: includes/addons/jet-widgets-advanced-carousel.php:1169
 #: includes/addons/jet-widgets-image-comparison.php:918
 #: includes/addons/jet-widgets-image-comparison.php:944
 #: includes/addons/jet-widgets-posts.php:1453
 #: includes/addons/jet-widgets-posts.php:1479
-#: includes/addons/jet-widgets-testimonials.php:588
-#: includes/addons/jet-widgets-testimonials.php:614
+#: includes/addons/jet-widgets-testimonials.php:606
+#: includes/addons/jet-widgets-testimonials.php:632
 msgid "Arrows Style"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1153
+#: includes/addons/jet-widgets-advanced-carousel.php:1189
 #: includes/addons/jet-widgets-image-comparison.php:964
 #: includes/addons/jet-widgets-posts.php:1499
-#: includes/addons/jet-widgets-testimonials.php:634
+#: includes/addons/jet-widgets-testimonials.php:652
 msgid "Prev Arrow Position"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1162
-#: includes/addons/jet-widgets-advanced-carousel.php:1313
+#: includes/addons/jet-widgets-advanced-carousel.php:1198
+#: includes/addons/jet-widgets-advanced-carousel.php:1349
 #: includes/addons/jet-widgets-image-comparison.php:973
 #: includes/addons/jet-widgets-image-comparison.php:1124
 #: includes/addons/jet-widgets-posts.php:1508
 #: includes/addons/jet-widgets-posts.php:1659
-#: includes/addons/jet-widgets-testimonials.php:643
-#: includes/addons/jet-widgets-testimonials.php:794
+#: includes/addons/jet-widgets-testimonials.php:661
+#: includes/addons/jet-widgets-testimonials.php:812
 msgid "Vertical Postition by"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1166
-#: includes/addons/jet-widgets-advanced-carousel.php:1317
+#: includes/addons/jet-widgets-advanced-carousel.php:1202
+#: includes/addons/jet-widgets-advanced-carousel.php:1353
 #: includes/addons/jet-widgets-animated-box.php:1830
 #: includes/addons/jet-widgets-animated-box.php:1887
 #: includes/addons/jet-widgets-headline.php:580
@@ -1211,15 +1234,15 @@ msgstr ""
 #: includes/addons/jet-widgets-services.php:227
 #: includes/addons/jet-widgets-services.php:1285
 #: includes/addons/jet-widgets-team-member.php:1667
-#: includes/addons/jet-widgets-testimonials.php:647
-#: includes/addons/jet-widgets-testimonials.php:798
-#: includes/addons/jet-widgets-testimonials.php:2320
+#: includes/addons/jet-widgets-testimonials.php:665
+#: includes/addons/jet-widgets-testimonials.php:816
+#: includes/addons/jet-widgets-testimonials.php:2486
 #: includes/class-jet-widgets-tools.php:182
 msgid "Top"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1167
-#: includes/addons/jet-widgets-advanced-carousel.php:1318
+#: includes/addons/jet-widgets-advanced-carousel.php:1203
+#: includes/addons/jet-widgets-advanced-carousel.php:1354
 #: includes/addons/jet-widgets-animated-box.php:1832
 #: includes/addons/jet-widgets-animated-box.php:1889
 #: includes/addons/jet-widgets-headline.php:588
@@ -1237,119 +1260,119 @@ msgstr ""
 #: includes/addons/jet-widgets-posts.php:1664
 #: includes/addons/jet-widgets-services.php:1287
 #: includes/addons/jet-widgets-team-member.php:1669
-#: includes/addons/jet-widgets-testimonials.php:648
-#: includes/addons/jet-widgets-testimonials.php:799
-#: includes/addons/jet-widgets-testimonials.php:2322
+#: includes/addons/jet-widgets-testimonials.php:666
+#: includes/addons/jet-widgets-testimonials.php:817
+#: includes/addons/jet-widgets-testimonials.php:2488
 #: includes/class-jet-widgets-tools.php:184
 msgid "Bottom"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1175
-#: includes/addons/jet-widgets-advanced-carousel.php:1326
+#: includes/addons/jet-widgets-advanced-carousel.php:1211
+#: includes/addons/jet-widgets-advanced-carousel.php:1362
 #: includes/addons/jet-widgets-image-comparison.php:986
 #: includes/addons/jet-widgets-image-comparison.php:1137
 #: includes/addons/jet-widgets-posts.php:1521
 #: includes/addons/jet-widgets-posts.php:1672
 #: includes/addons/jet-widgets-pricing-table.php:182
-#: includes/addons/jet-widgets-testimonials.php:656
-#: includes/addons/jet-widgets-testimonials.php:807
+#: includes/addons/jet-widgets-testimonials.php:674
+#: includes/addons/jet-widgets-testimonials.php:825
 msgid "Top Indent"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1204
-#: includes/addons/jet-widgets-advanced-carousel.php:1355
+#: includes/addons/jet-widgets-advanced-carousel.php:1240
+#: includes/addons/jet-widgets-advanced-carousel.php:1391
 #: includes/addons/jet-widgets-image-comparison.php:1015
 #: includes/addons/jet-widgets-image-comparison.php:1166
 #: includes/addons/jet-widgets-posts.php:1550
 #: includes/addons/jet-widgets-posts.php:1701
-#: includes/addons/jet-widgets-testimonials.php:685
-#: includes/addons/jet-widgets-testimonials.php:836
+#: includes/addons/jet-widgets-testimonials.php:703
+#: includes/addons/jet-widgets-testimonials.php:854
 msgid "Bottom Indent"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1233
-#: includes/addons/jet-widgets-advanced-carousel.php:1384
+#: includes/addons/jet-widgets-advanced-carousel.php:1269
+#: includes/addons/jet-widgets-advanced-carousel.php:1420
 #: includes/addons/jet-widgets-image-comparison.php:1044
 #: includes/addons/jet-widgets-image-comparison.php:1195
 #: includes/addons/jet-widgets-posts.php:1579
 #: includes/addons/jet-widgets-posts.php:1730
-#: includes/addons/jet-widgets-testimonials.php:714
-#: includes/addons/jet-widgets-testimonials.php:865
+#: includes/addons/jet-widgets-testimonials.php:732
+#: includes/addons/jet-widgets-testimonials.php:883
 msgid "Horizontal Postition by"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1246
-#: includes/addons/jet-widgets-advanced-carousel.php:1397
+#: includes/addons/jet-widgets-advanced-carousel.php:1282
+#: includes/addons/jet-widgets-advanced-carousel.php:1433
 #: includes/addons/jet-widgets-image-comparison.php:1057
 #: includes/addons/jet-widgets-image-comparison.php:1208
 #: includes/addons/jet-widgets-posts.php:1592
 #: includes/addons/jet-widgets-posts.php:1743
 #: includes/addons/jet-widgets-pricing-table.php:122
-#: includes/addons/jet-widgets-testimonials.php:727
-#: includes/addons/jet-widgets-testimonials.php:878
+#: includes/addons/jet-widgets-testimonials.php:745
+#: includes/addons/jet-widgets-testimonials.php:896
 msgid "Left Indent"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1275
-#: includes/addons/jet-widgets-advanced-carousel.php:1426
+#: includes/addons/jet-widgets-advanced-carousel.php:1311
+#: includes/addons/jet-widgets-advanced-carousel.php:1462
 #: includes/addons/jet-widgets-image-comparison.php:1086
 #: includes/addons/jet-widgets-image-comparison.php:1237
 #: includes/addons/jet-widgets-posts.php:1621
 #: includes/addons/jet-widgets-posts.php:1772
 #: includes/addons/jet-widgets-pricing-table.php:152
-#: includes/addons/jet-widgets-testimonials.php:756
-#: includes/addons/jet-widgets-testimonials.php:907
+#: includes/addons/jet-widgets-testimonials.php:774
+#: includes/addons/jet-widgets-testimonials.php:925
 msgid "Right Indent"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1304
+#: includes/addons/jet-widgets-advanced-carousel.php:1340
 #: includes/addons/jet-widgets-image-comparison.php:1115
 #: includes/addons/jet-widgets-posts.php:1650
-#: includes/addons/jet-widgets-testimonials.php:785
+#: includes/addons/jet-widgets-testimonials.php:803
 msgid "Next Arrow Position"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1457
+#: includes/addons/jet-widgets-advanced-carousel.php:1493
 #: includes/addons/jet-widgets-posts.php:1803
 msgid "Carousel Dots"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1476
-#: includes/addons/jet-widgets-advanced-carousel.php:1506
-#: includes/addons/jet-widgets-advanced-carousel.php:1536
+#: includes/addons/jet-widgets-advanced-carousel.php:1512
+#: includes/addons/jet-widgets-advanced-carousel.php:1542
+#: includes/addons/jet-widgets-advanced-carousel.php:1572
 #: includes/addons/jet-widgets-image-comparison.php:1290
 #: includes/addons/jet-widgets-image-comparison.php:1320
 #: includes/addons/jet-widgets-image-comparison.php:1350
 #: includes/addons/jet-widgets-posts.php:1822
 #: includes/addons/jet-widgets-posts.php:1852
 #: includes/addons/jet-widgets-posts.php:1882
-#: includes/addons/jet-widgets-testimonials.php:960
-#: includes/addons/jet-widgets-testimonials.php:990
-#: includes/addons/jet-widgets-testimonials.php:1020
+#: includes/addons/jet-widgets-testimonials.php:978
+#: includes/addons/jet-widgets-testimonials.php:1008
+#: includes/addons/jet-widgets-testimonials.php:1038
 msgid "Dots Style"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1528
+#: includes/addons/jet-widgets-advanced-carousel.php:1564
 #: includes/addons/jet-widgets-image-comparison.php:1342
 #: includes/addons/jet-widgets-posts.php:1874
-#: includes/addons/jet-widgets-testimonials.php:1012
+#: includes/addons/jet-widgets-testimonials.php:1030
 #: includes/lib/class-tgm-plugin-activation.php:2414
 msgid "Active"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1560
+#: includes/addons/jet-widgets-advanced-carousel.php:1596
 #: includes/addons/jet-widgets-image-comparison.php:1374
 #: includes/addons/jet-widgets-posts.php:1906
 #: includes/addons/jet-widgets-pricing-table.php:889
 #: includes/addons/jet-widgets-pricing-table.php:1316
-#: includes/addons/jet-widgets-testimonials.php:1044
+#: includes/addons/jet-widgets-testimonials.php:1062
 msgid "Gap"
 msgstr ""
 
-#: includes/addons/jet-widgets-advanced-carousel.php:1582
+#: includes/addons/jet-widgets-advanced-carousel.php:1618
 #: includes/addons/jet-widgets-image-comparison.php:1396
 #: includes/addons/jet-widgets-posts.php:1928
-#: includes/addons/jet-widgets-testimonials.php:1066
+#: includes/addons/jet-widgets-testimonials.php:1084
 msgid "Dots Box Margin"
 msgstr ""
 
@@ -1378,8 +1401,8 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:599
 #: includes/addons/jet-widgets-team-member.php:140
 #: includes/addons/jet-widgets-team-member.php:974
-#: includes/addons/jet-widgets-testimonials.php:252
-#: includes/addons/jet-widgets-testimonials.php:1109
+#: includes/addons/jet-widgets-testimonials.php:253
+#: includes/addons/jet-widgets-testimonials.php:1127
 msgid "Icon"
 msgstr ""
 
@@ -1397,8 +1420,8 @@ msgstr ""
 #: includes/addons/jet-widgets-services.php:81
 #: includes/addons/jet-widgets-services.php:83
 #: includes/addons/jet-widgets-services.php:509
-#: includes/addons/jet-widgets-testimonials.php:263
-#: includes/addons/jet-widgets-testimonials.php:1254
+#: includes/addons/jet-widgets-testimonials.php:264
+#: includes/addons/jet-widgets-testimonials.php:1272
 #: includes/class-jet-widgets-tools.php:150
 msgid "Title"
 msgstr ""
@@ -1596,7 +1619,7 @@ msgstr ""
 #: includes/addons/jet-widgets-image-comparison.php:611
 #: includes/addons/jet-widgets-services.php:264
 #: includes/addons/jet-widgets-team-member.php:434
-#: includes/addons/jet-widgets-testimonials.php:468
+#: includes/addons/jet-widgets-testimonials.php:486
 msgid "Height"
 msgstr ""
 
@@ -1632,7 +1655,7 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:877
 #: includes/addons/jet-widgets-team-member.php:992
 #: includes/addons/jet-widgets-team-member.php:1106
-#: includes/addons/jet-widgets-testimonials.php:1118
+#: includes/addons/jet-widgets-testimonials.php:1136
 msgid "Icon Color"
 msgstr ""
 
@@ -1642,7 +1665,7 @@ msgstr ""
 #: includes/addons/jet-widgets-services.php:384
 #: includes/addons/jet-widgets-team-member.php:1003
 #: includes/addons/jet-widgets-team-member.php:1117
-#: includes/addons/jet-widgets-testimonials.php:1129
+#: includes/addons/jet-widgets-testimonials.php:1147
 msgid "Icon Background Color"
 msgstr ""
 
@@ -1653,7 +1676,7 @@ msgstr ""
 #: includes/addons/jet-widgets-services.php:570
 #: includes/addons/jet-widgets-team-member.php:1014
 #: includes/addons/jet-widgets-team-member.php:1128
-#: includes/addons/jet-widgets-testimonials.php:1140
+#: includes/addons/jet-widgets-testimonials.php:1158
 msgid "Icon Font Size"
 msgstr ""
 
@@ -1663,7 +1686,7 @@ msgstr ""
 #: includes/addons/jet-widgets-services.php:415
 #: includes/addons/jet-widgets-team-member.php:1034
 #: includes/addons/jet-widgets-team-member.php:1148
-#: includes/addons/jet-widgets-testimonials.php:1160
+#: includes/addons/jet-widgets-testimonials.php:1178
 msgid "Icon Box Size"
 msgstr ""
 
@@ -1686,11 +1709,11 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:634
 #: includes/addons/jet-widgets-team-member.php:756
 #: includes/addons/jet-widgets-team-member.php:878
-#: includes/addons/jet-widgets-testimonials.php:1376
-#: includes/addons/jet-widgets-testimonials.php:1700
-#: includes/addons/jet-widgets-testimonials.php:1857
-#: includes/addons/jet-widgets-testimonials.php:2014
-#: includes/addons/jet-widgets-testimonials.php:2171
+#: includes/addons/jet-widgets-testimonials.php:1394
+#: includes/addons/jet-widgets-testimonials.php:1718
+#: includes/addons/jet-widgets-testimonials.php:1875
+#: includes/addons/jet-widgets-testimonials.php:2032
+#: includes/addons/jet-widgets-testimonials.php:2189
 msgid "Text Alignment"
 msgstr ""
 
@@ -1767,7 +1790,7 @@ msgstr ""
 #: includes/addons/jet-widgets-animated-box.php:1796
 #: includes/addons/jet-widgets-animated-box.php:1853
 #: includes/addons/jet-widgets-services.php:1221
-#: includes/addons/jet-widgets-testimonials.php:2226
+#: includes/addons/jet-widgets-testimonials.php:2377
 msgid "Icon Order"
 msgstr ""
 
@@ -1847,9 +1870,9 @@ msgstr ""
 #: includes/addons/jet-widgets-headline.php:136
 #: includes/addons/jet-widgets-headline.php:184
 #: includes/addons/jet-widgets-pricing-table.php:1206
-#: includes/addons/vendor/jet-widgets-contact-form7.php:598
-#: includes/addons/vendor/jet-widgets-contact-form7.php:849
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1100
+#: includes/addons/vendor/jet-widgets-contact-form7.php:606
+#: includes/addons/vendor/jet-widgets-contact-form7.php:857
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1108
 #: includes/class-jet-widgets-tools.php:147
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:209
 msgid "None"
@@ -2082,7 +2105,7 @@ msgstr ""
 
 #: includes/addons/jet-widgets-image-comparison.php:220
 #: includes/addons/jet-widgets-images-layout.php:147
-#: includes/addons/jet-widgets-testimonials.php:235
+#: includes/addons/jet-widgets-testimonials.php:236
 msgid "Items"
 msgstr ""
 
@@ -2138,21 +2161,21 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:686
 #: includes/addons/jet-widgets-team-member.php:808
 #: includes/addons/jet-widgets-team-member.php:1232
-#: includes/addons/jet-widgets-testimonials.php:1306
-#: includes/addons/jet-widgets-testimonials.php:1416
-#: includes/addons/jet-widgets-testimonials.php:1477
-#: includes/addons/jet-widgets-testimonials.php:1783
-#: includes/addons/jet-widgets-testimonials.php:1940
-#: includes/addons/jet-widgets-testimonials.php:2097
+#: includes/addons/jet-widgets-testimonials.php:1324
+#: includes/addons/jet-widgets-testimonials.php:1434
+#: includes/addons/jet-widgets-testimonials.php:1495
+#: includes/addons/jet-widgets-testimonials.php:1801
+#: includes/addons/jet-widgets-testimonials.php:1958
+#: includes/addons/jet-widgets-testimonials.php:2115
 #: includes/addons/vendor/jet-widgets-contact-form7.php:71
 #: includes/addons/vendor/jet-widgets-contact-form7.php:99
-#: includes/addons/vendor/jet-widgets-contact-form7.php:184
-#: includes/addons/vendor/jet-widgets-contact-form7.php:287
-#: includes/addons/vendor/jet-widgets-contact-form7.php:346
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1277
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1326
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1375
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1424
+#: includes/addons/vendor/jet-widgets-contact-form7.php:185
+#: includes/addons/vendor/jet-widgets-contact-form7.php:295
+#: includes/addons/vendor/jet-widgets-contact-form7.php:354
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1285
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1334
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1383
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1432
 msgid "Color"
 msgstr ""
 
@@ -2196,12 +2219,12 @@ msgid "Handle Arrow"
 msgstr ""
 
 #: includes/addons/jet-widgets-image-comparison.php:899
-#: includes/addons/jet-widgets-testimonials.php:569
+#: includes/addons/jet-widgets-testimonials.php:587
 msgid "Arrows"
 msgstr ""
 
 #: includes/addons/jet-widgets-image-comparison.php:1271
-#: includes/addons/jet-widgets-testimonials.php:941
+#: includes/addons/jet-widgets-testimonials.php:959
 msgid "Dots"
 msgstr ""
 
@@ -2302,13 +2325,13 @@ msgstr ""
 #: includes/addons/jet-widgets-images-layout.php:783
 #: includes/addons/jet-widgets-services.php:1212
 #: includes/addons/jet-widgets-team-member.php:1579
-#: includes/addons/jet-widgets-testimonials.php:2202
+#: includes/addons/jet-widgets-testimonials.php:2353
 msgid "Content Order and Alignment"
 msgstr ""
 
 #: includes/addons/jet-widgets-images-layout.php:792
 #: includes/addons/jet-widgets-services.php:1236
-#: includes/addons/jet-widgets-testimonials.php:2241
+#: includes/addons/jet-widgets-testimonials.php:2392
 msgid "Title Order"
 msgstr ""
 
@@ -2393,9 +2416,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:942
 #: includes/addons/jet-widgets-posts.php:1174
-#: includes/addons/vendor/jet-widgets-contact-form7.php:412
-#: includes/addons/vendor/jet-widgets-contact-form7.php:663
-#: includes/addons/vendor/jet-widgets-contact-form7.php:914
+#: includes/addons/vendor/jet-widgets-contact-form7.php:420
+#: includes/addons/vendor/jet-widgets-contact-form7.php:671
+#: includes/addons/vendor/jet-widgets-contact-form7.php:922
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:27
 msgctxt "Background Control"
 msgid "Background Type"
@@ -2403,9 +2426,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:946
 #: includes/addons/jet-widgets-posts.php:1178
-#: includes/addons/vendor/jet-widgets-contact-form7.php:416
-#: includes/addons/vendor/jet-widgets-contact-form7.php:667
-#: includes/addons/vendor/jet-widgets-contact-form7.php:918
+#: includes/addons/vendor/jet-widgets-contact-form7.php:424
+#: includes/addons/vendor/jet-widgets-contact-form7.php:675
+#: includes/addons/vendor/jet-widgets-contact-form7.php:926
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:31
 msgctxt "Background Control"
 msgid "Classic"
@@ -2413,9 +2436,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:950
 #: includes/addons/jet-widgets-posts.php:1182
-#: includes/addons/vendor/jet-widgets-contact-form7.php:420
-#: includes/addons/vendor/jet-widgets-contact-form7.php:671
-#: includes/addons/vendor/jet-widgets-contact-form7.php:922
+#: includes/addons/vendor/jet-widgets-contact-form7.php:428
+#: includes/addons/vendor/jet-widgets-contact-form7.php:679
+#: includes/addons/vendor/jet-widgets-contact-form7.php:930
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:35
 msgctxt "Background Control"
 msgid "Gradient"
@@ -2423,9 +2446,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:963
 #: includes/addons/jet-widgets-posts.php:1195
-#: includes/addons/vendor/jet-widgets-contact-form7.php:433
-#: includes/addons/vendor/jet-widgets-contact-form7.php:684
-#: includes/addons/vendor/jet-widgets-contact-form7.php:935
+#: includes/addons/vendor/jet-widgets-contact-form7.php:441
+#: includes/addons/vendor/jet-widgets-contact-form7.php:692
+#: includes/addons/vendor/jet-widgets-contact-form7.php:943
 msgctxt "Background Control"
 msgid "Color"
 msgstr ""
@@ -2436,9 +2459,9 @@ msgstr ""
 #: includes/addons/jet-widgets-pricing-table.php:1680
 #: includes/addons/jet-widgets-subscribe-form.php:731
 #: includes/addons/jet-widgets-subscribe-form.php:846
-#: includes/addons/vendor/jet-widgets-contact-form7.php:440
-#: includes/addons/vendor/jet-widgets-contact-form7.php:691
-#: includes/addons/vendor/jet-widgets-contact-form7.php:942
+#: includes/addons/vendor/jet-widgets-contact-form7.php:448
+#: includes/addons/vendor/jet-widgets-contact-form7.php:699
+#: includes/addons/vendor/jet-widgets-contact-form7.php:950
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:44
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:47
 msgctxt "Background Control"
@@ -2449,12 +2472,12 @@ msgstr ""
 #: includes/addons/jet-widgets-posts.php:1012
 #: includes/addons/jet-widgets-posts.php:1212
 #: includes/addons/jet-widgets-posts.php:1244
-#: includes/addons/vendor/jet-widgets-contact-form7.php:453
-#: includes/addons/vendor/jet-widgets-contact-form7.php:485
-#: includes/addons/vendor/jet-widgets-contact-form7.php:704
-#: includes/addons/vendor/jet-widgets-contact-form7.php:736
-#: includes/addons/vendor/jet-widgets-contact-form7.php:955
-#: includes/addons/vendor/jet-widgets-contact-form7.php:987
+#: includes/addons/vendor/jet-widgets-contact-form7.php:461
+#: includes/addons/vendor/jet-widgets-contact-form7.php:493
+#: includes/addons/vendor/jet-widgets-contact-form7.php:712
+#: includes/addons/vendor/jet-widgets-contact-form7.php:744
+#: includes/addons/vendor/jet-widgets-contact-form7.php:963
+#: includes/addons/vendor/jet-widgets-contact-form7.php:995
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:57
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:83
 msgctxt "Background Control"
@@ -2463,18 +2486,18 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:998
 #: includes/addons/jet-widgets-posts.php:1230
-#: includes/addons/vendor/jet-widgets-contact-form7.php:471
-#: includes/addons/vendor/jet-widgets-contact-form7.php:722
-#: includes/addons/vendor/jet-widgets-contact-form7.php:973
+#: includes/addons/vendor/jet-widgets-contact-form7.php:479
+#: includes/addons/vendor/jet-widgets-contact-form7.php:730
+#: includes/addons/vendor/jet-widgets-contact-form7.php:981
 msgctxt "Background Control"
 msgid "Second Color"
 msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1030
 #: includes/addons/jet-widgets-posts.php:1262
-#: includes/addons/vendor/jet-widgets-contact-form7.php:503
-#: includes/addons/vendor/jet-widgets-contact-form7.php:754
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1005
+#: includes/addons/vendor/jet-widgets-contact-form7.php:511
+#: includes/addons/vendor/jet-widgets-contact-form7.php:762
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1013
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:98
 msgctxt "Background Control"
 msgid "Type"
@@ -2482,9 +2505,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1033
 #: includes/addons/jet-widgets-posts.php:1265
-#: includes/addons/vendor/jet-widgets-contact-form7.php:506
-#: includes/addons/vendor/jet-widgets-contact-form7.php:757
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1008
+#: includes/addons/vendor/jet-widgets-contact-form7.php:514
+#: includes/addons/vendor/jet-widgets-contact-form7.php:765
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1016
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:101
 msgctxt "Background Control"
 msgid "Linear"
@@ -2492,9 +2515,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1034
 #: includes/addons/jet-widgets-posts.php:1266
-#: includes/addons/vendor/jet-widgets-contact-form7.php:507
-#: includes/addons/vendor/jet-widgets-contact-form7.php:758
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1009
+#: includes/addons/vendor/jet-widgets-contact-form7.php:515
+#: includes/addons/vendor/jet-widgets-contact-form7.php:766
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1017
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:102
 msgctxt "Background Control"
 msgid "Radial"
@@ -2502,9 +2525,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1048
 #: includes/addons/jet-widgets-posts.php:1280
-#: includes/addons/vendor/jet-widgets-contact-form7.php:521
-#: includes/addons/vendor/jet-widgets-contact-form7.php:772
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1023
+#: includes/addons/vendor/jet-widgets-contact-form7.php:529
+#: includes/addons/vendor/jet-widgets-contact-form7.php:780
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1031
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:113
 msgctxt "Background Control"
 msgid "Angle"
@@ -2512,9 +2535,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1074
 #: includes/addons/jet-widgets-posts.php:1306
-#: includes/addons/vendor/jet-widgets-contact-form7.php:547
-#: includes/addons/vendor/jet-widgets-contact-form7.php:798
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1049
+#: includes/addons/vendor/jet-widgets-contact-form7.php:555
+#: includes/addons/vendor/jet-widgets-contact-form7.php:806
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1057
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:136
 msgctxt "Background Control"
 msgid "Position"
@@ -2522,9 +2545,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1077
 #: includes/addons/jet-widgets-posts.php:1309
-#: includes/addons/vendor/jet-widgets-contact-form7.php:550
-#: includes/addons/vendor/jet-widgets-contact-form7.php:801
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1052
+#: includes/addons/vendor/jet-widgets-contact-form7.php:558
+#: includes/addons/vendor/jet-widgets-contact-form7.php:809
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1060
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:139
 msgctxt "Background Control"
 msgid "Center Center"
@@ -2532,9 +2555,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1078
 #: includes/addons/jet-widgets-posts.php:1310
-#: includes/addons/vendor/jet-widgets-contact-form7.php:551
-#: includes/addons/vendor/jet-widgets-contact-form7.php:802
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1053
+#: includes/addons/vendor/jet-widgets-contact-form7.php:559
+#: includes/addons/vendor/jet-widgets-contact-form7.php:810
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1061
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:140
 msgctxt "Background Control"
 msgid "Center Left"
@@ -2542,9 +2565,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1079
 #: includes/addons/jet-widgets-posts.php:1311
-#: includes/addons/vendor/jet-widgets-contact-form7.php:552
-#: includes/addons/vendor/jet-widgets-contact-form7.php:803
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1054
+#: includes/addons/vendor/jet-widgets-contact-form7.php:560
+#: includes/addons/vendor/jet-widgets-contact-form7.php:811
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1062
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:141
 msgctxt "Background Control"
 msgid "Center Right"
@@ -2552,9 +2575,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1080
 #: includes/addons/jet-widgets-posts.php:1312
-#: includes/addons/vendor/jet-widgets-contact-form7.php:553
-#: includes/addons/vendor/jet-widgets-contact-form7.php:804
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1055
+#: includes/addons/vendor/jet-widgets-contact-form7.php:561
+#: includes/addons/vendor/jet-widgets-contact-form7.php:812
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1063
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:142
 msgctxt "Background Control"
 msgid "Top Center"
@@ -2562,9 +2585,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1081
 #: includes/addons/jet-widgets-posts.php:1313
-#: includes/addons/vendor/jet-widgets-contact-form7.php:554
-#: includes/addons/vendor/jet-widgets-contact-form7.php:805
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1056
+#: includes/addons/vendor/jet-widgets-contact-form7.php:562
+#: includes/addons/vendor/jet-widgets-contact-form7.php:813
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1064
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:143
 msgctxt "Background Control"
 msgid "Top Left"
@@ -2572,9 +2595,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1082
 #: includes/addons/jet-widgets-posts.php:1314
-#: includes/addons/vendor/jet-widgets-contact-form7.php:555
-#: includes/addons/vendor/jet-widgets-contact-form7.php:806
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1057
+#: includes/addons/vendor/jet-widgets-contact-form7.php:563
+#: includes/addons/vendor/jet-widgets-contact-form7.php:814
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1065
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:144
 msgctxt "Background Control"
 msgid "Top Right"
@@ -2582,9 +2605,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1083
 #: includes/addons/jet-widgets-posts.php:1315
-#: includes/addons/vendor/jet-widgets-contact-form7.php:556
-#: includes/addons/vendor/jet-widgets-contact-form7.php:807
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1058
+#: includes/addons/vendor/jet-widgets-contact-form7.php:564
+#: includes/addons/vendor/jet-widgets-contact-form7.php:815
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1066
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:145
 msgctxt "Background Control"
 msgid "Bottom Center"
@@ -2592,9 +2615,9 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1084
 #: includes/addons/jet-widgets-posts.php:1316
-#: includes/addons/vendor/jet-widgets-contact-form7.php:557
-#: includes/addons/vendor/jet-widgets-contact-form7.php:808
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1059
+#: includes/addons/vendor/jet-widgets-contact-form7.php:565
+#: includes/addons/vendor/jet-widgets-contact-form7.php:816
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1067
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:146
 msgctxt "Background Control"
 msgid "Bottom Left"
@@ -2602,17 +2625,17 @@ msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1085
 #: includes/addons/jet-widgets-posts.php:1317
-#: includes/addons/vendor/jet-widgets-contact-form7.php:558
-#: includes/addons/vendor/jet-widgets-contact-form7.php:809
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1060
+#: includes/addons/vendor/jet-widgets-contact-form7.php:566
+#: includes/addons/vendor/jet-widgets-contact-form7.php:817
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1068
 #: includes/controls/groups/class-jet-widgets-group-control-box-style.php:147
 msgctxt "Background Control"
 msgid "Bottom Right"
 msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:1346
-#: includes/addons/vendor/jet-widgets-contact-form7.php:838
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1089
+#: includes/addons/vendor/jet-widgets-contact-form7.php:846
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1097
 msgid "Typography"
 msgstr ""
 
@@ -2891,9 +2914,9 @@ msgid "Excluded Bullet Icon"
 msgstr ""
 
 #: includes/addons/jet-widgets-pricing-table.php:1202
-#: includes/addons/vendor/jet-widgets-contact-form7.php:595
-#: includes/addons/vendor/jet-widgets-contact-form7.php:846
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1097
+#: includes/addons/vendor/jet-widgets-contact-form7.php:603
+#: includes/addons/vendor/jet-widgets-contact-form7.php:854
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1105
 msgid "Text Decoration"
 msgstr ""
 
@@ -2914,6 +2937,8 @@ msgid "Style"
 msgstr ""
 
 #: includes/addons/jet-widgets-pricing-table.php:1242
+#: includes/addons/jet-widgets-testimonials.php:2245
+#: includes/addons/jet-widgets-testimonials.php:2276
 msgid "Solid"
 msgstr ""
 
@@ -2939,12 +2964,12 @@ msgstr ""
 #: includes/addons/jet-widgets-subscribe-form.php:297
 #: includes/addons/jet-widgets-subscribe-form.php:663
 #: includes/addons/jet-widgets-team-member.php:406
-#: includes/addons/jet-widgets-testimonials.php:440
-#: includes/addons/jet-widgets-testimonials.php:1275
-#: includes/addons/jet-widgets-testimonials.php:1437
-#: includes/addons/jet-widgets-testimonials.php:1752
-#: includes/addons/jet-widgets-testimonials.php:1909
-#: includes/addons/jet-widgets-testimonials.php:2066
+#: includes/addons/jet-widgets-testimonials.php:458
+#: includes/addons/jet-widgets-testimonials.php:1293
+#: includes/addons/jet-widgets-testimonials.php:1455
+#: includes/addons/jet-widgets-testimonials.php:1770
+#: includes/addons/jet-widgets-testimonials.php:1927
+#: includes/addons/jet-widgets-testimonials.php:2084
 msgid "Width"
 msgstr ""
 
@@ -2953,6 +2978,7 @@ msgid "Action Box"
 msgstr ""
 
 #: includes/addons/jet-widgets-pricing-table.php:1453
+#: includes/addons/jet-widgets-testimonials.php:2291
 msgid "Size"
 msgstr ""
 
@@ -2978,12 +3004,12 @@ msgid "Services"
 msgstr ""
 
 #: includes/addons/jet-widgets-services.php:112
-#: includes/addons/jet-widgets-testimonials.php:307
-#: includes/addons/jet-widgets-testimonials.php:313
-#: includes/addons/jet-widgets-testimonials.php:319
 #: includes/addons/jet-widgets-testimonials.php:325
 #: includes/addons/jet-widgets-testimonials.php:331
 #: includes/addons/jet-widgets-testimonials.php:337
+#: includes/addons/jet-widgets-testimonials.php:343
+#: includes/addons/jet-widgets-testimonials.php:349
+#: includes/addons/jet-widgets-testimonials.php:355
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
@@ -3020,7 +3046,7 @@ msgstr ""
 
 #: includes/addons/jet-widgets-services.php:1251
 #: includes/addons/jet-widgets-team-member.php:1618
-#: includes/addons/jet-widgets-testimonials.php:2256
+#: includes/addons/jet-widgets-testimonials.php:2407
 msgid "Description Order"
 msgstr ""
 
@@ -3031,12 +3057,12 @@ msgstr ""
 
 #: includes/addons/jet-widgets-services.php:1281
 #: includes/addons/jet-widgets-team-member.php:1663
-#: includes/addons/jet-widgets-testimonials.php:2316
+#: includes/addons/jet-widgets-testimonials.php:2482
 msgid "Cover Content Vertical Alignment"
 msgstr ""
 
 #: includes/addons/jet-widgets-services.php:1288
-#: includes/addons/jet-widgets-testimonials.php:2323
+#: includes/addons/jet-widgets-testimonials.php:2489
 msgid "Space between"
 msgstr ""
 
@@ -3088,13 +3114,13 @@ msgid "Input"
 msgstr ""
 
 #: includes/addons/jet-widgets-subscribe-form.php:448
-#: includes/addons/vendor/jet-widgets-contact-form7.php:272
-#: includes/addons/vendor/jet-widgets-contact-form7.php:907
+#: includes/addons/vendor/jet-widgets-contact-form7.php:280
+#: includes/addons/vendor/jet-widgets-contact-form7.php:915
 msgid "Focus"
 msgstr ""
 
 #: includes/addons/jet-widgets-subscribe-form.php:577
-#: includes/addons/vendor/jet-widgets-contact-form7.php:394
+#: includes/addons/vendor/jet-widgets-contact-form7.php:402
 msgid "Submit Button"
 msgstr ""
 
@@ -3138,8 +3164,8 @@ msgstr ""
 #: includes/addons/jet-widgets-team-member.php:120
 #: includes/addons/jet-widgets-team-member.php:122
 #: includes/addons/jet-widgets-team-member.php:665
-#: includes/addons/jet-widgets-testimonials.php:287
-#: includes/addons/jet-widgets-testimonials.php:1888
+#: includes/addons/jet-widgets-testimonials.php:288
+#: includes/addons/jet-widgets-testimonials.php:1906
 msgid "Position"
 msgstr ""
 
@@ -3188,8 +3214,8 @@ msgid "Custom size"
 msgstr ""
 
 #: includes/addons/jet-widgets-team-member.php:526
-#: includes/addons/jet-widgets-testimonials.php:279
-#: includes/addons/jet-widgets-testimonials.php:1731
+#: includes/addons/jet-widgets-testimonials.php:280
+#: includes/addons/jet-widgets-testimonials.php:1749
 msgid "Name"
 msgstr ""
 
@@ -3222,12 +3248,12 @@ msgid "Hover Color"
 msgstr ""
 
 #: includes/addons/jet-widgets-team-member.php:1588
-#: includes/addons/jet-widgets-testimonials.php:2271
+#: includes/addons/jet-widgets-testimonials.php:2422
 msgid "Name Order"
 msgstr ""
 
 #: includes/addons/jet-widgets-team-member.php:1603
-#: includes/addons/jet-widgets-testimonials.php:2286
+#: includes/addons/jet-widgets-testimonials.php:2437
 msgid "Position Order"
 msgstr ""
 
@@ -3239,108 +3265,146 @@ msgstr ""
 msgid "Testimonials"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:146
+#: includes/addons/jet-widgets-testimonials.php:147
 msgid "Adaptive Height"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:271
-#: includes/addons/jet-widgets-testimonials.php:1407
+#: includes/addons/jet-widgets-testimonials.php:272
+#: includes/addons/jet-widgets-testimonials.php:1425
 msgid "Comment"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:295
-#: includes/addons/jet-widgets-testimonials.php:2045
+#: includes/addons/jet-widgets-testimonials.php:296
+#: includes/addons/jet-widgets-testimonials.php:2063
 #: includes/class-jet-widgets-tools.php:152
 msgid "Date"
 msgstr ""
 
+#: includes/addons/jet-widgets-testimonials.php:304
+#: includes/addons/jet-widgets-testimonials.php:2220
+msgid "Rating"
+msgstr ""
+
 #: includes/addons/jet-widgets-testimonials.php:308
-msgid "Mary Scott"
-msgstr ""
-
-#: includes/addons/jet-widgets-testimonials.php:309
-#: includes/addons/jet-widgets-testimonials.php:315
-#: includes/addons/jet-widgets-testimonials.php:321
-#: includes/addons/jet-widgets-testimonials.php:327
-#: includes/addons/jet-widgets-testimonials.php:333
-#: includes/addons/jet-widgets-testimonials.php:339
-msgid "Founder & CEO"
-msgstr ""
-
-#: includes/addons/jet-widgets-testimonials.php:310
-#: includes/addons/jet-widgets-testimonials.php:316
-#: includes/addons/jet-widgets-testimonials.php:322
-#: includes/addons/jet-widgets-testimonials.php:328
-#: includes/addons/jet-widgets-testimonials.php:334
-#: includes/addons/jet-widgets-testimonials.php:340
-msgid "Thursday, August 31, 2017"
-msgstr ""
-
-#: includes/addons/jet-widgets-testimonials.php:314
-msgid "John Borthwick"
-msgstr ""
-
-#: includes/addons/jet-widgets-testimonials.php:320
-msgid "Jane Bill"
+msgid "Hidden"
 msgstr ""
 
 #: includes/addons/jet-widgets-testimonials.php:326
-msgid "David Anderson"
+msgid "Mary Scott"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:327
+#: includes/addons/jet-widgets-testimonials.php:333
+#: includes/addons/jet-widgets-testimonials.php:339
+#: includes/addons/jet-widgets-testimonials.php:345
+#: includes/addons/jet-widgets-testimonials.php:351
+#: includes/addons/jet-widgets-testimonials.php:357
+msgid "Founder & CEO"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:328
+#: includes/addons/jet-widgets-testimonials.php:334
+#: includes/addons/jet-widgets-testimonials.php:340
+#: includes/addons/jet-widgets-testimonials.php:346
+#: includes/addons/jet-widgets-testimonials.php:352
+#: includes/addons/jet-widgets-testimonials.php:358
+msgid "Thursday, August 31, 2017"
 msgstr ""
 
 #: includes/addons/jet-widgets-testimonials.php:332
-msgid "Susan O’Neill"
+msgid "John Borthwick"
 msgstr ""
 
 #: includes/addons/jet-widgets-testimonials.php:338
+msgid "Jane Bill"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:344
+msgid "David Anderson"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:350
+msgid "Susan O’Neill"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:356
 msgid "Ryan King"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:352
+#: includes/addons/jet-widgets-testimonials.php:370
 msgid "Item"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:361
+#: includes/addons/jet-widgets-testimonials.php:379
 msgid "Equal Items Height"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:412
+#: includes/addons/jet-widgets-testimonials.php:430
 msgid "Item Margin"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1263
-#: includes/addons/jet-widgets-testimonials.php:1740
-#: includes/addons/jet-widgets-testimonials.php:1897
-#: includes/addons/jet-widgets-testimonials.php:2054
+#: includes/addons/jet-widgets-testimonials.php:1281
+#: includes/addons/jet-widgets-testimonials.php:1758
+#: includes/addons/jet-widgets-testimonials.php:1915
+#: includes/addons/jet-widgets-testimonials.php:2072
 msgid "Custom width"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1465
+#: includes/addons/jet-widgets-testimonials.php:1483
 msgid "Use comment corner"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1491
+#: includes/addons/jet-widgets-testimonials.php:1509
 msgid "Corner Position"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1516
+#: includes/addons/jet-widgets-testimonials.php:1534
 msgid "Corner Width"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1541
+#: includes/addons/jet-widgets-testimonials.php:1559
 msgid "Corner Height"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:1566
+#: includes/addons/jet-widgets-testimonials.php:1584
 msgid "Corner Skew"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:2211
+#: includes/addons/jet-widgets-testimonials.php:2229
+msgid "Stars"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2240
+msgid "Stars Style"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2249
+#: includes/addons/jet-widgets-testimonials.php:2280
+msgid "Outline"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2260
+msgid "Active Stars"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2271
+msgid "Active Stars Style"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2313
+msgid "Spacing"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2362
 msgid "Image Order"
 msgstr ""
 
-#: includes/addons/jet-widgets-testimonials.php:2301
+#: includes/addons/jet-widgets-testimonials.php:2452
 msgid "Date Order"
+msgstr ""
+
+#: includes/addons/jet-widgets-testimonials.php:2467
+msgid "Rating Order"
 msgstr ""
 
 #: includes/addons/vendor/jet-widgets-contact-form7.php:23
@@ -3367,43 +3431,43 @@ msgstr ""
 msgid "Controls"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:195
-#: includes/addons/vendor/jet-widgets-contact-form7.php:298
+#: includes/addons/vendor/jet-widgets-contact-form7.php:197
+#: includes/addons/vendor/jet-widgets-contact-form7.php:306
 msgid "Placeholder Color"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:331
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1366
+#: includes/addons/vendor/jet-widgets-contact-form7.php:339
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1374
 msgid "Not Valid"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:379
+#: includes/addons/vendor/jet-widgets-contact-form7.php:387
 msgid "Textarea Height"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:599
-#: includes/addons/vendor/jet-widgets-contact-form7.php:850
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1101
+#: includes/addons/vendor/jet-widgets-contact-form7.php:607
+#: includes/addons/vendor/jet-widgets-contact-form7.php:858
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1109
 msgid "Underline"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1160
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1168
 msgid "Fullwidth Button"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1189
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1197
 msgid "Alerts"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1268
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1276
 msgid "Sent Success"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1317
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1325
 msgid "Sent Error"
 msgstr ""
 
-#: includes/addons/vendor/jet-widgets-contact-form7.php:1415
+#: includes/addons/vendor/jet-widgets-contact-form7.php:1423
 msgid "Spam Blocked"
 msgstr ""
 
