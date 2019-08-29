@@ -2664,7 +2664,7 @@ msgid "Meta Label"
 msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:2241
-msgid "Dispaly Meta Label and Value"
+msgid "Display Meta Label and Value"
 msgstr ""
 
 #: includes/addons/jet-widgets-posts.php:2245
@@ -3511,7 +3511,7 @@ msgid "Save"
 msgstr ""
 
 #: includes/class-jet-widgets-settings.php:356
-msgid "CrocoBlock"
+msgid "Crocoblock"
 msgstr ""
 
 #: includes/class-jet-widgets-tools.php:96

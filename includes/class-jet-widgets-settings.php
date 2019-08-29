@@ -353,7 +353,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						</a>
 					</div>';
 
-			printf( $html, jet_widgets()->plugin_url( 'assets/images/banner.png' ), esc_attr__( 'CrocoBlock', 'jetwidgets-for-elementor' ) );
+			printf( $html, jet_widgets()->plugin_url( 'assets/images/banner.png' ), esc_attr__( 'Crocoblock', 'jetwidgets-for-elementor' ) );
 		}
 
 		/**

@@ -2238,7 +2238,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->add_control(
 			$position_slug . '_meta_label_display',
 			array(
-				'label'   => esc_html__( 'Dispaly Meta Label and Value', 'jetwidgets-for-elementor' ),
+				'label'   => esc_html__( 'Display Meta Label and Value', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => array(

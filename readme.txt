@@ -1,9 +1,9 @@
 === JetWidgets For Elementor ===
 
-Contributors: CrocoBlock
+Contributors: Crocoblock
 Tags: elementor, elementor widgets, elementor addons, elementor elements, subscribe form, headline, image comparison, posts, pricing table
 Requires at least: 4.7
-Tested up to: 5.1.1
+Tested up to: 5.2.2
 Requires PHP: 5.4
 Stable tag: 1.0.2
 License: GPLv3 or later

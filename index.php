@@ -4,6 +4,6 @@
  *
  * @package  jet-widgets
  * @category Core
- * @author   CrocoBlock
+ * @author   Crocoblock
  * @license  GPL-2.0+
  */
