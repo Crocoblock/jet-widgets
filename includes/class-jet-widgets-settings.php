@@ -348,7 +348,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		 */
 		public function render_banner_html() {
 			$html = '<div class="jet-widgets-banner">
-						<a class="jet-widgets-banner__link" href="http://jetelements.zemez.io/?_refer=crocoblock&utm_source=wpadmin&utm_medium=banner&utm_campaign=jetwidgets" target="_blank">
+						<a class="jet-widgets-banner__link" href="https://crocoblock.com/plugins/jetelements/?_refer=crocoblock&utm_source=wpadmin&utm_medium=banner&utm_campaign=jetwidgets" target="_blank">
 							<img class="jet-widgets-banner__img" src="%1$s" alt="%2$s">
 						</a>
 					</div>';

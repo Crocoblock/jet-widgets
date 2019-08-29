@@ -1,0 +1,14 @@
+.elementor-jw-contact-form-7 {
+	.select2.select2-container .select2-selection{
+		#page &{
+			height: auto;
+		}
+		.select2-selection__rendered{
+			line-height: inherit;
+		}
+		.select2-selection__arrow{
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
