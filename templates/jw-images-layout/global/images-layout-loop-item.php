@@ -35,6 +35,8 @@ if ( 'lightbox' === $link_type ) {
 	$this->add_render_attribute( $link_instance, 'target', $target );
 }
 
+$alt = esc_attr( Elementor\Control_Media::get_image_alt( $this->__processed_item['item_image'] ) );
+
 $this->item_counter++;
 
 ?>
@@ -44,9 +46,9 @@ $this->item_counter++;
 			<div class="jw-images-layout__image">
 				<?php
 					if ( 'justify' === $settings['layout_type'] ) {
-						echo $this->__loop_image_item( 'item_image', '<img class="jw-images-layout__image-instance" src="%1$s" data-width="%2$s" data-height="%3$s" alt="">' );
+						echo $this->__loop_image_item( 'item_image', '<img class="jw-images-layout__image-instance" src="%1$s" data-width="%2$s" data-height="%3$s" alt="' . $alt . '">' );
 					} else {
-						echo $this->__loop_item( array( 'item_image', 'url' ), '<img class="jw-images-layout__image-instance" src="%s" alt="">' );
+						echo $this->__loop_item( array( 'item_image', 'url' ), '<img class="jw-images-layout__image-instance" src="%s" alt="' . $alt . '">' );
 					}
 				?>
 			</div>
