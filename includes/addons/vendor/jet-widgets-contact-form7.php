@@ -385,7 +385,6 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 			'textarea_min_height',
 			array(
 				'label'       => esc_html__( 'Textarea Height', 'jetwidgets-for-elementor' ),
-				'label_block' => true,
 				'type'        => Controls_Manager::NUMBER,
 				'default'     => '',
 				'selectors'   => array(

@@ -81,12 +81,13 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				),
 			),
 			'post_cat' => array(
-				'type'       => 'select2',
-				'label'      => esc_html__( 'Category', 'jetwidgets-for-elementor' ),
-				'default'    => '',
-				'multiple'   => true,
-				'options'    => jet_widgets_tools()->get_categories(),
-				'condition' => array(
+				'type'        => 'select2',
+				'label'       => esc_html__( 'Category', 'jetwidgets-for-elementor' ),
+				'default'     => '',
+				'multiple'    => true,
+				'label_block' => true,
+				'options'     => jet_widgets_tools()->get_categories(),
+				'condition'   => array(
 					'posts_query' => array( 'category' ),
 					'post_type'   => array( 'post' ),
 				),
@@ -284,9 +285,10 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				),
 			),
 			'more_icon' => array(
-				'type'      => 'icon',
-				'label'     => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
-				'condition' => array(
+				'type'        => 'icon',
+				'label_block' => true,
+				'label'       => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
+				'condition'   => array(
 					'show_more' => array( 'yes' ),
 				),
 			),
