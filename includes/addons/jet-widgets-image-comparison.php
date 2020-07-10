@@ -259,7 +259,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			'item_list',
 			array(
 				'type'        => Controls_Manager::REPEATER,
-				'fields'      => array_values( $repeater->get_controls() ),
+				'fields'      => $repeater->get_controls(),
 				'default'     => array(
 					array(
 						'item_before_label' => esc_html__( 'Before', 'jetwidgets-for-elementor' ),

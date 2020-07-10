@@ -2162,7 +2162,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			$position_slug . '_meta',
 			array(
 				'type'        => Controls_Manager::REPEATER,
-				'fields'      => array_values( $repeater->get_controls() ),
+				'fields'      => $repeater->get_controls(),
 				'default'     => array(
 					array(
 						'meta_label' => esc_html__( 'Label', 'jetwidgets-for-elementor' ),

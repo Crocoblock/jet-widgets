@@ -230,7 +230,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 			'image_list',
 			array(
 				'type'        => Controls_Manager::REPEATER,
-				'fields'      => array_values( $repeater->get_controls() ),
+				'fields'      => $repeater->get_controls(),
 				'default'     => array(
 					array(
 						'item_image'       => array(

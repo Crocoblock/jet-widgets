@@ -179,7 +179,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			'social_list',
 			array(
 				'type'    => Controls_Manager::REPEATER,
-				'fields'  => array_values( $repeater->get_controls() ),
+				'fields'  => $repeater->get_controls(),
 				'default' => array(
 					array(
 						'social_icon'   => 'fa fa-facebook',

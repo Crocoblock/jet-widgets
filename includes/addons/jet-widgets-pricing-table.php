@@ -286,7 +286,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			'features_list',
 			array(
 				'type'    => Controls_Manager::REPEATER,
-				'fields'  => array_values( $repeater->get_controls() ),
+				'fields'  => $repeater->get_controls(),
 				'default' => array(
 					array(
 						'item_text'     => esc_html__( 'Feature #1', 'jetwidgets-for-elementor' ),
