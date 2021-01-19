@@ -241,11 +241,12 @@
 				return;
 			}
 
-			window.juxtapose.scanPage( '.jw-juxtapose' );
-
 			settings.draggable = false;
-			settings.infinite = false;
-			//settings.adaptiveHeight = true;
+
+			$target.on('init', function( event, slick ){
+				window.juxtapose.scanPage( '.jw-juxtapose' );
+			} );
+
 			JetWidgets.initCarousel( $target, settings );
 		},
 
