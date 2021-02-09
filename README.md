@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.8]
+* fix: minor bugs
+
 ## [1.0.7]
 * fix: minor bugs
 
