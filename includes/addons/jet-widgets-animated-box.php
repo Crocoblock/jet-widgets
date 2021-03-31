@@ -72,14 +72,18 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'front_side_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
-				'default'     => 'fa fa-flag-o',
+				'default'     => 'fa fa-flag',
+				'fa5_default' => array(
+					'value'   => 'fas fa-flag',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -119,14 +123,17 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'back_side_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
-				'default'     => '',
+				'fa5_default' => array(
+					'value'   => '',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -1411,7 +1418,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'button_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -1419,6 +1426,10 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-check',
+				'fa5_default' => array(
+					'value'   => 'fas fa-check',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'add_button_icon' => 'yes',
 				),

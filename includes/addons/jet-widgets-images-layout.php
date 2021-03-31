@@ -161,7 +161,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 			)
 		);
 
-		$repeater->add_control(
+		$this->_add_advanced_icon_control(
 			'item_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -169,7 +169,12 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-search-plus',
-			)
+				'fa5_default' => array(
+					'value'   => 'fas fa-search-plus',
+					'library' => 'fa-solid',
+				),
+			),
+			$repeater
 		);
 
 		$repeater->add_control(

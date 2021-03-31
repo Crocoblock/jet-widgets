@@ -280,28 +280,78 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'prev_arrow',
 			array(
-				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-left',
-				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
+				'label'       => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-left',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
-					'arrows' => 'true',
+					'arrows'            => 'true',
+					'vertical_carousel' => '',
 				),
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'next_arrow',
 			array(
-				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-right',
-				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
+				'label'       => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-right',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-right',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
-					'arrows' => 'true',
+					'arrows'            => 'true',
+					'vertical_carousel' => '',
+				),
+			)
+		);
+
+		$this->_add_advanced_icon_control(
+			'vertical_prev_arrow',
+			array(
+				'label'       => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-up',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-up',
+					'library' => 'fa-solid',
+				),
+				'condition' => array(
+					'arrows'            => 'true',
+					'vertical_carousel' => 'true',
+				),
+			)
+		);
+
+		$this->_add_advanced_icon_control(
+			'vertical_next_arrow',
+			array(
+				'label'       => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-down',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-down',
+					'library' => 'fa-solid',
+				),
+				'condition' => array(
+					'arrows'            => 'true',
+					'vertical_carousel' => 'true',
 				),
 			)
 		);
@@ -1668,8 +1718,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$settings = $this->get_settings();
 
 		$vertical_carousel = filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN );
-		$nextArrowIcon = $vertical_carousel ? str_replace( '-right', '-down', $settings['next_arrow']) : $settings['next_arrow'] ;
-		$prevArrowIcon = $vertical_carousel ? str_replace( '-left', '-up', $settings['prev_arrow']) : $settings['prev_arrow'] ;
+		$nextArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_next_arrow', '%s', 'next-arrow jw-arrow slick-arrow', false ) : $this->_render_icon( 'next_arrow', '%s', 'next-arrow jw-arrow slick-arrow', false );
+		$prevArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_prev_arrow', '%s', 'prev-arrow jw-arrow slick-arrow', false ) : $this->_render_icon( 'prev_arrow', '%s', 'prev-arrow jw-arrow slick-arrow', false );
 
 		$options  = array(
 			'slidesToShow'   => array(
@@ -1685,15 +1735,11 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $prevArrowIcon, 'prev-arrow' )
-			),
+			'prevArrow'      => $prevArrowIcon,
 			'variableWidth'  => $vertical_carousel ? false : filter_var( $settings['fluid_width'], FILTER_VALIDATE_BOOLEAN ),
 			'vertical'       => filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN ),
-			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $nextArrowIcon, 'next-arrow' )
-			),
-			'rtl' => is_rtl(),
+			'nextArrow'      => $nextArrowIcon,
+			'rtl'            => is_rtl(),
 		);
 
 		if ( 1 === absint( $settings['slides_to_show'] ) ) {

@@ -8,6 +8,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	public $__context         = 'render';
 	public $__processed_item  = false;
 	public $__processed_index = 0;
+	public $_new_icon_prefix  = 'selected_';
 
 	/**
 	 * Get globaly affected template
@@ -370,4 +371,102 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		echo '<# } #>';
 	}
 
+	/**
+	 * Add icon control
+	 *
+	 * @param string $id
+	 * @param array  $args
+	 * @param object $instance
+	 */
+	public function _add_advanced_icon_control( $id, array $args = array(), $instance = null ) {
+
+		if ( defined( 'ELEMENTOR_VERSION' ) && version_compare( ELEMENTOR_VERSION, '2.6.0', '>=' ) ) {
+
+			$_id = $id; // old control id
+			$id  = $this->_new_icon_prefix . $id;
+
+			$args['type'] = Controls_Manager::ICONS;
+			$args['fa4compatibility'] = $_id;
+
+			unset( $args['file'] );
+			unset( $args['default'] );
+
+			if ( isset( $args['fa5_default'] ) ) {
+				$args['default'] = $args['fa5_default'];
+
+				unset( $args['fa5_default'] );
+			}
+		} else {
+			$args['type'] = Controls_Manager::ICON;
+			unset( $args['fa5_default'] );
+		}
+
+		if ( null !== $instance ) {
+			$instance->add_control( $id, $args );
+		} else {
+			$this->add_control( $id, $args );
+		}
+	}
+
+	/**
+	 * Print HTML icon template
+	 *
+	 * @param  array  $setting
+	 * @param  string $format
+	 * @param  string $icon_class
+	 * @param  bool   $echo
+	 *
+	 * @return void|string
+	 */
+	public function _render_icon( $setting = null, $format = '%s', $icon_class = '', $echo = true ) {
+
+		if ( false === $this->__processed_item ) {
+			$settings = $this->get_settings_for_display();
+		} else {
+			$settings = $this->__processed_item;
+		}
+
+		$new_setting = $this->_new_icon_prefix . $setting;
+
+		$migrated = isset( $settings['__fa4_migrated'][ $new_setting ] );
+		$is_new   = empty( $settings[ $setting ] ) && class_exists( 'Elementor\Icons_Manager' ) && Icons_Manager::is_migration_allowed();
+
+		$icon_html = '';
+
+		if ( $is_new || $migrated ) {
+
+			$attr = array( 'aria-hidden' => 'true' );
+
+			if ( ! empty( $icon_class ) ) {
+				$attr['class'] = $icon_class;
+			}
+
+			if ( isset( $settings[ $new_setting ] ) ) {
+				ob_start();
+				Icons_Manager::render_icon( $settings[ $new_setting ], $attr );
+
+				$icon_html = ob_get_clean();
+			}
+
+		} else if ( ! empty( $settings[ $setting ] ) ) {
+
+			if ( empty( $icon_class ) ) {
+				$icon_class = $settings[ $setting ];
+			} else {
+				$icon_class .= ' ' . $settings[ $setting ];
+			}
+
+			$icon_html = sprintf( '<i class="%s" aria-hidden="true"></i>', $icon_class );
+		}
+
+		if ( empty( $icon_html ) ) {
+			return;
+		}
+
+		if ( ! $echo ) {
+			return sprintf( $format, $icon_html );
+		}
+
+		printf( $format, $icon_html );
+	}
 }

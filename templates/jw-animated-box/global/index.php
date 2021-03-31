@@ -11,7 +11,7 @@ $sub_title_tag = $this->__get_html( 'sub_title_html_tag', '%s' );
 		<div class="jw-animated-box__overlay"></div>
 		<div class="jw-animated-box__inner">
 			<?php
-				$this->__html( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front"><div class="jw-animated-box-icon-inner"><i class="%s"></i></div></div>' );
+				$this->_render_icon( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front"><div class="jw-animated-box-icon-inner">%s</div></div>' );
 			?>
 			<div class="jw-animated-box__content">
 			<?php
@@ -26,7 +26,7 @@ $sub_title_tag = $this->__get_html( 'sub_title_html_tag', '%s' );
 		<div class="jw-animated-box__overlay"></div>
 		<div class="jw-animated-box__inner">
 			<?php
-				$this->__html( 'back_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--back"><div class="jw-animated-box-icon-inner"><i class="%s"></i></div></div>' );
+				$this->_render_icon( 'back_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--back"><div class="jw-animated-box-icon-inner">%s</div></div>' );
 			?>
 			<div class="jw-animated-box__content">
 			<?php

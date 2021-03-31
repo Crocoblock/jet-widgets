@@ -2,9 +2,11 @@
 /**
  * Image Comparison item template
  */
-$settings = $this->get_settings();
-$prevArrow = $settings['handle_prev_arrow'];
-$nextArrow = $settings['handle_next_arrow'];
+$settings = $this->get_settings_for_display();
+
+$prevArrow = empty( $settings['handle_prev_arrow'] ) && ! empty( $settings['selected_handle_prev_arrow']['value'] ) ? $settings['selected_handle_prev_arrow']['value'] : $settings['handle_prev_arrow'];
+$nextArrow = empty( $settings['handle_next_arrow'] ) && ! empty( $settings['selected_handle_next_arrow']['value'] ) ? $settings['selected_handle_next_arrow']['value'] : $settings['handle_next_arrow'];
+
 $starting_position = $settings['starting_position'];
 $starting_position_string = $starting_position['size'] . $starting_position['unit'];
 
