@@ -10,6 +10,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
  *
+ * Elementor tested up to: 3.2
+ * Elementor Pro tested up to: 3.2
+ *
  * @package jet-widgets
  * @author  Crocoblock
  * @license GPL-2.0+
