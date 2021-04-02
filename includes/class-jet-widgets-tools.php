@@ -365,11 +365,34 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 
 		}
 
+		public function validate_html_tag( $tag ) {
+			$allowed_tags = array(
+				'article',
+				'aside',
+				'div',
+				'footer',
+				'h1',
+				'h2',
+				'h3',
+				'h4',
+				'h5',
+				'h6',
+				'header',
+				'main',
+				'nav',
+				'p',
+				'section',
+				'span',
+			);
+
+			return in_array( strtolower( $tag ), $allowed_tags ) ? $tag : 'div';
+		}
+
 		/**
 		 * Returns the instance.
 		 *
 		 * @since  1.0.0
-		 * @return object
+		 * @return Jet_Widgets_Tools
 		 */
 		public static function get_instance( $shortcodes = array() ) {
 
@@ -386,7 +409,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 /**
  * Returns instance of Jet_Widgets_Tools
  *
- * @return object
+ * @return Jet_Widgets_Tools
  */
 function jet_widgets_tools() {
 	return Jet_Widgets_Tools::get_instance();

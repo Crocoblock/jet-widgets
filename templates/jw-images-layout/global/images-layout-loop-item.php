@@ -59,6 +59,7 @@ $this->item_counter++;
 
 					<?php
 						$title_tag = $this->__get_html( 'title_html_tag', '%s' );
+						$title_tag = jet_widgets_tools()->validate_html_tag( $title_tag );
 
 						echo $this->__loop_item( array( 'item_title' ), '<' . $title_tag . ' class="jw-images-layout__title">%s</' . $title_tag . '>' );
 						echo $this->__loop_item( array( 'item_desc' ), '<div class="jw-images-layout__desc">%s</div>' );

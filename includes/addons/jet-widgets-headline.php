@@ -1510,7 +1510,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			$title = sprintf( '<a class="jw-headline__link" %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $title );
 		}
 
-		$title_html = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', $settings['header_size'], $heading_classes, $title );
+		$title_html = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', jet_widgets_tools()->validate_html_tag( $settings['header_size'] ), $heading_classes, $title );
 
 		echo $title_html;
 	}

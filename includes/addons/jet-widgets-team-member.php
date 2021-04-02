@@ -1727,6 +1727,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		}
 
 		$name_tag = $this->get_settings( 'member_name_html_tag' );
+		$name_tag = jet_widgets_tools()->validate_html_tag( $name_tag );
 
 		$format = apply_filters( 'jet-widgets/team-member/name-format', '<%3$s class="jw-team-member__name">%1$s%2$s</%3$s>' );
 

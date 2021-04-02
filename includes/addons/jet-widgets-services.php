@@ -1349,6 +1349,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		}
 
 		$title_tag = $this->get_settings( 'services_title_size' );
+		$title_tag = jet_widgets_tools()->validate_html_tag( $title_tag );
 
 		$format = apply_filters( 'jet-widgets/services/name-format', '<%3$s class="jw-services__title">%1$s%2$s</%3$s>' );
 
