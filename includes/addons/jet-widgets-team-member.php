@@ -134,7 +134,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 
 		$repeater = new Repeater();
 
-		$repeater->add_control(
+		$this->_add_advanced_icon_control(
 			'social_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -142,7 +142,12 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => '',
-			)
+				'fa5_default' => array(
+					'value'   => '',
+					'library' => 'fa-solid',
+				),
+			),
+			$repeater
 		);
 
 		$repeater->add_control(
@@ -1811,8 +1816,8 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 	}
 
 	public function __generate_social_icon_list( $cover_location = false ) {
-		$social_icon_list = $this->get_settings( 'social_list' );
-		$is_cover = filter_var( $this->get_settings( 'social_list_cover_location' ), FILTER_VALIDATE_BOOLEAN );
+		$social_icon_list = $this->get_settings_for_display( 'social_list' );
+		$is_cover         = filter_var( $this->get_settings_for_display( 'social_list_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
 			return;
@@ -1828,11 +1833,11 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 			$label = '';
 			$icon  = '';
 
+			$this->__processed_item = $icon_data;
+
 			if ( ! empty( $icon_data[ 'social_link' ] ) ) {
 
-				if ( ! empty( $icon_data[ 'social_icon' ] ) ) {
-					$icon = sprintf( '<div class="jw-team-member__socials-icon"><div class="inner"><i class="%s"></i></div></div>', $icon_data[ 'social_icon' ] );
-				}
+				$icon = $this->_get_icon( 'social_icon','<div class="jw-team-member__socials-icon"><div class="inner">%s</div></div>' );
 
 				if ( filter_var( $icon_data['label_visible'], FILTER_VALIDATE_BOOLEAN ) ) {
 					$label = sprintf( '<span class="jw-team-member__socials-label">%s</span>', $icon_data[ 'social_label' ] );

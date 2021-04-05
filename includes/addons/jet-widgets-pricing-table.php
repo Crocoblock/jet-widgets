@@ -45,7 +45,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -53,6 +53,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-flag-o',
+				'fa5_default' => array(
+					'value'   => 'fas fa-flag',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -1076,7 +1080,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'included_bullet_icon',
 			array(
 				'label'       => esc_html__( 'Included Bullet Icon', 'jetwidgets-for-elementor' ),
@@ -1084,6 +1088,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-check',
+				'fa5_default' => array(
+					'value'   => 'fas fa-check',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -1148,7 +1156,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'excluded_bullet_icon',
 			array(
 				'label'       => esc_html__( 'Excluded Bullet Icon', 'jetwidgets-for-elementor' ),
@@ -1156,6 +1164,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-times',
+				'fa5_default' => array(
+					'value'   => 'fas fa-times',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -1472,7 +1484,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'button_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -1480,6 +1492,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-shopping-cart',
+				'fa5_default' => array(
+					'value'   => 'fas fa-shopping-cart',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'add_button_icon' => 'yes',
 				),
@@ -1785,18 +1801,21 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 
 		switch ( $item['item_included'] ) {
 			case 'item-excluded':
-				$icon = $this->get_settings( 'excluded_bullet_icon' );
+				$icon_setting = 'excluded_bullet_icon';
 				break;
 
 			default:
-				$icon = $this->get_settings( 'included_bullet_icon' );
+				$icon_setting = 'included_bullet_icon';
 				break;
 		}
 
-		if ( $icon ) {
-			return sprintf( '<i class="item-bullet %s"></i>', $icon );
-		}
+		$this->__processed_item = false;
 
+		$icon = $this->_get_icon( $icon_setting, '<span class="item-bullet">%s</span>' );
+
+		$this->__processed_item = $item;
+
+		return $icon;
 	}
 
 	public function __pricing_feature_icon_edit() {

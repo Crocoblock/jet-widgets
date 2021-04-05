@@ -409,6 +409,18 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	}
 
 	/**
+	 * Returns HTML icon markup
+	 *
+	 * @param  array $setting
+	 * @param  string $format
+	 * @param  string $icon_class
+	 * @return string
+	 */
+	public function _get_icon( $setting = null, $format = '%s', $icon_class = '' ) {
+		return $this->_render_icon( $setting, $format, $icon_class, false );
+	}
+
+	/**
 	 * Print HTML icon template
 	 *
 	 * @param  array  $setting

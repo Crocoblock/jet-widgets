@@ -64,7 +64,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'services_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -72,6 +72,10 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-cogs',
+				'fa5_default' => array(
+					'value'   => 'fas fa-cogs',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -536,7 +540,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'title_icon',
 			array(
 				'label'       => esc_html__( 'Title Icon', 'jetwidgets-for-elementor' ),
@@ -544,6 +548,10 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => '',
+				'fa5_default' => array(
+					'value'   => '',
+					'library' => 'fa-solid',
+				),
 				'condition'   => array(
 					'use_title_icon' => 'yes',
 				),
@@ -881,7 +889,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'button_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -889,6 +897,10 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-check',
+				'fa5_default' => array(
+					'value'   => 'fas fa-check',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'add_button_icon' => 'yes',
 				),
@@ -1306,42 +1318,33 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 	}
 
 	public function __generate_icon( $cover_location = false ) {
-		$icon = $this->get_settings( 'services_icon' );
 		$is_cover = filter_var( $this->get_settings( 'icon_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
 			return;
 		}
 
-		if ( empty( $icon ) ) {
-			return false;
-		}
+		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jw-services__icon"><div class="inner">%s</div></div>' );
 
-		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jw-services__icon"><div class="inner"><i class="%s"></i></div></div>' );
-
-		return sprintf( $format, $icon );
+		return $this->_get_icon( 'services_icon', $format );
 	}
 
 	public function __generate_title( $cover_location = false ) {
-		$title_icon = $this->get_settings( 'title_icon' );
 		$title = $this->get_settings( 'services_title' );
 
 		$is_cover = filter_var( $this->get_settings( 'title_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
-		$icon_html = '';
 		$title_html = '';
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
 			return;
 		}
 
-		if ( empty( $title_icon ) && empty( $title ) ) {
+		if ( empty( $title ) ) {
 			return;
 		}
 
-		if ( ! empty( $title_icon ) ) {
-			$icon_html = sprintf( '<span class="jw-services__title-icon"><i class="%s"></i></span>', $title_icon );
-		}
+		$icon_html = $this->_get_icon( 'title_icon', '<span class="jw-services__title-icon">%s</span>' );
 
 		if ( ! empty( $title ) ) {
 
@@ -1376,7 +1379,6 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 	public function __generate_action_button( $cover_location = false ) {
 		$button_url    = $this->get_settings( 'button_url' );
 		$button_text   = $this->get_settings( 'button_text' );
-		$button_icon   = $this->get_settings( 'button_icon' );
 		$use_icon      = $this->get_settings( 'add_button_icon' );
 		$icon_position = $this->get_settings( 'button_icon_position' );
 		$icon_html     = '';
@@ -1396,7 +1398,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		}
 
 		if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
-			$icon_html = sprintf( '<i class="jw-services__button-icon %s"></i>', $button_icon );
+			$icon_html = $this->_get_icon( 'button_icon', '<span class="jw-services__button-icon">%s</span>' );
 		}
 
 		$this->add_render_attribute( 'url', 'class', array(
