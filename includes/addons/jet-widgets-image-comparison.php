@@ -38,7 +38,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 
 	public function get_script_depends() {
 		return array(
-			'jquery-slick',
+			'jet-slick',
 			'jet-juxtapose',
 		);
 	}

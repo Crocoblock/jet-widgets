@@ -99,10 +99,10 @@ gulp.task('css-rtl', () => {
 
 //watch
 gulp.task('watch', () => {
-	gulp.watch('./assets/scss/**', ['css']);
-	gulp.watch('./assets/scss/**', ['css-skin']);
-	gulp.watch('./assets/scss/**', ['css-admin']);
-	gulp.watch('./assets/scss/**', ['css-rtl']);
+	gulp.watch('./assets/scss/**', gulp.series( ...['css'] ) );
+	gulp.watch('./assets/scss/**', gulp.series( ...['css-skin'] ) );
+	gulp.watch('./assets/scss/**', gulp.series( ...['css-admin'] ) );
+	gulp.watch('./assets/scss/**', gulp.series( ...['css-rtl'] ) );
 });
 
 gulp.task( 'checktextdomain', () => {

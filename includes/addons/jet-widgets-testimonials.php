@@ -37,7 +37,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 	}
 
 	public function get_script_depends() {
-		return array( 'jquery-slick' );
+		return array( 'jet-slick' );
 	}
 
 	protected function _register_controls() {
