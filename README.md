@@ -4,6 +4,10 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.10]
+* UPD: widgets icon controls
+* FIX: prevent php warning
+
 ## [1.0.9]
 * fix: additional output validation for widgets
 * add: elementor compatibility tag
