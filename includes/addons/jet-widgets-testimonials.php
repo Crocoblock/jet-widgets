@@ -193,9 +193,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->_add_advanced_icon_control(
 			'prev_arrow',
 			array(
-				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
+				'label'       => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
-				'label_block' => true,
+				'label_block' => false,
+				'skin'        => 'inline',
 				'file'        => '',
 				'default'     => 'fa fa-angle-left',
 				'fa5_default' => array(
@@ -211,9 +212,10 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->_add_advanced_icon_control(
 			'next_arrow',
 			array(
-				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
+				'label'       => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
 				'type'        => Controls_Manager::ICON,
-				'label_block' => true,
+				'label_block' => false,
+				'skin'        => 'inline',
 				'file'        => '',
 				'default'     => 'fa fa-angle-right',
 				'fa5_default' => array(
