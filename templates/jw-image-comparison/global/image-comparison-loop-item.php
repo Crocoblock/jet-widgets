@@ -4,8 +4,16 @@
  */
 $settings = $this->get_settings_for_display();
 
-$prevArrow = empty( $settings['handle_prev_arrow'] ) && ! empty( $settings['selected_handle_prev_arrow']['value'] ) ? $settings['selected_handle_prev_arrow']['value'] : $settings['handle_prev_arrow'];
-$nextArrow = empty( $settings['handle_next_arrow'] ) && ! empty( $settings['selected_handle_next_arrow']['value'] ) ? $settings['selected_handle_next_arrow']['value'] : $settings['handle_next_arrow'];
+$prevArrow = ! empty( $settings['selected_handle_prev_arrow']['value'] ) ? $settings['selected_handle_prev_arrow']['value'] : '';
+$nextArrow = ! empty( $settings['selected_handle_next_arrow']['value'] ) ? $settings['selected_handle_next_arrow']['value'] : '';
+
+if ( empty( $prevArrow ) ) {
+	$prevArrow = ! empty( $settings['handle_prev_arrow'] ) ? $settings['handle_prev_arrow'] : '';
+}
+
+if ( empty( $nextArrow ) ) {
+	$nextArrow = ! empty( $settings['handle_next_arrow'] ) ? $settings['handle_next_arrow'] : '';
+}
 
 $starting_position = $settings['starting_position'];
 $starting_position_string = $starting_position['size'] . $starting_position['unit'];
