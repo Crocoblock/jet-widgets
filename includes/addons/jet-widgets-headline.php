@@ -140,7 +140,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'before_icon',
 			array(
 				'label'       => esc_html__( 'Before Icon', 'jetwidgets-for-elementor' ),
@@ -148,6 +148,10 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-arrow-circle-right',
+				'fa5_default' => array(
+					'value'   => 'fas fa-arrow-circle-right',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'before_deco_type' => 'icon',
 				),
@@ -188,7 +192,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'after_icon',
 			array(
 				'label'       => esc_html__( 'After Icon', 'jetwidgets-for-elementor' ),
@@ -196,6 +200,10 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-arrow-circle-left',
+				'fa5_default' => array(
+					'value'   => 'fas fa-arrow-circle-left',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'after_deco_type' => 'icon',
 				),
@@ -971,6 +979,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
 				),
 			)
 		);
@@ -994,6 +1003,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -1110,6 +1120,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
 				),
 			)
 		);
@@ -1132,6 +1143,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'icon',
 				),
 				'selectors'  => array(
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
@@ -1406,7 +1418,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 	 */
 	protected function render() {
 
-		$settings = $this->get_settings();
+		$settings = $this->get_settings_for_display();
 
 		if ( empty( $settings['first_part'] ) && empty( $settings['second_part'] ) ) {
 			return;
@@ -1430,9 +1442,8 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		// Before Deco Render
 		if ( 'none' !== $settings['before_deco_type'] ) {
 
-			if ( 'icon' === $settings['before_deco_type'] && ! empty( $settings['before_icon'] ) ) {
-				$before_deco_icon = sprintf( '<i class="%s"></i>', $settings['before_icon'] );
-				$before_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-icon">%1$s</span>', $before_deco_icon );
+			if ( 'icon' === $settings['before_deco_type'] ) {
+				$before_deco_html = $this->_render_icon( 'before_icon', '<span class="jw-headline__deco jw-headline__deco-icon">%s</span>', '', false );
 			}
 
 			if ( 'image' === $settings['before_deco_type'] && ! empty( $settings['before_image']['url'] ) ) {
@@ -1444,9 +1455,8 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		// After Deco Render
 		if ( 'none' !== $settings['after_deco_type'] ) {
 
-			if ( 'icon' === $settings['after_deco_type'] && ! empty( $settings['after_icon'] ) ) {
-				$after_deco_icon = sprintf( '<i class="%s"></i>', $settings['after_icon'] );
-				$after_deco_html = sprintf( '<span class="jw-headline__deco jw-headline__deco-icon">%1$s</span>', $after_deco_icon );
+			if ( 'icon' === $settings['after_deco_type'] ) {
+				$after_deco_html = $this->_render_icon( 'after_icon', '<span class="jw-headline__deco jw-headline__deco-icon">%s</span>', '', false );
 			}
 
 			if ( 'image' === $settings['after_deco_type'] && ! empty( $settings['after_image']['url'] ) ) {

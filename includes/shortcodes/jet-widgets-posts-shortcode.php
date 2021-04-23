@@ -287,6 +287,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			'more_icon' => array(
 				'type'        => 'icon',
 				'label_block' => true,
+				'responsive'  => true,
 				'label'       => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
 				'condition'   => array(
 					'show_more' => array( 'yes' ),

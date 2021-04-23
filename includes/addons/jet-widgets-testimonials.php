@@ -37,7 +37,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 	}
 
 	public function get_script_depends() {
-		return array( 'jquery-slick' );
+		return array( 'jet-slick' );
 	}
 
 	protected function _register_controls() {
@@ -190,26 +190,36 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'prev_arrow',
 			array(
 				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-left',
-				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-left',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'arrows' => 'true',
 				),
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'next_arrow',
 			array(
 				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-right',
-				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-right',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-right',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'arrows' => 'true',
 				),
@@ -247,7 +257,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			)
 		);
 
-		$repeater->add_control(
+		$this->_add_advanced_icon_control(
 			'item_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -255,7 +265,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-quote-left',
-			)
+				'fa5_default' => array(
+					'value'   => 'fas fa-quote-left',
+					'library' => 'fa-solid',
+				),
+			),
+			$repeater
 		);
 
 		$repeater->add_control(
@@ -1136,7 +1151,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1167,7 +1182,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -2548,12 +2563,8 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['prev_arrow'], 'prev-arrow' )
-			),
-			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['next_arrow'], 'next-arrow' )
-			),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="prev-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="next-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
 		);
 
 		if ( 'fade' === $settings['effect'] ) {

@@ -54,7 +54,7 @@ $this->item_counter++;
 			</div>
 			<div class="jw-images-layout__content">
 					<?php
-						echo $this->__loop_item( array( 'item_icon' ), '<div class="jw-images-layout__icon"><div class="jw-images-layout-icon-inner"><i class="%s"></i></div></div>' );
+						echo $this->_render_icon( 'item_icon', '<div class="jw-images-layout__icon"><div class="jw-images-layout-icon-inner">%s</div></div>' );
 					?>
 
 					<?php

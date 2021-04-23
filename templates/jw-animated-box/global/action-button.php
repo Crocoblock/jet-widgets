@@ -33,7 +33,6 @@ if ( is_array( $button_url ) ) {
 	if ( ! empty( $button_url['nofollow'] ) ) {
 		$this->add_render_attribute( 'url', 'rel', 'nofollow' );
 	}
-
 } else {
 	$this->add_render_attribute( 'url', 'href', $button_url );
 }
@@ -43,7 +42,7 @@ if ( is_array( $button_url ) ) {
 	echo $this->__html( 'back_side_button_text', '<span class="jw-animated-box__button-text">%s</span>' );
 
 	if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
-		echo $this->__html( 'button_icon', '<i class="jw-animated-box__button-icon %s"></i>' );
+		echo $this->_render_icon( 'button_icon', '%s', 'jw-animated-box__button-icon' );
 	}
 ?></a>
 

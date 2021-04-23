@@ -17,3 +17,31 @@
 		margin-right: 0;
 	}
 }
+
+.slick-slide {
+	float: right;
+}
+
+.elementor-slick-slider {
+	.slick-prev {
+		right: -25px;
+		left: auto;
+	}
+
+	.slick-next {
+		left: -25px;
+		right: auto;
+	}
+
+	.slick-arrows-inside {
+		.slick-prev {
+			right: 0;
+			left: auto;
+		}
+
+		.slick-next {
+			left: 0;
+			right: auto;
+		}
+	}
+}

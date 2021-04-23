@@ -38,7 +38,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 
 	public function get_script_depends() {
 		return array(
-			'jquery-slick',
+			'jet-slick',
 			'jet-juxtapose',
 		);
 	}
@@ -174,26 +174,36 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'prev_arrow',
 			array(
 				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-left',
-				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-left',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'arrows' => 'true',
 				),
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'next_arrow',
 			array(
 				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-right',
-				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-right',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-right',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'arrows' => 'true',
 				),
@@ -834,25 +844,33 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'handle_prev_arrow',
 			array(
 				'label'       => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'        => Controls_Manager::SELECT,
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
 				'default'     => 'fa fa-angle-left',
-				'render_type' => 'template',
-				'options'     => jet_widgets_tools()->get_available_prev_arrows_list(),
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'handle_next_arrow',
 			array(
 				'label'       => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'        => Controls_Manager::SELECT,
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
 				'default'     => 'fa fa-angle-right',
-				'render_type' => 'template',
-				'options'     => jet_widgets_tools()->get_available_next_arrows_list(),
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-right',
+					'library' => 'fa-solid',
+				),
 			)
 		);
 
@@ -1448,6 +1466,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 	 */
 	public function generate_setting_json() {
 		$settings = $this->get_settings();
+		$widget_id = $this->get_id();
 
 		$instance_settings = array(
 			'slidesToShow'   => array(
@@ -1463,12 +1482,8 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['prev_arrow'], 'prev-arrow' )
-			),
-			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['next_arrow'], 'next-arrow' )
-			),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-image-comparison__prev-arrow-' . $widget_id .' prev-arrow jw-arrow slick-arrow">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-image-comparison__next-arrow-' . $widget_id .' next-arrow jw-arrow slick-arrow">%s</div>', '', false ),
 		);
 
 		if ( 'fade' === $settings['effect'] ) {

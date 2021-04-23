@@ -99,6 +99,14 @@ if ( ! class_exists( 'Jet_Widgets_Assets' ) ) {
 				'1.3.0',
 				true
 			);
+
+			wp_register_script(
+				'jet-slick',
+				jet_widgets()->plugin_url( 'assets/js/lib/slick/slick.min.js' ),
+				array(),
+				'1.8.1',
+				true
+			);
 		}
 
 		/**

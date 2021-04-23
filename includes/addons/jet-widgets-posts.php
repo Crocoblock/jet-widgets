@@ -46,7 +46,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 	}
 
 	public function get_script_depends() {
-		return array( 'jquery-slick' );
+		return array( 'jet-slick' );
 	}
 
 	protected function _register_controls() {
@@ -63,6 +63,11 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		foreach ( $attributes as $attr => $settings ) {
 
 			if ( empty( $settings['type'] ) ) {
+				continue;
+			}
+
+			if ( 'icon' === $settings['type'] ) {
+				$this->_add_advanced_icon_control( $attr, $settings );
 				continue;
 			}
 
@@ -150,28 +155,35 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'prev_arrow',
 			array(
 				'label'   => esc_html__( 'Prev Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-left',
-				'options' => jet_widgets_tools()->get_available_prev_arrows_list(),
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-left',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'arrows' => 'true',
 				),
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'next_arrow',
 			array(
 				'label'   => esc_html__( 'Next Arrow Icon', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 'fa fa-angle-right',
-				'options' => jet_widgets_tools()->get_available_next_arrows_list(),
-				'condition' => array(
-					'arrows' => 'true',
+				'type'        => Controls_Manager::ICON,
+				'label_block' => true,
+				'file'        => '',
+				'default'     => 'fa fa-angle-right',
+				'fa5_default' => array(
+					'value'   => 'fas fa-angle-right',
+					'library' => 'fa-solid',
 				),
 			)
 		);
@@ -895,7 +907,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['button_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1999,6 +2011,8 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			return $content;
 		}
 
+		$widget_id = $this->get_id();
+
 		$options = array(
 			'slidesToShow'   => array(
 				'desktop' => absint( $settings['columns'] ),
@@ -2013,12 +2027,8 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['prev_arrow'], 'prev-arrow' )
-			),
-			'nextArrow'      => jet_widgets_tools()->get_carousel_arrow(
-				array( $settings['next_arrow'], 'next-arrow' )
-			),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-posts__prev-arrow-' . $widget_id . ' prev-arrow jw-arrow">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-posts__prev-arrow-' . $widget_id . ' next-arrow jw-arrow">%s</div>', '', false ),
 		);
 
 		if ( 1 === absint( $settings['columns'] ) ) {
@@ -2057,8 +2067,13 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				continue;
 			}
 
-			$attr_val            = $settings[ $attr ];
-			$attr_val            = ! is_array( $attr_val ) ? $attr_val : implode( ',', $attr_val );
+			if ( isset( $data['type'] ) && 'icon' === $data['type'] ) {
+				$attr_val = $this->_get_icon( $attr );
+			} else {
+				$attr_val            = isset( $settings[ $attr ] ) ? $settings[ $attr ] : '';
+				$attr_val            = ! is_array( $attr_val ) ? $attr_val : implode( ',', $attr_val );
+			}
+
 			$attributes[ $attr ] = $attr_val;
 		}
 

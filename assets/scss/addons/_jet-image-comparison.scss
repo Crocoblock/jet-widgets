@@ -33,6 +33,12 @@
 		&.next-arrow {
 			right: 0;
 		}
+
+		svg {
+			width: 1em;
+			height: 1em;
+			fill: currentColor;
+		}
 	}
 
 	.jw-slick-dots {

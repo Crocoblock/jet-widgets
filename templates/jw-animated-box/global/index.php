@@ -13,7 +13,7 @@ $sub_title_tag = jet_widgets_tools()->validate_html_tag( $sub_title_tag );
 		<div class="jw-animated-box__overlay"></div>
 		<div class="jw-animated-box__inner">
 			<?php
-				$this->__html( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front"><div class="jw-animated-box-icon-inner"><i class="%s"></i></div></div>' );
+				$this->_render_icon( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front "><div class="jw-animated-box-icon-inner"><span class="jet-widgets-icon">%s</span></div></div>' );
 			?>
 			<div class="jw-animated-box__content">
 			<?php
@@ -28,7 +28,7 @@ $sub_title_tag = jet_widgets_tools()->validate_html_tag( $sub_title_tag );
 		<div class="jw-animated-box__overlay"></div>
 		<div class="jw-animated-box__inner">
 			<?php
-				$this->__html( 'back_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--back"><div class="jw-animated-box-icon-inner"><i class="%s"></i></div></div>' );
+				$this->_render_icon( 'back_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--back"><div class="jw-animated-box-icon-inner">%s</div></div>' );
 			?>
 			<div class="jw-animated-box__content">
 			<?php

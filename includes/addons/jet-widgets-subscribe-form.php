@@ -593,7 +593,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 			)
 		);
 
-		$this->add_control(
+		$this->_add_advanced_icon_control(
 			'button_icon',
 			array(
 				'label'       => esc_html__( 'Icon', 'jetwidgets-for-elementor' ),
@@ -601,6 +601,10 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 				'label_block' => true,
 				'file'        => '',
 				'default'     => 'fa fa-send',
+				'fa5_default' => array(
+					'value'   => 'fas fa-paper-plane',
+					'library' => 'fa-solid',
+				),
 				'condition' => array(
 					'add_button_icon' => 'yes',
 				),
@@ -623,7 +627,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['submit_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['submit_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
