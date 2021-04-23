@@ -130,10 +130,6 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'type'        => Controls_Manager::ICON,
 				'label_block' => true,
 				'file'        => '',
-				'fa5_default' => array(
-					'value'   => '',
-					'library' => 'fa-solid',
-				),
 			)
 		);
 
@@ -465,8 +461,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' i:before' => 'color: {{VALUE}}',
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_front'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -606,8 +601,7 @@ class Jet_Widgets_Animated_Box extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' i:before' => 'color: {{VALUE}}',
-					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['animated_box_icon_back'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
