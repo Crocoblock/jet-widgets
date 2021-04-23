@@ -11,7 +11,7 @@ $sub_title_tag = $this->__get_html( 'sub_title_html_tag', '%s' );
 		<div class="jw-animated-box__overlay"></div>
 		<div class="jw-animated-box__inner">
 			<?php
-				$this->_render_icon( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front"><div class="jw-animated-box-icon-inner">%s</div></div>' );
+				$this->_render_icon( 'front_side_icon', '<div class="jw-animated-box__icon jw-animated-box__icon--front "><div class="jw-animated-box-icon-inner"><span class="jet-widgets-icon">%s</span></div></div>' );
 			?>
 			<div class="jw-animated-box__content">
 			<?php

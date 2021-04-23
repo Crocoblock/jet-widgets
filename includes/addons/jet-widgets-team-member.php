@@ -997,7 +997,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['socials_icon'] . ' i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['socials_icon'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1028,7 +1028,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['socials_icon'] . ' i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['socials_icon'] . ' .jet-widgets-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -1837,7 +1837,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 
 			if ( ! empty( $icon_data[ 'social_link' ] ) ) {
 
-				$icon = $this->_get_icon( 'social_icon','<div class="jw-team-member__socials-icon"><div class="inner">%s</div></div>' );
+				$icon = $this->_get_icon( 'social_icon','<div class="jw-team-member__socials-icon"><div class="inner"><span class="jet-widgets-icon">%s</span></div></div>' );
 
 				if ( filter_var( $icon_data['label_visible'], FILTER_VALIDATE_BOOLEAN ) ) {
 					$label = sprintf( '<span class="jw-team-member__socials-label">%s</span>', $icon_data[ 'social_label' ] );

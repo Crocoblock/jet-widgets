@@ -979,6 +979,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
 				),
 			)
 		);
@@ -1002,6 +1003,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors'  => array(
 					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -1118,6 +1120,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
 				),
 			)
 		);
@@ -1140,6 +1143,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 					'after_deco_type' => 'icon',
 				),
 				'selectors'  => array(
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)

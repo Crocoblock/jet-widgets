@@ -1151,7 +1151,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1182,7 +1182,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -2563,8 +2563,8 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => $this->_render_icon( 'prev_arrow', '%s', 'prev-arrow jw-arrow', false ),
-			'nextArrow'      => $this->_render_icon( 'next_arrow', '%s', 'next-arrow jw-arrow', false ),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="prev-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="next-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
 		);
 
 		if ( 'fade' === $settings['effect'] ) {

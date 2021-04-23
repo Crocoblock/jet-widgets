@@ -66,6 +66,11 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				continue;
 			}
 
+			if ( 'icon' === $settings['type'] ) {
+				$this->_add_advanced_icon_control( $attr, $settings );
+				continue;
+			}
+
 			if ( ! empty( $settings['responsive'] ) ) {
 				$this->add_responsive_control( $attr, $settings );
 			} else {
@@ -902,7 +907,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['button_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -2006,6 +2011,8 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			return $content;
 		}
 
+		$widget_id = $this->get_id();
+
 		$options = array(
 			'slidesToShow'   => array(
 				'desktop' => absint( $settings['columns'] ),
@@ -2020,8 +2027,8 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => $this->_render_icon( 'prev_arrow', '%s', 'prev-arrow jw-arrow', false ),
-			'nextArrow'      => $this->_render_icon( 'next_arrow', '%s', 'next-arrow jw-arrow', false ),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-posts__prev-arrow-' . $widget_id . ' prev-arrow jw-arrow">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-posts__prev-arrow-' . $widget_id . ' next-arrow jw-arrow">%s</div>', '', false ),
 		);
 
 		if ( 1 === absint( $settings['columns'] ) ) {
@@ -2060,8 +2067,13 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				continue;
 			}
 
-			$attr_val            = $settings[ $attr ];
-			$attr_val            = ! is_array( $attr_val ) ? $attr_val : implode( ',', $attr_val );
+			if ( isset( $data['type'] ) && 'icon' === $data['type'] ) {
+				$attr_val = $this->_get_icon( $attr );
+			} else {
+				$attr_val            = isset( $settings[ $attr ] ) ? $settings[ $attr ] : '';
+				$attr_val            = ! is_array( $attr_val ) ? $attr_val : implode( ',', $attr_val );
+			}
+
 			$attributes[ $attr ] = $attr_val;
 		}
 

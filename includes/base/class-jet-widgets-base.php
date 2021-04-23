@@ -378,6 +378,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 * @param array  $args
 	 * @param object $instance
 	 */
+
 	public function _add_advanced_icon_control( $id, array $args = array(), $instance = null ) {
 
 		if ( defined( 'ELEMENTOR_VERSION' ) && version_compare( ELEMENTOR_VERSION, '2.6.0', '>=' ) ) {

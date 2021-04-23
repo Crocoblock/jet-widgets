@@ -1718,8 +1718,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$settings = $this->get_settings();
 
 		$vertical_carousel = filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN );
-		$nextArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_next_arrow', '%s', 'next-arrow jw-arrow slick-arrow', false ) : $this->_render_icon( 'next_arrow', '%s', 'next-arrow jw-arrow slick-arrow', false );
-		$prevArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_prev_arrow', '%s', 'prev-arrow jw-arrow slick-arrow', false ) : $this->_render_icon( 'prev_arrow', '%s', 'prev-arrow jw-arrow slick-arrow', false );
+		$nextArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_next_arrow', '<span class="jet-widgets-icon next-arrow jw-arrow slick-arrow">%s</span>', '', false ) : $this->_render_icon( 'next_arrow', '<span class="jet-widgets-icon next-arrow jw-arrow slick-arrow">%s</span>', '', false );
+		$prevArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_prev_arrow', '<span class="jet-widgets-icon prev-arrow jw-arrow slick-arrow">%s</span>', '', false ) : $this->_render_icon( 'prev_arrow', '<span class="jet-widgets-icon prev-arrow jw-arrow slick-arrow">%s</span>', '', false );
 
 		$options  = array(
 			'slidesToShow'   => array(

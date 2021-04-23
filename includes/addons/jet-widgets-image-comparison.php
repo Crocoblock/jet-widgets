@@ -1466,6 +1466,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 	 */
 	public function generate_setting_json() {
 		$settings = $this->get_settings();
+		$widget_id = $this->get_id();
 
 		$instance_settings = array(
 			'slidesToShow'   => array(
@@ -1481,8 +1482,8 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
-			'prevArrow'      => $this->_render_icon( 'prev_arrow', '%s', 'prev-arrow jw-arrow slick-arrow', false ),
-			'nextArrow'      => $this->_render_icon( 'next_arrow', '%s', 'next-arrow jw-arrow slick-arrow', false ),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-image-comparison__prev-arrow-' . $widget_id .' prev-arrow jw-arrow slick-arrow">%s</div>', '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-image-comparison__next-arrow-' . $widget_id .' next-arrow jw-arrow slick-arrow">%s</div>', '', false ),
 		);
 
 		if ( 'fade' === $settings['effect'] ) {

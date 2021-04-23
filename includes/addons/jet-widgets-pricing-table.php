@@ -1111,8 +1111,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					),
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet:before' => 'font-size: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet' => 'font-size: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1127,7 +1126,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					'value' => Scheme_Color::COLOR_4,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet:before' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1187,8 +1186,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					),
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet:before' => 'font-size: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet' => 'font-size: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1203,7 +1201,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					'value' => Scheme_Color::COLOR_3,
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet:before' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -1513,9 +1511,6 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				),
 				'default'     => 'left',
 				'render_type' => 'template',
-				'selectors'   => array(
-					'{{WRAPPER}} ' . $css_scheme['button_icon'] => 'float: {{VALUE}}',
-				),
 				'condition' => array(
 					'add_button_icon' => 'yes',
 				),
@@ -1537,7 +1532,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['button_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1811,7 +1806,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 
 		$this->__processed_item = false;
 
-		$icon = $this->_get_icon( $icon_setting, '<span class="item-bullet">%s</span>' );
+		$icon = $this->_get_icon( $icon_setting, '<span class="jet-widgets-icon item-bullet">%s</span>' );
 
 		$this->__processed_item = $item;
 

@@ -627,7 +627,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['submit_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['submit_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);

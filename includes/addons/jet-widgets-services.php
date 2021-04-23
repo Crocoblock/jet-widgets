@@ -377,7 +377,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Icon Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'color: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'color: {{VALUE}}',
 				),
 			)
 		);
@@ -408,7 +408,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);
@@ -939,7 +939,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 					'add_button_icon' => 'yes',
 				),
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['button_icon'] . ':before' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} ' . $css_scheme['button_icon'] => 'font-size: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -1324,7 +1324,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			return;
 		}
 
-		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jw-services__icon"><div class="inner">%s</div></div>' );
+		$format = apply_filters( 'jet-widgets/services/icon-format', '<div class="jw-services__icon"><div class="inner"><span class="jet-widgets-icon">%s</span></div></div>' );
 
 		return $this->_get_icon( 'services_icon', $format );
 	}
@@ -1344,7 +1344,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			return;
 		}
 
-		$icon_html = $this->_get_icon( 'title_icon', '<span class="jw-services__title-icon">%s</span>' );
+		$icon_html = $this->_get_icon( 'title_icon', '<span class="jw-services__title-icon jet-widgets-icon">%s</span>' );
 
 		if ( ! empty( $title ) ) {
 
@@ -1398,7 +1398,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		}
 
 		if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
-			$icon_html = $this->_get_icon( 'button_icon', '<span class="jw-services__button-icon">%s</span>' );
+			$icon_html = $this->_get_icon( 'button_icon', '<span class="jw-services__button-icon jet-widgets-icon">%s</span>' );
 		}
 
 		$this->add_render_attribute( 'url', 'class', array(
