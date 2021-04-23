@@ -1182,7 +1182,8 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 					),
 				),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon i' => 'font-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' .jet-widgets-icon svg' => 'font-size: {{SIZE}}{{UNIT}}',
 				),
 			)
 		);

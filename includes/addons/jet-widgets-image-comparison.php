@@ -859,6 +859,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 					'value'   => 'fas fa-angle-left',
 					'library' => 'fa-solid',
 				),
+				'exclude_inline_options' => array( 'svg' ),
 			)
 		);
 
@@ -875,6 +876,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 					'value'   => 'fas fa-angle-right',
 					'library' => 'fa-solid',
 				),
+				'exclude_inline_options' => array( 'svg' ),
 			)
 		);
 
