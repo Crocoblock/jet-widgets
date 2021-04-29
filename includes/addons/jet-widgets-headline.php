@@ -979,7 +979,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
-					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['first_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}; color: {{VALUE}};',
 				),
 			)
 		);
@@ -1120,7 +1120,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon i' => 'color: {{VALUE}}',
-					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['second_part'] . ' .jw-headline__deco-icon svg' => 'fill: {{VALUE}}; color: {{VALUE}};',
 				),
 			)
 		);
@@ -1443,7 +1443,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		if ( 'none' !== $settings['before_deco_type'] ) {
 
 			if ( 'icon' === $settings['before_deco_type'] ) {
-				$before_deco_html = $this->_render_icon( 'before_icon', '<span class="jw-headline__deco jw-headline__deco-icon">%s</span>', '', false );
+				$before_deco_html = $this->_render_icon( 'before_icon', '<span class="jw-headline__deco jw-headline__deco-icon jet-widgets-icon">%s</span>', '', false );
 			}
 
 			if ( 'image' === $settings['before_deco_type'] && ! empty( $settings['before_image']['url'] ) ) {

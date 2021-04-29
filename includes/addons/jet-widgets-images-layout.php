@@ -419,7 +419,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['icon'] . ' i' => 'color: {{VALUE}}',
-					'{{WRAPPER}} ' . $css_scheme['icon'] . ' svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} ' . $css_scheme['icon'] . ' svg' => 'fill: {{VALUE}}; color: {{VALUE}};',
 				),
 			)
 		);
