@@ -79,7 +79,7 @@ if ( ! class_exists( 'Cherry_Toolkit' ) ) {
 		 * @return object New class instance.
 		 * @throws InvalidArgumentException If class does not exists.
 		 */
-		public static function get_class_instance( $class_name = '', $core, $args ) {
+		public static function get_class_instance( $class_name = '', $core = '', $args = '' ) {
 			if ( ! class_exists( $class_name ) ) {
 				throw new InvalidArgumentException( 'Class "' . $class_name . '" doesn\'t exists' );
 			}

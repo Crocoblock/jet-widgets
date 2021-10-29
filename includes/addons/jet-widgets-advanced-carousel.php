@@ -248,10 +248,12 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
-				'label'   => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => '2',
-				'options' => jet_widgets_tools()->get_select_range( 10 ),
+				'label'              => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
+				'type'               => Controls_Manager::SELECT,
+				'default'            => '2',
+				'options'            => jet_widgets_tools()->get_select_range( 10 ),
+				'frontend_available' => true,
+				'render_type'        => 'template',
 			)
 		);
 
@@ -1726,11 +1728,11 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 		$prevArrowIcon     = $vertical_carousel ? $this->_render_icon( 'vertical_prev_arrow', '<span class="jet-widgets-icon prev-arrow jw-arrow slick-arrow">%s</span>', '', false ) : $this->_render_icon( 'prev_arrow', '<span class="jet-widgets-icon prev-arrow jw-arrow slick-arrow">%s</span>', '', false );
 
 		$options  = array(
-			'slidesToShow'   => array(
-				'desktop' => absint( $settings['slides_to_show'] ),
-				'tablet'  => absint( $settings['slides_to_show_tablet'] ),
-				'mobile'  => absint( $settings['slides_to_show_mobile'] ),
-			),
+			// 'slidesToShow'   => array(
+			// 	'desktop' => absint( $settings['slides_to_show'] ),
+			// 	'tablet'  => absint( $settings['slides_to_show_tablet'] ),
+			// 	'mobile'  => absint( $settings['slides_to_show_mobile'] ),
+			// ),
 			'autoplaySpeed'  => absint( $settings['autoplay_speed'] ),
 			'autoplay'       => filter_var( $settings['autoplay'], FILTER_VALIDATE_BOOLEAN ),
 			'infinite'       => filter_var( $settings['infinite'], FILTER_VALIDATE_BOOLEAN ),

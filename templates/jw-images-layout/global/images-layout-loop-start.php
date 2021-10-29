@@ -3,7 +3,7 @@
  * Features list start template
  */
 
-$settings = $this->get_settings();
+$settings = $this->get_settings_for_display();
 $class_array[] = 'jw-images-layout__list';
 $attr_array = [];
 

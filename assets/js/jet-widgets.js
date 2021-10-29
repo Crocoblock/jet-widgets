@@ -242,8 +242,9 @@
 			}
 
 			settings.draggable = false;
+			settings.infinite  = false;
 
-			$target.on('init', function( event, slick ){
+			$target.on( 'init', function( event, slick ){
 				window.juxtapose.scanPage( '.jw-juxtapose' );
 			} );
 
@@ -252,46 +253,73 @@
 
 		initCarousel: function( $target, options ) {
 
-			var tabletSlides, mobileSlides, defaultOptions, slickOptions;
+			//var tabletSlides, mobileSlides, defaultOptions, slickOptions;
+			var	defaultOptions,
+				slickOptions,
+				responsive        = [],
+				eTarget           = $target.closest( '.elementor-widget' ),
+				breakpoints       = JetWidgetsTools.getElementorElementSettings( eTarget ),
+				activeBreakpoints = elementor.config.responsive.activeBreakpoints,
+				prevDeviceValue,
+				slidesCount,
+				dotsEnable = options.dots;
 
-			if ( options.slidesToShow.tablet ) {
-				tabletSlides = options.slidesToShow.tablet;
+			if ( 'widescreen'.indexOf(activeBreakpoints ) ) {
+				options.slidesToShow = breakpoints.slides_to_show_widescreen ? +breakpoints.slides_to_show_widescreen : +breakpoints.slides_to_show;
 			} else {
-				tabletSlides = 1 === options.slidesToShow.desktop ? 1 : 2;
+				options.slidesToShow = +breakpoints.slides_to_show;
 			}
 
-			if ( options.slidesToShow.mobile ) {
-				mobileSlides = options.slidesToShow.mobile;
-			} else {
-				mobileSlides = 1;
+			slidesCount = $( '> div', $target ).length;
+
+			if ( options.slidesToShow === slidesCount ) {
+				options.dots = false;
 			}
 
-			options.slidesToShow = options.slidesToShow.desktop;
+			prevDeviceValue = options.slidesToShow;
+
+			Object.keys( activeBreakpoints ).reverse().forEach( function( breakpointName ) {
+
+				var breakpointSetting = {
+					breakpoint: null,
+					settings: {}
+				}
+
+				breakpointSetting.breakpoint = 'widescreen' != breakpointName ? activeBreakpoints[breakpointName].value : activeBreakpoints[breakpointName].value - 1;
+
+				if ( 'widescreen' === breakpointName ) {
+					breakpointSetting.settings.slidesToShow = +breakpoints['slides_to_show'];
+				} else {
+					breakpointSetting.settings.slidesToShow = breakpoints['slides_to_show_' + breakpointName] ? +breakpoints['slides_to_show_' + breakpointName] : prevDeviceValue;
+				}
+
+				$target.on( 'init reInit', function(event, slick, currentSlide, nextSlide ){
+					if ( breakpointSetting.settings.slidesToShow === slick.slideCount ) {
+						breakpointSetting.settings.dots = false;
+					} else {
+						if ( dotsEnable ) {
+							breakpointSetting.settings.dots = true;
+						}
+					}
+				} );
+
+				prevDeviceValue = breakpointSetting.settings.slidesToShow;
+
+				responsive.push( breakpointSetting );
+			} );
+
+			options.responsive = responsive;
 
 			defaultOptions = {
 				customPaging: function(slider, i) {
 					return $( '<span />' ).text( i + 1 );
 				},
 				dotsClass: 'jw-slick-dots',
-				responsive: [
-					{
-						breakpoint: 1025,
-						settings: {
-							slidesToShow: tabletSlides,
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: mobileSlides,
-							slidesToScroll: 1
-						}
-					}
-				]
 			};
 
 			slickOptions = $.extend( {}, defaultOptions, options );
 
+			console.log(slickOptions);
 			$target.slick( slickOptions );
 		},
 	};
@@ -358,6 +386,44 @@
 			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 			return re.test( email );
+		},
+
+		getElementorElementSettings: function( $scope ) {
+
+			if ( window.elementorFrontend && window.elementorFrontend.isEditMode() ) {
+				return JetWidgetsTools.getEditorElementSettings( $scope );
+			}
+
+			return $scope.data( 'settings' ) || {};
+		},
+
+		getEditorElementSettings: function( $scope ) {
+			var modelCID = $scope.data( 'model-cid' ),
+				elementData;
+
+			if ( ! modelCID ) {
+				return {};
+			}
+
+			if ( ! elementor.hasOwnProperty( 'config' ) ) {
+				return {};
+			}
+
+			if ( ! elementor.config.hasOwnProperty( 'elements' ) ) {
+				return {};
+			}
+
+			if ( ! elementor.config.elements.hasOwnProperty( 'data' ) ) {
+				return {};
+			}
+
+			elementData = elementor.config.elements.data[ modelCID ];
+
+			if ( ! elementData ) {
+				return {};
+			}
+
+			return elementData.toJSON();
 		}
 	}
 
@@ -379,9 +445,6 @@
 		 */
 		defaultSettings = {
 			layoutType: 'masonry',
-			columns: 3,
-			columnsTablet: 2,
-			columnsMobile: 1,
 			justifyHeight: 300
 		}
 

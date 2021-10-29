@@ -73,10 +73,12 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'slides_to_show',
 			array(
-				'label'   => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => '1',
-				'options' => jet_widgets_tools()->get_select_range( 10 ),
+				'label'              => esc_html__( 'Slides to Show', 'jetwidgets-for-elementor' ),
+				'type'               => Controls_Manager::SELECT,
+				'default'            => '1',
+				'options'            => jet_widgets_tools()->get_select_range( 10 ),
+				'frontend_available' => true,
+				'render_type'        => 'template',
 			)
 		);
 
@@ -2551,11 +2553,6 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 		$settings = $this->get_settings();
 
 		$instance_settings = array(
-			'slidesToShow'   => array(
-				'desktop' => absint( $settings['slides_to_show'] ),
-				'tablet'  => absint( $settings['slides_to_show_tablet'] ),
-				'mobile'  => absint( $settings['slides_to_show_mobile'] ),
-			),
 			'autoplaySpeed'  => absint( $settings['autoplay_speed'] ),
 			'autoplay'       => filter_var( $settings['autoplay'], FILTER_VALIDATE_BOOLEAN ),
 			'infinite'       => filter_var( $settings['infinite'], FILTER_VALIDATE_BOOLEAN ),

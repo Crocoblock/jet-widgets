@@ -377,7 +377,7 @@ if ( ! class_exists( 'Cherry_Core' ) ) {
 		 * @param  string $module_path A full path to the core or module file.
 		 * @return string
 		 */
-		public static function base_url( $file_path = '', $module_path ) {
+		public static function base_url( $file_path = '', $module_path = '' ) {
 			$module_path = wp_normalize_path( $module_path );
 			preg_match( '/\.[0-9a-z]+$/', $module_path, $ext );
 

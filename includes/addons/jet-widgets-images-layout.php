@@ -91,12 +91,18 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 		$this->add_responsive_control(
 			'columns',
 			array(
-				'label'   => esc_html__( 'Columns', 'jetwidgets-for-elementor' ),
-				'type'    => Controls_Manager::SELECT,
-				'default' => 3,
-				'options' => jet_widgets_tools()->get_select_range( 6 ),
-				'condition' => array(
+				'label'              => esc_html__( 'Columns', 'jetwidgets-for-elementor' ),
+				'type'               => Controls_Manager::SELECT,
+				'default'            => 3,
+				'options'            => jet_widgets_tools()->get_select_range( 6 ),
+				'condition'          => array(
 					'layout_type' => array( 'masonry', 'grid' ),
+				),
+				'frontend_available' => true,
+				'render_type'        => 'template',
+				'selectors'          => array(
+					'{{WRAPPER}} .salvattore-column' => 'width: calc(100% / {{VALUE}});',
+					'{{WRAPPER}} .jw-images-layout__list::before' => 'content: "{{VALUE}} .salvattore-column"',
 				),
 			)
 		);
@@ -853,9 +859,6 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 
 		$settings = array(
 			'layoutType'    => $module_settings['layout_type'],
-			'columns'       => $module_settings['columns'],
-			'columnsTablet' => $module_settings['columns_tablet'],
-			'columnsMobile' => $module_settings['columns_mobile'],
 			'justifyHeight' => $module_settings['justify_height'],
 		);
 

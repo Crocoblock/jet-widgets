@@ -87,7 +87,7 @@ if ( ! class_exists( 'Cherry_Satellite_Utilit' ) ) {
 		 * @since  1.0.0
 		 * @return string
 		 */
-		public function cut_text( $text = '', $length = -1, $trimmed_type = 'word', $after, $content = false ) {
+		public function cut_text( $text = '', $length = -1, $trimmed_type = 'word', $after = '&hellip;', $content = false ) {
 
 			if ( -1 !== $length ) {
 
