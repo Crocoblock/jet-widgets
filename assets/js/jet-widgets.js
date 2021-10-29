@@ -253,7 +253,6 @@
 
 		initCarousel: function( $target, options ) {
 
-			//var tabletSlides, mobileSlides, defaultOptions, slickOptions;
 			var	defaultOptions,
 				slickOptions,
 				responsive        = [],
@@ -264,11 +263,13 @@
 				slidesCount,
 				dotsEnable = options.dots;
 
-			if ( 'widescreen'.indexOf(activeBreakpoints ) ) {
-				options.slidesToShow = breakpoints.slides_to_show_widescreen ? +breakpoints.slides_to_show_widescreen : +breakpoints.slides_to_show;
-			} else {
-				options.slidesToShow = +breakpoints.slides_to_show;
-			}
+			options.slidesToShow = +breakpoints.slides_to_show;
+
+			Object.keys( activeBreakpoints ).forEach( function( breakpointName ) {
+				if ( 'widescreen' === breakpointName ) {
+					return options.slidesToShow = breakpoints.slides_to_show_widescreen ? +breakpoints.slides_to_show_widescreen : +breakpoints.slides_to_show;
+				}
+			} );
 
 			slidesCount = $( '> div', $target ).length;
 
@@ -460,9 +461,9 @@
 				case 'masonry':
 					salvattore.init();
 
-					$(window).on( 'resize', function() {
+					$(window).on( 'resize orientationchange', function() {
 						salvattore.rescanMediaQueries();
-					} )
+					} );
 				break;
 				case 'justify':
 					$itemsList.each( function() {
