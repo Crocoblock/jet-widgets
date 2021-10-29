@@ -459,6 +459,10 @@
 			switch ( settings['layoutType'] ) {
 				case 'masonry':
 					salvattore.init();
+
+					$(window).on( 'resize', function() {
+						salvattore.rescanMediaQueries();
+					} )
 				break;
 				case 'justify':
 					$itemsList.each( function() {
