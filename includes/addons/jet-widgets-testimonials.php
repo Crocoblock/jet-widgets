@@ -2561,7 +2561,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 			'speed'          => absint( $settings['speed'] ),
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
-			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
+			'slidesToScroll' => 1 < absint( $settings['slides_to_show'] ) ? absint( $settings['slides_to_scroll'] ) : 1,
 			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="prev-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
 			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="next-arrow jw-arrow jet-widgets-icon">%s</div>', '', false ),
 		);

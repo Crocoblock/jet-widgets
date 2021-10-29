@@ -1484,7 +1484,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			'speed'          => absint( $settings['speed'] ),
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
-			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
+			'slidesToScroll' => 1 < absint( $settings['slides_to_show'] ) ? absint( $settings['slides_to_scroll'] ) : 1,
 			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-image-comparison__prev-arrow-' . $widget_id .' prev-arrow jw-arrow slick-arrow">%s</div>', '', false ),
 			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-image-comparison__next-arrow-' . $widget_id .' next-arrow jw-arrow slick-arrow">%s</div>', '', false ),
 		);

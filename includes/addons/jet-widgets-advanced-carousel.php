@@ -1740,7 +1740,7 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			'speed'          => absint( $settings['speed'] ),
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
-			'slidesToScroll' => absint( $settings['slides_to_scroll'] ),
+			'slidesToScroll' => 1 < absint( $settings['slides_to_show'] ) ? absint( $settings['slides_to_scroll'] ) : 1,
 			'prevArrow'      => $prevArrowIcon,
 			'variableWidth'  => $vertical_carousel ? false : filter_var( $settings['fluid_width'], FILTER_VALIDATE_BOOLEAN ),
 			'vertical'       => filter_var( $settings['vertical_carousel'], FILTER_VALIDATE_BOOLEAN ),
