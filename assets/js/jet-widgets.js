@@ -242,7 +242,6 @@
 			}
 
 			settings.draggable = false;
-			settings.infinite  = false;
 
 			$target.on( 'init', function( event, slick ){
 				window.juxtapose.scanPage( '.jw-juxtapose' );
