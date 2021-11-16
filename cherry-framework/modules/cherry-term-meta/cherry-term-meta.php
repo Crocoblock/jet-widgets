@@ -277,7 +277,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 				if ( is_array( $_POST[ $key ] ) ) {
 					$new_val = array_filter( $_POST[ $key ] );
 				} else {
-					$new_val = esc_attr( $_POST[ $key ] );
+					$new_val = sanitize_text_field( $_POST[ $key ] );
 				}
 
 				update_term_meta( $term_id, $key, $new_val );

@@ -193,8 +193,8 @@ if ( ! class_exists( 'Cherry5_Insertion_Popup' ) ) {
 		public function get_shortcode_options() {
 			$shortcode_list = apply_filters( 'cherry5-is__shortcode_list', array() );
 
-			$plugin_slug = ( ! empty( $_GET['data']['plugin_slug'] ) )? $_GET['data']['plugin_slug'] : '' ;
-			$shortcode_slug = ( ! empty( $_GET['data']['shortcode_slug'] ) )? $_GET['data']['shortcode_slug'] : '' ;
+			$plugin_slug = ( ! empty( $_GET['data']['plugin_slug'] ) )? sanitize_text_field( $_GET['data']['plugin_slug'] ) : '' ;
+			$shortcode_slug = ( ! empty( $_GET['data']['shortcode_slug'] ) )? sanitize_text_field( $_GET['data']['shortcode_slug'] ) : '' ;
 			$shortcode_attr = isset( $shortcode_list[ $plugin_slug ]['shortcodes'][ $shortcode_slug ] ) ? $shortcode_list[ $plugin_slug ]['shortcodes'][ $shortcode_slug ] : false;
 
 			if ( ! $shortcode_attr ) {
@@ -303,4 +303,3 @@ if ( ! class_exists( 'Cherry5_Insertion_Popup' ) ) {
 		}
 	}
 }
-
