@@ -447,7 +447,7 @@ if ( ! class_exists( 'Cherry5_Interface_Builder' ) ) {
 			if ( ! filter_var( $echo, FILTER_VALIDATE_BOOLEAN ) ) {
 				return $output;
 			} else {
-				echo $output;
+				echo self::kses( $output );
 			}
 		}
 
@@ -473,6 +473,10 @@ if ( ! class_exists( 'Cherry5_Interface_Builder' ) ) {
 				$this->core_version,
 				'all'
 			);
+		}
+
+		public static function kses( $string ) {
+			return apply_filters( 'cherry5_interface_builder_kses', $string );
 		}
 
 		/**

@@ -25,10 +25,10 @@ if ( ! defined( 'WPINC' ) ) {
 	<?php if ( ! empty( $__data['children'] ) ) { ?>
 		<div class="cherry-tab__body" >
 			<div class="cherry-tab__tabs" role="navigation" >
-				<?php echo $__data['tabs']; ?>
+				<?php echo Cherry5_Interface_Builder::kses( $__data['tabs'] ); ?>
 			</div>
 			<div class="cherry-ui-kit__content cherry-component__content cherry-tab__content" role="group" >
-				<?php echo $__data['children']; ?>
+				<?php echo Cherry5_Interface_Builder::kses( $__data['children'] ); ?>
 			</div>
 		</div>
 	<?php } ?>

@@ -1522,7 +1522,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 		$title_html = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', jet_widgets_tools()->validate_html_tag( $settings['header_size'] ), $heading_classes, $title );
 
-		echo $title_html;
+		echo wp_kses_post( $title_html );
 	}
 
 }

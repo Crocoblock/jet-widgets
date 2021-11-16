@@ -288,7 +288,7 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 			echo '<div class="notice notice-info">';
 				echo '<p>';
 					$this->notice_title( $slug );
-					echo $this->messages['update'];
+					echo wp_kses_post( $this->messages['update'] );
 				echo '</p>';
 				echo '<p>';
 					$this->notice_submit( $slug );
@@ -310,7 +310,7 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 			echo '<div class="notice notice-success is-dismissible">';
 				echo '<p>';
 					$this->notice_title( $slug );
-					echo $this->messages['updated'];
+					echo wp_kses_post( $this->messages['updated'] );
 				echo '</p>';
 			echo '</div>';
 

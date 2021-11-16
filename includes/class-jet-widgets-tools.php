@@ -24,6 +24,15 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		private static $instance = null;
 
 		/**
+		 * Returns escaped attribute values
+		 * @param  [type] $string [description]
+		 * @return [type]         [description]
+		 */
+		public function esc_attr( $string ) {
+			return apply_filters( 'jet-widgets/tools/esc-attr', $string );
+		}
+
+		/**
 		 * Returns columns classes string
 		 * @param  [type] $columns [description]
 		 * @return [type]          [description]

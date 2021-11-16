@@ -238,7 +238,7 @@ if ( ! class_exists( 'Cherry_Abstract_Widget' ) ) {
 			}
 
 			if ( isset( $cache[ $args['widget_id'] ] ) ) {
-				echo $cache[ $args['widget_id'] ];
+				echo wp_kses_post( $cache[ $args['widget_id'] ] );
 				return true;
 			}
 
@@ -297,7 +297,7 @@ if ( ! class_exists( 'Cherry_Abstract_Widget' ) ) {
 		 */
 		public function widget_start( $args, $instance ) {
 
-			echo $args['before_widget'];
+			echo wp_kses_post( $args['before_widget'] );
 
 			$title = apply_filters(
 				'widget_title',
@@ -305,7 +305,7 @@ if ( ! class_exists( 'Cherry_Abstract_Widget' ) ) {
 			);
 
 			if ( $title ) {
-				echo $args['before_title'] . $title . $args['after_title'];
+				echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] );
 			}
 		}
 
@@ -317,7 +317,7 @@ if ( ! class_exists( 'Cherry_Abstract_Widget' ) ) {
 		 * @return void
 		 */
 		public function widget_end( $args ) {
-			echo $args['after_widget'];
+			echo wp_kses_post( $args['after_widget'] );
 		}
 
 		/**

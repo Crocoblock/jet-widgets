@@ -25,9 +25,8 @@ $item_after_image = $this->__loop_item( array( 'item_after_image', 'url' ), '%s'
 
 ?>
 <div class="jw-image-comparison__item">
-	<div class="jw-image-comparison__container jw-juxtapose" data-prev-icon="<?php echo $prevArrow; ?>" data-next-icon="<?php echo $nextArrow; ?>" data-makeresponsive="true" data-startingposition="<?php echo $starting_position_string; ?>">
-		<img class="jw-image-comparison__before-image" src="<?php echo $item_before_image; ?>" <?php echo $item_before_label; ?> alt="">
-		<img class="jw-image-comparison__after-image" src="<?php echo $item_after_image; ?>" <?php echo $item_after_label; ?> alt="">
+	<div class="jw-image-comparison__container jw-juxtapose" data-prev-icon="<?php echo esc_attr( $prevArrow ); ?>" data-next-icon="<?php echo esc_attr( $nextArrow ); ?>" data-makeresponsive="true" data-startingposition="<?php echo esc_attr( $starting_position_string ); ?>">
+		<img class="jw-image-comparison__before-image" src="<?php echo esc_url( $item_before_image ); ?>" <?php echo esc_attr( $item_before_label ); ?> alt="">
+		<img class="jw-image-comparison__after-image" src="<?php echo esc_url( $item_after_image ); ?>" <?php echo esc_attr( $item_after_label ); ?> alt="">
 	</div>
 </div>
-

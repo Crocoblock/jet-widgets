@@ -2082,7 +2082,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			$attributes[ $attr ] = isset( $settings[ $attr ] ) ? $settings[ $attr ] : false;
 		}
 
-		echo $this->maybe_apply_carousel_wrappers( $shortcode_obj->do_shortcode( $attributes ), $settings );
+		echo wp_kses_post( $this->maybe_apply_carousel_wrappers( $shortcode_obj->do_shortcode( $attributes ), $settings ) );
 
 		$this->__close_wrap();
 	}

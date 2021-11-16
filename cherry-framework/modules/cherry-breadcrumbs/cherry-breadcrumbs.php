@@ -214,7 +214,7 @@ if ( ! class_exists( 'Cherry_Breadcrumbs' ) ) {
 			$result .= "\n\t\t" . '</div>';
 
 			if ( true === $this->args['echo'] ) {
-				echo $result;
+				echo wp_kses_post( $result );
 			} else {
 				return $result;
 			}

@@ -324,7 +324,7 @@ if ( ! class_exists( 'UI_Repeater' ) ) {
 		 * @return void
 		 */
 		public function print_js_template() {
-			echo $this->get_js_template();
+			echo wp_kses_post( $this->get_js_template() );
 		}
 
 		/**

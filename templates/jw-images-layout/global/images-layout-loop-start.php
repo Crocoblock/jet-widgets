@@ -33,4 +33,4 @@ $classes = implode( ' ', $class_array );
 $attrs = implode( ' ', $attr_array );
 
 ?>
-<div class="<?php echo $classes; ?>" <?php echo $attrs; ?>>
+<div class="<?php echo esc_attr( $classes ); ?>" <?php echo jet_widgets_tools()->esc_attr( $attrs ); ?>>

@@ -92,7 +92,7 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 			$result = vsprintf( $format, $args );
 
 			if ( $echo ) {
-				echo $result;
+				echo wp_kses_post( $result );
 			} else {
 				return $result;
 			}

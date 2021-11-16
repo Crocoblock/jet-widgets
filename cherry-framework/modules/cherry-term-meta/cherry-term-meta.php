@@ -133,7 +133,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 		public function render_add_fields( $taxonomy ) {
 
 			$format = '<div style="padding:10px 0;">%s</div>';
-			echo $this->get_fields( false, $taxonomy, $format );
+			echo wp_kses_post( $this->get_fields( false, $taxonomy, $format ) );
 		}
 
 		/**
@@ -147,7 +147,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 		public function render_edit_fields( $term, $taxonomy ) {
 
 			$format = '<tr class="form-field cherry-term-meta-wrap"><th>&nbsp;</th><td>%s</td></tr>';
-			echo $this->get_fields( $term, $taxonomy, $format );
+			echo wp_kses_post( $this->get_fields( $term, $taxonomy, $format ) );
 		}
 
 		/**

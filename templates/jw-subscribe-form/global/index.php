@@ -37,10 +37,10 @@ if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
 }
 
 ?>
-<div <?php echo $this->get_render_attribute_string( 'main-container' ); ?>>
+<div <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'main-container' ) ); ?>>
 	<form method="POST" action="#" class="jw-subscribe-form__form">
 		<div class="jw-subscribe-form__input-group">
-			<input <?php echo $this->get_render_attribute_string( 'form-input' ); ?>>
+			<input <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'form-input' ) ); ?>>
 			<?php echo sprintf( '<a class="jw-subscribe-form__submit elementor-button elementor-size-md" href="#">%s<span class="jw-subscribe-form__submit-text">%s</span></a>', $icon_html, $submit_button_text ); ?>
 		</div>
 		<div class="jw-subscribe-form__message"><div class="jw-subscribe-form__message-inner"><span></span></div></div>

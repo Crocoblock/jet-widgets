@@ -12,4 +12,4 @@ $class_array[] = 'elementor-slick-slider';
 $classes = implode( ' ', $class_array );
 
 ?>
-<div class="<?php echo $classes; ?>" <?php echo $data_settings; ?>>
+<div class="<?php echo esc_attr( $classes ); ?>" <?php echo jet_widgets_tools()->esc_attr( $data_settings ); ?>>

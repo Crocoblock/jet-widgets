@@ -14,7 +14,7 @@ $this->add_render_attribute( 'button', array(
 ) );
 
 ?>
-<a <?php echo $this->get_render_attribute_string( 'button' ); ?>><?php
+<a <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'button' ) ); ?>><?php
 
 	$position = $this->get_settings( 'button_icon_position' );
 	$icon     = $this->get_settings( 'add_button_icon' );
@@ -23,7 +23,7 @@ $this->add_render_attribute( 'button', array(
 		$this->_render_icon( 'button_icon', '<span class="jet-widgets-icon button-icon">%s</span>' );
 	}
 
-	echo $this->__html( 'button_text' );
+	echo wp_kses_post( $this->__html( 'button_text' ) );
 
 	if ( $icon && 'right' === $position ) {
 		$this->_render_icon( 'button_icon', '<span class="jet-widgets-icon button-icon">%s</span>' );

@@ -275,7 +275,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_link( $args = array() ) {
 
-			echo $this->get_post_format_link( $args );
+			echo wp_kses_post( $this->get_post_format_link( $args ) );
 
 		}
 
@@ -305,7 +305,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_quote( $args ) {
 
-			echo $this->get_post_format_quote();
+			echo wp_kses_post( $this->get_post_format_quote() );
 
 		}
 
@@ -360,7 +360,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_audio( $args ) {
 
-			echo $this->get_post_format_audio();
+			echo wp_kses_post( $this->get_post_format_audio() );
 
 		}
 
@@ -448,7 +448,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_video( $args = array() ) {
 
-			echo $this->get_post_format_video( $args );
+			echo wp_kses_post( $this->get_post_format_video( $args ) );
 
 		}
 
@@ -606,7 +606,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_image( $args ) {
 
-			echo $this->get_post_format_image( $args );
+			echo wp_kses_post( $this->get_post_format_image( $args ) );
 
 		}
 
@@ -728,7 +728,7 @@ if ( ! class_exists( 'Cherry_Post_Formats_Api' ) ) {
 		 */
 		public function post_format_gallery( $args ) {
 
-			echo $this->get_post_format_gallery( $args );
+			echo wp_kses_post( $this->get_post_format_gallery( $args ) );
 
 		}
 

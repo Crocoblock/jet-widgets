@@ -23,22 +23,22 @@ if ( filter_var( $show_on_hover, FILTER_VALIDATE_BOOLEAN ) ) {
 $classes = implode( ' ', $classes_list );
 
 ?>
-<div class="<?php echo $classes; ?>">
+<div class="<?php echo esc_attr( $classes ); ?>">
 	<div class="jw-team-member__inner">
 		<div class="jw-team-member__image">
 			<div class="jw-team-member__cover"><?php
-				echo $this->__generate_name( true );
-				echo $this->__generate_position( true );
-				echo $this->__generate_description( true );
-				echo $this->__generate_social_icon_list( true );
-				echo $this->__generate_action_button( true ); ?></div>
-			<?php echo $this->__get_member_image(); ?>
+				echo wp_kses_post( $this->__generate_name( true ) );
+				echo wp_kses_post( $this->__generate_position( true ) );
+				echo wp_kses_post( $this->__generate_description( true ) );
+				echo wp_kses_post( $this->__generate_social_icon_list( true ) );
+				echo wp_kses_post( $this->__generate_action_button( true ) ); ?></div>
+			<?php echo wp_kses_post( $this->__get_member_image() ); ?>
 		</div>
 		<div class="jw-team-member__content"><?php
-			echo $this->__generate_name();
-			echo $this->__generate_position();
-			echo $this->__generate_description();
-			echo $this->__generate_social_icon_list();
-			echo $this->__generate_action_button(); ?></div>
+			echo wp_kses_post( $this->__generate_name() );
+			echo wp_kses_post( $this->__generate_position() );
+			echo wp_kses_post( $this->__generate_description() );
+			echo wp_kses_post( $this->__generate_social_icon_list() );
+			echo wp_kses_post( $this->__generate_action_button() ); ?></div>
 	</div>
 </div>

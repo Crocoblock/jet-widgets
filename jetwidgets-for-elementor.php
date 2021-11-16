@@ -10,8 +10,8 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
  *
- * Elementor tested up to: 3.2
- * Elementor Pro tested up to: 3.2
+ * Elementor tested up to: 3.5
+ * Elementor Pro tested up to: 3.5
  *
  * @package jet-widgets
  * @author  Crocoblock
@@ -97,9 +97,15 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 			// Load files.
 			add_action( 'init', array( $this, 'init' ), -999 );
 
+			add_filter( 'jet-widgets/tools/esc-attr', array( $this, 'remove_invalid_utf' ) );
+
 			// Register activation and deactivation hook.
 			register_activation_hook( __FILE__, array( $this, 'activation' ) );
 			register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );
+		}
+
+		public function remove_invalid_utf( $string ) {
+			return wp_check_invalid_utf8( $string, true );
 		}
 
 		/**

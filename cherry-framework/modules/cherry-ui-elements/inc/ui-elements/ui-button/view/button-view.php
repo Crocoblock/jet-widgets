@@ -34,4 +34,4 @@ if ( filter_var( $__data['disabled'], FILTER_VALIDATE_BOOLEAN ) ) {
 }
 ?>
 
-<button <?php echo $attrs; ?>><?php echo $__data['content']; ?></button>
+<button <?php echo esc_attr( $attrs ); ?>><?php echo wp_kses_post( $__data['content'] ); ?></button>

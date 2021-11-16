@@ -38,11 +38,10 @@ if ( is_array( $button_url ) ) {
 }
 
 ?>
-<a <?php echo $this->get_render_attribute_string( 'url' ); ?>><?php
-	echo $this->__html( 'back_side_button_text', '<span class="jw-animated-box__button-text">%s</span>' );
+<a <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'url' ) ); ?>><?php
+	echo wp_kses_post( $this->__html( 'back_side_button_text', '<span class="jw-animated-box__button-text">%s</span>' ) );
 
 	if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
-		echo $this->_render_icon( 'button_icon', '%s', 'jw-animated-box__button-icon' );
+		echo wp_kses_post( $this->_render_icon( 'button_icon', '%s', 'jw-animated-box__button-icon' ) );
 	}
 ?></a>
-

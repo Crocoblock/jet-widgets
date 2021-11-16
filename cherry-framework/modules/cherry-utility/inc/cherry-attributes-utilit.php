@@ -165,7 +165,7 @@ if ( ! class_exists( 'Cherry_Attributes_Utilit' ) ) {
 					}
 
 					$title = ( $args['title'] ) ? 'title="' . $args['title'] . '"' : 'title="' . $title . '"' ;
-					$html = sprintf( $args['html'], $link, $title, $html_class, wp_kses( $text, wp_kses_allowed_html( 'post' ) ), $args['icon'] );
+					$html = sprintf( $args['html'], $link, $title, $html_class, wp_kses_post( $text ), $args['icon'] );
 				}
 			}
 

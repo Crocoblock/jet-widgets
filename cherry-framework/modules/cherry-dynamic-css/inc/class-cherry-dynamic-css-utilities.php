@@ -762,7 +762,7 @@ if ( ! class_exists( 'Cherry_Dynamic_Css_Utilities' ) ) {
 				return;
 			}
 
-			echo $rule . ': ' . $value;
+			echo esc_attr( $rule . ': ' . $value );
 
 			if ( is_numeric( $value ) ) {
 				echo 'px; ';

@@ -113,13 +113,13 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 */
 	public function __get_edit_looped_template( $templates = array(), $setting = null ) {
 		?>
-		<# if ( settings.<?php echo $setting; ?> ) { #>
+		<# if ( settings.<?php echo esc_attr( $setting ); ?> ) { #>
 		<?php
 			if ( ! empty( $templates['start'] ) ) {
 				include $templates['start'];
 			}
 		?>
-			<# _.each( settings.<?php echo $setting; ?>, function( item ) { #>
+			<# _.each( settings.<?php echo esc_attr( $setting ); ?>, function( item ) { #>
 			<?php
 				if ( ! empty( $templates['loop'] ) ) {
 					include $templates['loop'];
@@ -258,7 +258,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 
 		?>
 
-		<# if ( <?php echo $condition; ?> ) { #>
+		<# if ( <?php echo esc_attr( $condition ); ?> ) { #>
 
 			<?php include $file; ?>
 

@@ -16,19 +16,19 @@ if ( filter_var( $show_on_hover, FILTER_VALIDATE_BOOLEAN ) ) {
 $classes = implode( ' ', $classes_list );
 
 ?>
-<div class="<?php echo $classes; ?>">
+<div class="<?php echo esc_attr( $classes ); ?>">
 	<div class="jw-services__inner">
 		<div class="jw-services__header">
 			<div class="jw-services__cover"><?php
-			echo $this->__generate_icon( true );
-			echo $this->__generate_title( true );
-			echo $this->__generate_description( true );
-			echo $this->__generate_action_button( true ); ?></div>
+			echo wp_kses_post( $this->__generate_icon( true ) );
+			echo wp_kses_post( $this->__generate_title( true ) );
+			echo wp_kses_post( $this->__generate_description( true ) );
+			echo wp_kses_post( $this->__generate_action_button( true ) ); ?></div>
 		</div>
 		<div class="jw-services__content"><?php
-			echo $this->__generate_icon();
-			echo $this->__generate_title();
-			echo $this->__generate_description();
-			echo $this->__generate_action_button(); ?></div>
+			echo wp_kses_post( $this->__generate_icon() );
+			echo wp_kses_post( $this->__generate_title() );
+			echo wp_kses_post( $this->__generate_description() );
+			echo wp_kses_post( $this->__generate_action_button() ); ?></div>
 	</div>
 </div>

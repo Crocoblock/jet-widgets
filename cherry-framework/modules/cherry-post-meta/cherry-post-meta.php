@@ -267,7 +267,7 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 			$custom_box = apply_filters( 'cherry_post_meta_custom_box', false, $post, $metabox );
 
 			if ( false !== $custom_box ) {
-				echo $custom_box;
+				echo wp_kses_post( $custom_box );
 				return;
 			}
 
