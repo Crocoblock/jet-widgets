@@ -1784,7 +1784,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 		$this->__close_wrap();
 	}
 
-	protected function _content_template() {}
+	protected function content_template() {}
 
 	public function __pricing_feature_icon() {
 		return call_user_func( array( $this, sprintf( '__pricing_feature_icon_%s', $this->__context ) ) );

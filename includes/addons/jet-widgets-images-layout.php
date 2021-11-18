@@ -906,5 +906,5 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 		$this->__close_wrap();
 	}
 
-	protected function _content_template() {}
+	protected function content_template() {}
 }
