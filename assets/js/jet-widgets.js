@@ -294,7 +294,7 @@
 
 			slidesCount = $( '> div', $target ).length;
 
-			if ( options.slidesToShow === slidesCount ) {
+			if ( options.slidesToShow >= slidesCount ) {
 				options.dots = false;
 			}
 
@@ -316,7 +316,7 @@
 				}
 
 				$target.on( 'init reInit', function(event, slick, currentSlide, nextSlide ){
-					if ( breakpointSetting.settings.slidesToShow === slick.slideCount ) {
+					if ( breakpointSetting.settings.slidesToShow >= slick.slideCount ) {
 						breakpointSetting.settings.dots = false;
 					} else {
 						if ( dotsEnable ) {
