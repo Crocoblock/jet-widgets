@@ -32,17 +32,13 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'step'       => 1,
 			),
 			'columns' => array(
-				'type'       => 'select',
-				'responsive' => true,
-				'label'      => esc_html__( 'Columns', 'jetwidgets-for-elementor' ),
-				'default'    => 3,
-				'options'    => $columns,
-			),
-			'columns_tablet' => array(
-				'default' => 2,
-			),
-			'columns_mobile' => array(
-				'default' => 1,
+				'type'               => 'select',
+				'responsive'         => true,
+				'label'              => esc_html__( 'Columns', 'jetwidgets-for-elementor' ),
+				'default'            => 3,
+				'options'            => $columns,
+				'frontend_available' => true,
+				'render_type'        => 'template',
 			),
 			'equal_height_cols' => array(
 				'label'        => esc_html__( 'Equal Columns Height', 'jetwidgets-for-elementor' ),
