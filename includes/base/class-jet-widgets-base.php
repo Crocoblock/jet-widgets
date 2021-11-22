@@ -165,8 +165,8 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 
 		ob_start();
 
-		echo '<# if ( item.' . $settings . ' ) { #>';
-		printf( $format, '{{{ item.' . $settings . ' }}}' );
+		echo '<# if ( item.' . esc_attr( $settings ) . ' ) { #>';
+		printf( $format, '{{{ item.' . esc_attr( $settings ) . ' }}}' );
 		echo '<# } #>';
 
 		return ob_get_clean();
@@ -366,8 +366,8 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 			$setting = $setting[0] . '.' . $setting[1];
 		}
 
-		echo '<# if ( settings.' . $setting . ' ) { #>';
-		printf( $format, '{{{ settings.' . $setting . ' }}}' );
+		echo '<# if ( settings.' . esc_attr( $setting ) . ' ) { #>';
+		printf( $format, '{{{ settings.' . esc_attr( $setting ) . ' }}}' );
 		echo '<# } #>';
 	}
 

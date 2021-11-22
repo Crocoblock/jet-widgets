@@ -162,21 +162,6 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 							),
 						)
 					),
-					'cherry-widget-factory' => array(
-						'autoload' => true,
-					),
-					'cherry-term-meta' => array(
-						'autoload' => false,
-					),
-					'cherry-post-meta' => array(
-						'autoload' => false,
-					),
-					'cherry-dynamic-css' => array(
-						'autoload' => false,
-					),
-					'cherry5-insert-shortcode' => array(
-						'autoload' => false,
-					),
 					'cherry5-assets-loader' => array(
 						'autoload' => false,
 					),
