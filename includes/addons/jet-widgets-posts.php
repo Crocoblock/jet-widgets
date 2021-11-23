@@ -2074,7 +2074,8 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				$attr_val            = ! is_array( $attr_val ) ? $attr_val : implode( ',', $attr_val );
 			}
 
-			$attributes[ $attr ] = $attr_val;
+			$attributes[ $attr ] = jet_widgets_tools()->esc_attr( $attr_val );
+
 		}
 
 		// Add custom fields attributes

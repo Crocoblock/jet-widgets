@@ -104,6 +104,44 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		}
 
 		/**
+		 * Returns allowed options list
+		 *
+		 * @return array
+		 */
+		public function allowed_settings() {
+			return apply_filters( 'jet-widgets/allowed-settings', array(
+				'svg_uploads',
+				'mailchimp-api-key',
+				'mailchimp-list-id',
+				'mailchimp-double-opt-in',
+				'avaliable_widgets',
+			) );
+		}
+
+		/**
+		 * validate given setting
+		 *
+		 * @return [type] [description]
+		 */
+		public function sanitize_setting( $input ) {
+
+			if ( is_array( $input ) ) {
+
+				$sanitized = array();
+
+				foreach ( $input as $key => $value ) {
+					$sanitized[ $key ] = $this->sanitize_setting( $value );
+				}
+
+				return $sanitized;
+
+			} else {
+				return sanitize_text_field( $input );
+			}
+
+		}
+
+		/**
 		 * Save settings
 		 *
 		 * @return void
@@ -123,12 +161,11 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 			}
 
 			$current = get_option( $this->key, array() );
-			$data    = $_REQUEST;
+			$data    = array();
 
-			unset( $data['action'] );
-
-			foreach ( $data as $key => $value ) {
-				$current[ $key ] = is_array( $value ) ? $value : esc_attr( $value );
+			foreach ( $this->allowed_settings() as $setting ) {
+				$default             = isset( $current[ $setting ] ) ? $current[ $setting ] : false;
+				$current[ $setting ] = isset( $_POST[ $setting ] ) ? $this->sanitize_setting( $_POST[ $setting ] ) : $default;
 			}
 
 			update_option( $this->key, $current );

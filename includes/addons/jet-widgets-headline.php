@@ -1475,7 +1475,13 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			$first_classes = implode( ' ', $first_classes_array );
 
-			$first_part = sprintf( '<span class="%1$s">%2$s<span class="jw-headline__label">%3$s</span></span>%4$s', $first_classes, $before_deco_html, $settings['first_part'], $space );
+			$first_part = sprintf(
+				'<span class="%1$s">%2$s<span class="jw-headline__label">%3$s</span></span>%4$s',
+				esc_attr( $first_classes ),
+				$before_deco_html,
+				wp_kses_post( $settings['first_part'] ),
+				$space
+			);
 		}
 
 		if ( ! empty( $settings['second_part'] ) ) {
@@ -1487,7 +1493,12 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 
 			$second_classes = implode( ' ', $second_classes_array );
 
-			$second_part = sprintf( '<span class="%1$s"><span class="jw-headline__label">%2$s</span>%3$s</span>', $second_classes, $settings['second_part'], $after_deco_html );
+			$second_part = sprintf(
+				'<span class="%1$s"><span class="jw-headline__label">%2$s</span>%3$s</span>',
+				esc_attr( $second_classes ),
+				wp_kses_post( $settings['second_part'] ),
+				$after_deco_html
+			);
 		}
 
 		$deco_devider_left = '';
@@ -1520,7 +1531,12 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 			$title = sprintf( '<a class="jw-headline__link" %1$s>%2$s</a>', $this->get_render_attribute_string( 'url' ), $title );
 		}
 
-		$title_html = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', jet_widgets_tools()->validate_html_tag( $settings['header_size'] ), $heading_classes, $title );
+		$title_html = sprintf(
+			'<%1$s class="%2$s">%3$s</%1$s>',
+			jet_widgets_tools()->validate_html_tag( $settings['header_size'] ),
+			esc_attr( $heading_classes ),
+			$title
+		);
 
 		echo wp_kses_post( $title_html );
 	}

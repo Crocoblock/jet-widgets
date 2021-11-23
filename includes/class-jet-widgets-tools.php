@@ -53,7 +53,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 				}
 			}
 
-			return implode( ' ' , $classes );
+			return esc_attr( implode( ' ' , $classes ) );
 		}
 
 		/**
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 				}
 			}
 
-			return implode( ' ', $result );
+			return esc_attr( implode( ' ', $result ) );
 
 		}
 
@@ -291,7 +291,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 
 			$format = apply_filters( 'jet_widgets/carousel/arrows_format', '<i class="%s jw-arrow"></i>', $classes );
 
-			return sprintf( $format, implode( ' ', $classes ) );
+			return sprintf( $format, esc_attr( implode( ' ', $classes ) ) );
 		}
 
 		/**
