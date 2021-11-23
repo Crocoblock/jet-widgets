@@ -76,7 +76,7 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 			);
 		}
 
-		public function snitize_data( $input = array() ) {
+		public function sanitize_data( $input = array() ) {
 
 			foreach ( $input as $key => $value ) {
 				$input[ $key ] = sanitize_text_field( $value );
@@ -92,7 +92,7 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 		 */
 		public function jw_subscribe_form_ajax() {
 
-			$data = ( ! empty( $_POST['data'] ) ) ? $this->snitize_data( $_POST['data'] ) : false;
+			$data = ( ! empty( $_POST['data'] ) ) ? $this->sanitize_data( $_POST['data'] ) : false;
 
 			if ( ! $data ) {
 				wp_send_json_error( array( 'type' => 'error', 'message' => $this->sys_messages['server_error'] ) );

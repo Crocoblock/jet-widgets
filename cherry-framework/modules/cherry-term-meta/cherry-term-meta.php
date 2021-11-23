@@ -275,7 +275,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 				}
 
 				if ( is_array( $_POST[ $key ] ) ) {
-					$new_val = array_filter( $_POST[ $key ] );
+					$new_val = array_map( 'sanitize_text_field', array_filter( $_POST[ $key ] ) );
 				} else {
 					$new_val = sanitize_text_field( $_POST[ $key ] );
 				}
