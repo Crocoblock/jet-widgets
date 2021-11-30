@@ -20,13 +20,13 @@ $classes = implode( ' ', $classes_list );
 	<div class="jw-services__inner">
 		<div class="jw-services__header">
 			<div class="jw-services__cover"><?php
-			echo wp_kses_post( $this->__generate_icon( true ) );
+			echo $this->__generate_icon( true );
 			echo wp_kses_post( $this->__generate_title( true ) );
 			echo wp_kses_post( $this->__generate_description( true ) );
 			echo wp_kses_post( $this->__generate_action_button( true ) ); ?></div>
 		</div>
 		<div class="jw-services__content"><?php
-			echo wp_kses_post( $this->__generate_icon() );
+			echo $this->__generate_icon();
 			echo wp_kses_post( $this->__generate_title() );
 			echo wp_kses_post( $this->__generate_description() );
 			echo wp_kses_post( $this->__generate_action_button() ); ?></div>
