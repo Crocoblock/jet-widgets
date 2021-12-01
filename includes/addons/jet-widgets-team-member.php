@@ -468,7 +468,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label'       => esc_html__( 'Border', 'jetwidgets-for-elementor' ),
 				'placeholder' => '1px',
 				'default'     => '1px',
-				'selector'  => '{{WRAPPER}} ' . $css_scheme['image'],
+				'selector'  => '{{WRAPPER}} ' . $css_scheme['figure'],
 			)
 		);
 

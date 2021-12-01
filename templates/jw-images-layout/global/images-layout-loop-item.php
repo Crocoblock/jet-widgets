@@ -3,15 +3,6 @@
  * Images list item template
  */
 $settings = $this->get_settings();
-$col_class = '';
-
-if ( 'grid' === $settings['layout_type'] ) {
-	$col_class = jet_widgets_tools()->col_classes( array(
-		'desk' => $this->__get_html( 'columns' ),
-		'tab'  => $this->__get_html( 'columns_tablet' ),
-		'mob'  => $this->__get_html( 'columns_mobile' ),
-	) );
-}
 
 $link_instance = 'link-instance-' . $this->item_counter;
 
@@ -40,7 +31,7 @@ $alt = esc_attr( Elementor\Control_Media::get_image_alt( $this->__processed_item
 $this->item_counter++;
 
 ?>
-<div class="jw-images-layout__item <?php echo esc_attr( $col_class ); ?>">
+<div class="jw-images-layout__item">
 	<div class="jw-images-layout__inner">
 		<a <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( $link_instance ) ); ?>>
 			<div class="jw-images-layout__image">

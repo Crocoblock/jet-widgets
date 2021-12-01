@@ -262,6 +262,28 @@
 				slidesCount,
 				dotsEnable = options.dots;
 
+			if ( $target.hasClass( 'jw-posts' ) && $target.parent().hasClass( 'jw-carousel' ) ) {
+				function renameKeys( obj, newKeys ) {
+					const keyValues = Object.keys( obj ).map( key => {
+						const newKey = newKeys[key] || key;
+						return { [newKey]: obj[key] };
+					} );
+					return Object.assign( {}, ...keyValues );
+				}
+
+				var newBreakpointsKeys = {
+					columns: "slides_to_show",
+					columns_widescreen: "slides_to_show_widescreen",
+					columns_laptop: "slides_to_show_laptop",
+					columns_tablet_extra: "slides_to_show_tablet_extra",
+					columns_tablet: "slides_to_show_tablet",
+					columns_mobile_extra: "slides_to_show_mobile_extra",
+					columns_mobile: "slides_to_show_mobile"
+				};
+
+				breakpoints = renameKeys( breakpoints, newBreakpointsKeys );
+			}
+
 			options.slidesToShow = +breakpoints.slides_to_show;
 
 			Object.keys( activeBreakpoints ).forEach( function( breakpointName ) {
@@ -272,7 +294,7 @@
 
 			slidesCount = $( '> div', $target ).length;
 
-			if ( options.slidesToShow === slidesCount ) {
+			if ( options.slidesToShow >= slidesCount ) {
 				options.dots = false;
 			}
 
@@ -294,7 +316,7 @@
 				}
 
 				$target.on( 'init reInit', function(event, slick, currentSlide, nextSlide ){
-					if ( breakpointSetting.settings.slidesToShow === slick.slideCount ) {
+					if ( breakpointSetting.settings.slidesToShow >= slick.slideCount ) {
 						breakpointSetting.settings.dots = false;
 					} else {
 						if ( dotsEnable ) {

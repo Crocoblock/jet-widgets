@@ -103,6 +103,8 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 				'selectors'          => array(
 					'{{WRAPPER}} .salvattore-column' => 'width: calc(100% / {{VALUE}});',
 					'{{WRAPPER}} .jw-images-layout__list::before' => 'content: "{{VALUE}} .salvattore-column"',
+					'{{WRAPPER}} .layout-type-grid .jw-images-layout__list::before' => 'content: ""',
+					'{{WRAPPER}} .layout-type-grid .jw-images-layout__list .jw-images-layout__item' => 'width: calc(100% / {{VALUE}});',
 				),
 			)
 		);
@@ -906,5 +908,5 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 		$this->__close_wrap();
 	}
 
-	protected function _content_template() {}
+	protected function content_template() {}
 }

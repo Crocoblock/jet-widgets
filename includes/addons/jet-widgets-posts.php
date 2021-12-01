@@ -2016,8 +2016,6 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$options = array(
 			'slidesToShow'   => array(
 				'desktop' => absint( $settings['columns'] ),
-				'tablet'  => absint( $settings['columns_tablet'] ),
-				'mobile'  => absint( $settings['columns_mobile'] ),
 			),
 			'autoplaySpeed'  => absint( $settings['autoplay_speed'] ),
 			'autoplay'       => filter_var( $settings['autoplay'], FILTER_VALIDATE_BOOLEAN ),
@@ -2088,7 +2086,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 		$this->__close_wrap();
 	}
 
-	protected function _content_template() {}
+	protected function content_template() {}
 
 	/**
 	 * Add meta controls for selected poition
