@@ -26,10 +26,13 @@ if ( ! class_exists( 'Jet_Widgets_Compatibility' ) ) {
 		public function init() {
 
 			// WPML String Translation plugin exist check
-			if ( defined( 'WPML_ST_VERSION' ) ) {
-				$this->load_files();
-				add_filter( 'wpml_elementor_widgets_to_translate', array( $this, 'add_translatable_nodes' ) );
-			}
+            if ( defined( 'WPML_ST_VERSION' ) ) {
+                add_action('init', function() {
+                    $this->load_files();
+                }, 11);
+                add_filter( 'wpml_elementor_widgets_to_translate', array( $this, 'add_translatable_nodes' ) );
+            }
+
 		}
 
 		/**
