@@ -3,6 +3,10 @@
 Brand new addon for Elementor Page builder. It provides the set of modules to create different kinds of content, adds custom modules to your website and applies attractive styles in the matter of several clicks!
 
 # ChangeLog
+
+## [1.0.13]
+* FIX: Security issue on options save
+
 ## [1.0.12]
 * FIX: minor bugs
 * FIX: wpml compatibility
