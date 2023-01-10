@@ -60,6 +60,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 			$this->init_builder();
 
+			add_action( 'admin_enqueue_scripts', array( $this, 'inline_assets' ) );
 			add_action( 'admin_menu', array( $this, 'register_page' ), 99 );
 			add_action( 'init', array( $this, 'save' ), 40 );
 			add_action( 'admin_notices', array( $this, 'saved_notice' ) );
@@ -73,16 +74,37 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		}
 
 		/**
+		 * Check if is settings page now
+		 * 
+		 * @return boolean
+		 */
+		public function is_settings_page() {
+			return ( isset( $_REQUEST['page'] ) && $this->key === $_REQUEST['page'] );
+		}
+
+		/**
+		 * Add settings page inline assets
+		 */
+		public function inline_assets() {
+			if ( $this->is_settings_page() ) {
+				wp_add_inline_style( 'cherry-interface-builder', '.hidden-row {display:none;}' );
+			}
+		}
+
+		/**
 		 * Initialize page builder module if reqired
 		 *
 		 * @return [type] [description]
 		 */
 		public function init_builder() {
 
-			if ( isset( $_REQUEST['page'] ) && $this->key === $_REQUEST['page'] ) {
+			if ( $this->is_settings_page() ) {
 				$this->builder = jet_widgets()->get_core()->init_module( 'cherry-interface-builder', array() );
 			}
+
 		}
+
+
 
 		/**
 		 * Show saved notice
@@ -147,6 +169,10 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		 * @return void
 		 */
 		public function save() {
+
+			if ( empty( $_REQUEST['_nonce'] ) || ! wp_verify_nonce( $_REQUEST['_nonce'], 'jet-widgets-save' ) ) {
+				return;
+			}
 
 			if ( ! isset( $_REQUEST['page'] ) || $this->key !== $_REQUEST['page'] ) {
 				return;
@@ -370,6 +396,12 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						'parent' => 'settings_bottom',
 						'class'  => 'cherry-control dialog-save',
 						'html'   => '<button type="submit" class="button button-primary">' . esc_html__( 'Save', 'jetwidgets-for-elementor' ) . '</button>',
+					),
+					'_nonce' => array(
+						'type'   => 'html',
+						'parent' => 'settings_bottom',
+						'class'  => 'cherry-control hidden-row',
+						'html'   => '<input type="hidden" name="_nonce" value="' . esc_attr( wp_create_nonce( 'jet-widgets-save' ) ) . '">',
 					),
 				)
 			);
