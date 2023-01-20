@@ -47,17 +47,49 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 		/**
 		 * Retrieve single shortocde argument
 		 *
-		 * @return void
+		 * @return string or bool false
 		 */
 		public function get_attr( $name = null ) {
 
-			if ( isset( $this->atts[ $name ] ) ) {
-				return $this->atts[ $name ];
-			}
-
 			$allowed = $this->get_atts();
+			$value   = false;
+			$default = isset( $allowed[ $name ]['default'] ) ? $allowed[ $name ]['default'] : false;
 
-			if ( isset( $allowed[ $name ] ) && isset( $allowed[ $name ]['default'] ) ) {
+			if ( isset( $this->atts[ $name ] ) ) {
+
+				$value = $this->atts[ $name ];
+				
+				/**
+				 * Check for only allowed values used
+				 */
+				$attr_data = isset( $allowed[ $name ] ) ? $allowed[ $name ] : false;
+
+				/**
+				 * If attribute not registered - returns nothing
+				 */
+				if ( ! $attr_data ) {
+					return false;
+				}
+
+				/**
+				 * If attribute has options - check if one of this options was used
+				 */
+				$allowed_options = isset( $attr_data['options'] ) ? array_keys( $attr_data['options'] ) : array();
+
+				if ( ! empty( $allowed_options ) ) {
+					$value = in_array( $value, $allowed_options ) ? $value : $default;
+				} elseif ( ! empty( $attr_data['sanitize_cb'] ) && is_callable( $attr_data['sanitize_cb'] ) ) {
+					$value = call_user_func( $attr_data['sanitize_cb'], $value );
+				} else {
+					$value = esc_attr( $value );
+				}
+
+				return $value;
+
+			}
+			
+
+			if ( isset( $allowed[ $name ] ) && $default ) {
 				return $allowed[ $name ]['default'];
 			} else {
 				return false;
@@ -92,12 +124,50 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 			$result = vsprintf( $format, $args );
 
 			if ( $echo ) {
-				echo wp_kses_post( $result );
+				echo $this->kses_post_extended( $result );
 			} else {
 				return $result;
 			}
 
 		}
+
+	/**
+	 * Sanitize HTML strings where SVG is allowed
+	 * 
+	 * @param  [type] $data [description]
+	 * @return [type]       [description]
+	 */
+	public function kses_post_extended( $data ) {
+		
+		$extended_tags = array(
+			'svg' => array(
+				'aria-hidden' => true,
+				'aria-labelledby' => true,
+				'class' => true,
+				'height' => true,
+				'role' => true,
+				'viewbox' => true,
+				'width' => true,
+				'xmlns' => true,
+			),
+			'g' => array(
+				'fill' => true,
+			),
+			'title' => array(
+				'title' => true,
+			),
+			'path' => array(
+				'd' => true,
+				'fill' => true,
+			),
+		);
+
+		$allowed_html = wp_kses_allowed_html( 'post' );
+		$allowed_html = array_merge_recursive( $allowed_html, $extended_tags );
+
+		return wp_kses( $data, $allowed_html );
+
+	}
 
 		/**
 		 * Return defult shortcode attributes

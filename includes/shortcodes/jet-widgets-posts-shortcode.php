@@ -30,6 +30,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'min'        => -1,
 				'max'        => 30,
 				'step'       => 1,
+				'sanitize_cb' => 'absint'
 			),
 			'columns' => array(
 				'type'               => 'select',
@@ -47,6 +48,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'post_type'   => array(
 				'type'       => 'select',
@@ -75,6 +77,11 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 					'posts_query' => array( 'ids' ),
 					'post_type'   => array( 'post' ),
 				),
+				'sanitize_cb' => function( $value ) {
+					// Keep only numbers and commas
+					$value = preg_replace( '/[^/d,]/', '', $value );
+					return $value;
+				}
 			),
 			'post_cat' => array(
 				'type'        => 'select2',
@@ -95,6 +102,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'min'     => 0,
 				'max'     => 100,
 				'step'    => 1,
+				'sanitize_cb' => 'absint'
 			),
 			'show_title' => array(
 				'type'         => 'switcher',
@@ -103,6 +111,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 
 			'title_trimmed' => array(
@@ -112,6 +121,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'no',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 				'condition' => array(
 					'show_title' => 'yes',
 				),
@@ -124,6 +134,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'min'       => 1,
 				'max'       => 50,
 				'step'      => 1,
+				'sanitize_cb' => 'absint',
 				'condition' => array(
 					'title_trimmed' => 'yes',
 				),
@@ -133,6 +144,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'type'      => 'text',
 				'label'     => esc_html__( 'Title Trimmed Ending', 'jetwidgets-for-elementor' ),
 				'default'   => '...',
+				'sanitize_cb' => 'wp_kses_post',
 				'condition' => array(
 					'title_trimmed' => 'yes',
 				),
@@ -145,6 +157,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'show_image_as' => array(
 				'type'        => 'select',
@@ -211,6 +224,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'excerpt_length' => array(
 				'type'       => 'number',
@@ -219,6 +233,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'min'        => 1,
 				'max'        => 300,
 				'step'       => 1,
+				'sanitize_cb'  => 'absint',
 				'condition' => array(
 					'show_excerpt' => array( 'yes' ),
 				),
@@ -230,6 +245,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'show_author' => array(
 				'type'         => 'switcher',
@@ -238,6 +254,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 				'condition' => array(
 					'show_meta' => array( 'yes' ),
 				),
@@ -249,6 +266,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 				'condition' => array(
 					'show_meta' => array( 'yes' ),
 				),
@@ -260,6 +278,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 				'condition' => array(
 					'show_meta' => array( 'yes' ),
 				),
@@ -271,11 +290,13 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'more_text' => array(
 				'type'      => 'text',
 				'label'     => esc_html__( 'Read More Button Text', 'jetwidgets-for-elementor' ),
 				'default'   => esc_html__( 'Read More', 'jetwidgets-for-elementor' ),
+				'sanitize_cb'  => 'wp_kses_post',
 				'condition' => array(
 					'show_more' => array( 'yes' ),
 				),
@@ -285,6 +306,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_block' => false,
 				'skin'        => 'inline',
 				'label'       => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
+				'sanitize_cb'  => array( $this, 'kses_post_extended' ),
 				'condition'   => array(
 					'show_more' => array( 'yes' ),
 				),
@@ -296,6 +318,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
 			'rows_gap' => array(
 				'type'         => 'switcher',
@@ -304,15 +327,26 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'yes',
 				'default'      => 'yes',
+				'sanitize_cb'  => array( $this, 'sanitize_boolean' ),
 			),
-			'show_title_related_meta'       => array( 'default' => false ),
-			'show_content_related_meta'     => array( 'default' => false ),
-			'meta_title_related_position'   => array( 'default' => false ),
-			'meta_content_related_position' => array( 'default' => false ),
-			'title_related_meta'            => array( 'default' => false ),
-			'content_related_meta'          => array( 'default' => false ),
+			'show_title_related_meta'       => array( 'default' => false, 'sanitize_cb'  => array( $this, 'sanitize_boolean' ), ),
+			'show_content_related_meta'     => array( 'default' => false, 'sanitize_cb'  => array( $this, 'sanitize_boolean' ), ),
+			'meta_title_related_position'   => array( 'default' => false /* Sanitized on output */ ),
+			'meta_content_related_position' => array( 'default' => false /* Sanitized on output */ ),
+			'title_related_meta'            => array( 'default' => false /* Sanitized on output */ ),
+			'content_related_meta'          => array( 'default' => false /* Sanitized on output */ ),
 		) );
 
+	}
+
+	/**
+	 * Sanitize boolen-like data
+	 * 
+	 * @param  [type] $value [description]
+	 * @return [type]        [description]
+	 */
+	public function sanitize_boolean( $value ) {
+		return ( true === filter_var( $value, FILTER_VALIDATE_BOOLEAN ) ) ? 'yes' : false;
 	}
 
 	/**
