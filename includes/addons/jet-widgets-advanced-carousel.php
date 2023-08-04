@@ -7,13 +7,13 @@
 
 namespace Elementor;
 
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Repeater;
-use Elementor\Core\Schemes\Color as Scheme_Color;
-use Elementor\Core\Schemes\Typography as Scheme_Typography;
 use Elementor\Widget_Base;
 use Elementor\Utils;
 
@@ -896,7 +896,9 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'items_title_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['items_title'] . ', {{WRAPPER}} ' . $css_scheme['banner_title'],
 				'separator' => 'before',
 			)
@@ -941,9 +943,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'label'     => esc_html__( 'Items Content Color', 'jetwidgets-for-elementor' ),
 				'type'      => Controls_Manager::COLOR,
-				'scheme'    => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_3,
+				'global' => array(
+					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_text'] => 'color: {{VALUE}}',
@@ -981,7 +982,9 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'items_text_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['items_text'] . ', {{WRAPPER}} ' . $css_scheme['banner_text'],
 				'separator' => 'before',
 			)
@@ -1022,7 +1025,9 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_ACCENT,
+				),
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['items_button'],
 			)
 		);
@@ -1078,9 +1083,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Background Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+				'global' => array(
+					'default' => Global_Colors::COLOR_PRIMARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['items_button'] => 'background-color: {{VALUE}}',
@@ -1200,9 +1204,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow',
 				'fields_options' => array(
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_1,
+						'global' => array(
+							'default' => Global_Colors::COLOR_PRIMARY,
 						),
 					),
 				),
@@ -1226,9 +1229,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-arrow:hover',
 				'fields_options' => array(
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_1,
+						'global' => array(
+							'default' => Global_Colors::COLOR_PRIMARY,
 						),
 					),
 				),
@@ -1569,9 +1571,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span',
 				'fields_options' => array(
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_3,
+						'global' => array(
+							'default' => Global_Colors::COLOR_TEXT,
 						),
 					),
 				),
@@ -1599,9 +1600,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li span:hover',
 				'fields_options' => array(
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_1,
+						'global' => array(
+							'default' => Global_Colors::COLOR_PRIMARY,
 						),
 					),
 				),
@@ -1629,9 +1629,8 @@ class Jet_Widgets_Advanced_Carousel extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} .jw-carousel .jw-slick-dots li.slick-active span',
 				'fields_options' => array(
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_4,
+						'global' => array(
+							'default' => Global_Colors::COLOR_ACCENT,
 						),
 					),
 				),

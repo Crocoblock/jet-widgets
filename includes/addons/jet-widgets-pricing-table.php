@@ -5,15 +5,15 @@
  * Slug: jw-pricing-table
  */
 
-namespace Elementor;
-
+namespace Elementor
+;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Typography;
 use Elementor\Repeater;
-use Elementor\Core\Schemes\Color as Scheme_Color;
-use Elementor\Core\Schemes\Typography as Scheme_Typography;
 use Elementor\Widget_Base;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -423,9 +423,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 						),
 					),
 					'color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_3,
+						'global' => array(
+							'default' => Global_Colors::COLOR_TEXT,
 						),
 					),
 				),
@@ -500,9 +499,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label'  => esc_html__( 'Title Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_2,
+				'global' => array(
+					'default' => Global_Colors::COLOR_SECONDARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['title'] => 'color: {{VALUE}}',
@@ -514,8 +512,11 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}} ' . $css_scheme['title'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
+
 			)
 		);
 
@@ -533,9 +534,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label'  => esc_html__( 'Subtitle Color', 'jetwidgets-for-elementor' ),
 				'type'   => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_2,
+				'global' => array(
+					'default' => Global_Colors::COLOR_SECONDARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['subtitle'] => 'color: {{VALUE}}',
@@ -547,8 +547,11 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'subtitle_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['subtitle'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
+
 			)
 		);
 
@@ -631,9 +634,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'selector'       => '{{WRAPPER}} ' . $css_scheme['icon'],
 				'fields_options' => array(
 					'box_font_color' => array(
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_1,
+						'global' => array(
+							'default' => Global_Colors::COLOR_PRIMARY,
 						),
 					),
 				),
@@ -715,9 +717,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Price Prefix Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+				'global' => array(
+					'default' => Global_Colors::COLOR_RIMARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price_prefix'] => 'color: {{VALUE}}',
@@ -729,8 +730,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_prefix_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_prefix'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				),
 			)
 		);
 
@@ -777,9 +780,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Price Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+				'global' => array(
+					'default' => Global_Colors::COLOR_PRIMARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price_value'] => 'color: {{VALUE}}',
@@ -791,8 +793,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'price_typography',
-				'scheme'    => Scheme_Typography::TYPOGRAPHY_1,
 				'selector'  => '{{WRAPPER}}  ' . $css_scheme['price_value'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				),
 			)
 		);
 
@@ -810,9 +814,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Price Suffix Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_1,
+				'global' => array(
+					'default' => Global_Colors::COLOR_PRIMARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price_suffix'] => 'color: {{VALUE}}',
@@ -824,8 +827,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_suffix_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_suffix'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 			)
 		);
 
@@ -882,8 +887,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_desc_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_desc'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 			)
 		);
 
@@ -1051,8 +1058,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'features_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['features_item'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 			)
 		);
 
@@ -1070,9 +1079,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_2,
+				'global' => array(
+					'default' => Global_Colors::COLOR_SECONDARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['included_item'] => 'color: {{VALUE}}',
@@ -1121,9 +1129,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Bullet Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_4,
+				'global' => array(
+					'default' => Global_Colors::COLOR_ACCENT,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['included_item'] . ' .item-bullet' => 'color: {{VALUE}}',
@@ -1145,9 +1152,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_3,
+				'global' => array(
+					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['excluded_item'] => 'color: {{VALUE}}',
@@ -1196,9 +1202,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Bullet Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type'  => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_3,
+				'global' => array(
+					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['excluded_item'] . ' .item-bullet' => 'color: {{VALUE}}',
@@ -1269,9 +1274,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			array(
 				'label' => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
-				'scheme' => array(
-					'type' => Scheme_Color::get_type(),
-					'value' => Scheme_Color::COLOR_3,
+				'global' => array(
+					'default' => Global_Colors::COLOR_TEXT,
 				),
 				'condition' => array(
 					'features_divider' => 'yes',
@@ -1381,8 +1385,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'action_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_3,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['action'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				),
 			)
 		);
 
@@ -1586,9 +1592,8 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 					),
 					'color' => array(
 						'label'  => _x( 'Background Color', 'Background Control', 'jetwidgets-for-elementor' ),
-						'scheme' => array(
-							'type'  => Scheme_Color::get_type(),
-							'value' => Scheme_Color::COLOR_1,
+						'global' => array(
+							'default' => Global_Colors::COLOR_PRIMARY,
 						),
 					),
 					'color_b' => array(
@@ -1621,8 +1626,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_typography',
-				'scheme'   => Scheme_Typography::TYPOGRAPHY_4,
 				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'],
+				'global' => array(
+					'default' => Global_Typography::TYPOGRAPHY_ACCENT,
+				),
 			)
 		);
 
