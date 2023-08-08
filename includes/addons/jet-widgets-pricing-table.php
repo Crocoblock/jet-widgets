@@ -5,8 +5,8 @@
  * Slug: jw-pricing-table
  */
 
-namespace Elementor
-;
+namespace Elementor;
+
 use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Controls_Manager;
@@ -512,11 +512,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['title'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
-
+				'selector' => '{{WRAPPER}} ' . $css_scheme['title'],
 			)
 		);
 
@@ -547,11 +546,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'subtitle_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['subtitle'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
-
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['subtitle'],
 			)
 		);
 
@@ -718,7 +716,7 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 				'label' => esc_html__( 'Price Prefix Color', 'jetwidgets-for-elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'global' => array(
-					'default' => Global_Colors::COLOR_RIMARY,
+					'default' => Global_Colors::COLOR_PRIMARY,
 				),
 				'selectors' => array(
 					'{{WRAPPER}} ' . $css_scheme['price_prefix'] => 'color: {{VALUE}}',
@@ -730,10 +728,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_prefix_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_prefix'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_prefix'],
 			)
 		);
 
@@ -793,10 +791,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'      => 'price_typography',
-				'selector'  => '{{WRAPPER}}  ' . $css_scheme['price_value'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
 				),
+				'selector'  => '{{WRAPPER}}  ' . $css_scheme['price_value'],
 			)
 		);
 
@@ -827,10 +825,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_suffix_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_suffix'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_suffix'],
 			)
 		);
 
@@ -887,10 +885,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'price_desc_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_desc'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['price_desc'],
 			)
 		);
 
@@ -1058,10 +1056,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'features_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['features_item'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['features_item'],
 			)
 		);
 
@@ -1385,10 +1383,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'action_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['action'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['action'],
 			)
 		);
 
@@ -1626,10 +1624,10 @@ class Jet_Widgets_Pricing_Table extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'button_typography',
-				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_ACCENT,
 				),
+				'selector' => '{{WRAPPER}}  ' . $css_scheme['button'],
 			)
 		);
 
