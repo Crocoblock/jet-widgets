@@ -4,6 +4,10 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.15]
+* FIX: compatibility global styles for elementor
+* FIX: minor bugs
+
 ## [1.0.14]
 * FIX: Better sanitize shortocode attributes before using
 
