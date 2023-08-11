@@ -126,7 +126,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'selectors'   => array(
 					'{{WRAPPER}} ' . $css_scheme['inner-box'] => 'min-height: {{VALUE}}px;',
 				),
-
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -138,6 +140,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'default'   => '1',
 				'options'   => jet_widgets_tools()->get_select_range( 4 ),
 				'condition' => array(
+					'carousel_enabled!' => '',
 					'columns!' => '1',
 				),
 			)
@@ -152,6 +155,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -168,6 +174,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'library' => 'fa-solid',
 				),
 				'condition' => array(
+					'carousel_enabled!' => '',
 					'arrows' => 'true',
 				),
 			)
@@ -185,6 +192,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'value'   => 'fas fa-angle-right',
 					'library' => 'fa-solid',
 				),
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -197,6 +207,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -209,6 +222,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => '',
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -221,6 +237,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -231,6 +250,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'type'      => Controls_Manager::NUMBER,
 				'default'   => 5000,
 				'condition' => array(
+					'carousel_enabled!' => '',
 					'autoplay' => 'true',
 				),
 			)
@@ -245,6 +265,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label_off'    => esc_html__( 'No', 'jetwidgets-for-elementor' ),
 				'return_value' => 'true',
 				'default'      => 'true',
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -259,6 +282,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 					'fade'  => esc_html__( 'Fade', 'jetwidgets-for-elementor' ),
 				),
 				'condition' => array(
+					'carousel_enabled!' => '',
 					'columns' => '1',
 				),
 			)
@@ -270,6 +294,9 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'label'   => esc_html__( 'Animation Speed', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::NUMBER,
 				'default' => 500,
+				'condition' => array(
+					'carousel_enabled!' => '',
+				),
 			)
 		);
 
@@ -2079,7 +2106,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			$attributes[ $attr ] = isset( $settings[ $attr ] ) ? $settings[ $attr ] : false;
 		}
 
-		echo $shortcode_obj->kses_post_extended( $this->maybe_apply_carousel_wrappers( $shortcode_obj->do_shortcode( $attributes ), $settings ) );
+		echo jet_widgets_tools()->kses_post_extended( $this->maybe_apply_carousel_wrappers( $shortcode_obj->do_shortcode( $attributes ), $settings ) );
 
 		$this->__close_wrap();
 	}

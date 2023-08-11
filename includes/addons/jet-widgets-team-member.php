@@ -304,7 +304,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				'label'   => esc_html__( 'Corner Color', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['cover'] . ':after' => 'border-color: {{VALUE}} transparent transparent transparent;',
+					'{{WRAPPER}} ' . $css_scheme['cover'] . ':after' => 'border-top-color: {{VALUE}};',
 				),
 				'condition' => array(
 					'cover_like_hint' => 'yes',

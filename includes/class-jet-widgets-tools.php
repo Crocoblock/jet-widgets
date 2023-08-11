@@ -398,6 +398,44 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 		}
 
 		/**
+		 * Sanitize HTML strings where SVG is allowed
+		 * 
+		 * @param  [type] $data [description]
+		 * @return [type]       [description]
+		 */
+		public function kses_post_extended( $data ) {
+
+			$extended_tags = array(
+				'svg' => array(
+					'aria-hidden' => true,
+					'aria-labelledby' => true,
+					'class' => true,
+					'height' => true,
+					'role' => true,
+					'viewbox' => true,
+					'width' => true,
+					'xmlns' => true,
+				),
+				'g' => array(
+					'fill' => true,
+				),
+				'title' => array(
+					'title' => true,
+				),
+				'path' => array(
+					'd' => true,
+					'fill' => true,
+				),
+			);
+
+			$allowed_html = wp_kses_allowed_html( 'post' );
+			$allowed_html = array_merge_recursive( $allowed_html, $extended_tags );
+
+			return wp_kses( $data, $allowed_html );
+
+		}
+
+		/**
 		 * Returns the instance.
 		 *
 		 * @since  1.0.0

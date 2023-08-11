@@ -81,18 +81,10 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 				} elseif ( ! empty( $attr_data['sanitize_cb'] ) && is_callable( $attr_data['sanitize_cb'] ) ) {
 					$value = call_user_func( $attr_data['sanitize_cb'], $value );
 				} else {
-					$value = esc_attr( $value );
+					$value = is_array( $value ) ? $value : esc_attr($value);
 				}
-
+				
 				return $value;
-
-			}
-			
-
-			if ( isset( $allowed[ $name ] ) && $default ) {
-				return $allowed[ $name ]['default'];
-			} else {
-				return false;
 			}
 
 		}
@@ -124,50 +116,12 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 			$result = vsprintf( $format, $args );
 
 			if ( $echo ) {
-				echo $this->kses_post_extended( $result );
+				echo jet_widgets_tools()->kses_post_extended( $result );
 			} else {
 				return $result;
 			}
 
 		}
-
-	/**
-	 * Sanitize HTML strings where SVG is allowed
-	 * 
-	 * @param  [type] $data [description]
-	 * @return [type]       [description]
-	 */
-	public function kses_post_extended( $data ) {
-		
-		$extended_tags = array(
-			'svg' => array(
-				'aria-hidden' => true,
-				'aria-labelledby' => true,
-				'class' => true,
-				'height' => true,
-				'role' => true,
-				'viewbox' => true,
-				'width' => true,
-				'xmlns' => true,
-			),
-			'g' => array(
-				'fill' => true,
-			),
-			'title' => array(
-				'title' => true,
-			),
-			'path' => array(
-				'd' => true,
-				'fill' => true,
-			),
-		);
-
-		$allowed_html = wp_kses_allowed_html( 'post' );
-		$allowed_html = array_merge_recursive( $allowed_html, $extended_tags );
-
-		return wp_kses( $data, $allowed_html );
-
-	}
 
 		/**
 		 * Return defult shortcode attributes

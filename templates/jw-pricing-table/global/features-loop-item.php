@@ -9,7 +9,7 @@ $classes .= ' ' . $this->__loop_item( array( 'item_included' ) );
 ?>
 <div class="pricing-feature <?php echo esc_attr( $classes ); ?>">
 	<div class="pricing-feature__inner"><?php
-		echo wp_kses_post( $this->__pricing_feature_icon() );
+		echo jet_widgets_tools()->kses_post_extended(  $this->__pricing_feature_icon() );
 		printf( '<span class="pricing-feature__text">%s</span>', $this->__loop_item( array( 'item_text' ) ) );
 	?></div>
 </div>

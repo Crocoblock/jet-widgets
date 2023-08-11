@@ -557,7 +557,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => array( 'px', '%' ),
 				'selectors'  => array(
-					'{{WRAPPER}} ' . $css_scheme['image'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} figure' . $css_scheme['image'] => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				),
 			)
 		);
@@ -1513,7 +1513,7 @@ class Jet_Widgets_Testimonials extends Jet_Widgets_Base {
 				'label'   => esc_html__( 'Color', 'jetwidgets-for-elementor' ),
 				'type'    => Controls_Manager::COLOR,
 				'selectors' => array(
-					'{{WRAPPER}} ' . $css_scheme['comment'] . ':after' => 'border-color: {{VALUE}} transparent transparent transparent;',
+					'{{WRAPPER}} ' . $css_scheme['comment'] . ':after' => 'border-top-color: {{VALUE}};',
 				),
 				'condition' => array(
 					'use_comment_corner' => 'yes',

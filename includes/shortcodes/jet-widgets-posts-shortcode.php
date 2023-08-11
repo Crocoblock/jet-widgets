@@ -303,10 +303,10 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 			),
 			'more_icon' => array(
 				'type'        => 'icon',
+				'label'       => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
 				'label_block' => false,
 				'skin'        => 'inline',
-				'label'       => esc_html__( 'Read More Button Icon', 'jetwidgets-for-elementor' ),
-				'sanitize_cb'  => array( $this, 'kses_post_extended' ),
+				'sanitize_cb'  => array( jet_widgets_tools(), 'kses_post_extended' ),
 				'condition'   => array(
 					'show_more' => array( 'yes' ),
 				),

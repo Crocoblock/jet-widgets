@@ -6,7 +6,10 @@
 		}
 
 		&:after {
-			border-color: rgba(84, 89, 95, 0.5) transparent transparent transparent;
+			border-top-color: rgba(84, 89, 95, 0.5);
+		    border-right-color: transparent;
+		    border-bottom-color: transparent;
+		    border-left-color: transparent;
 		}
 	}
 
