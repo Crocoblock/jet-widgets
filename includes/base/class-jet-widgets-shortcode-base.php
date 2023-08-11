@@ -87,6 +87,12 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 				return $value;
 			}
 
+			if ( isset( $allowed[ $name ] ) && $default ) {
+				return $allowed[ $name ]['default'];
+			} else {
+				return false;
+			}
+
 		}
 
 		/**
