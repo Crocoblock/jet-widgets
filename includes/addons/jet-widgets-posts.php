@@ -89,6 +89,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 				'inner-box'     => '.jw-posts .jw-posts__inner-box',
 				'inner-content' => '.jw-posts .jw-posts__inner-content',
 				'thumb'         => '.jw-posts .post-thumbnail',
+				'post-title'    => '.jw-posts .entry-title a',
 				'title'         => '.jw-posts .entry-title',
 				'meta'          => '.jw-posts .post-meta',
 				'meta-item'     => '.jw-posts .post-meta__item',
@@ -579,7 +580,7 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			Group_Control_Typography::get_type(),
 			array(
 				'name'     => 'title_typography',
-				'selector' => '{{WRAPPER}} ' . $css_scheme['title'],
+				'selector' => '{{WRAPPER}} ' . $css_scheme['post-title'],
 				'global' => array(
 					'default' => Global_Typography::TYPOGRAPHY_TEXT,
 				),
