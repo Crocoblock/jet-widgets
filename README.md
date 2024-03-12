@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.16]
+* FIX: Correctly escape URL of button for Animated box widget
+
 ## [1.0.15]
 * FIX: compatibility global styles for elementor
 * FIX: minor bugs
