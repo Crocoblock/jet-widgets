@@ -24,7 +24,7 @@ $this->add_render_attribute( 'url', 'class', array(
 ) );
 
 if ( is_array( $button_url ) ) {
-	$this->add_render_attribute( 'url', 'href', $button_url['url'] );
+	$this->add_render_attribute( 'url', 'href', esc_url( $button_url['url'] ) );
 
 	if ( $button_url['is_external'] ) {
 		$this->add_render_attribute( 'url', 'target', '_blank' );
@@ -34,7 +34,7 @@ if ( is_array( $button_url ) ) {
 		$this->add_render_attribute( 'url', 'rel', 'nofollow' );
 	}
 } else {
-	$this->add_render_attribute( 'url', 'href', $button_url );
+	$this->add_render_attribute( 'url', 'href', esc_url( $button_url ) );
 }
 
 ?>
