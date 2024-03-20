@@ -1520,7 +1520,7 @@ class Jet_Widgets_Headline extends Jet_Widgets_Base {
 		$title = sprintf( '%1$s%2$s%3$s%4$s', $deco_devider_left, $first_part, $second_part, $deco_devider_right );
 
 		if ( ! empty( $settings['link']['url'] ) ) {
-			$this->add_render_attribute( 'url', 'href', $settings['link']['url'] );
+			$this->add_render_attribute( 'url', 'href', esc_url( $settings['link']['url'] ) );
 
 			if ( $settings['link']['is_external'] ) {
 				$this->add_render_attribute( 'url', 'target', '_blank' );

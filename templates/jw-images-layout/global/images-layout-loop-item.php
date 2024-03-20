@@ -15,14 +15,26 @@ $this->add_render_attribute( $link_instance, 'class', array(
 ) );
 
 if ( 'lightbox' === $link_type ) {
-	$this->add_render_attribute( $link_instance, 'href', $this->__loop_item( array( 'item_image', 'url' ), '%s' ) );
+
+	$this->add_render_attribute( 
+		$link_instance,
+		'href',
+		esc_url( $this->__loop_item( array( 'item_image', 'url' ), '%s' ) )
+	);
+
 	$this->add_render_attribute( $link_instance, 'data-elementor-open-lightbox', 'yes' );
 	$this->add_render_attribute( $link_instance, 'data-elementor-lightbox-slideshow', $this->get_id()  );
 } else {
+
 	$target = $this->__loop_item( array( 'item_target' ), '%s' );
 	$target = ! empty( $target ) ? $target : '_self';
 
-	$this->add_render_attribute( $link_instance, 'href', $this->__loop_item( array( 'item_url' ), '%s' ) );
+	$this->add_render_attribute(
+		$link_instance,
+		'href',
+		esc_url( $this->__loop_item( array( 'item_url' ), '%s' ) )
+	);
+
 	$this->add_render_attribute( $link_instance, 'target', $target );
 }
 

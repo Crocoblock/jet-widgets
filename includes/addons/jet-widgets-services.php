@@ -1415,7 +1415,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		) );
 
 		if ( is_array( $button_url ) ) {
-			$this->add_render_attribute( 'url', 'href', $button_url['url'] );
+			$this->add_render_attribute( 'url', 'href', esc_url( $button_url['url'] ) );
 
 			if ( $button_url['is_external'] ) {
 				$this->add_render_attribute( 'url', 'target', '_blank' );
@@ -1426,7 +1426,7 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 			}
 
 		} else {
-			$this->add_render_attribute( 'url', 'href', $button_url );
+			$this->add_render_attribute( 'url', 'href', esc_url( $button_url ) );
 		}
 
 		$format = apply_filters( 'jet-widgets/services/action-button-format', '<a %1$s><span class="jw-services__button-text">%2$s</span>%3$s</a>' );

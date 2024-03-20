@@ -10,7 +10,7 @@ $this->add_render_attribute( 'button', array(
 		'pricing-table-button',
 		'button-' . $this->get_settings( 'button_size' ) . '-size',
 	),
-	'href' => $this->get_settings( 'button_url' ),
+	'href' => esc_url( $this->get_settings( 'button_url' ) ),
 ) );
 
 ?>

@@ -1807,7 +1807,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		) );
 
 		if ( is_array( $button_url ) ) {
-			$this->add_render_attribute( 'url', 'href', $button_url['url'] );
+			$this->add_render_attribute( 'url', 'href', esc_url( $button_url['url'] ) );
 
 			if ( $button_url['is_external'] ) {
 				$this->add_render_attribute( 'url', 'target', '_blank' );
@@ -1817,7 +1817,7 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 				$this->add_render_attribute( 'url', 'rel', 'nofollow' );
 			}
 		} else {
-			$this->add_render_attribute( 'url', 'href', $button_url );
+			$this->add_render_attribute( 'url', 'href', esc_url( $button_url ) );
 		}
 
 		$format = apply_filters( 'jet-widgets/team-member/description-format', '<div class="jw-team-member__button-container"><a %1$s>%2$s</a></div>' );
@@ -1853,7 +1853,10 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 					$label = sprintf( '<span class="jw-team-member__socials-label">%s</span>', $icon_data[ 'social_label' ] );
 				}
 
-				$icon_list .= sprintf( '<div class="jw-team-member__socials-item"><a href="%1$s">%2$s%3$s</a></div>', $icon_data[ 'social_link' ], $icon, $label );
+				$icon_list .= sprintf(
+					'<div class="jw-team-member__socials-item"><a href="%1$s">%2$s%3$s</a></div>',
+					esc_url( $icon_data[ 'social_link' ] ), $icon, $label
+				);
 			}
 		}
 

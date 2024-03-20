@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.17]
+* FIX: Correctly escape URL for all widgets where user can manually set a link
+
 ## [1.0.16]
 * FIX: Correctly escape URL of button for Animated box widget
 
