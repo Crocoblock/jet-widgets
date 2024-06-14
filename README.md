@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.18]
+* FIX: Better sanitizing for Images Layout & Image Comparison widgets settings
+
 ## [1.0.17]
 * FIX: Correctly escape URL for all widgets where user can manually set a link
 
