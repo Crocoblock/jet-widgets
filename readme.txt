@@ -1,7 +1,7 @@
 === JetWidgets For Elementor ===
 
 Contributors: Crocoblock
-Tags: elementor, elementor widgets, elementor addons, elementor elements, subscribe form, headline, image comparison, posts, pricing table
+Tags: elementor widgets, subscribe form, headline, image comparison, pricing table
 Requires at least: 4.7
 Tested up to: 6.3
 Requires PHP: 7.0
@@ -9,7 +9,7 @@ Stable tag: 1.0.17
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Brand new addon for Elementor Page builder. It provides the set of modules to create different kinds of content, adds custom modules to your website and applies attractive styles in the matter of several clicks!
+Addon for Elementor Page builder. It provides the set of widgets to create different kinds of content like pricing tables, posts lists, banners, etc.
 
 == Description ==
 

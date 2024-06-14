@@ -860,11 +860,17 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 	 * @return string
 	 */
 	public function generate_setting_json() {
+		
 		$module_settings = $this->get_settings();
 
+		$layout = $module_settings['layout_type'] ?? 'masonry';
+
+		$allowed_layout_types = [ 'masonry', 'grid', 'justify', 'list' ];
+		$layout = in_array( $layout, $allowed_layout_types ) ? $layout : 'masonry';
+
 		$settings = array(
-			'layoutType'    => $module_settings['layout_type'],
-			'justifyHeight' => $module_settings['justify_height'],
+			'layoutType'    => $layout,
+			'justifyHeight' => absint( $module_settings['justify_height'] ),
 		);
 
 		$settings = json_encode( $settings );

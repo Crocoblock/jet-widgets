@@ -1468,8 +1468,19 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 	 * @return string
 	 */
 	public function generate_setting_json() {
+		
 		$settings = $this->get_settings();
 		$widget_id = $this->get_id();
+
+		$prev_arrow = sprintf( 
+			'<div class="jw-image-comparison__prev-arrow-%s prev-arrow jw-arrow slick-arrow">%%s</div>',
+			esc_attr( $widget_id )
+		);
+
+		$next_arrow = sprintf( 
+			'<div class="jw-image-comparison__next-arrow-%s next-arrow jw-arrow slick-arrow">%%s</div>',
+			esc_attr( $widget_id )
+		);
 
 		$instance_settings = array(
 			'autoplaySpeed'  => absint( $settings['autoplay_speed'] ),
@@ -1480,8 +1491,8 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 			'arrows'         => filter_var( $settings['arrows'], FILTER_VALIDATE_BOOLEAN ),
 			'dots'           => filter_var( $settings['dots'], FILTER_VALIDATE_BOOLEAN ),
 			'slidesToScroll' => 1 < absint( $settings['slides_to_show'] ) ? absint( $settings['slides_to_scroll'] ) : 1,
-			'prevArrow'      => $this->_render_icon( 'prev_arrow', '<div class="jw-image-comparison__prev-arrow-' . $widget_id .' prev-arrow jw-arrow slick-arrow">%s</div>', '', false ),
-			'nextArrow'      => $this->_render_icon( 'next_arrow', '<div class="jw-image-comparison__next-arrow-' . $widget_id .' next-arrow jw-arrow slick-arrow">%s</div>', '', false ),
+			'prevArrow'      => $this->_render_icon( 'prev_arrow', wp_kses_post( $prev_arrow ), '', false ),
+			'nextArrow'      => $this->_render_icon( 'next_arrow', wp_kses_post( $next_arrow ), '', false ),
 		);
 
 		if ( 'fade' === $settings['effect'] ) {
