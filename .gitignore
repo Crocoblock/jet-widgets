@@ -3,3 +3,4 @@ node_modules
 .sass-cache
 .idea
 package-lock.json
+composer.lock

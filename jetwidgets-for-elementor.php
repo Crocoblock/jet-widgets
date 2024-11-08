@@ -203,6 +203,10 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 					$this->required_plugins_notice();
 				}
 			}
+
+			if ( file_exists( $this->plugin_path( 'vendor/autoload.php' ) ) ) {
+				require_once $this->plugin_path( 'vendor/autoload.php' );
+			}
 		}
 
 		/**

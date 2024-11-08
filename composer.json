@@ -1,0 +1,6 @@
+{
+    "name": "crocoblock/jet-widgets",
+    "require": {
+        "enshrined/svg-sanitize": "^0.20.0"
+    }
+}
