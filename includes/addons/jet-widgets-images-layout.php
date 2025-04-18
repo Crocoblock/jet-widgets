@@ -47,7 +47,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 	 */
 	public $item_counter = 0;
 
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		$css_scheme = apply_filters(
 			'jet-widgets/images-layout/css-scheme',
@@ -860,7 +860,7 @@ class Jet_Widgets_Images_Layout extends Jet_Widgets_Base {
 	 * @return string
 	 */
 	public function generate_setting_json() {
-		
+
 		$module_settings = $this->get_settings();
 
 		$layout = $module_settings['layout_type'] ?? 'masonry';

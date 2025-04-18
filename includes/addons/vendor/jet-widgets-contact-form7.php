@@ -31,7 +31,7 @@ class Jet_Widgets_Contact_Form7 extends Jet_Widgets_Base {
 		return array( 'jet-widgets' );
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'section_settings',
 			array(

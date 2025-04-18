@@ -43,7 +43,7 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 		);
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$css_scheme = apply_filters(
 			'jet-widgets/image-comparison/css-scheme',
 			array(
@@ -1468,16 +1468,16 @@ class Jet_Widgets_Image_Comparison extends Jet_Widgets_Base {
 	 * @return string
 	 */
 	public function generate_setting_json() {
-		
+
 		$settings = $this->get_settings();
 		$widget_id = $this->get_id();
 
-		$prev_arrow = sprintf( 
+		$prev_arrow = sprintf(
 			'<div class="jw-image-comparison__prev-arrow-%s prev-arrow jw-arrow slick-arrow">%%s</div>',
 			esc_attr( $widget_id )
 		);
 
-		$next_arrow = sprintf( 
+		$next_arrow = sprintf(
 			'<div class="jw-image-comparison__next-arrow-%s next-arrow jw-arrow slick-arrow">%%s</div>',
 			esc_attr( $widget_id )
 		);

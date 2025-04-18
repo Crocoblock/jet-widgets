@@ -44,7 +44,7 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 		return array( 'jet-widgets' );
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 
 		$css_scheme = apply_filters(
 			'jet-widgets/subscribe-form/css-scheme',

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: JetWidgets For Elementor
  * Description: Brand new addon for Elementor Page builder. It provides the set of modules to create different kinds of content, adds custom modules to your website and applies attractive styles in the matter of several clicks!
- * Version:     1.0.19
+ * Version:     1.0.20
  * Author:      Crocoblock
  * Author URI:  https://crocoblock.com/
  * Text Domain: jetwidgets-for-elementor
@@ -10,8 +10,8 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
  *
- * Elementor tested up to: 3.19
- * Elementor Pro tested up to: 3.19
+ * Elementor tested up to: 3.28
+ * Elementor Pro tested up to: 3.28
  *
  * @package jet-widgets
  * @author  Crocoblock
@@ -64,7 +64,7 @@ if ( ! class_exists( 'Jet_Widgets' ) ) {
 		 *
 		 * @var string
 		 */
-		private $version = '1.0.19';
+		private $version = '1.0.20';
 
 		/**
 		 * Holder for base plugin path
