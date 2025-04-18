@@ -3,9 +3,9 @@
 Contributors: Crocoblock
 Tags: elementor widgets, subscribe form, headline, image comparison, pricing table
 Requires at least: 4.7
-Tested up to: 6.3
+Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

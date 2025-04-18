@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.20]
+* FIX: Prevent Elementor deprecation warnings
+
 ## [1.0.19]
 * FIX: Sanitize SVG files on upload
 
