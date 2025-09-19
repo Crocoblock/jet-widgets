@@ -4,6 +4,9 @@ Brand new addon for Elementor Page builder. It provides the set of modules to cr
 
 # ChangeLog
 
+## [1.0.21]
+* FIX: Sanitize & escape output where it was missed
+
 ## [1.0.20]
 * FIX: Prevent Elementor deprecation warnings
 
