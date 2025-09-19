@@ -105,7 +105,7 @@ if ( ! class_exists( 'Cherry5_Assets_Loader_Handle' ) ) {
 				$js_context
 			);
 
-			echo '<script type="text/javascript">' . $var . '</script>';
+			echo '<script type="text/javascript">' . $var . '</script>' ; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 	}

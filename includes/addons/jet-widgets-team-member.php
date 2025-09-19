@@ -1724,11 +1724,11 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$last_name_html = '';
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $first_name ) && empty( $last_name ) ) {
-			return;
+			return '';
 		}
 
 		if ( ! empty( $first_name ) ) {
@@ -1754,11 +1754,11 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$is_cover = filter_var( $this->get_settings( 'position_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $position ) ) {
-			return false;
+			return '';
 		}
 
 		$format = apply_filters( 'jet-widgets/team-member/position-format', '<div class="jw-team-member__position"><span>%1$s</span></div>' );
@@ -1771,11 +1771,11 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$is_cover = filter_var( $this->get_settings( 'desc_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $desc ) ) {
-			return false;
+			return '';
 		}
 
 		$format = apply_filters( 'jet-widgets/team-member/description-format', '<p class="jw-team-member__desc">%s</p>' );
@@ -1789,15 +1789,15 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 		$is_cover = filter_var( $this->get_settings( 'button_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $button_url ) ) {
-			return false;
+			return '';
 		}
 
 		if ( is_array( $button_url ) && empty( $button_url['url'] ) ) {
-			return false;
+			return '';
 		}
 
 		$this->add_render_attribute( 'url', 'class', array(
@@ -1826,15 +1826,16 @@ class Jet_Widgets_Team_Member extends Jet_Widgets_Base {
 	}
 
 	public function __generate_social_icon_list( $cover_location = false ) {
+
 		$social_icon_list = $this->get_settings_for_display( 'social_list' );
 		$is_cover         = filter_var( $this->get_settings_for_display( 'social_list_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $social_icon_list ) ) {
-			return false;
+			return '';
 		}
 
 		$icon_list = '';

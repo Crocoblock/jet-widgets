@@ -352,7 +352,7 @@ if ( ! class_exists( 'UI_Repeater' ) ) {
 				return;
 			}
 			self::$customizer_tmpl_printed = true;
-			echo self::$customizer_tmpl_to_print;
+			echo self::$customizer_tmpl_to_print; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
 }

@@ -17,7 +17,7 @@ if ( ! defined( 'WPINC' ) ) {
 ?>
 <div class="cherry-ui-kit cherry-settings <?php echo esc_attr( $__data['class'] ); ?>">
 	<?php if ( ! empty( $__data['title'] ) ) {
-		echo Cherry5_Interface_Builder::kses( $__data['title'] );
+		echo Cherry5_Interface_Builder::kses( $__data['title'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	} ?>
 	<?php if ( ! empty( $__data['children'] ) || ! empty( $__data['description'] ) ) { ?>
 		<div class="cherry-ui-kit__content cherry-settings__content" role="group" id="<?php echo esc_attr( $__data['id'] ); ?>"  >
@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 				<div class="cherry-ui-kit__description cherry-settings__description" role="note" ><?php echo wp_kses_post( $__data['description'] ); ?></div>
 			<?php } ?>
 			<?php if ( ! empty( $__data['children'] ) ) { ?>
-				<?php echo Cherry5_Interface_Builder::kses( $__data['children'] ); ?>
+				<?php echo Cherry5_Interface_Builder::kses( $__data['children'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php } ?>
 		</div>
 	<?php } ?>

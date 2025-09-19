@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 <form class="cherry-form <?php echo esc_attr( $__data['class'] ); ?>" id="<?php echo esc_attr( $__data['id'] ); ?>" name="<?php echo esc_attr( $__data['id'] ); ?>" accept-charset="<?php echo esc_attr( $__data['accept-charset'] ); ?>" action="<?php echo esc_attr( $__data['action'] ); ?>" autocomplete="<?php echo esc_attr( $__data['autocomplete'] ); ?>" enctype="<?php echo esc_attr( $__data['enctype'] ); ?>" method="<?php echo esc_attr( $__data['method'] ); ?>" target="<?php echo esc_attr( $__data['target'] ); ?>" <?php echo esc_attr( $__data['novalidate'] ); ?> >
 	<?php
 		if ( ! empty( $__data['children'] ) ) {
-			echo Cherry5_Interface_Builder::kses( $__data['children'] );
+			echo Cherry5_Interface_Builder::kses( $__data['children'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	?>
 </form>

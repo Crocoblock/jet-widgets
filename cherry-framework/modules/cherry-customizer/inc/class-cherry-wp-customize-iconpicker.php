@@ -55,11 +55,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<?php endif; ?>
 			</label>
 			<?php
-			echo str_replace(
+
+			echo wp_kses_post( str_replace(
 				'id="' . $this->id . '"',
 				'id="' . $this->id . '" ' . $this->get_link(),
 				$this->iconpicker->render()
-			);
+			) );
 		}
 
 		/**

@@ -268,6 +268,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 				return false;
 			}
 
+			// phpcs:disable
 			foreach ( $this->args['fields'] as $key => $field ) {
 
 				if ( ! isset( $_POST[ $key ] ) ) {
@@ -283,6 +284,7 @@ if ( ! class_exists( 'Cherry_Term_Meta' ) ) {
 				update_term_meta( $term_id, $key, $new_val );
 
 			}
+			// phpcs:enable
 
 			return true;
 

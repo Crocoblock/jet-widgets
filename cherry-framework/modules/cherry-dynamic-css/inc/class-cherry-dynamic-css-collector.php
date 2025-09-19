@@ -194,7 +194,7 @@ if ( ! class_exists( 'Cherry_Dynamic_Css_Collector' ) ) {
 		 * @return void
 		 */
 		public function print_property( $value, $name ) {
-			printf( '%1$s:%2$s; ', $name, $value );
+			printf( '%1$s:%2$s; ', esc_attr( $name ), esc_attr( $value ) );
 		}
 
 		/**

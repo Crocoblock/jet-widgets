@@ -15,4 +15,4 @@ $button = jet_widgets()->utility()->attributes->get_button( array(
 	'echo'  => false,
 ) );
 
-echo $button;
+echo wp_kses_post( $button );

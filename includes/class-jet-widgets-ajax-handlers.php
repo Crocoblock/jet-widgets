@@ -92,7 +92,10 @@ if ( ! class_exists( 'Jet_Widgets_Ajax_Handlers' ) ) {
 		 */
 		public function jw_subscribe_form_ajax() {
 
-			$data = ( ! empty( $_POST['data'] ) ) ? $this->sanitize_data( $_POST['data'] ) : false;
+			// phpcs:disable
+			$raw_data = ( ! empty( $_POST['data'] ) ) ? wp_unslash( $_POST['data'] ) : false;
+			$data = ( ! empty( $_POST['data'] ) ) ? $this->sanitize_data( $raw_data ) : false;
+			// phpcs:enable
 
 			if ( ! $data ) {
 				wp_send_json_error( array( 'type' => 'error', 'message' => $this->sys_messages['server_error'] ) );

@@ -21,6 +21,13 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 		public $atts = array();
 
 		/**
+		 * CSS classes
+		 *
+		 * @var array
+		 */
+		public $css_classes = array();
+
+		/**
 		 * Initalize post type
 		 * @return void
 		 */
@@ -58,7 +65,7 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 			if ( isset( $this->atts[ $name ] ) ) {
 
 				$value = $this->atts[ $name ];
-				
+
 				/**
 				 * Check for only allowed values used
 				 */
@@ -83,7 +90,7 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 				} else {
 					$value = is_array( $value ) ? $value : esc_attr($value);
 				}
-				
+
 				return $value;
 			}
 
@@ -122,7 +129,7 @@ if ( ! class_exists( 'Jet_Widgets_Shortcode_Base' ) ) {
 			$result = vsprintf( $format, $args );
 
 			if ( $echo ) {
-				echo jet_widgets_tools()->kses_post_extended( $result );
+				echo jet_widgets_tools()->kses_post_extended( $result ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			} else {
 				return $result;
 			}

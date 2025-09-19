@@ -75,11 +75,13 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 		/**
 		 * Check if is settings page now
-		 * 
+		 *
 		 * @return boolean
 		 */
 		public function is_settings_page() {
+			// phpcs:disable
 			return ( isset( $_REQUEST['page'] ) && $this->key === $_REQUEST['page'] );
+			// phpcs:enable
 		}
 
 		/**
@@ -113,13 +115,16 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		 */
 		public function saved_notice() {
 
+			// phpcs:disable
 			if ( ! isset( $_GET['settings-saved'] ) ) {
 				return false;
 			}
+			// phpcs:enable
 
-			$message = esc_html__( 'Settings saved', 'jetwidgets-for-elementor' );
-
-			printf( '<div class="notice notice-success is-dismissible"><p>%s</p></div>', $message );
+			printf(
+				'<div class="notice notice-success is-dismissible"><p>%s</p></div>',
+				esc_html__( 'Settings saved', 'jetwidgets-for-elementor' )
+			);
 
 			return true;
 
@@ -170,6 +175,7 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 		 */
 		public function save() {
 
+			// phpcs:disable
 			if ( empty( $_REQUEST['_nonce'] ) || ! wp_verify_nonce( $_REQUEST['_nonce'], 'jet-widgets-save' ) ) {
 				return;
 			}
@@ -198,12 +204,12 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 
 			$redirect = add_query_arg(
 				array( 'dialog-saved' => true ),
-				$this->get_settings_page_link()
+				esc_url( $this->get_settings_page_link() )
 			);
 
 			wp_redirect( $redirect );
 			die();
-
+			// phpcs:enable
 		}
 
 		/**
@@ -422,7 +428,11 @@ if ( ! class_exists( 'Jet_Widgets_Settings' ) ) {
 						</a>
 					</div>';
 
-			printf( $html, jet_widgets()->plugin_url( 'assets/images/banner.png' ), esc_attr__( 'Crocoblock', 'jetwidgets-for-elementor' ) );
+			printf(
+				wp_kses_post( $html ),
+				esc_url( jet_widgets()->plugin_url( 'assets/images/banner.png' ) ),
+				esc_attr__( 'Crocoblock', 'jetwidgets-for-elementor' )
+			);
 		}
 
 		/**

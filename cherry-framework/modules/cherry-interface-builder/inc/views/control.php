@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 	<?php } ?>
 	<?php if ( ! empty( $__data['children'] ) ) { ?>
 		<div class="cherry-ui-kit__content cherry-control__content" role="group" >
-			<?php echo Cherry5_Interface_Builder::kses( $__data['children'] ); ?>
+			<?php echo Cherry5_Interface_Builder::kses( $__data['children'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
 	<?php } ?>
 </div>

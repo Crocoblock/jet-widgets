@@ -2107,7 +2107,14 @@ class Jet_Widgets_Posts extends Jet_Widgets_Base {
 			$attributes[ $attr ] = isset( $settings[ $attr ] ) ? $settings[ $attr ] : false;
 		}
 
-		echo jet_widgets_tools()->kses_post_extended( $this->maybe_apply_carousel_wrappers( $shortcode_obj->do_shortcode( $attributes ), $settings ) );
+		// phpcs:disable
+		// Output is escaped by kses_post_extended()
+		echo jet_widgets_tools()->kses_post_extended(
+			$this->maybe_apply_carousel_wrappers(
+				$shortcode_obj->do_shortcode( $attributes ), $settings
+			)
+		);
+		// phpcs:enable
 
 		$this->__close_wrap();
 	}

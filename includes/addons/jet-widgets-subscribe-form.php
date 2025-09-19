@@ -1211,11 +1211,12 @@ class Jet_Widgets_Subscribe_Form extends Jet_Widgets_Base {
 	 * @return string
 	 */
 	public function generate_setting_json() {
+
 		$module_settings = $this->get_settings();
 
 		$settings = array(
 			'redirect'     => filter_var( $module_settings['use_redirect_url'], FILTER_VALIDATE_BOOLEAN ),
-			'redirect_url' => $module_settings['redirect_url'],
+			'redirect_url' => esc_url( $module_settings['redirect_url'] ),
 		);
 
 		$settings = json_encode( $settings );

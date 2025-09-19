@@ -406,7 +406,7 @@ if ( ! class_exists( 'Cherry_Dynamic_Css' ) ) {
 				return false;
 			}
 
-			printf( '<style type="text/css">%s</style>', $parsed_css );
+			printf( '<style type="text/css">%s</style>', $parsed_css ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		}
 

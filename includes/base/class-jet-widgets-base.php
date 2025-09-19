@@ -141,9 +141,9 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 * @param  string $key Key to get from processed item
 	 * @return mixed
 	 */
-	public function __loop_item( $keys = array(), $format = '%s' ) {
+	public function __loop_item( $keys = array(), $format = '%s', $sanitize_callback = null ) {
 
-		return call_user_func( array( $this, sprintf( '__%s_loop_item', $this->__context ) ), $keys, $format );
+		return call_user_func( array( $this, sprintf( '__%s_loop_item', $this->__context ) ), $keys, $format, $sanitize_callback );
 
 	}
 
@@ -155,7 +155,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 * @param  boolean $nested_key [description]
 	 * @return [type]              [description]
 	 */
-	public function __edit_loop_item( $keys = array(), $format = '%s' ) {
+	public function __edit_loop_item( $keys = array(), $format = '%s', $sanitize_callback = null ) {
 
 		$settings = $keys[0];
 
@@ -166,7 +166,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		ob_start();
 
 		echo '<# if ( item.' . esc_attr( $settings ) . ' ) { #>';
-		printf( $format, '{{{ item.' . esc_attr( $settings ) . ' }}}' );
+		printf( wp_kses_post( $format ), '{{{ item.' . esc_attr( $settings ) . ' }}}' );
 		echo '<# } #>';
 
 		return ob_get_clean();
@@ -180,7 +180,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 * @param  boolean $nested_key [description]
 	 * @return [type]              [description]
 	 */
-	public function __render_loop_item( $keys = array(), $format = '%s' ) {
+	public function __render_loop_item( $keys = array(), $format = '%s', $sanitize_callback = null ) {
 
 		$item = $this->__processed_item;
 
@@ -198,6 +198,10 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		}
 
 		if ( ! empty( $value ) ) {
+
+			if ( $sanitize_callback && is_callable( $sanitize_callback ) ) {
+				$value = call_user_func( $sanitize_callback, $value );
+			}
 			return sprintf( $format, $value );
 		}
 
@@ -273,7 +277,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 	 * @return void
 	 */
 	public function __open_wrap() {
-		printf( '<div class="elementor-%s jet-widgets">', $this->get_name() );
+		printf( '<div class="elementor-%s jet-widgets">', esc_attr( $this->get_name() ) );
 	}
 
 	/**
@@ -334,7 +338,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		$val = $this->get_settings( $setting );
 
 		if ( ! is_array( $val ) && '0' === $val ) {
-			printf( $format, $val );
+			printf( wp_kses_post( $format ), $val ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		if ( is_array( $val ) && empty( $val[ $key ] ) ) {
@@ -346,9 +350,9 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		}
 
 		if ( is_array( $val ) ) {
-			printf( $format, $val[ $key ] );
+			printf( wp_kses_post( $format ), $val[ $key ] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		} else {
-			printf( $format, $val );
+			printf( wp_kses_post( $format ), $val ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 	}
@@ -367,7 +371,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		}
 
 		echo '<# if ( settings.' . esc_attr( $setting ) . ' ) { #>';
-		printf( $format, '{{{ settings.' . esc_attr( $setting ) . ' }}}' );
+		printf( wp_kses_post( $format ), '{{{ settings.' . esc_attr( $setting ) . ' }}}' );
 		echo '<# } #>';
 	}
 
@@ -457,8 +461,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 			if ( isset( $settings[ $new_setting ] ) ) {
 				ob_start();
 				Icons_Manager::render_icon( $settings[ $new_setting ], $attr );
-
-				$icon_html = ob_get_clean();
+				$icon_html = ob_get_clean(); // output santized by render_icon()
 			}
 
 		} else if ( ! empty( $settings[ $setting ] ) ) {
@@ -469,7 +472,7 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 				$icon_class .= ' ' . $settings[ $setting ];
 			}
 
-			$icon_html = sprintf( '<i class="%s" aria-hidden="true"></i>', $icon_class );
+			$icon_html = sprintf( '<i class="%s" aria-hidden="true"></i>', esc_attr( $icon_class ) );
 		}
 
 		if ( empty( $icon_html ) ) {
@@ -477,9 +480,9 @@ abstract class Jet_Widgets_Base extends Widget_Base {
 		}
 
 		if ( ! $echo ) {
-			return sprintf( $format, $icon_html );
+			return sprintf( $format, $icon_html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
-		printf( $format, $icon_html );
+		printf( $format, $icon_html ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }

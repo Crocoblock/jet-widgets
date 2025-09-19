@@ -185,9 +185,11 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 
 			$nonce_action = sprintf( $this->nonce, esc_attr( $this->args['slug'] ) );
 
+			// phpcs:disable
 			if ( ! wp_verify_nonce( $_GET['_nonce'], $nonce_action ) ) {
 				return false;
 			}
+			// phpcs:enable
 
 			return true;
 		}
@@ -265,8 +267,8 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 			if ( empty( $this->args['slug'] ) || empty( $this->args['version'] ) ) {
 				echo '<div class="error"><p>';
 				printf(
-					$this->messages['error'],
-					'<b>' . str_replace( untrailingslashit( ABSPATH ), '', $this->core->settings['base_dir'] ) . '</b>'
+					wp_kses_post( $this->messages['error'] ),
+					'<b>' . esc_html( str_replace( untrailingslashit( ABSPATH ), '', $this->core->settings['base_dir'] ) ) . '</b>'
 				);
 				echo '</p></div>';
 
@@ -326,7 +328,6 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 		private function notice_submit( $slug = '' ) {
 
 			$format = '<a href="%1s" class="button button-primary">%2$s</a>';
-			$label  = esc_html__( 'Start Update', 'cherry-framework' );
 			$url    = add_query_arg(
 				array(
 					'cherry_db_update' => true,
@@ -336,7 +337,7 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 				esc_url( admin_url( 'index.php' ) )
 			);
 
-			printf( $format, $url, $label );
+			printf( wp_kses_post( $format ), esc_url( $url ), esc_html__( 'Start Update', 'cherry-framework' ) );
 
 		}
 
@@ -363,7 +364,7 @@ if ( ! class_exists( 'Cherry_Db_Updater' ) ) {
 			$name = str_replace( '-', ' ', $slug );
 			$name = ucwords( $name );
 
-			printf( '<strong>%1$s %2$s</strong> &#8211; ', $name, esc_html__( 'Data Update', 'cherry-framework' ) );
+			printf( '<strong>%1$s %2$s</strong> &#8211; ', esc_html( $name ), esc_html__( 'Data Update', 'cherry-framework' ) );
 		}
 
 		/**

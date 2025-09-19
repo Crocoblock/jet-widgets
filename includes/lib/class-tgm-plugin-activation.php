@@ -797,6 +797,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @return boolean True on success, false on failure.
 		 */
 		protected function do_plugin_install() {
+
 			if ( empty( $_GET['plugin'] ) ) {
 				return false;
 			}
@@ -2832,6 +2833,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function process_bulk_actions() {
+
 			// Bulk installation process.
 			if ( 'tgmpa-bulk-install' === $this->current_action() || 'tgmpa-bulk-update' === $this->current_action() ) {
 
@@ -3043,7 +3045,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					printf( // WPCS: xss ok.
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
 						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'jetwidgets-for-elementor' ) ),
-						$imploded
+						esc_html( $imploded )
 					);
 
 					// Update recently activated plugins option.
@@ -3850,4 +3852,5 @@ if ( ! class_exists( 'TGMPA_Utils' ) ) {
 			return false;
 		}
 	} // End of class TGMPA_Utils
+
 } // End of class_exists wrapper

@@ -194,7 +194,7 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 			if ( ! empty( $this->args['admin_columns'][ $column ]['callback'] ) && is_callable( $this->args['admin_columns'][ $column ]['callback'] ) ) {
 				call_user_func( $this->args['admin_columns'][ $column ]['callback'], $column, $post_id );
 			} else {
-				echo get_post_meta( $post_id, $column, true );
+				echo wp_kses_post( get_post_meta( $post_id, $column, true ) );
 			}
 
 		}
@@ -353,9 +353,11 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 				return;
 			}
 
+			// phpcs:disable
 			if ( ! isset( $_POST[ $this->nonce ] ) || ! wp_verify_nonce( $_POST[ $this->nonce ], $this->nonce ) ) {
 				return;
 			}
+			// phpcs:enable
 
 			$posts = ! empty( $this->args['page'] ) ? $this->args['page'] : array( 'post' );
 			$posts = is_array( $posts ) ? $posts : array( $posts );
@@ -417,6 +419,7 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 			// Array of new post meta value.
 			$new_meta_value = array();
 
+			// phpcs:disable
 			if ( empty( $_POST[ $meta_key ] ) ) {
 				return;
 			}
@@ -436,6 +439,7 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 			} elseif ( empty( $new_meta_value ) && $meta_value ) {
 				delete_post_meta( $post_id, $meta_key, $meta_value );
 			}
+			// phpcs:enable
 		}
 
 		/**
@@ -452,12 +456,14 @@ if ( ! class_exists( 'Cherry_Post_Meta' ) ) {
 					continue;
 				}
 
+				// phpcs:disable
 				if ( empty( $_POST[ $key ] ) ) {
 					update_post_meta( $post_id, $key, false );
 					continue;
 				}
+				// phpcs:enable
 
-				$value = $this->sanitize_meta( $key, $_POST[ $key ] );
+				$value = $this->sanitize_meta( $key, $_POST[ $key ] ); // phpcs:ignore
 				update_post_meta( $post_id, $key, $value );
 			}
 

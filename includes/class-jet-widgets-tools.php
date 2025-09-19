@@ -245,7 +245,7 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 			$key      = md5( $svg_path );
 			$svg      = get_transient( $key );
 
-			if ( ! $svg ) {
+			if ( false === $svg && file_exists( $svg_path ) ) {
 				$svg = file_get_contents( $svg_path );
 			}
 
@@ -399,11 +399,15 @@ if ( ! class_exists( 'Jet_Widgets_Tools' ) ) {
 
 		/**
 		 * Sanitize HTML strings where SVG is allowed
-		 * 
+		 *
 		 * @param  [type] $data [description]
 		 * @return [type]       [description]
 		 */
 		public function kses_post_extended( $data ) {
+
+			if ( empty( $data ) ) {
+				return '';
+			}
 
 			$extended_tags = array(
 				'svg' => array(

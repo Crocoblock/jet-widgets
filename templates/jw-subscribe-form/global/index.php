@@ -37,11 +37,11 @@ if ( filter_var( $use_icon, FILTER_VALIDATE_BOOLEAN ) ) {
 }
 
 ?>
-<div <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'main-container' ) ); ?>>
+<div <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'main-container' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<form method="POST" action="#" class="jw-subscribe-form__form">
 		<div class="jw-subscribe-form__input-group">
-			<input <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'form-input' ) ); ?>>
-			<?php echo sprintf( '<a class="jw-subscribe-form__submit elementor-button elementor-size-md" href="#">%s<span class="jw-subscribe-form__submit-text">%s</span></a>', $icon_html, $submit_button_text ); ?>
+			<input <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( 'form-input' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+			<?php echo sprintf( '<a class="jw-subscribe-form__submit elementor-button elementor-size-md" href="#">%s<span class="jw-subscribe-form__submit-text">%s</span></a>', $icon_html, wp_kses_post( $submit_button_text ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</div>
 		<div class="jw-subscribe-form__message"><div class="jw-subscribe-form__message-inner"><span></span></div></div>
 	</form>

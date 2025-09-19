@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards">
+  <description>WordPress Coding Standards for PHP_CodeSniffer</description>
+
+  <!-- Include/exclude specific files or directories -->
+  <file>includes/</file>
+  <file>templates/</file>
+  <file>cherry-framework/</file>
+
+  <exclude-pattern>*/framework/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/assets/*</exclude-pattern>
+
+  <rule ref="WordPress.Security" />
+
+</ruleset>

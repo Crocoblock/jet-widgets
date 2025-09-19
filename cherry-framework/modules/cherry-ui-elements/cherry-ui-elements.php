@@ -108,14 +108,14 @@ if ( ! class_exists( 'Cherry_UI_Elements' ) ) {
 			}
 
 			if ( ! in_array( $ui_slug, $this->args['ui_elements'] ) ) {
-				echo '<p> Element <b>' . $ui_slug . '</b> has not been initialized in this instance!</p>';
+				echo '<p> Element <b>' . esc_html( $ui_slug ) . '</b> has not been initialized in this instance!</p>';
 				return false;
 			}
 
 			$ui_class_name = 'UI_' . ucwords( $ui_slug );
 
 			if ( ! class_exists( $ui_class_name ) ) {
-				echo '<p>Class <b>' . $ui_class_name . '</b> not exist!</p>';
+				echo '<p>Class <b>' . esc_html( $ui_class_name ) . '</b> not exist!</p>';
 				return false;
 			}
 			return new $ui_class_name( $args );

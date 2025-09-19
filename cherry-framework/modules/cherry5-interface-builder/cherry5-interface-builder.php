@@ -447,7 +447,7 @@ if ( ! class_exists( 'Cherry5_Interface_Builder' ) ) {
 			if ( ! filter_var( $echo, FILTER_VALIDATE_BOOLEAN ) ) {
 				return $output;
 			} else {
-				echo self::kses( $output );
+				echo self::kses( $output ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 

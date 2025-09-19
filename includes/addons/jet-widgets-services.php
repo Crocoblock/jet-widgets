@@ -1370,11 +1370,11 @@ class Jet_Widgets_Services extends Jet_Widgets_Base {
 		$is_cover = filter_var( $this->get_settings( 'desc_cover_location' ), FILTER_VALIDATE_BOOLEAN );
 
 		if ( ( $cover_location && ! $is_cover ) || ( ! $cover_location && $is_cover ) ) {
-			return;
+			return '';
 		}
 
 		if ( empty( $desc ) ) {
-			return false;
+			return '';
 		}
 
 		$format = apply_filters( 'jet-widgets/services/description-format', '<p class="jw-services__desc">%s</p>' );

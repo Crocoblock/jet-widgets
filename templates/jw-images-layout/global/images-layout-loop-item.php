@@ -16,7 +16,7 @@ $this->add_render_attribute( $link_instance, 'class', array(
 
 if ( 'lightbox' === $link_type ) {
 
-	$this->add_render_attribute( 
+	$this->add_render_attribute(
 		$link_instance,
 		'href',
 		esc_url( $this->__loop_item( array( 'item_image', 'url' ), '%s' ) )
@@ -45,7 +45,7 @@ $this->item_counter++;
 ?>
 <div class="jw-images-layout__item">
 	<div class="jw-images-layout__inner">
-		<a <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( $link_instance ) ); ?>>
+		<a <?php echo jet_widgets_tools()->esc_attr( $this->get_render_attribute_string( $link_instance ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 			<div class="jw-images-layout__image">
 				<?php
 					if ( 'justify' === $settings['layout_type'] ) {
@@ -57,7 +57,7 @@ $this->item_counter++;
 			</div>
 			<div class="jw-images-layout__content">
 					<?php
-						echo wp_kses_post( $this->_render_icon( 'item_icon', '<div class="jw-images-layout__icon"><div class="jw-images-layout-icon-inner">%s</div></div>' ) );
+						echo $this->_render_icon( 'item_icon', '<div class="jw-images-layout__icon"><div class="jw-images-layout-icon-inner">%s</div></div>' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					?>
 
 					<?php

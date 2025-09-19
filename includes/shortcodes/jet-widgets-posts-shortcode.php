@@ -341,7 +341,7 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 	/**
 	 * Sanitize boolen-like data
-	 * 
+	 *
 	 * @param  [type] $value [description]
 	 * @return [type]        [description]
 	 */
@@ -489,9 +489,9 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 		printf(
 			' style="background-image: url(\'%1$s\');background-repeat:no-repeat;background-size: %2$s;background-position: %3$s;"',
-			$thumb_url,
-			$this->get_attr( 'bg_size' ),
-			$this->get_attr( 'bg_position' )
+			esc_url( $thumb_url ),
+			esc_attr( $this->get_attr( 'bg_size' ) ),
+			esc_attr( $this->get_attr( 'bg_position' ) )
 		);
 
 	}
@@ -564,8 +564,11 @@ class Jet_Widgets_Posts_Shortcode extends Jet_Widgets_Shortcode_Base {
 
 		}
 
-		printf( '<div class="%1$s">%2$s</div>', $base, $result );
-
+		printf(
+			'<div class="%1$s">%2$s</div>',
+			esc_attr( $base ),
+			wp_kses_post( $result )
+		);
 	}
 
 }
